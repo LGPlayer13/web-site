@@ -1,0 +1,353 @@
+/* for, y'know, basically the entire web site */
+body {
+	overflow-y: auto;
+	margin-bottom: 0%;
+    /*background-image: url("./images/websitebg.png");*/
+    background-attachment: fixed;
+    background-image: linear-gradient(135deg, #271b61, #3c2e84);
+	padding-bottom: 100px;
+}
+
+/* for the big text, which i never use lol */
+h1 {color: navy;}
+
+/* font type and size */
+body, html, div {
+	font-family: "Instrument Sans", sans-serif;
+	font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* the "box" class is for your everyday boxes */
+.box {
+    color: black;
+	position: relative;
+	margin: auto;
+	bottom: -10px;
+	right: 0;
+	left: 0;
+	background-color: #d68a2b;
+    border: 4px #b37116;
+    border-style: hidden solid hidden solid;
+	width: 67%;
+	height: auto;
+	display: block;
+	text-align: center;
+    text-shadow:1px 1px 1px #52350c;
+}
+
+#flex {display: flex;}
+
+/* the "game" class is for Scratch/IGM-game related boxes */
+.game {
+	position: relative;
+	margin: auto;
+	bottom: -10px;
+	right: 0;
+	left: 0;
+	background-color: #3bc995;
+	width: 50%;
+	height: auto;
+	padding: 5px;
+	text-shadow: 1px 1px 1px #5b5b5b;
+	border-radius: 7px 28px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),inset 0px 2px 1px rgba(255, 255, 255, 0.3),inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+	display: block;
+	text-align: center;
+}
+
+/* the "special" class is no longer used, methinks */
+.special {
+	position: relative;
+	margin: auto;
+	bottom: -10px;
+	right: 0;
+	left: 0;
+	background-color: darkviolet;
+	width: 50%;
+	height: auto;
+	padding: 5px;
+	color: white;
+	text-shadow: 1px 1px 1px #5b5b5b;
+	border-radius: 7px 28px;
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.3),inset 0px 2px 1px rgba(255, 255, 255, 0.3),inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+	display: block;
+	text-align: center;
+}
+
+/* the "spotify" class is for information above spotify playlist embeds */
+.spotify {
+    position: relative;
+    margin: auto;
+    bottom: -10px;
+    right: 0;
+    left: 0;
+    background-color: #19b250;
+    width: 50%;
+    height: auto;
+    border: 7px groove #1ed760;
+    padding: 5px;
+    text-shadow: 1px 1px 1px #5b5b5b;
+    border-radius: 7px 28px;
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.3),inset 0px 2px 1px rgba(255, 255, 255, 0.3),inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+    display: block;
+    text-align: center;
+}
+
+/* the "disc" class is for the discs */
+.disc {
+	position: relative;
+	margin: auto;
+	bottom: -10px;
+	right: 0;
+	left: 0;
+	background-color: lightgray;
+	width: 50%;
+	height: auto;
+	border: 7px groove #f2f2f2;
+	padding: 5px;
+	color: white;
+	text-shadow: 1px 1px 1px #5b5b5b;
+	border-radius: 7px 28px;
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.3),inset 0px 2px 1px rgba(255, 255, 255, 0.3),inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+	display: block;
+	text-align: center
+}
+
+/* the "secondary" class is for larger boxes containing information */
+.extrainfo {
+    position: relative;
+    margin: auto;
+    bottom: -10px;
+    right: 0;
+    left: 0;
+    background-color: #959595;
+    width: 50%;
+    height: auto;
+    border: 7px groove #b3b3b3;
+    padding: 5px;
+    text-shadow: 1px 1px 1px #5b5b5b;
+    border-radius: 7px 28px;
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.3),inset 0px 2px 1px rgba(255, 255, 255, 0.3),inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+    display: block;
+    text-align: center;
+}
+
+/* the "shortbox" class is for short boxes, typically for going back a page */
+.shortbox {
+    position: relative;
+    margin: auto;
+    bottom: -10px;
+    right: 0;
+    left: 0;
+    background-color: #959595;
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    text-shadow: 1px 1px 1px #5b5b5b;
+    border-radius: 7px 28px;
+    box-shadow:0px 10px 15px rgba(0, 0, 0, 0.3),inset 0px 2px 1px rgba(255, 255, 255, 0.3),inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+    display: block;
+    text-align: center;
+}
+
+/* the "update" class is for updates and various other links */
+.update {
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), inset 0px 2px 1px rgba(255, 255, 255, 0.3), inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* the "pic" class is for images */
+.pic {
+    position: relative;
+    margin: auto;
+    bottom: -5px;
+    right: 0;
+    left: 0;
+    padding-top: 5px;
+    text-shadow: 1px 1px 1px #5b5b5b;
+    display: block;
+    text-align: center;
+}
+
+/* the "minipic" class is for small images contained in small boxes */
+.minipic {
+    position: relative;
+    margin: auto;
+    top: -13px;
+    text-shadow: 1px 1px 1px #5b5b5b;
+    display: block;
+    text-align: center;
+}
+
+/* i don't think this is used at all tbh */
+.header {
+	background-color: lightgrey;
+	border: 7px ridge #f2f2f2;
+	padding: 20px;
+	text-shadow: 1px 1px 1px #5b5b5b;
+	border-radius: 3px;
+	display: block;
+	text-align: center;
+	z-index: 500;
+}
+
+/* these following 4 css thingys are for link colors */
+a:link {color: #ffb676;}
+a:visited {color: #ffb676;}
+a:hover {color: #ffd0a7;}
+a:active {color: #ebc5a4;}
+
+/* the "topnav" class is for the Navbar */
+.topnav {
+	position: sticky;
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
+	border: 1px hidden #000000;
+    list-style: none;
+    list-style-type: none;
+	text-shadow: 1px 1px 1px #5b5b5b;
+	width:100%;
+    text-align: center;
+	z-index: 1;
+}
+
+.topnav li {display: inline;}
+
+/* the "topnav a" class is for the Navbar buttons */
+.topnav a {
+	color: white;
+	display: inline-block;
+	padding: 14px 16px;
+    margin-right: 7px;
+	text-decoration: none;
+    font-size: 17px;
+	background-color: #ffb03a;
+    border-radius: 18px;
+    width: 110px;
+    transition: background-color .2s;
+    transition: color .2s;
+}
+.topnav a:hover {color:black;background-color:#ffc773;}
+
+#active {background-color:#ffcf75;}
+
+@keyframes spread {
+  from {opacity: 0;width: 60%;}
+  to {opacity: 1;width: 90%;}
+}
+
+@keyframes openy {
+  from {transform: scaleY(0.1);}
+  to {transform: scaleY(1);}
+}
+@keyframes openx {
+  from {transform: scaleX(0.1);}
+  to {transform: scaleX(1);}
+}
+
+.openy {
+  animation-name: openy;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+
+.button {
+    color: white;
+	display: inline-block;
+	padding: 14px 16px;
+    margin-right: 7px;
+	text-decoration: none;
+    font-size: 17px;
+	background-color: #c67e24;
+    border-radius: 18px;
+    width: 110px;
+    animation-name: openx;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    transition: background-color .2s;
+    transition: color .2s;
+}
+.button:hover {background-color:#d99744;transition:background-color .15s;}
+
+.off {opacity: 0.5;cursor: not-allowed;}
+.off:hover {background-color:#c67e24;transition:background-color .15s;}
+
+.neatbutton {
+    color: white;
+	display: block;
+	padding: 14px 16px;
+    margin-right: 7px;
+    font-size: 17px;
+	background-color: #c67e24;
+    border-radius: 18px;
+    width: auto;
+    height: auto;
+    animation-name: openy;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    transition: background-color .2s;
+}
+.neatbutton:hover {background-color:#d99744;transition:background-color .15s;}
+
+.yellow {background-color: #c6a124;}
+.yellow:hover {background-color:#d9b744;transition:background-color .15s;}
+
+.blue {background-color: #2489c6;}
+.blue:hover {background-color:#43a4de;transition:background-color .15s;}
+
+.linkbutton {
+    color: black;
+    display: block;
+    width: 90%;
+    background-color: #f3a039;
+    border: 4px solid #ac6c1d;
+    border-radius: 8px;
+    font-size: 20px;
+    text-decoration: none;
+    margin: auto;
+    transition-duration: 0.2s;
+    padding: 3px;
+    cursor: pointer;
+    text-align:left;
+    animation-name: spread;
+    animation-duration: 0.45s;
+    animation-iteration-count: 1;
+}
+.linkbutton:hover {background-color:#ffbe6d;width:91%;transition:width .15s;}
+
+details > summary {
+    color: white;
+	padding: 14px 16px;
+    margin-right: 7px;
+    font-size: 17px;
+	background-color: #c67e24;
+    border-radius: 18px;
+    width: auto;
+    height: auto;
+    animation-name: openy;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    transition: background-color .2s;
+}
+details > summary:hover {background-color:#d99744;transition:background-color .15s;cursor:default;}
+
+details > p {
+    color: white;
+	padding: 7px 8px;
+    margin-right: 7px;
+    font-size: 16px;
+	background-color: #b37220;
+    border-radius: 18px;
+    width: auto;
+    height: auto;
+}
+
+/* scrollbar customization!! */
+
+::-webkit-scrollbar-track {background:#cd862c;}
+
+
+
+
