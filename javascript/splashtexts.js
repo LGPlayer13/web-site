@@ -112,6 +112,7 @@ var splashes = [
     "I am the yeast of thoughts and mind.",
     "New Objective: Wait in the line of slaves.",
     "Hey look, ramps! We can use these as ramps!",
+    "Business. Serious business. This is absolutely all of your business.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
