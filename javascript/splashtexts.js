@@ -114,6 +114,7 @@ var splashes = [
     "Hey look, ramps! We can use these as ramps!",
     "Business. Serious business. This is absolutely all of your business.",
     "Oh look, SpongeBob and Patrick are on fire. This is going to be the best hunger games we have ever had.",
+    "Kick some ice.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
