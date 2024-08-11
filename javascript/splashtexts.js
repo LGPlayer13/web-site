@@ -115,6 +115,9 @@ var splashes = [
     "Business. Serious business. This is absolutely all of your business.",
     "Oh look, SpongeBob and Patrick are on fire. This is going to be the best hunger games we have ever had.",
     "Kick some ice.",
+    "What's it gonna take to shake the ill times?",
+    "I'm thirsty- should be some orange juice in the fridge. ...I could go for a cup of coffee!",
+    "I worked for George the Jumping Triangle, he's a fraud.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
