@@ -118,6 +118,7 @@ var splashes = [
     "What's it gonna take to shake the ill times?",
     "I'm thirsty- should be some orange juice in the fridge. ...I could go for a cup of coffee!",
     "I worked for George the Jumping Triangle, he's a fraud.",
+    "SAVㅤㅤHㅤㅤINCㅤSS",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
