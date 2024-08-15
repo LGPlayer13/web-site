@@ -119,6 +119,8 @@ var splashes = [
     "I'm thirsty- should be some orange juice in the fridge. ...I could go for a cup of coffee!",
     "I worked for George the Jumping Triangle, he's a fraud.",
     "SAVㅤㅤHㅤㅤINCㅤSS",
+    "Bro can someone <i>please</i> upload the Sound Shapes OST to Spotify, thank you",
+    "This project has no meaningful contribution to society.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];

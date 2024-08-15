@@ -252,6 +252,11 @@ a:active {color: #ebc5a4;}
   animation-duration: 0.2s;
   animation-iteration-count: 1;
 }
+.openx {
+  animation-name: openx;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
 
 .button {
     color: white;
