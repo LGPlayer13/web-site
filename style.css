@@ -122,7 +122,7 @@ a:active {color: #ebc5a4;}
   animation-duration: 0.2s;
   animation-iteration-count: 1;
 }
-.bounce:hover {
+.bounce:active {
   animation-name: bounce;
   animation-duration: 0.2s;
   animation-iteration-count: 1;
