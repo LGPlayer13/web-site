@@ -223,6 +223,20 @@ details > p {
 
 ::-webkit-scrollbar-track {background:#cd862c;}
 
+/* lastfm now playing stuffs */
+
+#player-frame {
+  width: 50%;
+  height: 90px;
+  background-color: #c67e24;
+}
+
+.refresh {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
 
 
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Last.fm Now Playing</title>
+    <style>
+      body {
+        background: #c67e24;
+        text-shadow:1px 1px 1px #52350c;
+      }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td rowspan="3"><img id="album-cover"></td>
+            <td id="track"></td>
+        </tr>
+        <tr>
+            <td id="artist"></td>
+        </tr>
+        <tr>
+            <td id="date"></td>
+        </tr>
+    </table>
+    <!--<span class="refresh" onclick="window.location.reload()">&#128472;</span>-->
+    <img class="refresh" src="./images/refresh.png" width="11px" height="11px" onclick="window.location.reload()">
+</body>
+
+<script src="javascript/main.js"></script>
+
+</html>
