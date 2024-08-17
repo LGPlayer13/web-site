@@ -12,6 +12,33 @@
     <script src="./javascript/footer.js" type="text/javascript" defer></script>
   </head>
 <body>
+    <script>
+      function SinceThen() {
+
+        var then = new Date("04/13/2023"); 
+        var today = new Date(); 
+        today.setHours(0, 0, 0, 0);
+
+        var difference = today.getTime() - then.getTime(); 
+        var days = difference / (1000 * 3600 * 24); 
+        var days = Math.round(days);
+
+        document.getElementById("days").innerHTML = days;
+
+        if (difference < 0) {
+          clearInterval(SinceThen);
+          document.getElementById("days").innerHTML = "Uh oh! an error has occured";
+        }
+      };
+
+
+      setInterval( function() {
+      SinceThen();
+      }, 1000);
+
+      SinceThen();
+    </script>
+    <!-- script borrowed from fractyl's website -->
     <div>
       <p><a style="display:block;position:relative;margin:auto;bottom:7px;right:0;left:0;width:300px;height:auto;text-align:center;" href="https://lgplayer13.neocities.org/"><img src="./images/lgproductionslogo.svg" title="this graphic is the peak of my scratch career, can we get 3 likes guys"></a><!--<a style="color:white;font-size:17px;display:block;position:relative;margin:auto;bottom:7px;width:300px;height:auto;text-align:center;letter-spacing:0.5px" href="https://lgplayer13.neocities.org/"><b>Web Site</b></a>--></p>
     </div>
@@ -32,7 +59,7 @@
       <main style="width:50%;height:auto;background:#d68a2b;padding-top:15px;padding-bottom:5px;">
         <p style="background-color:#d38c33;margin:auto;margin-bottom:7px;padding:7px;width:75%;border:5px double #52330b;text-align:left;"><b style="color:white;font-size:21px;">• MORE ABOUT ME •</b>
           <img class="bounce" src="./images/site_gregoe.svg" title="this is geroge the jumping dorito. he is a triangle who bounces occasionally" style="float:left;padding-top:5px;padding-right:5px;">
-          <br>Heyo. I like to make dinky games on Scratch and IGM, play dumb video games, and rant.<br><br>This is my web site, and yes, the space between <i>web</i> and <i>site</i> is very much intentional. I explain this in more detail somewhere else.<br><br>It was made as a way to talk about random stuff I'm interested in, and to avoid having to use a platform like Twitter. I also get to add all sorts of fun, little details everywhere.<br>-----<br>What do I like? Well, my favorite game is Minecraft. My favorite movies are Holes, Coraline, Isle of Dogs, Elf, Home Alone 1 & 2, and Charlie and the Chocolate Factory.<br><br>My favorite artists/bands are Tame Impala, MGMT, Vampire Weekend, Bill Wurtz, Beck, Foster The People, Tally Hall, Radiohead, Daft Punk, and Grizzly Bear.<br><br>I do occassionally listen to a variety of other artists, but I won't list them all here.<br>-----<br>Oh yeah, I say 'good morning' a lot.<br>I wouldn't ask about it.
+          <br>Heyo. I like to make dinky games on Scratch and IGM, play dumb video games, and rant.<br><br>This is my web site, and yes, the space between <i>web</i> and <i>site</i> is very much intentional.<br><u style="font-weight:bold;">est. April 13, 2023 / <span id="days"></span> days ago</u><br><br>It was made as a way to talk about random stuff I'm interested in, and to avoid having to use a platform like Twitter. I also get to add all sorts of fun, little details everywhere.<br>-----<br>What do I like? Well, my favorite game is Minecraft. My favorite movies are Holes, Coraline, Isle of Dogs, Elf, Home Alone 1 & 2, and Charlie and the Chocolate Factory.<br><br>My favorite artists/bands are Tame Impala, MGMT, Vampire Weekend, Bill Wurtz, Beck, Foster The People, Tally Hall, Radiohead, Daft Punk, and Grizzly Bear.<br><br>I do occassionally listen to a variety of other artists, but I won't list them all here.<br>-----<br>Oh yeah, I say 'good morning' a lot.<br>I wouldn't ask about it.
         </p>
         <p style="margin-top:0px;font-size:15px;">Check out the <a href="about-extras">About Extras</a> page for more.</p>
       </main>
