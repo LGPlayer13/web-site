@@ -122,6 +122,7 @@ var splashes = [
     "Bro can someone <i>please</i> upload the Sound Shapes OST to Spotify, thank you",
     "This project has no meaningful contribution to society.",
     "Nothing puts a poop in a person's pants faster than talking about AI.",
+    "Uh, hey- come look at this site. Aw, cool, can you download the Foo Fighters?",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
