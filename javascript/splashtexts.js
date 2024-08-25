@@ -123,6 +123,9 @@ var splashes = [
     "This project has no meaningful contribution to society.",
     "Nothing puts a poop in a person's pants faster than talking about AI.",
     "Uh, hey- come look at this site. Aw, cool, can you download the Foo Fighters?",
+    "*hysterical laughing* What a C-H-O-E-K.",
+    "So before you speak, it's best to remember- each individual case will require a specific judgement call, depending on who you're talking to and the context of the conversation!",
+    "A smile is like a hug that your face gives to someone else's eyes.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
