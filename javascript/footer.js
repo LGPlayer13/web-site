@@ -13,6 +13,7 @@ class Footer extends HTMLElement {
       <sub style="color:white;position:relative;margin:auto;margin-top:15px;right:0;left:0;display:block;text-align:center;text-shadow:1px 1px 1px #000000;"><b>v2.0.2</b> • Hate the color orange? Too bad. No themes for you.</sub>
     </footer>
     `;
+    // change ABOUT PAGE footer version when updating this
   }
 }
 
