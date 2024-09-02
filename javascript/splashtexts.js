@@ -119,7 +119,7 @@ var splashes = [
     "I'm thirsty- should be some orange juice in the fridge. ...I could go for a cup of coffee!",
     "I worked for George the Jumping Triangle, he's a fraud.",
     "SAVㅤㅤHㅤㅤINCㅤSS",
-    "Bro can someone <i>please</i> upload the Sound Shapes OST to Spotify, thank you",
+    "Bro can someone <i>please</i> upload the Sound Shapes OST to Spotify, thank you.",
     "This project has no meaningful contribution to society.",
     "Nothing puts a poop in a person's pants faster than talking about AI.",
     "Uh, hey- come look at this site. Aw, cool, can you download the Foo Fighters?",
@@ -127,6 +127,10 @@ var splashes = [
     "So before you speak, it's best to remember- each individual case will require a specific judgement call, depending on who you're talking to and the context of the conversation!",
     "A smile is like a hug that your face gives to someone else's eyes.",
     "Just remember the five D's of dodgeball: Dodge, Duck, Dip, Dive, and... Dodge.",
+    "Water contains unhealthy amounts of water.",
+    "This is my house dude. Don't jostle the heating ducts.",
+    "Open your mouth wide... a universal sigh.",
+    "I saw a guy do this in a toothpaste ad once.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
