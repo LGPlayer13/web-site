@@ -119,7 +119,7 @@ var splashes = [
     "I'm thirsty- should be some orange juice in the fridge. ...I could go for a cup of coffee!",
     "I worked for George the Jumping Triangle, he's a fraud.",
     "SAVㅤㅤHㅤㅤINCㅤSS",
-    "Bro can someone <i>please</i> upload the Sound Shapes OST to Spotify, thank you.",
+    "Holy crap- part of the Sound Shapes OST is on Spotify, we're so back",
     "This project has no meaningful contribution to society.",
     "Nothing puts a poop in a person's pants faster than talking about AI.",
     "Uh, hey- come look at this site. Aw, cool, can you download the Foo Fighters?",
@@ -131,6 +131,13 @@ var splashes = [
     "This is my house dude. Don't jostle the heating ducts.",
     "Open your mouth wide... a universal sigh.",
     "I saw a guy do this in a toothpaste ad once.",
+    "Where are my non-LG Productions-flavored blog posts?!",
+    "For some reason, a lot of Minecraft YouTubers confuse 18 with 12.",
+    "Where do these stairs go? ...They go up.",
+    "This calls for an EMERGENCY FROG SITUATION.",
+    "UI's are like jokes. If you have to explain them, they are not good.",
+    "The Concord Situation of 2024 is crazy.",
+    "Roll up, roll up for the Misery Tour!",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
