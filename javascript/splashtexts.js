@@ -138,6 +138,7 @@ var splashes = [
     "UI's are like jokes. If you have to explain them, they are not good.",
     "The Concord Situation of 2024 is crazy.",
     "Roll up, roll up for the Misery Tour!",
+    "Unregistered HyperCam 2",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
