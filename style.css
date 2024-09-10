@@ -219,6 +219,14 @@ details > p {
   height: auto;
 }
 
+.textcode {
+  color:#919191;
+  border-radius:5px;
+  padding:0px 2px 0px 2px;
+  background-color:#737373;
+  text-shadow:0.3px 1px 1px #000000;
+}
+
 /* scrollbar customization!! (it doesn't work...) */
 
 ::-webkit-scrollbar-track {background:#cd862c;}
