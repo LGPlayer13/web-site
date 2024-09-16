@@ -2,18 +2,10 @@
 body {
   overflow-y: auto;
   margin-bottom: 0%;
-  /*background-image: url("./images/websitebg.png");*/
   background-attachment: fixed;
   background-image: linear-gradient(135deg, #271b61, #3c2e84);
   padding-bottom: 100px;
 }
-
-:root {
-  --blur: #5b5b5b;
-}
-
-/* for the big text, which i never use lol */
-h1 {color: navy;}
 
 /* font type and size */
 body, html, div {
@@ -31,16 +23,44 @@ body, html, div {
   bottom: -10px;
   right: 0;
   left: 0;
-  background-color: #d68a2b;
-  border: 4px #b37116;
+  background-color: var(--box-bg);
+  border: 4px var(--box-bdr);
   border-style: hidden solid hidden solid;
   width: 67%;
   height: auto;
   display: block;
   text-align: center;
   word-wrap: break-word;
-  text-shadow:1px 1px 1px #52350c;
+  transition: background-color .2s;
+  text-shadow:1px 1px 1px var(--text-shadow);
   box-shadow: 5px 5px 5px #000000;
+}
+
+.minibox {
+  background-color: var(--minibox-bg);
+  border-radius: 12px;
+  margin: auto;
+  margin-bottom: 7px;
+  padding: 10px;
+  width: 75%;
+  text-align: center;
+  transition: background-color .2s;
+  animation-name: openx;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+
+.infbox {
+  background-color: var(--infbox-bg);
+  border: 5px double var(--infbox-bdr);
+  margin: auto;
+  margin-bottom: 7px;
+  padding: 7px;
+  width: 75%;
+  height: auto;
+  text-align: left;
+  transition: background-color .2s;
+  overflow-y:auto;
 }
 
 #flex {display: flex;}
@@ -50,15 +70,11 @@ body, html, div {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), inset 0px 2px 1px rgba(255, 255, 255, 0.3), inset 0px -2px 1px rgba(0, 0, 0, 0.4);
 }
 
-.bounce {
-    
-}
-
 /* these following 4 css thingys are for link colors */
-a:link {color: #ffb676;}
-a:visited {color: #ffb676;}
-a:hover {color: #ffd0a7;}
-a:active {color: #ebc5a4;}
+a:link {color: var(--link-default);}
+a:visited {color: var(--link-visited);}
+a:hover {color: var(--link-hover);}
+a:active {color: var(--link-active);}
 
 /* the "topnav" class is for the Navbar */
 .topnav {
@@ -69,7 +85,7 @@ a:active {color: #ebc5a4;}
   border: 1px hidden #000000;
   list-style: none;
   list-style-type: none;
-  text-shadow: 1px 1px 1px #52350c;
+  text-shadow: 1px 1px 1px var(--text-shadow);
   width:100%;
   text-align: center;
   z-index: 1;
@@ -80,20 +96,21 @@ a:active {color: #ebc5a4;}
 /* the "topnav a" class is for the Navbar buttons */
 .topnav a {
   color: white;
+  background-color: var(--topnav-bg);
   display: inline-block;
   padding: 14px 16px;
   margin-right: 7px;
-  text-decoration: none;
   font-size: 17px;
-  background-color: #ffb03a;
   border-radius: 18px;
   width: 110px;
-  transition: background-color .2s;
-  transition: color .2s;
+  margin-bottom: 8px;
+  transition: .2s;
+  z-index:2;
+  text-decoration: none;
+  box-shadow: 3px 3px 5px #000000;
 }
-.topnav a:hover {color:black;background-color:#ffc773;}
-
-#active {background-color:#ffcf75;}
+.topnav a:hover {color:black;background-color:var(--topnav-hover);box-shadow: 3px 3px 5px #ffffff;}
+#active {background-color:var(--topnav-hover);}
 
 @keyframes spread {
   from {opacity: 0;width: 60%;}
@@ -135,19 +152,18 @@ a:active {color: #ebc5a4;}
   margin-right: 7px;
   text-decoration: none;
   font-size: 17px;
-  background-color: #c67e24;
+  background-color: var(--minibox-bg);
   border-radius: 18px;
   width: 110px;
   animation-name: openx;
   animation-duration: 0.25s;
   animation-iteration-count: 1;
-  transition: background-color .2s;
-  transition: color .2s;
+  transition: .15s;
 }
-.button:hover {background-color:#d99744;transition:background-color .15s;}
+.button:hover {background-color:var(--neatbox-hover);}
 
 .off {opacity: 0.5;cursor: not-allowed;}
-.off:hover {background-color:#c67e24;transition:background-color .15s;}
+.off:hover {background-color:var(--minibox-bg);transition:background-color .15s;}
 
 .neatbutton {
   color: white;
@@ -155,7 +171,7 @@ a:active {color: #ebc5a4;}
   padding: 14px 16px;
   margin-right: 7px;
   font-size: 17px;
-  background-color: #c67e24;
+  background-color: var(--minibox-bg);
   border-radius: 18px;
   width: auto;
   height: auto;
@@ -164,20 +180,20 @@ a:active {color: #ebc5a4;}
   animation-iteration-count: 1;
   transition: background-color .2s;
 }
-.neatbutton:hover {background-color:#d99744;transition:background-color .15s;}
+.neatbutton:hover {background-color:var(--neatbox-hover);transition:background-color .15s;}
 
 .yellow {background-color: #c6a124;}
 .yellow:hover {background-color:#d9b744;transition:background-color .15s;}
 
 .blue {background-color: #2489c6;}
-.blue:hover {background-color:#43a4de;transition:background-color .15s;}
+.blue:hover {background-color:#53aade;transition:background-color .15s;}
 
 .linkbutton {
   color: black;
   display: block;
   width: 90%;
-  background-color: #f3a039;
-  border: 4px solid #ac6c1d;
+  background-color: var(--linkbutton-default);
+  border: 4px solid var(--linkbutton-bdr);
   border-radius: 8px;
   font-size: 20px;
   text-decoration: none;
@@ -190,14 +206,14 @@ a:active {color: #ebc5a4;}
   animation-duration: 0.45s;
   animation-iteration-count: 1;
 }
-.linkbutton:hover {background-color:#ffbe6d;width:91%;transition:width .15s;}
+.linkbutton:hover {background-color:var(--linkbutton-hover);width:91%;transition:width .15s;}
 
 details > summary {
   color: white;
   padding: 14px 16px;
   margin-right: 7px;
   font-size: 17px;
-  background-color: #c67e24;
+  background-color: var(--minibox-bg);
   border-radius: 18px;
   width: auto;
   height: auto;
@@ -206,17 +222,25 @@ details > summary {
   animation-iteration-count: 1;
   transition: background-color .2s;
 }
-details > summary:hover {background-color:#d99744;transition:background-color .15s;cursor:default;}
+details > summary:hover {background-color:var(--neatbox-hover);transition:background-color .15s;cursor:default;}
 
 details > p {
   color: white;
   padding: 7px 8px;
   margin-right: 7px;
   font-size: 16px;
-  background-color: #b37220;
+  background-color: var(--box-bdr);
   border-radius: 18px;
   width: auto;
   height: auto;
+}
+
+select {
+  color: white;
+  background-color: var(--infbox-bg);
+  border: 1px solid var(--linkbutton-bdr);
+  border-radius: 5px;
+  text-shadow:0.3px 1px 1px #000000;
 }
 
 .textcode {
@@ -234,9 +258,9 @@ details > p {
 /* lastfm now playing stuffs */
 
 #player-frame {
+  color: white;
   width: 50%;
-  height: 90px;
-  background-color: #c67e24;
+  height: 94px;
 }
 
 .refresh {
@@ -244,7 +268,3 @@ details > p {
   bottom: 10px;
   right: 10px;
 }
-
-
-
-

@@ -85,7 +85,7 @@ var splashes = [
     "I have a rash in an uncomfortable place.",
     "As I pull down this file menu, you will notice the word 'hope' does not appear. You will also notice there is no command M for 'miracle'.",
     "If bowling is an analogy for life, then bowling makes sense. Because it makes no f***in' sense.",
-    "\"In life is not if you nin or lose is if you me spice\", as the saying goes.",
+    "\'In life is not if you nin or lose is if you me spice\', as the saying goes.",
     "So, we're technically canon, right?",
     "This contact lense represents you, and my eye represents my eye.",
     "Typically, veggies can't be carried from room to room. However, since it was stuck in his head, this didn't apply.",
@@ -139,6 +139,17 @@ var splashes = [
     "The Concord Situation of 2024 is crazy.",
     "Roll up, roll up for the Misery Tour!",
     "Unregistered HyperCam 2",
+    "Ah, 'Snow White and the 7 Clever Boys' for the PS2, my favorite horror game.",
+    "Majority of the rights reserved... I think.",
+    "She didn’t have what it takes to survive in the cutthroat world of businesssssssss.",
+    "'This world is mine to craft.' -Bryan, the Hero",
+    "Bro made a guipplegorp-",
+    "According to all known laws of physics, there is no way Java should be able to compile.",
+    "No, I'm probably not okay. :/",
+    // ^ response to rylie eric quote
+    "Keep it simple, don't overdo it.",
+    "ＮＯ ＭＵＳＩＣ",
+    "Thanks to you, I am a figure of ridicule within the market community.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
