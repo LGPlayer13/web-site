@@ -145,7 +145,7 @@ var splashes = [
     "'This world is mine to craft.' -Bryan, the Hero",
     "Bro made a guipplegorp-",
     "According to all known laws of physics, there is no way Java should be able to compile.",
-    "No, I'm probably not okay. :/",
+    "No, I'm probably not okay :/",
     // ^ response to rylie eric quote
     "Keep it simple, don't overdo it.",
     "ＮＯ ＭＵＳＩＣ",

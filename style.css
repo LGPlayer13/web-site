@@ -29,6 +29,7 @@ body, html, div {
   --marquee-bg:#e49636;
   --topnav-bg:#ffb03a;
   --topnav-hover:#ffc773;
+  --text-color:#000000;
   --text-shadow:#52350c;
   --link-default:#ffb676;
   --link-visited:#fcb271;
@@ -39,7 +40,7 @@ body, html, div {
 
 /* the "box" class is for your everyday boxes */
 .box {
-  color: black;
+  color: var(--text-color);
   position: relative;
   margin: auto;
   bottom: -10px;
@@ -54,11 +55,12 @@ body, html, div {
   text-align: center;
   word-wrap: break-word;
   transition: background-color .2s;
-  text-shadow:1px 1px 1px var(--text-shadow);
+  text-shadow: 1px 1px 1px var(--text-shadow);
   box-shadow: 5px 5px 5px #000000;
 }
 
 .minibox {
+  color: var(--text-color);
   background-color: var(--minibox-bg);
   border-radius: 12px;
   margin: auto;
@@ -73,6 +75,7 @@ body, html, div {
 }
 
 .infbox {
+  color: var(--text-color);
   background-color: var(--infbox-bg);
   border: 5px double var(--infbox-bdr);
   margin: auto;
@@ -205,13 +208,13 @@ a:active {color: var(--link-active);}
 .neatbutton:hover {background-color:var(--neatbox-hover);transition:background-color .15s;}
 
 .yellow {background-color: #c6a124;}
-.yellow:hover {background-color:#d9b744;transition:background-color .15s;}
+.yellow:hover {background-color: #d9b744;transition:background-color .15s;}
 
 .blue {background-color: #2489c6;}
-.blue:hover {background-color:#53aade;transition:background-color .15s;}
+.blue:hover {background-color: #53aade;transition:background-color .15s;}
 
 .linkbutton {
-  color: black;
+  color: var(--text-color);
   display: block;
   width: 90%;
   background-color: var(--linkbutton-default);
