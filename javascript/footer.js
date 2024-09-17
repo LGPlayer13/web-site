@@ -11,7 +11,7 @@ class Footer extends HTMLElement {
       </div>
 
       <sub style="color:white;position:relative;margin:auto;margin-top:15px;right:0;left:0;display:block;text-align:center;text-shadow:1px 1px 1px #000000;"><b>v2.0.3</b> • Hate these colors? Try a different theme:
-        <select id="selecttheme">
+        <select id="selectTheme">
           <option>George (orange)</option>
           <option>Cory (green)</option>
           <option>Greg (turquoise)</option>

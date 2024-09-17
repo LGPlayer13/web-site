@@ -1,5 +1,3 @@
-// thanks to fractyl for this handy code
-
 let theme = 0;
 let t = {
   change:function(variable,value){document.documentElement.style.setProperty(("--").concat(variable),value)},
@@ -19,7 +17,7 @@ let t = {
       t.change("topnav-hover","#ffc773")
       t.change("text-shadow","#52350c")
       t.change("link-default","#ffb676")
-      t.change("link-visited","#ffb676")
+      t.change("link-visited","#fcb271")
       t.change("link-hover","#ffd0a7")
       t.change("link-active","#ebc5a4")
       t.change("footer-bg","#cd7f1d");
@@ -65,7 +63,7 @@ let t = {
     t.save();
   },
   switch:function(){
-    theme = selecttheme.selectedIndex
+    theme = selectTheme.selectedIndex
     t.update();
   },
   save:function(){localStorage.setItem("theme", JSON.stringify({theme:theme}))},
@@ -74,7 +72,7 @@ let t = {
     if (localStorage.getItem("theme") !== null) {
       if (typeof savedTheme.theme !== "undefined") {
         theme = savedTheme.theme
-        document.getElementById("selecttheme").selectedIndex = savedTheme.theme
+        document.getElementById("selectTheme").selectedIndex = savedTheme.theme
       }
       t.update();
     }
@@ -83,12 +81,6 @@ let t = {
 
 t.load();
   
-var selecttheme = document.getElementById("selecttheme");
-selecttheme.onchange = t.switch;
-
-function imgsrcClassChange(classname, image) {
-  var images = document.getElementsByClassName(classname);
-  for (var i = 0; i < images.length; i++) {
-    images[i].src = image;
-  }
-}
+var selectTheme = document.getElementById("selectTheme");
+selectTheme.onchange = t.switch;
+// thanks to fractyl for this handy code

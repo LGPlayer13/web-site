@@ -15,6 +15,28 @@ body, html, div {
   font-style: normal;
 }
 
+/* these are the starting colors before choosing a theme */
+:root {
+  --box-bg:#d68a2b;
+  --box-bdr:#b37116;
+  --infbox-bg:#d38c33;
+  --infbox-bdr:#52330b;
+  --minibox-bg:#c67e24;
+  --neatbox-hover:#d99744;
+  --linkbutton-default:#f3a039;
+  --linkbutton-hover:#ffbe6d;
+  --linkbutton-bdr:#ac6c1d;
+  --marquee-bg:#e49636;
+  --topnav-bg:#ffb03a;
+  --topnav-hover:#ffc773;
+  --text-shadow:#52350c;
+  --link-default:#ffb676;
+  --link-visited:#fcb271;
+  --link-hover:#ffd0a7;
+  --link-active:#ebc5a4;
+  --footer-bg:#cd7f1d;
+}
+
 /* the "box" class is for your everyday boxes */
 .box {
   color: black;
