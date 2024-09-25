@@ -75,7 +75,7 @@ let t = {
       t.change("linkbutton-default","#5839f3")
       t.change("linkbutton-hover","#866dff")
       t.change("linkbutton-bdr","#351dac")
-      t.change("marquee-bg","#5336e4")
+      t.change("marquee-bg","#5b36e4")
       t.change("topnav-bg","#5b3aff")
       t.change("topnav-hover","#8167ff")
       t.change("text-color","#ffffff")

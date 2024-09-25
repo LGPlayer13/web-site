@@ -132,7 +132,7 @@ var splashes = [
     "Open your mouth wide... a universal sigh.",
     "I saw a guy do this in a toothpaste ad once.",
     "Where are my non-LG Productions-flavored blog posts?!",
-    "For some reason, a lot of Minecraft YouTubers confuse 18 with 12.",
+    "For some reason, a lot of Minecraft Youtubers confuse 18 with 12.",
     "Where do these stairs go? ...They go up.",
     "This calls for an EMERGENCY FROG SITUATION.",
     "UI's are like jokes. If you have to explain them, they are not good.",
@@ -150,6 +150,7 @@ var splashes = [
     "Keep it simple, don't overdo it.",
     "ＮＯ ＭＵＳＩＣ",
     "Thanks to you, I am a figure of ridicule within the market community.",
+    "I'd like a new hat.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
