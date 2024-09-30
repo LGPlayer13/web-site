@@ -99,7 +99,7 @@ var splashes = [
     "This marquee has given me too much power.",
     "Welcome to the George Series, you kinda joined at a low point.",
     "We don't have a bloomin' onion, we have a bloomin' PUMPKIN!",
-    "Let's go on an adventure! Why? ...because we're tighter than bark on a tree! Oh, ok.",
+    "Let's go on an adventure! Why? ...Because we're tighter than bark on a tree!",
     "Why does it take more than three squirrels to change a lightbulb? Because they're so darn stupid and ugli.",
     "Taking a bite of McDonald's Doom Burger tastes like heaven, the second bite can take you there.",
     "I know a good rye when I see one.",
@@ -151,6 +151,7 @@ var splashes = [
     "ＮＯ ＭＵＳＩＣ",
     "Thanks to you, I am a figure of ridicule within the market community.",
     "I'd like a new hat.",
+    "We appreciate it very much, Tim Apple.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
