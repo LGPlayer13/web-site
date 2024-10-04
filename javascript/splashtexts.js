@@ -108,7 +108,7 @@ var splashes = [
     "99% of gamblers quit before the big win!",
     "Someone stop this criminal, this is not forgivable!",
     "That evil individual, this is just unthinkable!",
-    "Don’t you think this is all a little unfair? ...yes.",
+    "Don’t you think this is all a little unfair? ...Yes.",
     "I am the yeast of thoughts and mind.",
     "New Objective: Wait in the line of slaves.",
     "Hey look, ramps! We can use these as ramps!",
@@ -152,6 +152,10 @@ var splashes = [
     "Thanks to you, I am a figure of ridicule within the market community.",
     "I'd like a new hat.",
     "We appreciate it very much, Tim Apple.",
+    "I bought 99 boxes of ammo, and you're telling me not one person in this family had the ability to shoot Inspector Gadget with just one bullet before he stole 9 oxen?",
+    "I'm the guy who listens to the same 5 songs and then switches them 2 months later",
+    "This game makes no ham sense.",
+    "You could stop at five or six stores, or just one. I can't stand it when she touches me.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];

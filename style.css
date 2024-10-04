@@ -278,9 +278,12 @@ select {
   text-shadow:0.3px 1px 1px #000000;
 }
 
-/* scrollbar customization!! (it doesn't work...) */
+/* scrollbar customization! it works now!! */
 
-::-webkit-scrollbar-track {background:#cd862c;}
+::-webkit-scrollbar {width:16px;}
+::-webkit-scrollbar-track {background:var(--linkbutton-bdr);}
+::-webkit-scrollbar-thumb {background:var(--marquee-bg);background-clip:content-box;border-radius:10px;border:3px solid transparent;}
+::-webkit-scrollbar-thumb:hover {background:var(--linkbutton-default);background-clip:content-box;}
 
 /* lastfm now playing stuffs */
 
