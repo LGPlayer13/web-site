@@ -38,18 +38,19 @@ body, html, div {
   --footer-bg:#cd7f1d;
 }
 
-/* the "box" class is for your everyday boxes */
+/* the "box" class is used to assemble different sections on this here site */
 .box {
   color: var(--text-color);
+  background-color: var(--box-bg);
+  border: 4px var(--box-bdr);
+  border-style: hidden solid hidden solid;
   position: relative;
   margin: auto;
   bottom: -10px;
   right: 0;
   left: 0;
-  background-color: var(--box-bg);
-  border: 4px var(--box-bdr);
-  border-style: hidden solid hidden solid;
   width: 67%;
+  max-width: 1570px;
   height: auto;
   display: block;
   text-align: center;
@@ -59,6 +60,7 @@ body, html, div {
   box-shadow: 5px 5px 5px #000000;
 }
 
+/* used for smaller containers containing information that's contained within them */
 .minibox {
   color: var(--text-color);
   background-color: var(--minibox-bg);
@@ -74,6 +76,7 @@ body, html, div {
   animation-iteration-count: 1;
 }
 
+/* the "infbox" class is used for boxes within the main boxes, am i right or am i right */
 .infbox {
   color: var(--text-color);
   background-color: var(--infbox-bg);
@@ -88,6 +91,7 @@ body, html, div {
   overflow-y:auto;
 }
 
+/* woah, you go big guy */
 #flex {display: flex;}
 
 /* the "update" class is for updates and various other links */
@@ -95,7 +99,7 @@ body, html, div {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), inset 0px 2px 1px rgba(255, 255, 255, 0.3), inset 0px -2px 1px rgba(0, 0, 0, 0.4);
 }
 
-/* these following 4 css thingys are for link colors */
+/* used for the link colors */
 a:link {color: var(--link-default);}
 a:visited {color: var(--link-visited);}
 a:hover {color: var(--link-hover);}
@@ -115,7 +119,6 @@ a:active {color: var(--link-active);}
   text-align: center;
   z-index: 1;
 }
-
 .topnav li {display: inline;}
 
 /* the "topnav a" class is for the Navbar buttons */
@@ -134,9 +137,10 @@ a:active {color: var(--link-active);}
   text-decoration: none;
   box-shadow: 3px 3px 5px #000000;
 }
-.topnav a:hover {color:black;background-color:var(--topnav-hover);box-shadow: 3px 3px 5px #ffffff;}
+.topnav a:hover {color:black;background-color:var(--topnav-hover);box-shadow:3px 3px 5px #ffffff;}
 #active {background-color:var(--topnav-hover);}
 
+/* the different animations that play throughout the site */
 @keyframes spread {
   from {opacity: 0;width: 60%;}
   to {opacity: 1;width: 90%;}
@@ -153,7 +157,13 @@ a:active {color: var(--link-active);}
   from {transform: scaleX(0.1);}
   to {transform: scaleX(1);}
 }
+@keyframes flash {
+  0% {color:var(--text-color);background-color:var(--minibox-bg);}
+  50% {color:#ffffff;background-color: var(--marquee-bg);}
+  100% {color:var(--text-color);background-color:var(--minibox-bg);}
+}
 
+/* these are classes that activate the animations from above */
 .openy {
   animation-name: openy;
   animation-duration: 0.2s;
@@ -164,12 +174,18 @@ a:active {color: var(--link-active);}
   animation-duration: 0.2s;
   animation-iteration-count: 1;
 }
+.flash {
+  animation-name: flash;
+  animation-duration: 0.75s;
+  animation-iteration-count: 3;
+}
 .bounce:active {
   animation-name: bounce;
   animation-duration: 0.2s;
   animation-iteration-count: 1;
 }
 
+/* it's a button (e.g. blog pages, games sub-pages) */
 .button {
   color: white;
   position: relative;
@@ -187,11 +203,12 @@ a:active {color: var(--link-active);}
   transition: .15s;
   z-index: 1;
 }
-.button:hover {background-color:var(--neatbox-hover);}
 
+/* access denied */
 .off {opacity: 0.5;cursor: not-allowed;}
 .off:hover {background-color:var(--minibox-bg);transition:background-color .15s;}
 
+/* these are pretty neat if i do say so myself */
 .neatbutton {
   color: white;
   display: block;
@@ -207,14 +224,18 @@ a:active {color: var(--link-active);}
   animation-iteration-count: 1;
   transition: background-color .2s;
 }
-.neatbutton:hover {background-color:var(--neatbox-hover);transition:background-color .15s;}
 
+/* hovering code */
+.neatbutton:hover,.minihover:hover,.button:hover {background-color:var(--neatbox-hover);transition:background-color .15s;}
+
+/* scratch/igm game buttons in the Games page */
 .yellow {background-color: #c6a124;}
 .yellow:hover {background-color: #d9b744;transition:background-color .15s;}
 
 .blue {background-color: #2489c6;}
 .blue:hover {background-color: #53aade;transition:background-color .15s;}
 
+/* website link buttons */
 .linkbutton {
   color: var(--text-color);
   display: block;
@@ -235,6 +256,7 @@ a:active {color: var(--link-active);}
 }
 .linkbutton:hover {background-color:var(--linkbutton-hover);width:91%;transition:width .15s;}
 
+/* FAQ page stuffs */
 details > summary {
   color: white;
   padding: 14px 16px;
@@ -262,6 +284,7 @@ details > p {
   height: auto;
 }
 
+/* theme selector in the footer */
 select {
   color: white;
   background-color: var(--infbox-bg);
@@ -279,14 +302,12 @@ select {
 }
 
 /* scrollbar customization! it works now!! */
-
 ::-webkit-scrollbar {width:16px;}
 ::-webkit-scrollbar-track {background:var(--linkbutton-bdr);}
 ::-webkit-scrollbar-thumb {background:var(--marquee-bg);background-clip:content-box;border-radius:10px;border:3px solid transparent;}
 ::-webkit-scrollbar-thumb:hover {background:var(--linkbutton-default);background-clip:content-box;}
 
 /* lastfm now playing stuffs */
-
 #player-frame {
   color: white;
   width: 50%;

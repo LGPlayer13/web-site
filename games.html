@@ -11,6 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <script src="./javascript/footer.js" type="text/javascript" defer></script>
     <script src="./javascript/themes.js" type="text/javascript" defer></script>
+    <style>
+      .minihover {
+        color:var(--text-color);
+        text-decoration:none;
+      }
+      .minihover:link {color:var(--text-color);transition:color .2s, background-color .2s;}
+      .minihover:hover {color: #ffffff;}
+    </style>
   </head>
 <body>
     <div>
@@ -34,23 +42,24 @@
       <!-- <a style="color:#ffe5e5;font-size:16px;">No new releases yet. This will start scrolling when there's some new stuff.</a> -->
     </div>
   
-    <div class="box" id="flex" style="border-style:hidden solid dashed solid;">
-      <main style="width:50%;height:auto;padding-top:15px;padding-bottom:5px;">
-        <div style="background-color:#d6af2b;margin:auto;margin-bottom:7px;padding:7px;width:75%;border:5px double #52420b;text-align:left;"><b style="color:white;font-size:21px;">• SCRATCH GAMES •</b><br>
-          <a class="neatbutton yellow" style="color:#e4e4e4;margin-bottom:7px;text-decoration:none;animation-delay:0.00s;" href="./games/george-series"><b style="font-size:24px;">George Series ▲</b><br><span style="color:#101010;text-shadow:1px 1px 1px #52510c;"><i>2021-2024</i> • Platformers • 1 Release, 2 In-dev</span></a>
-          <a class="neatbutton yellow" style="color:#e4e4e4;margin-bottom:7px;text-decoration:none;animation-delay:0.03s;" href="./games/sids-adventure"><b style="font-size:24px;">Sid's Adventure ■</b><br><span style="color:#101010;text-shadow:1px 1px 1px #52510c;"><i>September 2023</i> • Side-scrolling • Released</span></a>
-          <a class="neatbutton yellow" style="color:#e4e4e4;margin-bottom:7px;text-decoration:none;animation-delay:0.06s;" href="./games/lgs-remastered-collection"><b style="font-size:24px;">LG's Remastered Collection ●</b><br><span style="color:#101010;text-shadow:1px 1px 1px #52510c;"><i>March 2024</i> • Collection • 3 Releases</span></a>
-          <a class="neatbutton yellow" style="color:#e4e4e4;text-decoration:none;animation-delay:0.09s;" href="./games/super-scratch-melee"><b style="font-size:24px;">Super Scratch Melee ◆</b><br><span style="color:#101010;text-shadow:1px 1px 1px #52510c;"><i>2021-2022</i> • Turn-based • 1 Release, 1 Demo</span></a>
-        </div>
-        <p style="margin-top:0px;font-size:15px;">Widescreen ports of some games are available on my <a href="https://lgplayer13.itch.io/">itch.io page</a>.</p>
+    <div class="box" style="border-style:hidden solid dashed solid;cursor:default;">
+      <div style="margin:auto;padding:7px;padding-top:10px;width:75%;text-align:center;"><b style="color:white;font-size:21px;">• SCRATCH GAMES •</b><br><p style="margin-top:0px;margin-bottom:0px;font-size:15px;">Widescreen ports of some games are available on my <a href="https://lgplayer13.itch.io/">itch.io page</a>.</p></div>
+      <main style="display:flex;width:100%;height:auto;padding-top:5px;padding-bottom:5px;">
+        <a class="minibox minihover" href="./games/george-series" style="width:30%;animation-delay:0.00s;"><img src="./images/site_georgeseriesThumb.png" title="includes george 1 and...!" style="width:100%;"><b>George Series</b> • <i>2021-2024</i><br><span style="font-size:16px;">Platformers • 1 Release, 2 In-dev</span></a>
+        <a class="minibox minihover" href="./games/sids-adventure" style="width:30%;animation-delay:0.00s;"><img src="./images/site_sidThumb.png" title="sid the science kid leaked episode" style="width:100%;"><b>Sid's Adventure</b> • <i>09/2023</i><br><span style="font-size:16px;">Side-scrolling • Released</span></a>
+        <a class="minibox minihover" href="./games/lgs-remastered-collection" style="width:30%;animation-delay:0.00s;"><img src="./images/site_remcolThumb.png" title="WHAT, that is so soon... AMAZING" style="width:100%;"><b>LG's Remastered Collection</b> • <i>03/2024</i><br><span style="font-size:16px;">Point-and-Click • 3 Releases</span></a>
       </main>
-      <main style="width:50%;height:auto;padding-top:15px;padding-bottom:5px;">
-        <div style="background-color:#2ba5d6;margin:auto;margin-bottom:7px;padding:7px;width:75%;border:5px double #0b3e52;text-align:left;"><b style="color:white;font-size:21px;">• IGM GAMES •</b><br>
-          <a class="neatbutton blue" style="color:#e4e4e4;margin-bottom:7px;text-decoration:none;animation-delay:0.00s;" href="./games/the-lost-labyrinths"><b style="font-size:24px;">The Lost Labyrinths ↗</b><br><span style="color:#101010;text-shadow:1px 1px 1px #0c2552;"><i>August 2022</i> • Real-time fighting • Released</span></a>
-          <a class="neatbutton blue" style="color:#e4e4e4;margin-bottom:7px;text-decoration:none;animation-delay:0.03s;" href="./games/sms-24"><b style="font-size:24px;">Stone Mine Simulator 2024 ⛏</b><br><span style="color:#101010;text-shadow:1px 1px 1px #0c2552;"><i>August 2024</i> • Clicking/Idle • Released</span></a>
-          <a class="neatbutton blue" style="color:#e4e4e4;text-decoration:none;animation-delay:0.06s;" href="./games/fire-forge"><b style="font-size:24px;">Fire Forge ☼</b><br><span style="color:#101010;text-shadow:1px 1px 1px #0c2552;"><i>2024</i> • Tech-based • In-dev</span></a>
-        </div>
-        <p style="margin-top:0px;font-size:15px;">Here's a neat list of <a href="./games/completed-igm-games">all the IGM games I've completed</a>.</p>
+      <main style="display:flex;width:100%;height:auto;padding-top:5px;padding-bottom:8px;">
+        <a class="minibox minihover" href="./games/super-scratch-melee" style="width:30%;animation-delay:0.03s;"><img src="./images/site_ssmThumb.png" title="super duper scratch blitz fighters ultimate" style="width:100%;"><b>Super Scratch Melee</b> • <i>2021-2022</i><br><span style="font-size:16px;">Turn-based • 1 Release, 1 Demo</span></a>
+      </main>
+    </div>
+  
+    <div class="box" style="border-style:hidden solid dashed solid;cursor:default;">
+      <div style="margin:auto;padding:7px;padding-top:10px;width:75%;text-align:center;"><b style="color:white;font-size:21px;">• IGM GAMES •</b><br><p style="margin-top:0px;margin-bottom:0px;font-size:15px;">Here's a neat list of <a href="./games/completed-igm-games">all the IGM games I've completed</a>.</p></div>
+      <main style="display:flex;width:100%;height:auto;padding-top:5px;padding-bottom:8px;">
+        <a class="minibox minihover" href="./games/the-lost-labyrinths" style="width:30%;animation-delay:0.00s;"><img src="./images/site_tllThumb.png" title="wait is that gabe newell" style="width:100%;"><b>The Lost Labyrinths</b> • <i>08/2022</i><br><span style="font-size:16px;">Real-time fighting • Released</span></a>
+        <a class="minibox minihover" href="./games/sms-24" style="width:30%;animation-delay:0.00s;"><img src="./images/site_sms24Thumb.png" title="made by our finest interns!" style="width:100%;"><b>Stone Mine Simulator 2024</b> • <i>08/2024</i><br><span style="font-size:16px;">Clicking/Idle • Released</span></a>
+        <a class="minibox minihover" href="./games/fire-forge" style="width:30%;animation-delay:0.00s;"><img src="./images/site_ffThumb.png" title="some other third thing" style="width:100%;"><b>Fire Forge</b> • <i>??/2024</i><br><span style="font-size:16px;">Tech-based • In-dev</span></a>
       </main>
     </div>
     
@@ -59,7 +68,7 @@
     <div class="box">
       <main style="width:100%;height:auto;padding-top:20px;padding-bottom:15px;">
         <div class="infbox"><b style="color:white;font-size:21px;">• MISC. LORE POSTS •</b><br>
-          <a class="neatbutton" style="color:#e4e4e4;margin-bottom:7px;text-decoration:none;animation-delay:0.06s;" href="./lore/the-demon"><b style="font-size:24px;">The Demon ★</b><br><span style="color:var(--text-colordev);"><i>December 2023</i> • Humor...?</span></a>
+          <a class="neatbutton" style="color:#e4e4e4;margin-top:3px;margin-bottom:7px;text-decoration:none;animation-delay:0.06s;" href="./lore/the-demon"><b style="font-size:24px;">The Demon ★</b><br><span style="color:var(--text-colordev);"><i>December 2023</i> • Humor...?</span></a>
           <a class="neatbutton" style="color:#e4e4e4;text-decoration:none;animation-delay:0.09s;" href="./lore/the-demon-ii"><b style="font-size:24px;">The Demon II ★</b><br><span style="color:var(--text-colordev);"><i>January 2024</i> • More humor...?</span></a>
         </div>
       </main>

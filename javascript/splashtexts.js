@@ -156,6 +156,8 @@ var splashes = [
     "I'm the guy who listens to the same 5 songs and then switches them 2 months later",
     "This game makes no ham sense.",
     "You could stop at five or six stores, or just one. I can't stand it when she touches me.",
+    "Did you just riff yourself?",
+    "If you cannot push the button, I cannot help you.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
