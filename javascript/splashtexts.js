@@ -158,6 +158,11 @@ var splashes = [
     "You could stop at five or six stores, or just one. I can't stand it when she touches me.",
     "Did you just riff yourself?",
     "If you cannot push the button, I cannot help you.",
+    "Beginner is too hard, we are going to intermediate.",
+    "Avoid discussing how bad you think modern Minecraft or Mojang are. Everything that could possibly be said on this subject has been said by now.",
+    "Hey, hey, hey! You're bad! You wanna try super beginner's course?",
+    "The first night is never usually that Portuguese.",
+    "HE JUMPED FOR THE BEEF???",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];

@@ -23,6 +23,10 @@ let t = {
       t.change("link-hover","#ffd0a7")
       t.change("link-active","#ebc5a4")
       t.change("footer-bg","#cd7f1d");
+      t.change("background","linear-gradient(135deg, #271b61, #3c2e84)");
+      imgsrcChange("georgie","/images/site_gregoe.png");
+      imgsrcChange("coryy","/images/site_cor the e.png");
+      imgsrcChange("sidgang","/images/site_sids_gang.png");
     } else if (theme == 1) {
       t.change("box-bg","#32cf2c")
       t.change("box-bdr","#16b31e")
@@ -44,6 +48,10 @@ let t = {
       t.change("link-hover","#b6ffba")
       t.change("link-active","#adedb0")
       t.change("footer-bg","#20c428");
+      t.change("background","linear-gradient(135deg, #271b61, #3c2e84)");
+      imgsrcChange("georgie","/images/site_gregoe.png");
+      imgsrcChange("coryy","/images/site_cor the e.png");
+      imgsrcChange("sidgang","/images/site_sids_gang.png");
     } else if (theme == 2) {
       t.change("box-bg","#2bd6bc")
       t.change("box-bdr","#16b39b")
@@ -65,6 +73,10 @@ let t = {
       t.change("link-hover","#d0fff6")
       t.change("link-active","#b0ede1")
       t.change("footer-bg","#1fc8b5");
+      t.change("background","linear-gradient(135deg, #271b61, #3c2e84)");
+      imgsrcChange("georgie","/images/site_gregoe.png");
+      imgsrcChange("coryy","/images/site_cor the e.png");
+      imgsrcChange("sidgang","/images/site_sids_gang.png");
     } else if (theme == 3) {
       t.change("box-bg","#4f2bd6")
       t.change("box-bdr","#3e16b3")
@@ -86,6 +98,35 @@ let t = {
       t.change("link-hover","#cbc1ff")
       t.change("link-active","#beb3f7")
       t.change("footer-bg","#4825ca");
+      t.change("background","linear-gradient(135deg, #271b61, #3c2e84)");
+      imgsrcChange("georgie","/images/site_gregoe.png");
+      imgsrcChange("coryy","/images/site_cor the e.png");
+      imgsrcChange("sidgang","/images/site_sids_gang.png");
+    } else if (theme == 4) {
+      t.change("box-bg","#d75e2b")
+      t.change("box-bdr","#b55127")
+      t.change("infbox-bg","#d36433")
+      t.change("infbox-bdr","#521e0b")
+      t.change("minibox-bg","#c64f24")
+      t.change("neatbox-hover","#d96d44")
+      t.change("linkbutton-default","#f36d39")
+      t.change("linkbutton-hover","#ff966d")
+      t.change("linkbutton-bdr","#ac451d")
+      t.change("marquee-bg","#e46838")
+      t.change("topnav-bg","#ff793a")
+      t.change("topnav-hover","#ff9a73")
+      t.change("text-color","#000000")
+      t.change("text-colordev","#4a4a4a")
+      t.change("text-shadow","#521f0c")
+      t.change("link-default","#ff9c76")
+      t.change("link-visited","#fc9871")
+      t.change("link-hover","#ffbfa7")
+      t.change("link-active","#ebb8a4")
+      t.change("footer-bg","#cd4f1d");
+      t.change("background","linear-gradient(135deg, #0a0020, #0a0a0a)");
+      imgsrcChange("georgie","/images/site_gregoeH.png");
+      imgsrcChange("coryy","/images/site_cor the eH.png");
+      imgsrcChange("sidgang","/images/site_sids_gangH.png");
     }
     t.save();
   },
@@ -110,4 +151,11 @@ t.load();
   
 var selectTheme = document.getElementById("selectTheme");
 selectTheme.onchange = t.switch;
+
+function imgsrcChange(classname, image) {
+  var images = document.getElementsByClassName(classname);
+  for (var i = 0; i < images.length; i++) {
+    images[i].src = image;
+  }
+}
 // thanks to fractyl for this handy code

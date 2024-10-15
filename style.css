@@ -3,7 +3,8 @@ body {
   overflow-y: auto;
   margin-bottom: 0%;
   background-attachment: fixed;
-  background-image: linear-gradient(135deg, #271b61, #3c2e84);
+  background-image: var(--background);
+  transition: background .5s;
   padding-bottom: 100px;
 }
 
@@ -36,6 +37,7 @@ body, html, div {
   --link-hover:#ffd0a7;
   --link-active:#ebc5a4;
   --footer-bg:#cd7f1d;
+  --background:linear-gradient(135deg, #271b61, #3c2e84);
 }
 
 /* the "box" class is used to assemble different sections on this here site */
@@ -304,8 +306,8 @@ select {
 /* scrollbar customization! it works now!! */
 ::-webkit-scrollbar {width:16px;}
 ::-webkit-scrollbar-track {background:var(--linkbutton-bdr);}
-::-webkit-scrollbar-thumb {background:var(--marquee-bg);background-clip:content-box;border-radius:10px;border:3px solid transparent;}
-::-webkit-scrollbar-thumb:hover {background:var(--linkbutton-default);background-clip:content-box;}
+::-webkit-scrollbar-thumb {background:var(--link-default);background-clip:content-box;border-radius:10px;border:3px solid transparent;}
+::-webkit-scrollbar-thumb:hover {background:var(--link-hover);background-clip:content-box;}
 
 /* lastfm now playing stuffs */
 #player-frame {

@@ -16,6 +16,7 @@ class Footer extends HTMLElement {
           <option>Cory (green)</option>
           <option>Greg (turquoise)</option>
           <option>Sid (purple)</option>
+          <option>Spook (halloween!)</option>
         </select>
       </sub>
     </footer>
