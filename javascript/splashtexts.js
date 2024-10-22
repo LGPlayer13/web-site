@@ -163,6 +163,10 @@ var splashes = [
     "Hey, hey, hey! You're bad! You wanna try super beginner's course?",
     "The first night is never usually that Portuguese.",
     "HE JUMPED FOR THE BEEF???",
+    "It's over. He's done. He's finished. It got worse. He is done. It's done. He's ruined. Finally finished. The end. It's over.",
+    "My boy. This peace is what all true warriors strive for.",
+    "So what have you done? Some of your light has come to dirt!",
+    "You know something has gone wrong when he switches to Chinese.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
