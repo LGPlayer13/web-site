@@ -121,7 +121,7 @@ main {width: 100%;order: 1;}
   position: relative;
   margin: auto;
   padding-top:3px;
-  padding-bottom: 1px;
+  padding-bottom: 0px;
   width: 67%;
   max-width: 1570px;
   height: auto;
@@ -129,6 +129,11 @@ main {width: 100%;order: 1;}
   right: 0;
   left: 0;
   box-shadow: 5px 5px 5px #000000;
+}
+@-moz-document url-prefix() {
+  .marquee {
+    padding-bottom: 6px;
+  }
 }
 
 /* sections that split off from the middle */
@@ -156,6 +161,7 @@ div.sector {padding: 0px !important;}
   padding: 10px;
   width: auto;
   text-align: left;
+  list-style-position: inside;
   overflow-y:auto;
 }
 .sector2 hr {border: 0;border-bottom: 2px dashed var(--border2);margin: 8px;width: auto;}
@@ -166,6 +172,7 @@ div.sector {padding: 0px !important;}
   margin: 15px;
   padding: 10px;
   width: auto;
+  list-style-position: inside;
 }
 .sector3 hr {border: 0;border-bottom: 2px dashed var(--embed-bg);margin: 8px;width: auto;}
 
@@ -201,6 +208,8 @@ div.sector {padding: 0px !important;}
   width: auto !important;
   text-decoration: none;
 }
+a.bubblehover:link {color: #ffffff !important;transition:color .2s, background-color .2s;}
+a.bubblehover:hover {color: var(--link-hover) !important;}
 
 /* it's a button (e.g. blog pages, games sub-pages) */
 .button {
@@ -381,9 +390,6 @@ a:visited {color: var(--link-visited);}
 a:hover {color: var(--link-hover);}
 a:active {color: var(--link-active);}
 
-a.bubblehover:link {color: #ffffff !important;transition:color .2s, background-color .2s;}
-a.bubblehover:hover {color: var(--link-hover) !important;}
-
 /* access denied */
 .off {opacity: 0.5;cursor: not-allowed;}
 .off:hover {background-color: var(--bubble-bg);transition: background-color .15s;}
@@ -462,6 +468,12 @@ select {
 ::-webkit-scrollbar-track {background: var(--sitelinkbutton-bdr);}
 ::-webkit-scrollbar-thumb {background: var(--link-default);background-clip: content-box;border-radius: 10px;border: 3px solid transparent;}
 ::-webkit-scrollbar-thumb:hover {background: var(--link-hover);background-clip: content-box;}
+
+/* firefox scrollbar customization */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--link-default) var(--sitelinkbutton-bdr);
+}
 
 /* lastfm now playing stuffs */
 #player-frame {
