@@ -381,8 +381,8 @@ a:visited {color: var(--link-visited);}
 a:hover {color: var(--link-hover);}
 a:active {color: var(--link-active);}
 
-.bubblehover:link {color: #ffffff !important;transition:color .2s, background-color .2s;}
-.bubblehover:hover {color: var(--link-hover) !important;}
+a.bubblehover:link {color: #ffffff !important;transition:color .2s, background-color .2s;}
+a.bubblehover:hover {color: var(--link-hover) !important;}
 
 /* access denied */
 .off {opacity: 0.5;cursor: not-allowed;}
