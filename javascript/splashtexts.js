@@ -32,7 +32,7 @@ var splashes = [
     "A cheeseburger, for eating? Eat it.",
     "The jungle is on fire, go go run go go get to spaceship.",
     "That's a dead kid. Yup.",
-    "At the end of the day, we've finally reached the peak.",
+    "What even are generations anyway? Like, are you talking about Pokémon generations? How about Sonic Generations?",
     "Hmm. We don't know the lyrics for this one.",
     "You'll have to guess the lyrics for this one.",
     "Looks like we don't have the lyrics for this song.",
@@ -62,6 +62,7 @@ var splashes = [
     "It's \"web site\" to me. I don't care what your \"website\" says.",
     "Look here bucko, \"web site\" at least stands out and doesn't interfere with that awful, woke \"website\" community.",
     "Mid CSS?! My good man, you update your site's CSS every 2 months! <i>And you're not even the one making it!</i> You're one to talk.",
+    "Oh, please. Your main page has a spinning... thing that you *always* complain about not working properly! Don't get me started on trying to resize the pages, or even the half-baked sub-pages!",
     // violence ends
     "Communications with beef boss's Wii Remote have been interrupted.",
     "What do you mean you don't agree with me? Do you know who you're dealing with?!",
@@ -167,6 +168,15 @@ var splashes = [
     "My boy. This peace is what all true warriors strive for.",
     "So what have you done? Some of your light has come to dirt!",
     "You know something has gone wrong when he switches to Chinese.",
+    "Bentley is inviting people to his birthday party. If he invites 3 people, how many people are at the birthday?",
+    "Just did a strange thing, now everything's pink.",
+    "And the winner of the Bake-Off is... nine dismembered bodies.",
+    "Why is it still raining? I did what I was supposed to. That's not fair.",
+    "Once the sun starts to go down, it'll start to get dark.",
+    "In my younger and more vulnerable years, my father gave me some advice that I've been turning over in my mind ever since.",
+    "Are wii gonna have a problem? You best switch up that attitude!",
+    "What are you, a pending transaction or what?",
+    "The can of root beer soda started yapping about how muscular its thighs were, despite not knowing where or if it has any thighs.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];

@@ -1,11 +1,11 @@
 /* for, y'know, basically the entire web site */
 body {
-  overflow-y: auto;
-  margin-bottom: 0%;
-  background-attachment: fixed;
+  color: #ffffff;
   background-image: var(--background);
-  transition: background .5s;
-  padding-bottom: 100px;
+  background-attachment: fixed;
+  margin-bottom: 0%;
+  padding-bottom: 48px;
+  overflow-y: auto;
 }
 
 /* font type and size */
@@ -16,22 +16,58 @@ body, html, div {
   font-style: normal;
 }
 
+/* transitions for ALl elements */
+* {
+  transition: background .5s;
+  transition: background-color .2s;
+  text-shadow: 1px 1px 1.5px #000000;
+}
+
+/*
+ORDER FOR PROPERTIES
+
+- display
+- color
+- float
+- opacity
+- background
+- border
+- position
+- margin
+- padding
+- width/height
+- max width/height
+- top/bottom/left/right
+- text align
+- text decoration
+- font size
+- list style
+- transition(s)
+- animation(s)
+- text shadow
+- box shadow
+- word wrap
+- overflow
+- cursor
+- z-index
+
+*/
+
 /* these are the starting colors before choosing a theme */
 :root {
-  --box-bg:#d68a2b;
-  --box-bdr:#b37116;
-  --infbox-bg:#d38c33;
-  --infbox-bdr:#52330b;
-  --minibox-bg:#c67e24;
-  --neatbox-hover:#d99744;
-  --linkbutton-default:#f3a039;
-  --linkbutton-hover:#ffbe6d;
-  --linkbutton-bdr:#ac6c1d;
+  --container-bg:#d68a2b;
+  --bubble-bg:#b17121;
+  --sector-bg:#c67e24;
+  --border1:#b37116;
+  --border2:#52330b;
+  --embed-bg:#d99744;
+  --faq-bg:#d1882d;
   --marquee-bg:#e49636;
   --topnav-bg:#ffb03a;
   --topnav-hover:#ffc773;
-  --text-color:#000000;
-  --text-shadow:#52350c;
+  --sitelinkbutton-default:#f3a039;
+  --sitelinkbutton-hover:#ffbe6d;
+  --sitelinkbutton-bdr:#b9731e;
   --link-default:#ffb676;
   --link-visited:#fcb271;
   --link-hover:#ffd0a7;
@@ -40,129 +76,260 @@ body, html, div {
   --background:linear-gradient(135deg, #271b61, #3c2e84);
 }
 
-/* the "box" class is used to assemble different sections on this here site */
-.box {
-  color: var(--text-color);
-  background-color: var(--box-bg);
-  border: 4px var(--box-bdr);
-  border-style: hidden solid hidden solid;
+/* used for container positioning */
+#order-left {order: 1;}
+#order-middle {order: 2;}
+#order-right {order: 3;}
+main {width: 100%;order: 1;}
+
+/* building blocks of the site */
+.container {
+  background-color: var(--container-bg);
+  border: 4px solid var(--border1);
+  border-style: dashed solid hidden solid;
   position: relative;
   margin: auto;
-  bottom: -10px;
-  right: 0;
-  left: 0;
+  padding-bottom: 1px;
   width: 67%;
   max-width: 1570px;
   height: auto;
-  display: block;
-  text-align: center;
+  bottom: -10px;
+  right: 0;
+  left: 0;
+  box-shadow: 5px 5px 5px #000000;
   word-wrap: break-word;
-  transition: background-color .2s;
-  text-shadow: 1px 1px 1px var(--text-shadow);
+}
+.containerblank {
+  border: 4px hidden var(--border1);
+  position: relative;
+  margin: auto;
+  padding-bottom: 1px;
+  width: 67%;
+  max-width: 1570px;
+  height: auto;
+  bottom: -10px;
+  right: 0;
+  left: 0;
+  word-wrap: break-word;
+}
+
+/* funny horizontally scrolling text with meaningful quotes */
+.marquee {
+  background-color: var(--marquee-bg);
+  border: 4px solid var(--border1);
+  border-style:dashed solid hidden solid;
+  position: relative;
+  margin: auto;
+  padding-top:3px;
+  padding-bottom: 1px;
+  width: 67%;
+  max-width: 1570px;
+  height: auto;
+  bottom: -10px;
+  right: 0;
+  left: 0;
   box-shadow: 5px 5px 5px #000000;
 }
 
+/* sections that split off from the middle */
+aside {width: 70%;}
+aside > hr {border: 0;border-bottom: 2px dashed var(--border1);margin: auto;width:75%;}
+
+.sector {
+  background-color: var(--sector-bg);
+  border: 3px outset var(--border2);
+  border-radius: 12px;
+  margin: 15px;
+  padding: 10px;
+  width: auto;
+}
+div.sector {padding: 0px !important;}
+.sector hr {border: 0;border-bottom: 3px solid var(--border2);margin: 0;margin-bottom: 12px;}
+.sector-text {background-color: var(--bubble-bg);padding: 1px;}
+.sector-text hr {border: 0;border-bottom: 2px dashed var(--embed-bg);margin: 8px;width: auto;}
+
+.sector2 {
+  background-color: var(--sector-bg);
+  border: 5px double var(--border2);
+  border-radius: 12px;
+  margin: 15px;
+  padding: 10px;
+  width: auto;
+  text-align: left;
+  overflow-y:auto;
+}
+.sector2 hr {border: 0;border-bottom: 2px dashed var(--border2);margin: 8px;width: auto;}
+
+.sector3 {
+  background-color: var(--sector-bg);
+  border-radius: 16px;
+  margin: 15px;
+  padding: 10px;
+  width: auto;
+}
+.sector3 hr {border: 0;border-bottom: 2px dashed var(--embed-bg);margin: 8px;width: auto;}
+
+.sector4 {
+  background-color: var(--sector-bg);
+  border-radius: 16px;
+  margin: 15px;
+  padding: 2px;
+  padding-bottom: 0px;
+  width: auto;
+}
+
 /* used for smaller containers containing information that's contained within them */
-.minibox {
-  color: var(--text-color);
-  background-color: var(--minibox-bg);
+.bubble {
+  background-color: var(--sector-bg);
   border-radius: 12px;
   margin: auto;
   margin-bottom: 7px;
   padding: 10px;
   width: 75%;
-  text-align: center;
-  transition: background-color .2s;
-  animation-name: openx;
-  animation-duration: 0.2s;
+}
+.artbox {
+  background-color: var(--sector-bg);
+  border-radius: 12px;
+  margin: auto;
+  padding: 10px;
+  width: 75%;
+}
+
+.bubblehover {
+  display: block !important;
+  margin: 10px !important;
+  width: auto !important;
+  text-decoration: none;
+}
+.bubblehover:link {color: #ffffff !important;transition:color .2s, background-color .2s;}
+.bubblehover:hover {color: var(--link-hover) !important;}
+
+/* it's a button (e.g. blog pages, games sub-pages) */
+.button {
+  display: inline-block;
+  background-color: var(--bubble-bg);
+  border-radius: 18px;
+  margin: auto;
+  padding: 14px 16px;
+  width: 110px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: .15s;
+  z-index: 1;
+}
+.buttonwide {
+  display: inline-block;
+  background-color: var(--bubble-bg);
+  border-radius: 18px;
+  margin: auto;
+  padding: 14px 16px;
+  width: 80%;
+  text-decoration: none;
+  font-size: 17px;
+  transition: .15s;
+  z-index: 1;
+}
+
+/* these are pretty neat if i do say so myself */
+.linkbutton {
+  color:#e4e4e4 !important;
+  background-color: var(--bubble-bg);
+  border-radius: 18px;
+  margin-right: 7px;
+  padding: 14px 16px;
+  width: auto;
+  text-decoration: none;
+  font-size: 17px;
+  animation-name: openy;
+  animation-duration: 0.25s;
   animation-iteration-count: 1;
 }
 
-/* the "infbox" class is used for boxes within the main boxes, am i right or am i right */
-.infbox {
-  color: var(--text-color);
-  background-color: var(--infbox-bg);
-  border: 5px double var(--infbox-bdr);
+/* hovering code */
+.linkbutton:hover,.bubblehover:hover,.button:hover,.buttonwide:hover {background-color: var(--embed-bg);transition: background-color .15s;}
+
+/* website link buttons in the About page */
+.sitelinkbutton {
+  color: #ffffff !important;
+  background-color: var(--sitelinkbutton-default);
+  border: 4px solid var(--sitelinkbutton-bdr);
+  border-radius: 8px;
   margin: auto;
-  margin-bottom: 7px;
-  padding: 7px;
-  width: 75%;
-  height: auto;
+  margin-bottom: 5px;
+  padding: 3px;
+  width: 90%;
+  height: 70px;
   text-align: left;
-  transition: background-color .2s;
-  overflow-y:auto;
+  text-decoration: none;
+  font-size: 20px;
+  transition: .15s;
+  cursor: pointer;
 }
-
-/* woah, you go big guy */
-#flex {display: flex;}
-
-/* the "update" class is for updates and various other links */
-.update {
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), inset 0px 2px 1px rgba(255, 255, 255, 0.3), inset 0px -2px 1px rgba(0, 0, 0, 0.4);
-}
-
-/* used for the link colors */
-a:link {color: var(--link-default);}
-a:visited {color: var(--link-visited);}
-a:hover {color: var(--link-hover);}
-a:active {color: var(--link-active);}
+.sitelinkbutton:hover {background-color: var(--sitelinkbutton-hover);width: 91%;}
 
 /* the "topnav" class is for the Navbar */
 .topnav {
+  border: 1px hidden #000000;
   position: sticky;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  border: 1px hidden #000000;
+  width: 100%;
   list-style: none;
   list-style-type: none;
-  text-shadow: 1px 1px 1px var(--text-shadow);
-  width:100%;
-  text-align: center;
+  overflow: hidden;
+  cursor: default;
   z-index: 1;
 }
 .topnav li {display: inline;}
 
-/* the "topnav a" class is for the Navbar buttons */
-.topnav a {
-  color: white;
-  background-color: var(--topnav-bg);
-  display: inline-block;
-  padding: 14px 16px;
-  margin-right: 7px;
-  font-size: 17px;
-  border-radius: 18px;
-  width: 110px;
-  margin-bottom: 8px;
-  transition: .2s;
-  z-index:2;
-  text-decoration: none;
-  box-shadow: 3px 3px 5px #000000;
+/* headers for sectors */
+h3 {
+  border-bottom: 2px dashed var(--border2);
+  margin: 5px 0px 0px 0px;
+  padding-top: 1px;
+  padding-bottom: 4px;
+  text-shadow: 2px 2px 2px #000000;
 }
-.topnav a:hover {color:black;background-color:var(--topnav-hover);box-shadow:3px 3px 5px #ffffff;}
-#active {background-color:var(--topnav-hover);}
+h4 {
+  margin: 11px 0px 10px 0px;
+  font-size: 1.17em;
+  text-shadow: 2px 2px 2px #000000;
+}
+.sector2 h3 {border-bottom: 0;padding-top: 0;margin: 0;}
+.sector3 h3 {margin-bottom:5px;}
+.sector h2 {border-bottom: 0;padding-top: 0;margin: 10px 10px 0px 10px;text-shadow: 2px 2px 2px #000000;}
 
-/* the different animations that play throughout the site */
-@keyframes spread {
-  from {opacity: 0;width: 60%;}
-  to {opacity: 1;width: 90%;}
+span > hr {
+  border: 0;
+  border-bottom: 2px dashed var(--border1);
+  margin: auto auto 6px auto;
+  width: 75%;
 }
-@keyframes bounce {
-  from {transform: scaleY(1.15)scaleX(0.9);}
-  to {transform: scaleY(1)scaleX(1);}
-}
-@keyframes openy {
-  from {transform: scaleY(0.1);}
-  to {transform: scaleY(1);}
-}
-@keyframes openx {
-  from {transform: scaleX(0.1);}
-  to {transform: scaleX(1);}
-}
-@keyframes flash {
-  0% {color:var(--text-color);background-color:var(--minibox-bg);}
-  50% {color:#ffffff;background-color: var(--marquee-bg);}
-  100% {color:var(--text-color);background-color:var(--minibox-bg);}
+
+/* display: block */ .container,.containerblank,.marquee,.linkbutton,.sitelinkbutton {display: block;}
+/* height: auto */ .container,.containerblank,.marquee,.linkbutton,.bubblehover,details > summary,details > main {height: auto;}
+/* text-align: center */ .container,.containerblank,.sector,.sector3,.sector4,.bubble,.artbox,.topnav {text-align: center;}
+/* openx animation */ .sector3,.sector4,.bubble,.button,.buttonwide {animation-name: openx;animation-duration: 0.25s;animation-iteration-count: 1;}
+
+/* the IDs */
+#flex {display: flex;} /* woah you go big guy */
+#flexcolumn {flex-direction: column;}
+#active {background-color: var(--topnav-hover);}
+
+/* classes used for a multitude of things */
+.top {border-radius: 20px 20px 0px 0px;border-style: solid solid hidden solid;}
+.footer {background-color: var(--footer-bg);border-radius: 0px 0px 20px 20px;border-style: solid;}
+.scroll {border-radius: 12px 6px 6px 12px;height: 311px;overflow-y: auto;} /* the border-radius accounts for the scrollbar (311 / 362) */
+.centerimage {display: flex;align-items: center;}
+.subtext {margin-top: -10px;font-size: 15px;}
+.smallfont {font-size: 16px;}
+.linkicon {float: left;margin-right: 6px;padding-top: 3px;padding-left: 3px;width: 64px;height: 64px;}
+.list-circle {list-style-type: circle;}
+.embed {
+  border: 4px solid var(--embed-bg);
+  border-radius: 10px;
+  margin: 5px 5px 0px 5px;
+  width: 95%;
 }
 
 /* these are classes that activate the animations from above */
@@ -187,131 +354,117 @@ a:active {color: var(--link-active);}
   animation-iteration-count: 1;
 }
 
-/* it's a button (e.g. blog pages, games sub-pages) */
-.button {
-  color: white;
-  position: relative;
-  display: inline-block;
-  padding: 14px 16px;
-  margin-right: 7px;
-  text-decoration: none;
-  font-size: 17px;
-  background-color: var(--minibox-bg);
-  border-radius: 18px;
-  width: 110px;
-  animation-name: openx;
-  animation-duration: 0.25s;
-  animation-iteration-count: 1;
-  transition: .15s;
-  z-index: 1;
+/* the different animations that play throughout the site */
+@keyframes spread {
+  from {opacity: 0;width: 60%;}
+  to {opacity: 1;width: 90%;}
 }
+@keyframes bounce {
+  from {transform: scaleY(1.15)scaleX(0.9);}
+  to {transform: scaleY(1)scaleX(1);}
+}
+@keyframes openy {
+  from {transform: scaleY(0.1);}
+  to {transform: scaleY(1);}
+}
+@keyframes openx {
+  from {transform: scaleX(0.1);}
+  to {transform: scaleX(1);}
+}
+@keyframes flash {
+  0% {color:var(--text-color);background-color:var(--sector-bg);}
+  50% {color:#ffffff;background-color: var(--marquee-bg);}
+  100% {color:var(--text-color);background-color:var(--sector-bg);}
+}
+
+/* used for link colors */
+a:link {color: var(--link-default);}
+a:visited {color: var(--link-visited);}
+a:hover {color: var(--link-hover);}
+a:active {color: var(--link-active);}
 
 /* access denied */
 .off {opacity: 0.5;cursor: not-allowed;}
-.off:hover {background-color:var(--minibox-bg);transition:background-color .15s;}
+.off:hover {background-color: var(--bubble-bg);transition: background-color .15s;}
 
-/* these are pretty neat if i do say so myself */
-.neatbutton {
-  color: white;
-  display: block;
-  padding: 14px 16px;
-  margin-right: 7px;
-  font-size: 17px;
-  background-color: var(--minibox-bg);
+/* the "topnav a" class is for the Navbar buttons */
+.topnav a {
+  display: inline-block;
+  color: #ffffff;
+  background-color: var(--topnav-bg);
   border-radius: 18px;
-  width: auto;
-  height: auto;
-  animation-name: openy;
-  animation-duration: 0.25s;
-  animation-iteration-count: 1;
-  transition: background-color .2s;
-}
-
-/* hovering code */
-.neatbutton:hover,.minihover:hover,.button:hover {background-color:var(--neatbox-hover);transition:background-color .15s;}
-
-/* scratch/igm game buttons in the Games page */
-.yellow {background-color: #c6a124;}
-.yellow:hover {background-color: #d9b744;transition:background-color .15s;}
-
-.blue {background-color: #2489c6;}
-.blue:hover {background-color: #53aade;transition:background-color .15s;}
-
-/* website link buttons */
-.linkbutton {
-  color: var(--text-color);
-  display: block;
-  width: 90%;
-  background-color: var(--linkbutton-default);
-  border: 4px solid var(--linkbutton-bdr);
-  border-radius: 8px;
-  font-size: 20px;
+  margin-right: 7px;
+  margin-bottom: 8px;
+  padding: 14px 16px;
+  width: 110px;
   text-decoration: none;
-  margin: auto;
-  transition-duration: 0.2s;
-  padding: 3px;
-  cursor: pointer;
-  text-align:left;
-  animation-name: spread;
-  animation-duration: 0.45s;
-  animation-iteration-count: 1;
+  font-size: 17px;
+  transition: .2s;
+  box-shadow: 3px 3px 5px #000000;
+  z-index: 2;
 }
-.linkbutton:hover {background-color:var(--linkbutton-hover);width:91%;transition:width .15s;}
+.topnav a:hover {color: #000000;background-color: var(--topnav-hover);box-shadow: 3px 3px 5px #ffffff;}
 
 /* FAQ page stuffs */
 details > summary {
-  color: white;
-  padding: 14px 16px;
-  margin-right: 7px;
-  font-size: 17px;
-  background-color: var(--minibox-bg);
+  background-color: var(--faq-bg);
   border-radius: 18px;
+  margin-right: 7px;
+  padding: 14px 16px;
   width: auto;
-  height: auto;
+  font-size: 17px;
   animation-name: openy;
   animation-duration: 0.25s;
   animation-iteration-count: 1;
-  transition: background-color .2s;
 }
-details > summary:hover {background-color:var(--neatbox-hover);transition:background-color .15s;cursor:default;}
+details > summary:hover {background-color: var(--marquee-bg);transition: background-color .15s;cursor: default;}
 
-details > p {
-  color: white;
-  padding: 7px 8px;
-  margin-right: 7px;
-  font-size: 16px;
-  background-color: var(--box-bdr);
+details > main {
+  background-color: var(--faq-bg);
   border-radius: 18px;
+  margin-right: 7px;
+  padding: 7px 8px;
   width: auto;
-  height: auto;
+  font-size: 16px;
 }
 
 /* theme selector in the footer */
 select {
-  color: white;
-  background-color: var(--infbox-bg);
-  border: 1px solid var(--linkbutton-bdr);
+  color: #ffffff;
+  background-color: var(--container-bg);
+  border: 1px solid var(--sitelinkbutton-bdr);
   border-radius: 5px;
-  text-shadow:0.3px 1px 1px #000000;
+  text-shadow: 0.3px 1px 1px #000000;
 }
 
-.textcode {
-  color:#919191;
-  border-radius:5px;
-  padding:0px 2px 0px 2px;
-  background-color:#737373;
-  text-shadow:0.3px 1px 1px #000000;
+/* lg products button copy instructions */
+.copyinst {
+  color: #ffffff;
+  background-color: var(--bubble-bg);
+  border: 2px solid var(--border2);
+  margin-bottom: 5px;
+  width: 85%;
+  max-width:300px;
+  font-size:10px;
+}
+
+/* rainbow text */
+.rainbow-text {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  text-shadow: 1px 1px 1.5px #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #0000;
 }
 
 /* scrollbar customization! it works now!! */
-::-webkit-scrollbar {width:16px;}
-::-webkit-scrollbar-track {background:var(--linkbutton-bdr);}
-::-webkit-scrollbar-thumb {background:var(--link-default);background-clip:content-box;border-radius:10px;border:3px solid transparent;}
-::-webkit-scrollbar-thumb:hover {background:var(--link-hover);background-clip:content-box;}
+::-webkit-scrollbar {width: 16px;}
+::-webkit-scrollbar-track {background: var(--sitelinkbutton-bdr);}
+::-webkit-scrollbar-thumb {background: var(--link-default);background-clip: content-box;border-radius: 10px;border: 3px solid transparent;}
+::-webkit-scrollbar-thumb:hover {background: var(--link-hover);background-clip: content-box;}
 
 /* lastfm now playing stuffs */
 #player-frame {
-  color: white;
+  color: #ffffff;
   width: 50%;
   height: 94px;
 }
@@ -320,4 +473,26 @@ select {
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+
+/* post list styles */
+#postlistdiv ul {
+  padding: 0;
+  font-size: 1.2em;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+#recentpostlistdiv ul {
+  padding: 0;
+  font-size: 19px;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+#recentpostlistdiv > b {
+  color: #ffffff;
+  font-size: 21px;
+}
+.moreposts {
+  margin-top: 0.2em;
+  font-size: 0.8em;
 }

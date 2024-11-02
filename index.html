@@ -12,93 +12,131 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <script src="./javascript/footer.js" type="text/javascript" defer></script>
     <script src="./javascript/themes.js" type="text/javascript" defer></script>
+    <style>
+      /* for the big image in the latest announcement */
+      a.bubble > img {
+        opacity: 0.875;
+        border-radius: 8px;
+        width: 100%;
+        transition: opacity .2s;
+      }
+      a.bubble:hover > img {opacity: 1;}
+    </style>
   </head>
-<body>
+  <body>
     <!--
       is any of this code good? i'm sure there's a million better ways to do this, but it's not what's on the inside that matters, it's on the outside. actually, that might just be a tiny bit backwards. eh.
-      my (future) web design teacher is gonna look at this and be like "what the hell did you do"
+      my web design teacher (if i ever get one!!) is gonna look at this and be like "what the hell did you do"
     -->
   
     <div>
-      <p><a style="display:block;position:relative;margin:auto;right:0;left:0;width:300px;height:auto;text-align:center;" href="index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
+      <p><a style="display:block;position:relative;margin:auto;right:0;left:0;width:300px;height:auto;text-align:center;" href="./index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
     </div>
   
     <ul class="topnav">
-      <li><a id="active" href="">Home</a></li>
+      <li><a id="active" href="./index">Home</a></li>
       <li><a href="./about">About</a></li>
-      <li><a href="./blog/top-post">Blog</a></li>
+      <li><a href="./blog">Blog</a></li>
       <li><a href="./games">Games</a></li>
-      <li><a href="./devlog">Devlog</a></li>
+      <li><a href="./faq">FAQ</a></li>
     </ul>
     
-    <div class="box" style="padding-bottom:1px;border-radius:28px 28px 0px 0px;border-style:solid solid hidden solid;">
-      <p>Welcome to the <i>official web site</i> for <b>LG Productions</b>, the creator of the George series.</p>
-      <p>Here you can find my games, project updates and events, my blog, important lore, and info about me.<br>Expect frequent updates, as I tinker and mess with this place often.</p>
+    <div class="container centerimage top">
+      <img class="bounce georgie" src="./images/site_gregoe.png" title="this is geroge the jumping dorito. he is a triangle who bounces occasionally" style="margin:auto 0 auto auto;padding:10px;width:73px;height:62.5px;"><p style="margin:auto 0 auto 0;vertical-align:middle;"><span style="font-size:22px;font-weight:bold;vertical-align:middle;">Welcome to the LG Productions web site!</span><br><span style="font-size:16px;">I'm the creator of the George Series.</span></p><img class="bounce coryy" src="./images/site_cor%20the%20e.png" title="this is geroge the jumping dorito. he is a triangle who bounces occasionally" style="margin:auto auto auto 0;padding:10px;width:37px;height:64px;">
     </div>
-  
-    <div class="box" style="background-color:var(--marquee-bg);border-style:dashed solid dashed solid;padding-top:3px;">
-      <marquee id="splashes" style="color:white;font-size:16px;"><script src="javascript/splashtexts.js"></script></marquee>
+    
+    <div class="marquee">
+      <marquee id="splashes" style="color:white;font-size:16px;"><script src="./javascript/splashtexts.js"></script></marquee>
     </div>
-    <!-- onmouseover="this.stop();" onmouseout="this.start();" use this for marquees -->
-  
-    <div class="box" id="flex">
-      <main style="width:25%;height:auto;padding-top:15px;padding-bottom:2px;">
-        <div class="infbox"><b style="color:white;font-size:21px;">• ABOUT ME •</b>
-          <br>Good morning! I'm a moody teen who makes neat games on Scratch and IGM.<br>-----<br>Welcome to my <i>web site</i> (space intentional), where I rant about stuff and edit these pages often.<br>-----<br>pronouns: he/him
+    
+    <div class="container" id="flex">
+      
+      <aside id="order-left">
+        <div class="sector2">
+          <h3>ABOUT ME</h3>Good morning! I'm a moody teen who makes games (sometimes).<br><br>Welcome to my <i>web site</i>, where I rant about stuff and edit these pages often.<hr><b>pronouns:</b> he/him
         </div>
-        <div class="minibox" style="animation-delay:0.00s;">Sign my <a href="https://lgplayer13.atabook.org/">guestbook</a>!<br>Check out the <a href="art-gallery">art gallery</a>!<br>I also <a href="https://www.albumoftheyear.org/user/lgplayer13/">rank albums</a> now.</div>
-        <div class="minibox" style="animation-delay:0.03s;"><a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=hexpqnnx&nd=9&style=23" border="0" alt="visitor counter"></a><br><u style="font-size:17px;">unique visitors</u></div>
+        <div class="sector2">
+          <h3>FUN STUFFS</h3><li>Sign my <a href="https://lgplayer13.atabook.org/">guestbook</a>!</li><li>Check out the <a href="art-gallery">art gallery</a>!</li><li>I also <a href="https://www.albumoftheyear.org/user/lgplayer13/">rank albums</a> now.</li>
+        </div>
+        <hr>
+        <div class="sector3" style="padding-top:6px;">
+          <a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=hexpqnnx&nd=9&style=23" border="0" alt="visitor counter" style="border-radius:0;margin-top:5px;width:auto;"></a><br><u style="font-size:16px;font-weight:600;">unique visitors!</u>
+        </div>
+        <div class="sector3" style="padding-bottom:0;">
+          <img src="./images/LG%20Productions%20Web%20Site%20Button.gif"><span style="margin:5px;"/><img src="./images/LG%20Productions%20Web%20Site%20Button%20Static.png"><br><span style="font-size:16px;font-weight:600;">Here's this site's button.</span><br><sup style="font-size:14px;">(feel free to use either one!)</sup>
+          <!-- <hr style="margin-top:0px;">
+          <textarea class="copyinst"><a href="https://lgplayer13.neocities.org/"><img src="(insert png/gif link)"></a></textarea> -->
+        </div>
+      </aside>
+      
+      <main id="flexcolumn">
+        <div class="sector">
+          <h3>LATEST ANNOUNCEMENT</h3>
+          <div class="sector-text">
+            <a class="bubble bubblehover" href="./games/sms-24"><img src="./images/site_sms24Thumb.png" title="made by our finest interns!">New game released: <b>Stone Mine Simulator 2024</b></a>
+          </div>
+          <hr>
+        </div>
+        <div class="sector">
+          <h3>RECENT POSTS</h3>
+          <div class="sector-text" style="padding-left:6px;text-align:left;">
+            <div id="recentpostlistdiv"></div>
+          </div>
+          <hr>
+        </div>
+        <p class="subtext">Check out the <a href="./blog">Blog</a> for the full list of posts.</p>
       </main>
-      <main style="width:50%;height:auto;padding-top:15px;padding-bottom:1px;">
-        <div class="infbox"><b style="color:white;font-size:21px;">• LATEST ANNOUNCEMENT •</b>
-          <a class="neatbutton" style="color:#e4e4e4;margin-top:3px;text-decoration:none;animation-delay:0.15s;" href="index"><b style="font-size:24px;">New Halloween theme (limited time!)</b><br><span style="color:var(--text-color);"><q style="color:var(--text-colordev);font-size:15px;">Posted on October 14, 2024 • Site Update</q></span></a>
-          <!-- delete the desc, remove the margin-bottom, add 'margin-top:3px;', give the arrow a margin-top:-8px, and make the posted text 15px -->
+      
+      <aside id="order-right">
+        <div class="sector2 list-circle">
+          <h3>SOCIAL LINKS</h3><li>videos: <a href="https://www.youtube.com/@LGPlayer13">youtube channel</a></li><li> streams: <a href="https://www.twitch.tv/lgplayer13">twitch channel</a><li> posts: <a href="https://bsky.app/profile/lgplayer13.bsky.social">bluesky page</a></li><hr><li> games: <a href="https://scratch.mit.edu/users/LGameMaker13">scratch page</a></li><li> ports: <a href="https://lgplayer13.itch.io/">itch.io page</a></li><li> music: <a href="https://lgplayer13.bandcamp.com/">bandcamp page</a></li>
         </div>
-        <div class="infbox"><b style="color:white;font-size:20px;">• THE AGENDA •</b>
-          <br>This is a roadmap of sorts to let you all know about what upcoming projects of mine are being made first.<br>-----<br>Next to the game is the engine I'm using to make it.<br><br>>>>ㅤ<b>George 1.5</b> / Scratch<br>>>ㅤ<b>Fire Forge</b> / IGM<br>>ㅤ<b>SSMB</b> / Scratch<br><br>Future projects will be announced in advance.
+        <hr>
+        <div class="sector2 scroll">
+          <h3>SITE UPDATES</h3><span class="smallfont"><i>11/02/24</i> - v2.1<li><b>fall season update!</b></li><li>improved site layout/design</li><li>overhauled the entire Blog</li><hr><i>10/03/24</i> - v2.0.5<li>new <a href="sitemap">Site Map</a> page</li><li>changed Blog links</li><li>customized scrollbars</li><hr><i>09/24/24</i> - v2.0.4<li>redesigned game sub-pages</li><li>overhauled Blog Backlog</li><li>some minor tweaks</li><hr><i>09/16/24</i> - v2.0.3<li>three new themes!</li><li>minor CSS additions</li><li>improved code</li><hr><i>09/02/24</i> - v2.0.2<li>some QOL changes</li><li>new secret page</li><li>misc. fixes/reworks</li><hr><i>08/15/24</i> - v2.0.1<li>embeds in index</li><li>new guestbook (again)</li><li>new widgets in About</li><hr><i>08/03/24</i> - v2.0<li>finished incomplete pages</li><li>moved back to Neocities</li><hr><i>08/01/24</i> - v2.0 (beta)<li>web site overhaul</li><li>couple pages added</li><li>several pages removed</li><hr><i>07/27/24</i><li>new secret page</li><hr><i>07/15/24</i> - v1.2_2<li>added music page</li><hr><i>06/07/24</i> - v1.2_1<li>web site redesign</li><li>new Guestbook page</li><li>removed Lore page</li><hr><i>04/19/24</i> - v1.2<li>new web site layout</li><li>streamlined development</li><li>proper announcements</li><hr><i>02/02/24</i><li>scratch project embeds</li><hr><i>01/28/24</i><li>first official Guestbook</li><hr><i>01/27/24</i> - v1.1<li>minor CSS changes</li><li>added new icons</li><hr><i>01/13/24</i> - v1.0_1<li><b>15th birthday update!</b></li><li>added Lore page</li><li>tidied up details</li><hr><i>01/01/24</i> - v1.0<li><b>new year's update!</b></li><li>finalized unfinished pages</li><li>established blog</li><hr><i>08/15/23</i> - v0.0<li>new GitHub site</li><li>added unfinished Games page</li><li>abandoned Neocities site</li><hr><i>04/13/23</i> - pre-v0.0<li>established the site</li><li>looks quite ugly</li><li>ah well</li></span>
         </div>
-        <p style="margin-top:0px;font-size:15px;">Check out the <a href="games">Games</a> page for more stuff of mine.</p>
-      </main>
-      <main style="width:25%;height:auto;padding-top:15px;padding-bottom:2px;">
-        <div class="infbox" style="list-style-type:circle;"><b style="color:white;font-size:21px;">• SOCIAL LINKS •</b>
-          <br><li>videos: <a href="https://www.youtube.com/@LGPlayer13">youtube channel</a></li><li> streams: <a href="https://www.twitch.tv/lgplayer13">twitch channel</a><li> posts: <a href="https://bsky.app/profile/lgplayer13.bsky.social">bluesky page</a></li>-----<br><li> games: <a href="https://scratch.mit.edu/users/LGameMaker13">scratch page</a></li><li> ports: <a href="https://lgplayer13.itch.io/">itch.io page</a></li><li> music: <a href="https://lgplayer13.bandcamp.com/">bandcamp page</a></li>
-        </div>
-        <div class="infbox" style="height:203px"><b style="color:white;font-size:21px;">• SITE UPDATES •</b>
-          <br><i>10/03/24</i> - v2.0.5<li>new <a href="sitemap">Site Map</a> page</li><li>changed Blog links</li><li>customized scrollbars<br><br><i>09/24/24</i> - v2.0.4<li>redesigned game sub-pages</li><li>overhauled Blog Backlog</li><li>some minor tweaks<br><br><i>09/16/24</i> - v2.0.3<li>three new themes!</li><li>minor CSS additions</li><li>improved code<br><br><i>09/02/24</i> - v2.0.2<li>some QOL changes</li><li>new secret page</li><li>misc. fixes/reworks<br><br><i>08/15/24</i> - v2.0.1<li>embeds in index</li><li>new guestbook (again)</li><li>new widgets in About<br><br><i>08/03/24</i> - v2.0<li>finished incomplete pages</li><li>moved back to Neocities<br><br><i>08/01/24</i> - v2.0 (beta)<li>web site overhaul</li><li>couple pages added</li><li>several pages removed<br><br><i>07/27/24</i><li>new secret page<br><br><i>07/15/24</i> - v1.2_2<li>added music page<br><br><i>06/07/24</i> - v1.2_1<li>web site redesign</li><li>new Guestbook page</li><li>removed Lore page<br><br><i>04/19/24</i> - v1.2<li>new web site layout</li><li>streamlined development</li><li>proper announcements<br><br><i>02/02/24</i><li>scratch project embeds<br><br><i>01/28/24</i><li>first official Guestbook<br><br><i>01/27/24</i> - v1.1<li>minor CSS changes</li><li>added new icons<br><br><i>01/13/24</i> - v1.0_1<li>15th birthday update</li><li>added Lore page</li><li>tidied up details<br><br><i>01/01/24</i> - v1.0<li>new year's update</li><li>finalized unfinished pages</li><li>established blog<br><br><i>08/15/23</i> - v0.0<li>new GitHub site</li><li>added unfinished Games page</li><li>abandoned Neocities site<br><br><i>04/13/23</i> - pre-v0.0<li>established the site</li><li>looks quite ugly</li><li>ah well<br><br>
-        </div>
-      </main>
+      </aside>
+      
     </div>
-    <!--
-    <div class="box" style="background:var(--marquee-bg);padding-bottom:5px;border-style:dashed solid dashed solid;padding-top:3px;">
-      <a style="color:#ffe5e5;font-size:16px;">If I ever join a webring, it'll go right here!</a>
+    
+    <div class="container" id="flex">
+      
+      <aside id="order-left">
+        <div class="sector">
+          <h3>'THE S' SERIES</h3>
+          <div class="sector-text">
+            <iframe class="embed" style="width:92%;height:120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2326800181/size=large/bgcol=ffffff/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lgplayer13.bandcamp.com/album/the-s-remixes">The S (Remixes) by LG Productions</a></iframe>
+            <iframe class="embed" style="width:92%;height:120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1311868612/size=large/bgcol=000000/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lgplayer13.bandcamp.com/album/the-s">The S by LG Productions</a></iframe>
+          </div>
+          <hr>
+        </div>
+        <p class="subtext">Visit my <a href="https://lgplayer13.bandcamp.com/">Bandcamp page</a> for more "outstanding" songs.</p>
+      </aside>
+      
+      <aside id="order-right">
+        <div class="sector">
+          <h3>DISCORD SERVER</h3>
+          <div class="sector-text">
+            <iframe src="https://discord.com/widget?id=1064646442318307349&theme=dark" class="embed" style="width:92%;height:258px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          </div>
+          <hr>
+        </div>
+        <p class="subtext">Join the Discord server and see who's online!</p>
+      </aside>
+      
     </div>
-    -->
-    <div class="box" id="flex" style="border-style:dashed solid hidden solid;">
-      <main style="width:50%;height:auto;padding-top:20px;padding-bottom:8px;">
-        <iframe class="infbox" style="height:120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2326800181/size=large/bgcol=ffffff/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lgplayer13.bandcamp.com/album/the-s-remixes">The S (Remixes) by LG Productions</a></iframe>
-        <iframe class="infbox" style="height:120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1311868612/size=large/bgcol=000000/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lgplayer13.bandcamp.com/album/the-s">The S by LG Productions</a></iframe>
-        <div class="minibox" style="border-radius:12px;margin:auto;margin-bottom:7px;padding:10px;width:75%;text-align:center;animation-delay:0.00s;">More can be found on my <a href="https://lgplayer13.bandcamp.com/">Bandcamp page</a>.</div>
-      </main>
-      <main style="width:50%;height:auto;padding-top:20px;padding-bottom:8px;">
-        <iframe src="https://discord.com/widget?id=1064646442318307349&theme=dark" class="infbox" style="height:300px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        <p style="margin-top:-3px;font-size:15px;">Join the Discord server and see who's online!</p>
-      </main>
-    </div>
-  
-    <div class="box" style="border-style:dashed solid hidden solid;">
-      <main style="width:100%;height:auto;padding-top:20px;padding-bottom:15px;">
-        <div class="infbox"><b style="color:white;font-size:21px;">• PATCH NOTES / v2.0.5 •</b>
-          <br><li>new <a href="sitemap">Site Map</a> page found in <a href="about-extras">About Extras</a></li><li>changed the <a href="./blog/top-post">Blog</a> links again</li><li>lists are now <i>actual lists</i> instead of the fake ones i was using</li><li>scrollbars are now <b>customized</b>! (themes also affect their colors)</li><li>retooled almost every page to utilize &lt;div&gt; tags instead of &lt;p&gt;</li><li>added a few new splashes i found in five seconds</li><li><i>shadow patch: overhauled the <a href="games">Games</a> page</i></li>
+    
+    <div class="container" id="flex">
+      
+      <main id="flexcolumn">
+        <div class="sector2">
+          <h3>PATCH NOTES / v2.1</h3><li>completely redid the site's layout and design, using more <i>rounded corners</i></li><li>overhauled the <i>entire</i> <a href="./blog">Blog</a>, which now uses Zonelets</li><li>every Blog-related link and page has been changed</li><li>archived the <a href="./posts/old-blog">Old Blog</a>, <a href="./posts/old-backlog">Old Backlog</a>, and the <a href="./posts/old-devlog">Old Devlog</a></li><li>moved the Lore posts to the Blog page</li><li>new sub-page for <a href="./games/george-1.5">George 1.5</a></li><li>more splashes. you can never have enough of them</li><li>added my new <a href="https://bsky.app/profile/lgplayer13.bsky.social">Bluesky page</a> to the front page. down with X/twitter</li><li>the devlog hasn't been affected, but i might come for it next</li>
         </div>
       </main>
+      
     </div>
-    <!--
-        <p style="margin:auto;margin-bottom:7px;padding:7px;padding-bottom:8px;width:75%;height:300px;border:5px double #52330b;text-align:center;">
-          <a href="./games/george-series"><img src="./images/site_georgeseries.svg" title="oh look! a singular complete game (remaster)!" style="cursor:pointer;width:calc(100% - 3px);height:100.5%;"></a>
-        </p>
-        <span style="margin-top:-3px;font-size:15px;">Check out the George Series here!</span>
-    -->
-  
+    
+    <script src="./javascript/blog.js"></script>
     <footer-component></footer-component>
   </body>
 </html>

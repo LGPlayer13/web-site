@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LG Productions • Blog</title>
+    <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="./javascript/footer.js" type="text/javascript" defer></script>
+    <script src="./javascript/themes.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <div>
+      <p><a style="display:block;position:relative;margin:auto;right:0;left:0;width:300px;height:auto;text-align:center;" href="./index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
+    </div>
+  
+    <ul class="topnav">
+      <li><a href="./index">Home</a></li>
+      <li><a href="./about">About</a></li>
+      <li><a id="active" href="./blog">Blog</a></li>
+      <li><a href="./games">Games</a></li>
+      <li><a href="./faq">FAQ</a></li>
+    </ul>
+    
+    <div class="container top" id="flex">
+      
+      <aside id="order-left">
+        <div class="sector2">
+          <h3>ABOUT THE BLOG</h3>Welcome to the official <b>Blog</b>, where I ramble about stuff that's going on in my life.<br>New posts are written and uploaded the <i>first week</i> (as in the first 7 days) of every month.<hr>Posts are sorted from newest (top) to oldest (bottom).<br><br>Dates are formatted <b>YYYY-MM-DD</b>. I don't know if I can change that...
+        </div>
+        <hr>
+        <div class="sector2">
+          <h3>POST TYPES</h3>
+          <section class="sector3" style="margin:0px 0px -7px 0px;text-align:left;animation-iteration-count:0;">
+          <details style="margin-top:-5px;margin-bottom:8px;">
+            <summary><b>BLOG</b></summary>
+            <main style="margin-top:5px;"><b>Personal talking/ranting.</b><hr>Blog posts are written by me every month, relaying a bunch of events that occur in my life.<br>They can also cover more personal issues that I may want to talk about.</main>
+          </details>
+          <details>
+            <summary style="animation-delay:0.03s;"><b>DEVLOG</b></summary>
+            <main style="margin-top:5px;"><b>Project announcements/teasers.</b><hr>Devlogs are written when a project of mine has a substantial release or update.<br>They can cover games, videos, music, or web site updates.</main>
+          </details>
+          </section>
+        </div>
+      </aside>
+      
+      <main id="flexcolumn">
+        <div class="sector">
+          <h3>BLOG/DEVLOG POSTS</h3>
+          <div class="sector-text" style="padding-left:6px;text-align:left;">
+            <div id="postlistdiv"></div>
+          </div>
+          <hr>
+        </div>
+        <p class="subtext">The blog is built with <a href='https://zonelets.net/'>Zonelets</a>. Thought I should mention that.</p>
+      </main>
+      
+      <aside id="order-right">
+        <div class="sector2">
+          <h3>MISC. LORE POSTS</h3><a class="linkbutton" style="margin-bottom:7px;animation-delay:0.00s;" href="./lore/the-demon"><b style="font-size:24px;">The Demon ★</b><br><span><i>December 2023</i> • Humor...?</span></a>
+          <a class="linkbutton" style="animation-delay:0.03s;" href="./lore/the-demon-ii"><b style="font-size:24px;">The Demon II ★</b><br><span style="color:var(--text-colordev);"><i>January 2024</i> • More humor...?</span></a>
+        </div>
+        <hr>
+        <div class="sector3" style="padding-top:6px;">
+          <a class="buttonwide" style="margin-top:5px;" href="./posts/old-blog">Old Blog</a><hr><a class="buttonwide" href="./posts/old-backlog">Old Backlog</a><hr><a class="buttonwide" href="./posts/old-devlog">Old Devlog</a>
+        </div>
+      </aside>
+      
+    </div>
+    
+    <script src="./javascript/blog.js"></script>
+    <footer-component></footer-component>
+  </body>
+</html>

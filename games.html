@@ -12,67 +12,95 @@
     <script src="./javascript/footer.js" type="text/javascript" defer></script>
     <script src="./javascript/themes.js" type="text/javascript" defer></script>
     <style>
-      .minihover {
-        color:var(--text-color) !important;
-        text-decoration:none;
-      }
-      .minihover:link {color:var(--text-color) !important;transition:color .2s, background-color .2s;}
-      .minihover:hover {color: #ffffff !important;}
+      .artbox {width:auto;}
+      img {border-radius: 8px;width: 100%;}
     </style>
   </head>
 <body>
     <div>
-      <p><a style="display:block;position:relative;margin:auto;right:0;left:0;width:300px;height:auto;text-align:center;" href="index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
+      <p><a style="display:block;position:relative;margin:auto;right:0;left:0;width:300px;height:auto;text-align:center;" href="./index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
     </div>
   
     <ul class="topnav">
-      <li><a href="https://lgplayer13.neocities.org/">Home</a></li>
+      <li><a href="./index">Home</a></li>
       <li><a href="./about">About</a></li>
-      <li><a href="./blog/top-post">Blog</a></li>
+      <li><a href="./blog">Blog</a></li>
       <li><a id="active" href="./games">Games</a></li>
-      <li><a href="./devlog">Devlog</a></li>
+      <li><a href="./faq">FAQ</a></li>
     </ul>
   
-    <div class="box" style="padding-bottom:1px;border-radius:28px 28px 0px 0px;border-style:solid solid hidden solid;">
-      <p>This is the <b>Games</b> page, where I show off my dinky Scratch and IGM games.<br>Some miscellaneous <b>Lore</b> posts are shown below the games.</p>
-    </div>
-  
-    <div class="box" style="background:var(--marquee-bg);/*padding-bottom:5px;*/border-style:dashed solid dashed solid;padding-top:3px;">
-      <marquee style="color:#ffe5e5;font-size:16px;">Latest release: <b>Stone Mine Simulator 2024</b> // Latest update: <b>Sid's Adventure</b></marquee>
-      <!-- <a style="color:#ffe5e5;font-size:16px;">No new releases yet. This will start scrolling when there's some new stuff.</a> -->
-    </div>
-  
-    <div class="box" style="border-style:hidden solid dashed solid;cursor:default;">
-      <div style="margin:auto;padding:7px;padding-top:10px;width:75%;text-align:center;"><b style="color:white;font-size:21px;">• SCRATCH GAMES •</b><br><p style="margin-top:0px;margin-bottom:0px;font-size:15px;">Widescreen ports of some games are available on my <a href="https://lgplayer13.itch.io/">itch.io page</a>.</p></div>
-      <main style="display:flex;width:100%;height:auto;padding-top:5px;padding-bottom:5px;">
-        <a class="minibox minihover" href="./games/george-series" style="width:30%;animation-delay:0.00s;"><img src="./images/site_georgeseriesThumb.png" title="includes george 1 and...!" style="width:100%;"><b>George Series</b> • <i>2021-2024</i><br><span style="font-size:16px;">Platformers • 1 Release, 2 In-dev</span></a>
-        <a class="minibox minihover" href="./games/sids-adventure" style="width:30%;animation-delay:0.00s;"><img src="./images/site_sidThumb.png" title="sid the science kid leaked episode" style="width:100%;"><b>Sid's Adventure</b> • <i>09/2023</i><br><span style="font-size:16px;">Side-scrolling • Released</span></a>
-        <a class="minibox minihover" href="./games/lgs-remastered-collection" style="width:30%;animation-delay:0.00s;"><img src="./images/site_remcolThumb.png" title="WHAT, that is so soon... AMAZING" style="width:100%;"><b>LG's Remastered Collection</b> • <i>03/2024</i><br><span style="font-size:16px;">Point-and-Click • 3 Releases</span></a>
-      </main>
-      <main style="display:flex;width:100%;height:auto;padding-top:5px;padding-bottom:8px;">
-        <a class="minibox minihover" href="./games/super-scratch-melee" style="width:30%;animation-delay:0.03s;"><img src="./images/site_ssmThumb.png" title="super duper scratch blitz fighters ultimate" style="width:100%;"><b>Super Scratch Melee</b> • <i>2021-2022</i><br><span style="font-size:16px;">Turn-based • 1 Release, 1 Demo</span></a>
-      </main>
-    </div>
-  
-    <div class="box" style="border-style:hidden solid dashed solid;cursor:default;">
-      <div style="margin:auto;padding:7px;padding-top:10px;width:75%;text-align:center;"><b style="color:white;font-size:21px;">• IGM GAMES •</b><br><p style="margin-top:0px;margin-bottom:0px;font-size:15px;">Here's a neat list of <a href="./games/completed-igm-games">all the IGM games I've completed</a>.</p></div>
-      <main style="display:flex;width:100%;height:auto;padding-top:5px;padding-bottom:8px;">
-        <a class="minibox minihover" href="./games/the-lost-labyrinths" style="width:30%;animation-delay:0.00s;"><img src="./images/site_tllThumb.png" title="wait is that gabe newell" style="width:100%;"><b>The Lost Labyrinths</b> • <i>08/2022</i><br><span style="font-size:16px;">Real-time fighting • Released</span></a>
-        <a class="minibox minihover" href="./games/sms-24" style="width:30%;animation-delay:0.00s;"><img src="./images/site_sms24Thumb.png" title="made by our finest interns!" style="width:100%;"><b>Stone Mine Simulator 2024</b> • <i>08/2024</i><br><span style="font-size:16px;">Clicking/Idle • Released</span></a>
-        <a class="minibox minihover" href="./games/fire-forge" style="width:30%;animation-delay:0.00s;"><img src="./images/site_ffThumb.png" title="some other third thing" style="width:100%;"><b>Fire Forge</b> • <i>??/2024</i><br><span style="font-size:16px;">Tech-based • In-dev</span></a>
-      </main>
-    </div>
-    
-    <!-- <b style="color:#ff3a3a">NEW!</b> for new releases, keep for about a month -->
-  
-    <div class="box">
-      <main style="width:100%;height:auto;padding-top:20px;padding-bottom:15px;">
-        <div class="infbox"><b style="color:white;font-size:21px;">• MISC. LORE POSTS •</b><br>
-          <a class="neatbutton" style="color:#e4e4e4;margin-top:3px;margin-bottom:7px;text-decoration:none;animation-delay:0.06s;" href="./lore/the-demon"><b style="font-size:24px;">The Demon ★</b><br><span style="color:var(--text-colordev);"><i>December 2023</i> • Humor...?</span></a>
-          <a class="neatbutton" style="color:#e4e4e4;text-decoration:none;animation-delay:0.09s;" href="./lore/the-demon-ii"><b style="font-size:24px;">The Demon II ★</b><br><span style="color:var(--text-colordev);"><i>January 2024</i> • More humor...?</span></a>
+    <div class="container top" id="flex">
+      
+      <main id="flexcolumn">
+        <div class="sector">
+          <h3>GAMES</h3>
+          <div class="sector-text">
+            <p>These are my dinky games that I make in my free time. Feel free to look around.<br><i>Scratch</i> games are at the <i>top</i>, <i>IGM</i> games are further below.</p>
+          </div>
+          <hr>
         </div>
       </main>
+      
     </div>
+    
+    <div class="marquee">
+      <marquee style="color:#ffe5e5;font-size:16px;">Latest release: <b>Stone Mine Simulator 2024</b> // Latest update: <b>Sid's Adventure</b></marquee>
+    </div>
+  
+    <div class="container">
+      
+      <span><h4>SCRATCH GAMES</h4><p class="subtext" style="margin-bottom:2px;">Widescreen ports of some games are available on my <a href="https://lgplayer13.itch.io/">itch.io page</a>.</span>
+      
+      <main id="flex">
+        <aside id="order-left">
+          <a class="bubble bubblehover" href="./games/george-series" style="animation-delay:0.00s;"><img src="./images/site_georgeseriesThumb.png" title="includes george 1 and...!"><b>George Series</b> • <i>2021-2024</i><br><span style="font-size:16px;">Platformers • 1 Release, 2 In-dev</span></a>
+        </aside>
+        
+        <aside id="order-middle">
+          <a class="bubble bubblehover" href="./games/sids-adventure" style="animation-delay:0.00s;"><img src="./images/site_sidThumb.png" title="sid the science kid leaked episode"><b>Sid's Adventure</b> • <i>09/2023</i><br><span style="font-size:16px;">Side-scrolling • Released</span></a>
+        </aside>
+
+        <aside id="order-right">
+          <a class="bubble bubblehover" href="./games/lgs-remastered-collection" style="animation-delay:0.00s;"><img src="./images/site_remcolThumb.png" title="WHAT, that is so soon... AMAZING"><b>LG's Remastered Collection</b> • <i>03/2024</i><br><span style="font-size:16px;">Point-and-Click • 3 Releases</span></a>
+        </aside>
+      </main>
+      
+      <main id="flex">
+        <aside id="order-left">
+          <!-- tbd -->
+        </aside>
+        
+        <aside id="order-middle">
+          <a class="bubble bubblehover" href="./games/super-scratch-melee" style="animation-delay:0.03s;"><img src="./images/site_ssmThumb.png" title="super duper scratch blitz fighters ultimate"><b>Super Scratch Melee</b> • <i>2021-2022</i><br><span style="font-size:16px;">Turn-based • 1 Release, 1 Demo</span></a>
+        </aside>
+
+        <aside id="order-right">
+          <!-- tbd -->
+        </aside>
+      </main>
+      
+    </div>
+  
+    <div class="container">
+      
+      <span><h4>IGM GAMES</h4><p class="subtext" style="margin-bottom:2px;">Here's a neat list of <a href="./games/completed-igm-games">all the IGM games I've completed</a>.</span>
+      
+      <main id="flex">
+        <aside id="order-left">
+          <a class="bubble bubblehover" href="./games/the-lost-labyrinths" style="animation-delay:0.00s;"><img src="./images/site_tllThumb.png" title="wait is that gabe newell"><b>The Lost Labyrinths</b> • <i>08/2022</i><br><span style="font-size:16px;">Real-time fighting • Released</span></a>
+        </aside>
+        
+        <aside id="order-middle">
+          <a class="bubble bubblehover" href="./games/sms-24" style="animation-delay:0.00s;"><img src="./images/site_sms24Thumb.png" title="made by our finest interns!"><b>Stone Mine Simulator 2024</b> • <i>08/2024</i><br><span style="font-size:16px;">Clicking/Idle • Released</span></a>
+        </aside>
+
+        <aside id="order-right">
+          <a class="bubble bubblehover" href="./games/fire-forge" style="animation-delay:0.00s;"><img src="./images/site_ffThumb.png" title="some other third thing"><b>Fire Forge</b> • <i>??/2024</i><br><span style="font-size:16px;">Tech-based • In-dev</span></a>
+        </aside>
+      </main>
+      
+    </div>
+    <!-- <b style="color:#ff3a3a">NEW!</b> for new releases, keep for about a month -->
 
     <footer-component></footer-component>
   </body>
