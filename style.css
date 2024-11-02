@@ -201,8 +201,6 @@ div.sector {padding: 0px !important;}
   width: auto !important;
   text-decoration: none;
 }
-.bubblehover:link {color: #ffffff !important;transition:color .2s, background-color .2s;}
-.bubblehover:hover {color: var(--link-hover) !important;}
 
 /* it's a button (e.g. blog pages, games sub-pages) */
 .button {
@@ -382,6 +380,9 @@ a:link {color: var(--link-default);}
 a:visited {color: var(--link-visited);}
 a:hover {color: var(--link-hover);}
 a:active {color: var(--link-active);}
+
+.bubblehover:link {color: #ffffff !important;transition:color .2s, background-color .2s;}
+.bubblehover:hover {color: var(--link-hover) !important;}
 
 /* access denied */
 .off {opacity: 0.5;cursor: not-allowed;}
