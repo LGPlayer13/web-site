@@ -177,6 +177,7 @@ var splashes = [
     "Are wii gonna have a problem? You best switch up that attitude!",
     "What are you, a pending transaction or what?",
     "The can of root beer soda started yapping about how muscular its thighs were, despite not knowing where or if it has any thighs.",
+    "We've got drama and tension, and asteroids! Emotion, adventure, we've got it all.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
