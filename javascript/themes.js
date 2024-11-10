@@ -95,28 +95,9 @@ let t = {
       imgsrcChange("coryy","/images/site_cor the e.png")
       imgsrcChange("sidgang","/images/site_sids_gang.png");
     } else if (theme == 4) {
-      t.change("container-bg","#d75c2b")
-      t.change("sector-bg","#c65224")
-      t.change("bubble-bg","#b14a21")
-      t.change("embed-bg","#d96d44")
-      t.change("faq-bg","#d15c2d")
-      t.change("marquee-bg","#e46836")
-      t.change("topnav-bg","#eb6028")
-      t.change("topnav-hover","#eb8258")
-      t.change("border1","#b34316")
-      t.change("border2","#521f0b")
-      t.change("sitelinkbutton-default","#f36d39")
-      t.change("sitelinkbutton-hover","#ff966d")
-      t.change("sitelinkbutton-bdr","#ac451d")
-      t.change("link-default","#ff9c76")
-      t.change("link-hover","#ffbfa7")
-      t.change("link-active","#ebb8a4")
-      t.change("scrollbar-hover","#ffb89c")
-      t.change("footer-bg","#cd4f1d")
-      t.change("background","linear-gradient(135deg, #0a0020, #0a0a0a)")
-      imgsrcChange("georgie","/images/site_gregoeH.png")
-      imgsrcChange("coryy","/images/site_cor the eH.png")
-      imgsrcChange("sidgang","/images/site_sids_gangH.png");
+      const selectElement = document.getElementById('selectTheme');
+      selectElement.value = 'george';
+      // this will automatically switch back to the george theme
     }
     t.save();
   },
