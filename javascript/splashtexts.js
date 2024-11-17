@@ -179,6 +179,13 @@ var splashes = [
     "The can of root beer soda started yapping about how muscular its thighs were, despite not knowing where or if it has any thighs.",
     "We've got drama and tension, and asteroids! Emotion, adventure, we've got it all.",
     "Join us. Thrive.",
+    "I went to college for some reason. I don't know why I've done that.",
+    "Joe, you gotta stop dying every few days. It's very bad.",
+    "Speaking is not permitted during the debate.",
+    "Don't let your dad pick out your clothes if he can't pick out his clothes.",
+    "When life gives you lemons, make orange juice and let the world wonder how you did it.",
+    "Man, wish my parents weren’t so divorced.",
+    "Slackies; when you gotta go, but you don’t wanna leave.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];

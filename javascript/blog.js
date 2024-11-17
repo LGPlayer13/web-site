@@ -31,10 +31,8 @@ let authorLink = "https://lgplayer13.neocities.org/about"; // Enter your website
   use a date it must still follow that format.*/
 
 let postsArray = [
-//[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ],
-//[ "posts/2020-11-10-My-Third-Post-Example.html" ],
-//[ "posts/2020-11-10-My-Second-Post-Example.html" ],
-[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again / Blog' ) ] ]
+[ "posts/2024-11-16-Devlog-G1R-v1.1.html", encodeURI ( 'George 1R Update 1.1 / Devlog' )],
+[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again / Blog' ) ] ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
