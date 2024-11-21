@@ -137,7 +137,7 @@ var splashes = [
     "Where do these stairs go? ...They go up.",
     "This calls for an EMERGENCY FROG SITUATION.",
     "UI's are like jokes. If you have to explain them, they are not good.",
-    "The Concord Situation of 2024 is crazy.",
+    "The [noun] Situation is [adjective].",
     "Roll up, roll up for the Misery Tour!",
     "Unregistered HyperCam 2",
     "Ah, 'Snow White and the 7 Clever Boys' for the PS2, my favorite horror game.",
@@ -186,6 +186,9 @@ var splashes = [
     "When life gives you lemons, make orange juice and let the world wonder how you did it.",
     "Man, wish my parents weren’t so divorced.",
     "Slackies; when you gotta go, but you don’t wanna leave.",
+    "At this point, I feel like Jack Black is going to be cast for the voice in my head.",
+    "I have never followed a rule. That is my rule. Do you follow? I don’t.",
+    "As a child, I yearned for the mines.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
