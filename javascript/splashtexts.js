@@ -185,10 +185,18 @@ var splashes = [
     "Don't let your dad pick out your clothes if he can't pick out his clothes.",
     "When life gives you lemons, make orange juice and let the world wonder how you did it.",
     "Man, wish my parents weren’t so divorced.",
+    "Where are you Christmas? Why are you Christmas?",
     "Slackies; when you gotta go, but you don’t wanna leave.",
     "At this point, I feel like Jack Black is going to be cast for the voice in my head.",
     "I have never followed a rule. That is my rule. Do you follow? I don’t.",
+    "This is now a safe city. I have punched a penguin into prison.",
+    "Eat a dinner, Mattress Wayne.",
     "As a child, I yearned for the mines.",
+    "There is no data.",
+    "Why do I miss people who hurt me? That's because you're a dummy.",
+    "Ron’s Ron shirt was just as bad as Ron himself.",
+    "They looked at the door, screaming about how closed it was.",
+    "h",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];

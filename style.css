@@ -50,28 +50,27 @@ ORDER FOR PROPERTIES
 - overflow
 - cursor
 - z-index
-
 */
 
 /* these are the starting colors before choosing a theme */
 :root {
   --container-bg:#d68a2b;
-  --bubble-bg:#b17121;
   --sector-bg:#c67e24;
-  --border1:#b37116;
-  --border2:#52330b;
+  --bubble-bg:#b17121;
   --embed-bg:#d99744;
   --faq-bg:#d1882d;
   --marquee-bg:#e49636;
   --topnav-bg:#ffb03a;
   --topnav-hover:#ffc773;
+  --border1:#b37116;
+  --border2:#52330b;
   --sitelinkbutton-default:#f3a039;
   --sitelinkbutton-hover:#ffbe6d;
   --sitelinkbutton-bdr:#ac6c1d;
   --link-default:#ffb676;
   --link-hover:#ffd0a7;
   --link-active:#ebc5a4;
-  --scrollbar-hover:#fcb271;
+  --scrollbar-hover:#ffca9c;
   --footer-bg:#cd7f1d;
   --background:linear-gradient(135deg, #271b61, #3c2e84);
 }
