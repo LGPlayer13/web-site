@@ -63,6 +63,7 @@ var splashes = [
     "Look here bucko, \"web site\" at least stands out and doesn't interfere with that awful, woke \"website\" community.",
     "Mid CSS?! My good man, you update your site's CSS every 2 months! <i>And you're not even the one making it!</i> You're one to talk.",
     "Oh, please. Your main page has a spinning... thing that you *always* complain about not working properly! Don't get me started on trying to resize the pages, or even the half-baked sub-pages!",
+    "What bricks? You mean the ones I threw at your window at 2am in the morning?",
     // violence ends
     "Communications with beef boss's Wii Remote have been interrupted.",
     "What do you mean you don't agree with me? Do you know who you're dealing with?!",
@@ -197,6 +198,11 @@ var splashes = [
     "Ron’s Ron shirt was just as bad as Ron himself.",
     "They looked at the door, screaming about how closed it was.",
     "h",
+    "Max, what do you want for dinner? <b>Justice</b>, with a side order of spaghetti.",
+    "Free spring rolls and prawn crackers appreciated; toilet seat broken.",
+    "Suggest to confine child and observe behavior.",
+    "Contributed to alcohol abuse statistics; Love and laughter shared.",
+    "Fluorine Uranium Carbon Potassium Bismuth Technetium Helium Sulfur Germanium Thulium Oxygen Neon Yttrium.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
