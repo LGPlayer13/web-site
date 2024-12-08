@@ -174,7 +174,7 @@ var splashes = [
     "And the winner of the Bake-Off is... nine dismembered bodies.",
     "Why is it still raining? I did what I was supposed to. That's not fair.",
     "Once the sun starts to go down, it'll start to get dark.",
-    "In my younger and more vulnerable years, my father gave me some advice that I've been turning over in my mind ever since.",
+    "In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.",
     "Are wii gonna have a problem? You best switch up that attitude!",
     "What are you, a pending transaction or what?",
     "The can of root beer soda started yapping about how muscular its thighs were, despite not knowing where or if it has any thighs.",
@@ -203,6 +203,12 @@ var splashes = [
     "Suggest to confine child and observe behavior.",
     "Contributed to alcohol abuse statistics; Love and laughter shared.",
     "Fluorine Uranium Carbon Potassium Bismuth Technetium Helium Sulfur Germanium Thulium Oxygen Neon Yttrium.",
+    "Life is like a sardine... it’s small and kinda sucks.",
+    "Not a flying toy.",
+    "Duck forgot to drink water so now he is dead. Some sort of blob turns up.",
+    "That's the way the cookie crumbles.",
+    "Even if I wanted to, it's gone on further than it was supposed to.",
+    "To put it simply, I myself create computerized games.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];

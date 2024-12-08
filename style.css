@@ -16,12 +16,8 @@ body, html, div {
   font-style: normal;
 }
 
-/* transitions for ALl elements */
-* {
-  transition: background .5s;
-  transition: background-color .2s;
-  text-shadow: 1px 1px 1.5px #000000;
-}
+/* text shadow for ALl elements */
+* {text-shadow: 1px 1px 1.5px #000000;}
 
 /*
 ORDER FOR PROPERTIES
