@@ -121,7 +121,7 @@ var splashes = [
     "I'm thirsty- should be some orange juice in the fridge. ...I could go for a cup of coffee!",
     "I worked for George the Jumping Triangle, he's a fraud.",
     "SAVㅤㅤHㅤㅤINCㅤSS",
-    "Holy crap- part of the Sound Shapes OST is on Spotify, we're so back",
+    "We're so back. Actually, we've been here the whole time.",
     "This project has no meaningful contribution to society.",
     "Nothing puts a poop in a person's pants faster than talking about AI.",
     "Uh, hey- come look at this site. Aw, cool, can you download the Foo Fighters?",
@@ -178,7 +178,7 @@ var splashes = [
     "Are wii gonna have a problem? You best switch up that attitude!",
     "What are you, a pending transaction or what?",
     "The can of root beer soda started yapping about how muscular its thighs were, despite not knowing where or if it has any thighs.",
-    "We've got drama and tension, and asteroids! Emotion, adventure, we've got it all.",
+    "We've got drama and tension, and asteroids. Emotion, adventure, we've got it all!",
     "Join us. Thrive.",
     "I went to college for some reason. I don't know why I've done that.",
     "Joe, you gotta stop dying every few days. It's very bad.",
@@ -209,6 +209,12 @@ var splashes = [
     "That's the way the cookie crumbles.",
     "Even if I wanted to, it's gone on further than it was supposed to.",
     "To put it simply, I myself create computerized games.",
+    "Be sure to drink your Ovaltine.",
+    "We don't need an unsupervised adult man karate chopping poor people in a halloween costume.",
+    "The analysis is severely limited by my lack of understanding of what I am doing.",
+    "Listening to LG Productions-brand music is not highly recommended.",
+    "I can't stand Bethesda. You know they blow.",
+    "Time is money, and you're gonna be penniless real soon.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
