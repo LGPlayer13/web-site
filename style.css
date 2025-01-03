@@ -56,8 +56,8 @@ ORDER FOR PROPERTIES
   --embed-bg:#d99744;
   --faq-bg:#d1882d;
   --marquee-bg:#e49636;
-  --topnav-bg:#ffb03a;
-  --topnav-hover:#ffc773;
+  --topnav-bg:#e79e42;
+  --topnav-hover:#fdba66;
   --border1:#b37116;
   --border2:#52330b;
   --sitelinkbutton-default:#f3a039;
@@ -242,15 +242,16 @@ a.bubblehover:hover {color: var(--link-hover) !important;}
   width: auto;
   text-decoration: none;
   font-size: 17px;
+  transition: .15s;
   animation-name: openy;
   animation-duration: 0.25s;
   animation-iteration-count: 1;
 }
 
 /* hovering code */
-.linkbutton:hover,.bubblehover:hover,.button:hover,.buttonwide:hover {background-color: var(--embed-bg);transition: background-color .15s;}
+.linkbutton:hover,.bubblehover:hover,.button:hover,.buttonwide:hover {background-color: var(--embed-bg);}
 
-/* website link buttons in the About page */
+/* (OLD) website link buttons in the About page */
 .sitelinkbutton {
   color: #ffffff !important;
   background-color: var(--sitelinkbutton-default);
@@ -285,6 +286,13 @@ a.bubblehover:hover {color: var(--link-hover) !important;}
 .topnav li {display: inline;}
 
 /* headers for sectors */
+h2 {
+  margin: 15px 0px 0px 0px;
+  padding-top: 1px;
+  padding-bottom: 4px;
+  text-decoration: underline;
+  text-shadow: 2.2px 2.2px 2.5px #000000;
+}
 h3 {
   border-bottom: 2px dashed var(--border2);
   margin: 5px 0px 0px 0px;
@@ -320,7 +328,8 @@ span > hr {
 
 /* classes used for a multitude of things */
 .top {border-radius: 20px 20px 0px 0px;border-style: solid solid hidden solid;}
-.footer {background-color: var(--footer-bg);border-radius: 0px 0px 20px 20px;border-style: solid;}
+.bottom {border-radius: 0px 0px 20px 20px;border-style: dashed solid solid solid;}
+.full {border-radius: 020px;border-style: solid;}
 .scroll {border-radius: 12px 6px 6px 12px;height: 311px;overflow-y: auto;} /* the border-radius accounts for the scrollbar (311 / 362) */
 .centerimage {display: flex;align-items: center;}
 .subtext {margin-top: -10px;font-size: 15px;}
@@ -415,6 +424,7 @@ details > summary {
   padding: 14px 16px;
   width: auto;
   font-size: 17px;
+  transition: .15s;
   animation-name: openy;
   animation-duration: 0.25s;
   animation-iteration-count: 1;

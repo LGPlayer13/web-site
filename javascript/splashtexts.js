@@ -215,6 +215,15 @@ var splashes = [
     "Listening to LG Productions-brand music is not highly recommended.",
     "I can't stand Bethesda. You know they blow.",
     "Time is money, and you're gonna be penniless real soon.",
+    "There's a Youtube glitch going around causing people to randomly unsubscribe.",
+    "I'm a reasonable man, get off my case.",
+    "Honey? More like phony, 'cause it's all fraudulent.",
+    "Happy music makes me depressed.",
+    "This is selling crap to kids who don't know better than to trust the people who are selling it to them. Do better.",
+    "Please welcome to the stage, Thom Yorke and the Radioheads.",
+    "I am in a contant state of Missouri.",
+    "Do y'all ever get bored and download western Australia?",
+    "If it exists, there’s a Tiger handheld version of it.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];
