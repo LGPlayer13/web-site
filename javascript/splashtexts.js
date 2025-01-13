@@ -224,6 +224,8 @@ var splashes = [
     "I am in a contant state of Missouri.",
     "Do y'all ever get bored and download western Australia?",
     "If it exists, there’s a Tiger handheld version of it.",
+    "34 hours! That's short for an RPG, but... that's long for somebody with a life.",
+    "Before playing, read your operations manual for important information about your health and safety.",
     "We've got the vision, now let's have some fun."
     // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
 ];

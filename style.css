@@ -10,7 +10,7 @@ body {
 
 /* font type and size */
 body, html, div {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Outfit", serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -91,7 +91,7 @@ main {width: 100%;order: 1;}
   bottom: -10px;
   right: 0;
   left: 0;
-  box-shadow: 5px 5px 5px #000000;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.85);
   word-wrap: break-word;
 }
 .containerblank {
@@ -123,7 +123,7 @@ main {width: 100%;order: 1;}
   bottom: -10px;
   right: 0;
   left: 0;
-  box-shadow: 5px 5px 5px #000000;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.85);
 }
 @-moz-document url-prefix() {
   .marquee {
@@ -194,6 +194,7 @@ div.sector {padding: 0px !important;}
   border-radius: 12px;
   margin: auto;
   padding: 10px;
+  padding-bottom: 2px;
   width: 75%;
 }
 
@@ -406,15 +407,39 @@ a:active {color: var(--link-active);}
   border-radius: 18px;
   margin-right: 7px;
   margin-bottom: 8px;
-  padding: 14px 16px;
+  padding: 12px 14px;
   width: 110px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
   transition: .2s;
-  box-shadow: 3px 3px 5px #000000;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
   z-index: 2;
 }
-.topnav a:hover {color: #000000;background-color: var(--topnav-hover);box-shadow: 3px 3px 5px #ffffff;}
+.topnav a:hover {color: #000000;background-color: var(--topnav-hover);box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.9)}
+
+.logo {
+  display: block;
+  position: relative;
+  margin: auto;
+  right: 0;
+  left: 0;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.6));
+}
+
+.footer {
+  display: block;
+  color: #d4ccff;
+  position: relative;
+  margin: auto;
+  right: 0;
+  left: 0;
+  text-align: center;
+  text-shadow: 1px 1px 1.5px #000000;
+  font-size: 15px;
+}
 
 /* FAQ page stuffs */
 details > summary {
@@ -463,7 +488,7 @@ select {
 /* rainbow text */
 .rainbow-text {
   background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-  text-shadow: 1px 1px 1.5px #ffffff;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: #0000;
 }
