@@ -226,8 +226,23 @@ var splashes = [
     "If it exists, there’s a Tiger handheld version of it.",
     "34 hours! That's short for an RPG, but... that's long for somebody with a life.",
     "Before playing, read your operations manual for important information about your health and safety.",
+    "You do not know how much you show, but the wind doth blow in the hills below?",
+    "Commonly known not for making updates, but forcing others to update stuff about him.", // reference to nothing in particular
+    "Why is no one having a good time? I specifically requested it.",
+    "You can clean shrimp, good for you. You're not even a good person.",
+    "You may not rest now, there are monsters nearby.", // took me waaaay too long to think of this
+    "The power of one, the power of two, the power of mannnnyyyyy.",
+    "I can't watch my clothes wash, because the washer needs to be closed for the clothes to wash.",
+    "After a great meal, I like to lie on the floor and feel like garbage.",
+    "ALPHYS updated status.",
+    "A person's a person no matter how small, except to the point where they might actually be an ant.",
+    "The creator lied to us.",
+    "Renowned for taking 4 years to make a Scratch game.",
+    "Every time I make music, I have to listen to an entire album to remind myself of what music actually sounds like.",
+    "Are you telling me this clown's a level 4 naughty lister?",
     "We've got the vision, now let's have some fun."
-    // I NEED MORE SPLASHES SO NOW I WILL WATCH MORE YOUTUBE AND ABSOLUTELY NOTHING ELSE DURING MY FREETIME
+    // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
+    // i like this quote but it's too sensitive and kinda makes me upset thinking about it
 ];
 document.getElementById("splashes").innerHTML = splashes[Math.floor(Math.random() * splashes.length)]
 //why
