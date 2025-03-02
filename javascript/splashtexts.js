@@ -240,6 +240,7 @@ var splashes = [
     "Renowned for taking 4 years to make a Scratch game.",
     "Every time I make music, I have to listen to an entire album to remind myself of what music actually sounds like.",
     "Are you telling me this clown's a level 4 naughty lister?",
+    "Horton hears domestic violence in the next apartment and doesn't call 911.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i like this quote but it's too sensitive and kinda makes me upset thinking about it
