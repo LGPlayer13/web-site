@@ -1,5 +1,5 @@
 var splashes = [
-    "Surely I've frolicked too hard. I shall search for my punishment.",
+    "Surely I've frolicked too hard. I shall search for my punishment.", // the OG
     "Fact: a hat is a very good rabbit habitat. Thanks for that.",
     "I'm skipping work again, that's because I don't have a job.",
     "Have you ever carried a dozen bricks down a brick road, through a brick door and into a brick house?",
@@ -147,8 +147,7 @@ var splashes = [
     "'This world is mine to craft.' -Bryan, the Hero",
     "Bro made a guipplegorp-",
     "According to all known laws of physics, there is no way Java should be able to compile.",
-    "No, I'm probably not okay :/",
-    // ^ response to rylie eric quote
+    "No, I'm probably not okay :/", // response to a rylie eric quote
     "Keep it simple, don't overdo it.",
     "ＮＯ ＭＵＳＩＣ",
     "Thanks to you, I am a figure of ridicule within the market community.",
@@ -241,6 +240,11 @@ var splashes = [
     "Every time I make music, I have to listen to an entire album to remind myself of what music actually sounds like.",
     "Are you telling me this clown's a level 4 naughty lister?",
     "Horton hears domestic violence in the next apartment and doesn't call 911.",
+    "When there's a quota to meet, ethics go out the window.",
+    "I was truly taken aback by the Minecraft of beta Minecraft... what have Minecraft been doing these days,,",
+    "Human.. I remember you're <b>genocides</b>.",
+    "Too old to order off the kids menu.",
+    "Two days ago I was interrogating a sex shop employee about her work conditions.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i like this quote but it's too sensitive and kinda makes me upset thinking about it

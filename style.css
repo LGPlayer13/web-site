@@ -244,9 +244,6 @@ a.bubblehover:hover {color: var(--link-hover) !important;}
   text-decoration: none;
   font-size: 17px;
   transition: .15s;
-  animation-name: openy;
-  animation-duration: 0.25s;
-  animation-iteration-count: 1;
 }
 
 /* hovering code */
@@ -320,7 +317,7 @@ span > hr {
 /* display: block */ .container,.containerblank,.marquee,.linkbutton,.sitelinkbutton {display: block;}
 /* height: auto */ .container,.containerblank,.marquee,.linkbutton,.bubblehover,details > summary,details > main {height: auto;}
 /* text-align: center */ .container,.containerblank,.sector,.sector3,.sector4,.bubble,.artbox,.topnav {text-align: center;}
-/* openx animation */ .sector3,.sector4,.bubble,.button,.buttonwide {animation-name: openx;animation-duration: 0.25s;animation-iteration-count: 1;}
+/* openx animation  .sector3,.sector4,.bubble,.button,.buttonwide {animation-name: openx;animation-duration: 0.25s;animation-iteration-count: 1;} */
 
 /* the IDs */
 #flex {display: flex;} /* woah you go big guy */
@@ -451,9 +448,6 @@ details > summary {
   width: auto;
   font-size: 17px;
   transition: .15s;
-  animation-name: openy;
-  animation-duration: 0.25s;
-  animation-iteration-count: 1;
 }
 details > summary:hover {background-color: var(--marquee-bg);transition: background-color .15s;cursor: default;}
 

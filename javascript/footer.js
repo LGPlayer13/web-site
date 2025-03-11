@@ -7,7 +7,7 @@ class Footer extends HTMLElement {
     this.innerHTML = `
     <footer>
       <sub class="footer" style="margin-top:20px;">
-        &copy; 2023-2025 LG Productions • <u>v2.1.2</u>
+        &copy; 2023-2025 LG Productions • <u>v2.1.3</u>
       </sub>
 
       <sub class="footer">Hate these colors? Try a different theme:
