@@ -245,6 +245,8 @@ var splashes = [
     "Human.. I remember you're <b>genocides</b>.",
     "Too old to order off the kids menu.",
     "Two days ago I was interrogating a sex shop employee about her work conditions.",
+    "Lamp oil, rope, bombs? You want it? <b>TOO BAD</b>",
+    "Safety is an illusion, oblivion catches up with us all.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i like this quote but it's too sensitive and kinda makes me upset thinking about it
