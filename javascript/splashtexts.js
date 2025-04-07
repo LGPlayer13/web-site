@@ -247,6 +247,10 @@ var splashes = [
     "Two days ago I was interrogating a sex shop employee about her work conditions.",
     "Lamp oil, rope, bombs? You want it? <b>TOO BAD</b>",
     "Safety is an illusion, oblivion catches up with us all.",
+    "A delaye, a dela. A delayed gamne, a delayepb. Bad Game Design.",
+    "Legally questionable!",
+    "A lonely child is what you're gonna be when I sell you.",
+    "Oh, these dudes? They're the villagers!",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i like this quote but it's too sensitive and kinda makes me upset thinking about it
