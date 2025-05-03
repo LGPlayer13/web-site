@@ -4,94 +4,60 @@
     <title>LG Productions • George Series</title>
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="../javascript/footer.js" type="text/javascript" defer></script>
-    <script src="../javascript/themes.js" type="text/javascript" defer></script>
-    <style>
-      .img {border-radius: 8px;width: 100%;}
-    </style>
+    <script src="/javascript/extras.js" type="text/javascript" defer></script>
   </head>
-<body>
-    <div>
-      <p><a class="logo" href="../index"><img src="../images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
-    </div>
-  
-    <ul class="topnav">
-      <li><a href="../index">Home</a></li>
-      <li><a href="../about">About</a></li>
-      <li><a href="../blog">Blog</a></li>
-      <li><a href="../games">Games</a></li>
-      <li><a href="../faq">FAQ</a></li>
-    </ul>
-  
-    <div class="container top" id="flex">
-      
-      <main id="flexcolumn">
-        <div class="sector">
-          <h3>GEORGE SERIES</h3>
-          <div class="sector-text">
-            <p>Developed from <i>2021-2024</i><br>Platformers • 1 Release, 2 In-dev</p>
-          </div>
-          <hr>
-        </div>
-      </main>
-      
-    </div>
-  
-    <div class="container">
-      
-      <main id="flex">
-        <aside id="order-left">
-          <img src="../images/games/site_g1title.png" title="the calm before the storm" style="display:inline-flex;margin-bottom:-12px;padding-top:11px;width:70%;">
-          <div class="sector3">
-            <h3>GEORGE 1</h3><i>The official remaster of George's first adventure on Asfard Archipelago. Join him on a long-awaited journey to stop his evil brother, Greg.</i><br><br>status: released and remastered!<hr><a class="buttonwide" style="font-size:19px;margin-bottom:7px;" href="./george-1r">Visit its page!</a><a class="buttonwide" style="font-size:19px;" href="https://scratch.mit.edu/projects/485819865/">Try the original game!</a>
-          </div>
-          <p class="subtext"><b>NOTE:</b> Both versions may vary in quality.</p>
-        </aside>
-        
-        <aside id="order-middle">
-          <img src="../images/games/site_g15title.png" title="what was bro cooking in his basement" style="display:inline-flex;margin-bottom:-12px;padding-top:11px;width:80%;">
-          <div class="sector3">
-            <h3>GEORGE 1.5</h3><i>The chapter inbetween the first and the second. Find out what happened to George and Greg after their fight in the Toxic Labyrinth.</i><br><br>status: in development (semi-actively)<hr><a class="buttonwide" style="font-size:19px;margin-bottom:7px;" href="./george-1.5">Visit its page!</a><a class="buttonwide off" style="font-size:19px;" href="#">Listen to the OST!</a>
-          </div>
-          <p class="subtext">Watch the first <a href="https://www.youtube.com/watch?v=liTOlih09SA" title="it's real good bro trust me">Gameplay Trailer</a> now!</p>
-        </aside>
+  <body>
+    <header-component></header-component>
+    
+    <div id="container">
 
-        <aside id="order-right">
-          <img src="../images/games/site_g2title.png" title="coming in 2222 to theaters far away from you" style="display:inline-flex;margin-bottom:-12px;padding-top:11px;width:73%;">
-          <div class="sector3">
-            <h3>GEORGE 2</h3><i>The second entry in the George series. Fight against an unhinged and terrifying new foe that threatens the survival of the <b>entire</b> planet.</i><br><br>status: in development (hiatus)<hr><a class="buttonwide off" style="font-size:19px;margin-bottom:7px;" href="#">Visit its page!</a>
-          </div>
-        </aside>
-      </main>
+      <h2>George Series</h2>
+      <div class="textbox">
+        This contains every entry in the <b>George Series</b>, including the unreleased/scrapped ones. It'd be empty without them.
+      </div>
+      
+      <hr>
+      
+      <div class="flex">
+        <a class="bubble blacktext" style="background-image:url(/images/linkimgs/george1bg.png);background-position:0% 5%;--bgcolor:#e09c3d;--bdcolor:#7b5014;" href="/games/george-series/george-1r">
+          <img src="/images/linkimgs/george1icon.png"><h3>George 1 Remastered</h3><p>The official remaster of George's first adventure on Asfard Archipelago.<br><sup style="vertical-align:baseline;"><b>status:</b> released!</sup></p>
+        </a>
+        <a class="bubble whitetext" style="background-image:url(/images/linkimgs/george1.5bg.png);background-position:0% 20%;--bgcolor:#52d1b4;--bdcolor:#1f7561;" href="/games/george-series/george-1.5">
+          <img src="/images/linkimgs/george1.5icon.png"><h3>George 1.5</h3><p>Find out what happens to George and Greg after their fight in the Lethal Labyrinth.<br><sup style="vertical-align:baseline;"><b>status:</b> in development</sup></p>
+        </a>
+        <a class="bubble blacktext off" style="background-image:url(/images/linkimgs/george2bg.png);background-position:0% 20%;--bgcolor:#ff9126;--bdcolor:#944a00;" href="#">
+          <img src="/images/linkimgs/george2icon.png"><h3>George 2</h3><p>Fight against a new foe that threatens the survival of the <i>entire</i> archipelago.<br><sup style="vertical-align:baseline;"><b>status:</b> scrapped</sup></p>
+        </a>
+        <a class="bubble whitetext" style="background-image:url(/images/linkimgs/feelinglostbg.png);background-position:0% 40%;--bgcolor:#7a562c;--bdcolor:#402d17;" href="https://turbowarp.org/636390190" target="_blank">
+          <img src="/images/linkimgs/georgerefsicon.png"><h3>George Refs</h3><p>An important reference/lore project for George, Cory, and Greg.<br></p>
+        </a>
+      </div>
+      <!-- <b style="color:#ffb0b0">UPDATE!</b>-->
+      
+      <div class="flex">
+        <a class="flexbubble" href="https://turbowarp.org/1037737293" target="_blank">Geography Project</a>
+        <a class="flexbubble" href="https://turbowarp.org/980147831/" target="_blank">Presentation Project</a>
+      </div>
+      
+      <hr>
       
     </div>
-  
-    <div class="container bottom">
-      
-      <span><h4>LORE PROJECTS</h4><p class="subtext" style="margin-bottom:2px;">These projects expand upon the universe by explaining lore, characters, and more.</span>
-      
-      <main id="flex">
-        <aside id="order-left">
-          <a class="bubble bubblehover" href="../lore/george-refs"><img class="img" src="../images/games/site_georgerefsThumb.png" title="NOT based on irl experiences, thankfully"><b>George Refs</b> • <i>12/2023</i><br><span style="font-size:16px;">Story/Characters • Released</span></a>
-        </aside>
-        
-        <aside id="order-middle">
-          <a class="bubble bubblehover" href="../lore/george-geography"><img class="img" src="../images/games/site_georgegeogThumb.png" title="just another lg products presentation"><b>George Geography</b> • <i>06/2024</i><br><span style="font-size:16px;">Locations/Toponyms • Released</span></a>
-        </aside>
-        
-        <aside id="order-right">
-          <a class="bubble bubblehover" href="../lore/lg-productions-presentation"><img class="img" src="../images/games/site_lgpresentationThumb.png" title="the first of many unfortunate lacking of ideas"><b>LG Productions Presentation</b> • <i>03/2024</i><br><span style="font-size:16px;">Game Details • Released</span></a>
-        </aside>
-      </main>
-      
-    </div>
-    <!-- • <b style="color:#ffb0b0">UPDATE!</b>-->
-  
+
     <footer-component></footer-component>
+    
+    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
+    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
+    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
+    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
+    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
+    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
+    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
+    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
+    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
   </body>
 </html>

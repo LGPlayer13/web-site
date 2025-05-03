@@ -5,157 +5,127 @@
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta name="description" content="Welcome to the World of LG Productions.">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="./javascript/footer.js" type="text/javascript" defer></script>
-    <script src="./javascript/themes.js" type="text/javascript" defer></script>
-    <style>
-      /* for the big image in the latest announcement */
-      a.bubble > img {
-        opacity: 0.875;
-        border-radius: 8px;
-        width: 100%;
-        transition: opacity .2s;
-      }
-      a.bubble:hover > img {opacity: 1;}
-    </style>
+    <script src="/javascript/extras.js" type="text/javascript" defer></script>
+    <script src="/javascript/blog.js" type="text/javascript" defer></script>
   </head>
   <body>
     <!--
-      is any of this code good? i'm sure there's a million better ways to do this, but it's not what's on the inside that matters, it's on the outside. actually, that might just be a tiny bit backwards. eh.
-      my web design teacher (if i ever get one!!) is gonna look at this and be like "what the hell did you do"
+      is any of this code good even after 2 major updates? eh, probably not.
+      my web design teacher (if i ever get one) is gonna look at this and be like "what the hell happened here?"
     -->
-  
-    <div>
-      <p><a class="logo" href="./index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
-    </div>
-  
-    <ul class="topnav">
-      <li><a id="active" href="./index">Home</a></li>
-      <li><a href="./about">About</a></li>
-      <li><a href="./blog">Blog</a></li>
-      <li><a href="./games">Games</a></li>
-      <li><a href="./faq">FAQ</a></li>
-    </ul>
     
-    <div class="container centerimage top">
-      
-      <aside id="order-left">
-        <img class="bounce georgie" src="./images/site_gregoe.png" title="this is george the jumping dorito. he is a triangle who bounces occasionally" style="float:right;width:73px;height:62.5px;">
-      </aside>
-      
-      <main id="flexcolumn">
-        <p style="margin:auto;vertical-align:middle;padding:16px;"><span style="font-size:22px;font-weight:bold;vertical-align:middle;">Welcome to the LG Productions web site!</span><br><span style="font-size:16px;">I'm the creator of the George Series.</span></p>
-      </main>
-      
-      <aside id="order-right">
-        <img class="bounce coryy" src="./images/site_cor%20the%20e.png" title="this is cory the cucumber. he uses knockoff mario sunshine powers" style="float:left;width:45px;height:64px;">
-      </aside>
-      
-    </div>
+    <header-component></header-component>
     
-    <div class="marquee">
-      <marquee id="splashes" style="color:white;font-size:16px;"><script src="./javascript/splashtexts.js"></script></marquee>
-      <!-- <marquee style="font-size:16px;"><b class="rainbow-text">Today is my birthday!</b></marquee> saving it for next year, every year -->
-    </div>
+    <div id="container">
+
+      <div class="textbox" style="margin-top:10px;">
+        <span style="font-size:20px;font-weight:bold;text-decoration:underline;">Welcome to the LG Productions web site!</span><br>Good morning! I'm LG, a moody teen who makes games (sometimes).<br>This is my <i title="the space is very much intentional">web site</i>, where I rant about and show off stuff.<br><sub>pronouns: he/him | est. <span id="days"></span> days ago</sub>
+      </div>
+      <!-- est. april 13, 2023 -->
     
-    <div class="container" id="flex">
+      <div class="marquee">
+        <marquee id="splashes" style="color:white;font-size:16px;"><script src="/javascript/splashtexts.js"></script></marquee>
+        <!-- <marquee style="font-size:16px;"><b class="rainbow-text">Today is my birthday!</b></marquee> saving it for next year, every year -->
+      </div>
+
+      <hr>
       
-      <aside id="order-left">
-        <div class="sector2">
-          <h3>ABOUT ME</h3>Good morning! I'm a moody teen who makes games (sometimes).<br><br>Welcome to my <i>web site</i>, where I rant about stuff and edit these pages often.<hr><b>pronouns:</b> he/him
-        </div>
-        <div class="sector2">
-          <h3>FUN STUFFS</h3><li>Sign my <a href="https://lgplayer13.atabook.org/">guestbook</a>!</li><li>Check out the <a href="./art-gallery">art gallery</a>!</li><li>I also <a href="https://www.albumoftheyear.org/user/lgplayer13/">rank albums</a> now.</li>
-        </div>
-        <hr>
-        <div class="sector3" style="padding-top:6px;">
+      <div class="flex">
+        <!-- border color is background with half the brightness -->
+        <a class="bubble whitetext" style="background-image:url(/images/linkimgs/lab2bg.jpg);background-position:center;--bgcolor:#20734e;--bdcolor:#113c28;" href="/games/labyrinths-II">
+          <img src="/images/linkimgs/lab2icon.png"><h3>Labyrinths II <span style="--typecolor:#6f9cff;"><b style="color:#ffb0b0">(NEW!)</b> IGM</span></h3><p>Explore through many different labyrinths and fight through hordes of monsters!<br><sup style="vertical-align:baseline;"><b>(coming soon to IGM!)</b></sup></p>
+        </a>
+        <a class="bubble blacktext" style="background-image:url(/images/linkimgs/georgeseriesbg.png);background-position:100% 58%;--bgcolor:#d68100;--bdcolor:#6b4000;" href="/games/george-series">
+          <img src="/images/linkimgs/georgeseriesicon.png"><h3>George Series <span style="--typecolor:#fffe6f;">Scratch</span></h3><p>Journey through the Asfard Archipelago and unravel the story of George the Triangle.</p>
+        </a>
+        <a class="bubble noimage" style="background-image:url(/images/linkimgs/moregamesbg.png);background-position:0% 40%;--bgcolor:#b5b5b5;--bdcolor:#5e5e5e;" href="/games">
+          <h3>More Games</h3><p>A bunch of my other Scratch and IGM games can be found in the Games page. They're pretty decent.</p>
+        </a>
+        <a class="bubble noimage" style="background-image:url(/images/linkimgs/aboutmebg.jpeg);background-position:10% 50%;--bgcolor:#ef5b3b;--bdcolor:#89220b;" href="/about">
+          <h3>About Me!</h3><p>Was the header not enough for you? Eh, there's a lot more to know, I guess.</p>
+        </a>
+        <a class="bubble blacktext noimage" style="background-image:url(/images/linkimgs/blogbg.png);background-position:0% 50%;--bgcolor:#d3b07c;--bdcolor:#7e5c2a;" href="/blog">
+          <h3>Blog</h3><p>I like to write stuff. Sometimes it can be mildly entertaining, but anything can happen here.</p>
+        </a>
+        <a class="bubble noimage" style="background-image:url(/images/linkimgs/feelinglostbg.png);background-position:0% 17%;--bgcolor:#825c30;--bdcolor:#432f19;" href="/sitemap">
+          <h3>...feeling lost?</h3><p>If you have no idea where to go, check out the sitemap! Consider it this site's "table of contents".</p>
+        </a>
+      </div>
+      
+      <div class="fadebox" style="cursor:default;">
+        <a href="/art-gallery">Art Gallery</a> • <a href="https://lgplayer13.atabook.org/">Guestbook</a> • <a href="/patch-notes">Patch Notes</a>
+      </div>
+      
+      <hr>
+      
+      <div class="textbox list">
+        <h3>Recent Posts</h3>
+        <p id="recentpostlistdiv"></p>
+      </div>
+      
+      <div class="flex">
+        <div class="flexfadebox" style="padding-top:14px;padding-bottom:0px;--width:20%;">
           <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40031905&main=1"></script>
           <noscript><img src="//counter1.fc2.com/counter_img.php?id=40031905&main=1" /></noscript>
-          <br>
-          <u style="font-size:16px;font-weight:600;">unique visitors!</u>
+          <br><sup style="line-height:0;">unique visitors!</sup>
         </div>
-        <div class="sector3" style="padding-bottom:0;">
-          <img src="./images/sites/LG%20Productions%20Web%20Site%20Button.gif"><span style="margin:5px;"/><img src="./images/sites/LG%20Productions%20Web%20Site%20Button%20Static.png"><br><span style="font-size:16px;font-weight:600;">Here's this site's button.</span><br><sup style="font-size:14px;">(feel free to use either one!)</sup>
-          <!-- <hr style="margin-top:0px;">
-          <textarea class="copyinst"><a href="https://lgplayer13.neocities.org/"><img src="(insert png/gif link)"></a></textarea> -->
+        <div class="flexfadebox" style="padding-bottom:0px;--width:20%;">
+          <img src="/images/sites/lgbutton.gif"><span style="margin:5px;"/><img src="/images/sites/lgbuttonstatic.png">
+          <br><sup style="line-height:0;">here's the <b>site button</b>!</sup>
         </div>
-      </aside>
+      </div>
       
-      <main id="flexcolumn">
-        <div class="sector">
-          <h3>LATEST ANNOUNCEMENT</h3>
-          <div class="sector-text">
-            <a class="bubble bubblehover" href="https://lgplayer13.bandcamp.com/album/fragments-of-waves" target="_blank"><img src="./images/site_promo.png" title="so average even these dudes are listening"><b>Fragments of Waves</b> has been released!</a>
-            <!-- <p style="margin:-5px 10px 8px 10px;text-align:left;font-size:16px;">published 11/16/24</p> -->
-          </div>
-          <hr>
-        </div>
-        <div class="sector">
-          <h3>RECENT POSTS</h3>
-          <div class="sector-text" style="padding-left:6px;text-align:left;">
-            <div id="recentpostlistdiv"></div>
-          </div>
-          <hr>
-        </div>
-      </main>
-      
-      <aside id="order-right">
-        <div class="sector2 list-circle">
-          <h3>SOCIAL LINKS</h3><li>videos: <a href="https://www.youtube.com/@LGPlayer13">youtube channel</a></li><li>streams: <a href="https://www.twitch.tv/lgplayer13">twitch channel</a><li>posts: <a href="https://bsky.app/profile/lgplayer13.neocities.org">bluesky page</a></li><hr><li>games: <a href="https://scratch.mit.edu/users/LGameMaker13">scratch page</a></li><li>ports: <a href="https://lgplayer13.itch.io/">itch.io page</a></li><li>music: <a href="https://lgplayer13.bandcamp.com/">bandcamp page</a></li>
-        </div>
-        <hr>
-        <div class="sector2 scroll">
-          <h3>SITE UPDATES</h3><span class="smallfont"><i>03/11/25</i> - v2.1.3<li>small CSS changes</li><li>changed Bandcamp links</li><li>a few more splashes</li><hr><i>01/03/25</i> - v2.1.2<li><b>happy new year!</b></li><li>simplified Blog page</li><li>edits to some CSS</li><hr><i>12/01/24</i> - v2.1.1<li>redesigned some page sections</li><li>new Lore sub-page</li><li>fixed minor CSS issues</li><hr><i>11/02/24</i> - v2.1<li><b>fall season update!</b></li><li>improved site layout/design</li><li>overhauled the entire Blog</li><hr><i>10/03/24</i> - v2.0.5<li>new <a href="./sitemap">Site Map</a> page</li><li>changed Blog links</li><li>customized scrollbars</li><hr><i>09/24/24</i> - v2.0.4<li>redesigned game sub-pages</li><li>overhauled Blog Backlog</li><li>some minor tweaks</li><hr><i>09/16/24</i> - v2.0.3<li>three new themes!</li><li>minor CSS additions</li><li>improved code</li><hr><i>09/02/24</i> - v2.0.2<li>some QOL changes</li><li>new secret page</li><li>misc. fixes/reworks</li><hr><i>08/15/24</i> - v2.0.1<li>embeds in index</li><li>new guestbook (again)</li><li>new widgets in About</li><hr><i>08/03/24</i> - v2.0<li>finished incomplete pages</li><li>moved back to Neocities</li><hr><i>08/01/24</i> - v2.0 (beta)<li>web site overhaul</li><li>couple pages added</li><li>several pages removed</li><hr><i>07/27/24</i><li>new secret page</li><hr><i>07/15/24</i> - v1.2_2<li>added music page</li><hr><i>06/07/24</i> - v1.2_1<li>web site redesign</li><li>new Guestbook page</li><li>removed Lore page</li><hr><i>04/19/24</i> - v1.2<li>new web site layout</li><li>streamlined development</li><li>proper announcements</li><hr><i>02/02/24</i><li>scratch project embeds</li><hr><i>01/28/24</i><li>first official Guestbook</li><hr><i>01/27/24</i> - v1.1<li>minor CSS changes</li><li>added new icons</li><hr><i>01/13/24</i> - v1.0_1<li><b>15th birthday update!</b></li><li>added Lore page</li><li>tidied up details</li><hr><i>01/01/24</i> - v1.0<li><b>new year's update!</b></li><li>finalized unfinished pages</li><li>established blog</li><hr><i>08/15/23</i> - v0.0<li>new GitHub site</li><li>added unfinished Games page</li><li>abandoned Neocities site</li><hr><i>04/13/23</i> - pre-v0.0<li>established the site</li><li>looks quite ugly</li><li>ah well</li></span>
-        </div>
-      </aside>
+      <hr>
       
     </div>
     
-    <div class="container" id="flex">
-      
-      <aside id="order-left">
-        <div class="sector">
-          <h3>BANDCAMP PAGE</h3>
-          <div class="sector-text">
-            <iframe class="embed" style="width:92%;height:120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2197789584/size=large/bgcol=ffffff/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lgplayer13.bandcamp.com/track/magnesium-tire-2">Magnesium Tire by LG Productions</a></iframe>
-            <iframe class="embed" style="width:92%;height:120px;" src="https://bandcamp.com/EmbeddedPlayer/track=4214126770/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lgplayer13.bandcamp.com/track/doublemint">Doublemint by LG Productions</a></iframe>
-          </div>
-          <hr>
-        </div>
-        <p class="subtext">Visit my <a href="https://lgplayer13.bandcamp.com/">Bandcamp page</a> for more of whatever this is.</p>
-      </aside>
-      
-      <aside id="order-right">
-        <div class="sector">
-          <h3>DISCORD SERVER</h3>
-          <div class="sector-text">
-            <iframe src="https://discord.com/widget?id=1064646442318307349&theme=dark" class="embed" style="width:92%;height:258px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-          </div>
-          <hr>
-        </div>
-        <p class="subtext">Join the Discord server and see what's happening.</p>
-      </aside>
-      
-    </div>
-    
-    <div class="container bottom" id="flex">
-      
-      <main id="flexcolumn">
-        <section class="sector2">
-          <details style="margin-top:0px;">
-            <summary><b>PATCH NOTES / v2.1.3</b></summary>
-            <main style="margin-top:5px;"><li>small CSS changes, such as completely removing all animations</li><li>added new section to the Art Gallery</li><li>changed Bandcamp links to more recent songs</li><li>collapsed <i>this panel!</i></li><li>added a few more splashes</li><li>this update is Not Interesting (sorry)</li></main>
-          </details>
-        </section>
-      </main>
-      
-    </div>
-    
-    <script src="./javascript/blog.js"></script>
     <footer-component></footer-component>
+    
+    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
+    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
+    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
+    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
+    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
+    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
+    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
+    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
+    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
+    
+    <img class="charhover" style="top:41%;left:14%;--delay:0s;" src="/images/decor/gregoe.png" title="here's george. people like to call this man a dorito">
+    <img class="charhover" style="top:31%;left:79%;--delay:0.75s;" src="/images/decor/cor%20the%20e.png" title="this is cory. he has super mario sunshine knockoff powers">
+    <img class="charhover" style="top:77%;left:23%;--delay:1.5s;" src="/images/decor/sparkyyy.png" title="sparky the rhombus: seen in everything except the games">
+    
+    <!-- script borrowed from fractyl's website -->
+    <script>
+      function SinceThen() {
+
+        var then = new Date("04/13/2023"); 
+        var today = new Date(); 
+        today.setHours(0, 0, 0, 0);
+
+        var difference = today.getTime() - then.getTime(); 
+        var days = difference / (1000 * 3600 * 24); 
+        var days = Math.round(days);
+
+        document.getElementById("days").innerHTML = days;
+
+        if (difference < 0) {
+          clearInterval(SinceThen);
+          document.getElementById("days").innerHTML = "N/A";
+        }
+      };
+
+
+      setInterval( function() {
+      SinceThen();
+      }, 1000);
+
+      SinceThen();
+    </script>
   </body>
 </html>

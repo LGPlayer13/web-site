@@ -4,139 +4,141 @@
     <title>LG Productions • About</title>
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="./javascript/footer.js" type="text/javascript" defer></script>
-    <script src="./javascript/themes.js" type="text/javascript" defer></script>
-    <style>
-      .othersite:hover {opacity: 0.55;}
-    </style>
+    <script src="/javascript/extras.js" type="text/javascript" defer></script>
   </head>
   <body>
-    <!-- script borrowed from fractyl's website -->
-    <script>
-      function SinceThen() {
+    <header-component></header-component>
+    
+    <div id="container">
 
-        var then = new Date("04/13/2023"); 
-        var today = new Date(); 
-        today.setHours(0, 0, 0, 0);
-
-        var difference = today.getTime() - then.getTime(); 
-        var days = difference / (1000 * 3600 * 24); 
-        var days = Math.round(days);
-
-        document.getElementById("days").innerHTML = days;
-
-        if (difference < 0) {
-          clearInterval(SinceThen);
-          document.getElementById("days").innerHTML = "N/A";
-        }
-      };
-
-
-      setInterval( function() {
-      SinceThen();
-      }, 1000);
-
-      SinceThen();
-    </script>
-    <div>
-      <p><a class="logo" href="./index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
-    </div>
-  
-    <ul class="topnav">
-      <li><a href="./index">Home</a></li>
-      <li><a id="active" href="./about">About</a></li>
-      <li><a href="./blog">Blog</a></li>
-      <li><a href="./games">Games</a></li>
-      <li><a href="./faq">FAQ</a></li>
-    </ul>
-  
-    <div class="container top" id="flex">
+      <h2>About Me</h2>
+      <div class="textbox">
+        Heyo, this is LG. I like to make dinky projects on Scratch and IGM, play dumb video games, and rant about stuff. (you probably knew that.)<br><br>In my spare time, I collect plushies and CDs alongside being lazy.<br>I also listen to music. A LOT of music.<br><br>My favorite project I've started has to be the George Series. Sure, it only contains one entry, but the concept is there!
+      </div>
+    
+      <div class="fadebox" style="margin-top:0px;">
+        links: <a href="https://www.youtube.com/@LGPlayer13" target="_blank" title="subscribe for a rare video or two">Youtube</a>, <a href="https://www.twitch.tv/lgplayer13" target="_blank" title="follow for very rare streams">Twitch</a>, <a href="https://bsky.app/profile/lgplayer13.neocities.org" target="_blank" title="follow for occasional ramblings">Bluesky</a>, <a href="https://lgplayer13.bandcamp.com/" target="_blank" title="apparently i make music???">Bandcamp</a>
+      </div>
       
-      <aside id="order-left">
-        <div class="sector2">
-          <h3>MORE ABOUT ME</h3><img class="bounce" src="./images/site_itsme.png" title="this is me. i exist. like and/or/please subscription" style="float:left;padding:2px 10px 2px 2px;">Heyo. I like to make dinky games on Scratch and IGM, play dumb video games, and rant about stuff.<br>This is my web site, and yes, the space between <i>web</i> and <i>site</i> is very much intentional.<br><br><u style="font-weight:bold;">est. April 13, 2023 / <span id="days"></span> days ago</u>
-          <hr>
-          <section class="sector4">
-          <details style="margin-top:-3px;margin-bottom:8px;">
-            <summary><b>FAVORITE GAMES</b></summary>
-            <main style="margin-top:5px;"><b>Top 10 of All Time:</b><li>Minecraft</li><li>Pizza Tower</li><li>Wii Sports</li><li>Sound Shapes</li><li>Baldi's Basics</li><li>Rhythm Heaven</li><li>Undertale/Deltarune</li><li>OMORI</li><li>Stardew Valley</li><li>Cookie Clicker</li></main>
+      <hr>
+      
+      <div class="fadebox showoff" style="--dir:row;--align:left;">
+        <img class="squareimg" style="--position:50% 0%;" src="/images/decor/plushies.jpeg" tabindex="0">
+        <span>Like I mentioned earlier, I collect plushies! While I mainly collect Minecraft mob plushies, I also have some random ones lying around.<br><br>Some of my most prized ones include Ross Federman of Tally Hall, a Minecraft frog that has a brass-coated penny in its mouth, a Minecraft armadillo, and my giant Minecraft bee.<br>Don't worry, there's more on the other shelf.</span>
+      </div>
+      
+      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
+        <img class="squareimg" style="--position:50% 30%;" src="/images/decor/la%20musica.jpeg" tabindex="0">
+        <span>Another hobby of mine is collecting CDs! Shocker, I know, coming from the guy who doesn't shut up about his "niche" taste in music.<br><br>Most of the CDs I have right now are just from my parents' collections, but I have quite a few of my own.<br>These two Grizzly Bear CDs you see are probably my favorites out of the bunch.</span>
+      </div>
+      
+      <hr>
+      
+      <h2>FAQ</h2>
+      <div class="textbox list">
+        <section>
+          <details style="margin-top:0px;">
+            <summary><b>General</b></summary>
+            <ul>
+              <li><b>Q : How can I support you?</b><br>A : I'm unfortunately too young to have a PayPal or something like that, so I dunno. Subscribe to my <a href="https://www.youtube.com/@LGPlayer13" target="_blank">Youtube channel</a> or check out my other socials.</li>
+              <li><b>Q : I like your art. Do you do commissions?</b><br>A : Nope. If you're that desperate for my artwork, draw something better. Literally everyone draws my characters better than I can, lol.</li>
+              <li><b>Q : How can I check for new releases and updates?</b><br>A : Well, you've already gotten to my web site, so I'd say you're in a good place for that.</li>
+              <li><b>Q : How can I contact you?</b><br>A : Join my <a href="https://discord.gg/v7NaVBTwnD" target="_blank">Discord server</a> and shoot me a message. You can also sign my <a href="https://lgplayer13.atabook.org/">guestbook</a>.</li>
+              <li><b>Q : Where are the secrets?</b><br>A : I forgot, although I <i>do</i> know they're kept in a folder called "secrets".</li>
+            </ul>
           </details>
-          <details style="margin-bottom:8px;">
-            <summary><b>FAVORITE MOVIES/SHOWS</b></summary>
-            <main style="margin-top:5px;"><b>Top 5 Movies of All Time:</b><li>Holes</li><li>Coraline</li><li>Isle of Dogs</li><li>Elf</li><li>Home Alone 1 & 2</li><br><b>Top 5 Shows of All Time:</b><li>The Amazing World of Gumball</li><li>Arrested Development</li><li>Clarence</li><li>Brooklyn Nine-Nine</li><li>We Bear Bears</li></main>
+        </section>
+      </div>
+      <div class="textbox list">
+        <section>
+          <details style="margin-top:0px;">
+            <summary><b>About Me +</b></summary>
+            <ul>
+              <li><b>Q : How old are you?</b><br>A : Between the ages of 15-18. My actual age is already out there, I just don't wanna update this every year.</li>
+              <li><b>Q : Any nicknames you go by?</b><br>A : Typically, I just go by LG. I don't care if you make <a href="https://www.lg.com/" target="_blank">Life's Good</a> jokes.</li>
+              <li><b>Q : When did you start making stuff online?</b><br>A : I "discovered" Scratch back in 2019, but I brushed it off for not being "real coding". A year later (during the pandemic), I revisited Scratch and found it to be quite the neat tool. Ever since then, I've been making neat games on there. As for IGM, I started making a bunch of crappy, now-deleted clicker games back in 2019, until I lost interest and stopped. Then in 2022, I picked up coding in IGM again and started making actually decent games.</li>
+              <li><b>Q : Any hobbies other than coding?</b><br>A : Look at the clear boxes up there.</li>
+            </ul>
           </details>
-          <details style="margin-bottom:-13px;">
-            <summary><b>FAVORITE ARTISTS/BANDS</b></summary>
-            <main style="margin-top:5px;margin-bottom:-9px;"><b>Top 10 of All Time:</b><li>Vampire Weekend</li><li>Radiohead</li><li>Grizzly Bear</li><li>Tame Impala</li><li>LCD Soundsystem</li><li>Tally Hall</li><li>Bill Wurtz</li><li>MGMT</li><li>Beck</li><li>Foster the People</li></main>
+        </section>
+      </div>
+      <div class="textbox list">
+        <section>
+          <details style="margin-top:0px;">
+            <summary><b>Web Site</b></summary>
+            <ul>
+              <li><b>Q : How did you make this web site?</b><br>A : I use <a href="https://neocities.org/" target="_blank">Neocities</a> for hosting, <a href="https://github.com/" target="_blank">GitHub</a> for the repo, and <a href="https://brackets.io/" target="_blank">Brackets</a> for coding.</li>
+              <li><b>Q : Any external resources you use?</b><br>A : I also use <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> for HTML/CSS tutorials and <a href="https://www.gimp.org/" target="_blank">GIMP</a> for image editing.</li>
+              <li><b>Q : You're telling me you DIDN'T use a layout builder?</b><br>A : You're correct! I didn't use one because I thought it'd be more fun making an entire website straight from scratch, especially considering my affiliation with CSS through <a href="https://orteil.dashnet.org/igm/" target="_blank">IGM</a>. It actually ended up working out, surprisingly.</li>
+              <li><b>Q : What's with the version number? Shouldn't those just be for games?</b><br>A : Ever since I started making games back in 2019, I've always been obsessed with version numbers. Whether it's formatted X.Y or X.Y.Z, I'm all for it. (1-digit numbers are no good, though.)</li>
+              <li><b>Q : What's with the space between <i>web</i> and <i>site</i>?</b><br>A : I faintly remember making a typo during the early days of the site, which was an accidental space in the word 'website'. I thought it'd be funny to just roll with it, and it's stuck ever since.</li>
+              <li><b>Q : When was this web site originally established?</b><br>A : April 13, 2023, so it's been a while. The now-defunct GitHub Pages version was made on October 15, 2023.</li>
+            </ul>
           </details>
-          </section>
+        </section>
+      </div>
+      <div class="textbox list">
+        <section>
+          <details style="margin-top:0px;">
+            <summary><b>Games / Characters</b></summary>
+            <ul>
+              <li><b>Q : When did you come up with your characters?</b><br>A : I came up with George, Cory, and Greg in early 2021, and Sparky in mid 2021. The <a href="/games/sids-adventure">Sid's Adventure</a> characters were made in 2022 (one in mid 2023). My IGM games have no real characters so far.</li>
+              <li><b>Q : Can I use your characters in my own games?</b><br>A : Go ahead! Just make sure to credit me.</li>
+              <li><b>Q : Can I make fanart of your characters?</b><br>A : Sure, just please don't make it weird.</li>
+              <li><b>Q : Can I record/stream myself playing your games or listening to your music?</b><br>A : Sure! (the latter is more of a joke, but go ahead if you'd like)</li>
+            </ul>
+          </details>
+        </section>
+      </div>
+      
+      <hr>
+      
+      <div class="flex">
+        <div class="flexfadebox" style="padding-bottom:0px;--width:30%;">
+          <iframe src="https://free.timeanddate.com/clock/i9i71eqz/n137/fn6/fs16/fc16ff00/tc080808/pct/ftb/bas3/bat8/bacafa79c/pa8/tt0/tw1/th1/ta1/tb4" style="padding-top:2px;width:214px;height:58px;" frameborder="0" allowtransparency="true"></iframe>
+          <br><sup style="line-height:0;">here's my current time!</sup>
         </div>
-        <p class="subtext">Check out the <a href="./about-extras">About Extras</a> page for more.</p>
-      </aside>
-      
-      <aside id="order-right">
-        <div class="sector2">
-          <h3>QUICK FAQ</h3>Here's a random assortment of self-asked questions that might match some of <i>your</i> questions.<br><br><b>Q : What kind of games do you make?</b><br>A : Platformers, turn-based, and text-based.<br><b>Q : Why do you have 35,000+ hours on Cookie Clicker?</b><br>A : I like cookies.<br><b>Q : Are you a huge gamer most of the time?</b><br>A : Eh, not really. I need to play more games.<br><b>Q : Why does your 'web site' suck complete ass?</b><br>A : Yours probably doesn't look much better.<br><b>Q : What is your favorite food <i>ever</i>?</b><br>A : I dunno. Burgers? Spaghetti? Pizza? Bowl of tar?<br><b>Q : What is your favorite album <i>ever</i>?</b><br>A : Only God Was Above Us by Vampire Weekend.<br><b>Q : Why are swears censored?</b><br>A : I'd like to keep this site as PG-13 as possible.<br><b>Q : How would you rate your pain?</b><br>A : Five, on a scale of 1-10.<br><b>Q : Is there a fly in your room?</b><br>A : Yup. Where it came from, I have no clue.<br><b>Q : What's the latest time you've stayed up?</b><br>A : 4:04 AM. Trust me, I've seen a <i>lot</i> worse.<br><b>Q : Have you ever had gum stuck in your hair?</b><br>A : Yes. When? I forgot.
+        <div class="flexfadebox" style="padding:0px;padding-bottom:5px;--width:35%;">
+          <div id="player"><iframe style="width:100%" id="player-frame" src="now-playing.html" frameborder="0" scrolling="no"></iframe></div>
         </div>
-        <p class="subtext">Visit the <a href="./faq">FAQ</a> page for actually decent questions.</p>
-      </aside>
+      </div>
       
-    </div>
-  
-    <div class="container" id="flex">
+      <div class="fadebox">
+        <span style="font-size:18px;font-weight:600;">other cool websites!</span><br>
+        <a class="othersite" href="https://hyphen-lost.neocities.org/"><img src="/images/sites/hyphenbutton.png" title="where did all the hyphens go my good man" target="_blank" loading="lazy"></a>
+        <a class="othersite" href="https://rylieeric.neocities.org/"><img src="/images/sites/ryliebutton.gif" title="neapolitan: the wombo combo of ice creams" target="_blank" loading="lazy"></a>
+        <a class="othersite" href="https://fractyl.neocities.org/"><img src="/images/sites/fractylbutton.png" title="hosted by this apparently 'really cool, smart, and especially handsome person'" target="_blank" loading="lazy"></a>
+        <a class="othersite" href="https://scrambledrubiks.neocities.org/"><img src="/images/sites/rubiksbutton.gif" title="weary travellers beware of the fractals" target="_blank" loading="lazy"></a>
+      </div>
+      <!-- just a heads up for anyone wondering about this. if i end up featuring your website here, don't feel inclined or forced to feature mine on yours! this is purely to show off cool websites, not ask for people to feature mine. -->
       
-      <aside id="order-left">
-        <div class="sector3">
-          <iframe src="https://free.timeanddate.com/clock/i9i71eqz/n137/fn14/fs19/tct/pct/ftb/pa0/tt0/tw0/tm1/tb1" style="width:262px;height:23px;" frameborder="0" allowtransparency="true"></iframe><br>
-          <span style="margin-bottom:4px;">This is my current date and time.</span>
-        </div>
-        <p class="subtext">Time Zone: Pacific Standard Time (PST)</p>
-      </aside>
-      
-      <aside id="order-right">
-        <div id="player"><iframe class="sector3" style="padding:0px;width:94.5%;" id="player-frame" src="now-playing.html" frameborder="0" scrolling="no"></iframe></div>
-        <!-- this neat little widget is from https://github.com/vojislav/lastfm-now-playing -->
-        <p class="subtext" style="margin-top:-15px;">Here's what I've last listened to! (Or what's playing <i>right now</i>!)</p>
-      </aside>
-      
+      <hr>
+    
     </div>
     
-    <div class="container bottom" id="flex">
-      
-      <main id="flexcolumn">
-        <div class="sector">
-          <h3>OTHER COOL WEBSTIES</h3>
-          <div class="sector-text" style="padding-top:8px;padding-bottom:6px;">
-            <a class="othersite" href="https://hyphen-lost.neocities.org/"><img src="/images/sites/hyphenbutton.png" title="where did all the hyphens go my good man" loading="lazy"></a>
-            <a class="othersite" href="https://rylieeric.neocities.org/"><img src="/images/sites/ryliebutton.gif" title="neapolitan: the wombo combo of ice creams" loading="lazy"></a>
-            <a class="othersite" href="https://fractyl.neocities.org/"><img src="/images/sites/fractylbutton.png" title="hosted by this apparently 'really cool, smart, and especially handsome person'" loading="lazy"></a>
-            <a class="othersite" href="https://scrambledrubiks.neocities.org/"><img src="/images/sites/rubiksbutton.gif" title="weary travellers beware of the fractals" loading="lazy"></a>
-            <br>
-            <a href="https://codenamed.site/" title="codenaming many different types of naming schemes">Codenamed</a>
-          </div>
-          <hr>
-        </div>
-      </main>
-      
-    </div>
-    <!-- just a heads up for anyone wondering about this. if i end up featuring your website here, don't feel inclined or forced to feature mine on yours! this is purely to show off cool websites, not ask for people to feature mine. -->
-  
-    <sub class="footer" style="margin-top:20px;">
-      All content belongs to its respective owners. • <u>v2.1.3</u>
-    </sub>
-
-    <sub class="footer">Hate these colors? Try a different theme:
-      <select id="selectTheme">
-        <option value="george">George (orange)</option>
-        <option value="cory">Cory (green)</option>
-        <option value="greg">Greg (turquoise)</option>
-        <option value="sid">Sid (purple)</option>
-      </select>
-    </sub>
+    <footer>
+      <p class="topfooter" style="margin-top:20px;">
+        All content belongs to its respective owners. • v3.0
+      </p>
+      <sup>hosted on <a href="https://neocities.org/" target="_blank">neocities</a> | <a href="/sitemap">site map</a> | <a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord server</a></sup>
+    </footer>
+    
+    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
+    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
+    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
+    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
+    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
+    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
+    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
+    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
+    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
+    
+    <img class="charhover" style="top:58%;left:17%;--delay:0s;" src="/images/decor/to%20the%20max.png" title="my guy is absolutely flabbergasted">
+    <img class="charhover" style="top:84%;left:74%;--delay:0.75s;" src="/images/decor/disc.png" title="only real ones know where this is from">
   </body>
 </html>

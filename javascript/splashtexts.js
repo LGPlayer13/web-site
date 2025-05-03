@@ -10,7 +10,6 @@ var splashes = [
     "No. Don't you touch my macaroni.",
     "Is that a bad guy or a lens flare?",
     "Nice one, you just caught yourself lacking.",
-    "Always trying, trying my best to be good.",
     "The eight wonders of the world; Easter Island heads, the pyramids, y'know. Useless crap like that.",
     "The soup is cold, and the salad is hot. How is that even possible?",
     "Does <i>your</i> life have a pause control?",
@@ -251,6 +250,19 @@ var splashes = [
     "Legally questionable!",
     "A lonely child is what you're gonna be when I sell you.",
     "Oh, these dudes? They're the villagers!",
+    "That looks dubious to me. What do you think?",
+    "I’ve checked every Gucci store on the planet looking for this baby.",
+    "I f***ing hate it when the immutable power of the sun detonates in my room.",
+    "Life is short. Have a Kitkat.",
+    "Hello my good friend, I am the milk man here to serve fresh pasturized milk rich with vitamins and calcium.",
+    "I'd rather have one Birdo than five children.",
+    "Mario and Peach together, me and Gina together.",
+    "Hot buttered popcorn, that's a deal!",
+    "$29.99, none of that $60, multiplayer-only bullsh*t.",
+    "I like you Jimmy, you're a spunky guy.",
+    "This program is a cancer.",
+    "We're on Apple's magical black box, just in time for the holidays!",
+    "Oh, you get crushes on cartoons? That's pretty cool.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i like this quote but it's too sensitive and kinda makes me upset thinking about it

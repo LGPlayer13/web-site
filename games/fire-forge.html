@@ -4,79 +4,68 @@
     <title>LG Productions • Fire Forge</title>
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="../javascript/footer.js" type="text/javascript" defer></script>
-    <script src="../javascript/themes.js" type="text/javascript" defer></script>
-    <style>
-      .sector3 {text-align: left;overflow-y: auto;}
-      .sector3 h3 {text-align: center;}
-      .sector3 img {border: 3px outset var(--border2);border-radius: 11px;margin-top: 4px;width: 475px;}
-    </style>
+    <script src="/javascript/extras.js" type="text/javascript" defer></script>
   </head>
-<body>
-    <div>
-      <p><a class="logo" href="../index"><img src="../images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
-    </div>
-  
-    <ul class="topnav">
-      <li><a href="../index">Home</a></li>
-      <li><a href="../about">About</a></li>
-      <li><a href="../blog">Blog</a></li>
-      <li><a href="../games">Games</a></li>
-      <li><a href="../faq">FAQ</a></li>
-    </ul>
-  
-    <div class="container top" id="flex">
+  <body>
+    <header-component></header-component>
+    
+    <div id="container">
+
+      <img class="gamelogo" src="/images/games/fftitle.png" title="bro who fired forge???" style="width:200px;">
+      <div class="textbox">
+        Released: --/--/--<br>v1.0 (alpha) • Tech-based/humor<br><sub>last update: --/--/--</sub>
+      </div>
       
-      <main id="flexcolumn">
-        <div class="sector">
-          <h3><img src="../images/games/site_fftitle.png" title="bro who fired forge???" style="width:200px;padding-top:3px;"></h3>
-          <div class="sector-text">
-            <p>Released <i>--/--/25?</i> • Updated <i>--/--/--</i><br>v1.0 (alpha) // Tech-based</p>
-          </div>
-          <hr>
-        </div>
-      </main>
+      <div class="flex">
+        <a class="flexbubble off" href="#">Play it!</a>
+        <a class="flexbubble off" href="#">Archive Page</a>
+      </div>
       
-    </div>
-  
-    <div class="container bottom" id="flex">
+      <hr>
       
-      <main id="flexcolumn">
-        <div class="sector3">
-          <h3>IT STARTS AS A SIMPLE JOKE</h3>
-          <img src="https://file.garden/Yhwc9XZFah3TM9iw/screenies/ffScreenie1.png" alt="oops, looks like file garden is down. so sad" id="flex" style="float:left;margin-right:5px;">
-          <sub style="font-style:italic;">Burning a scrap during the 1st quest.</sub><hr><span style="font-size:17px;"><i>Fire Forge</i> is an upcoming tech-based game where you burn random junk in an open fire, climbing the odd tech tree along the way. Make weird materials, build contraptions, and chat with your wacky friend.<br><br>Starting off as a simple joke, this game's plot spirals into a chaotic mess of multi-management and growing a friendship, all to have something to do during summer break.</span>
-        </div>
-        <div class="sector3" style="text-align:right;">
-          <h3>HOW'D THIS HAPPEN</h3>
-          <img src="https://file.garden/Yhwc9XZFah3TM9iw/screenies/ffScreenie2.png" alt="oops, looks like file garden is down. so sad" id="flex" style="float:right;margin-left:5px;">
-          <sub style="font-style:italic;">Having your Friend forage for scrap.</sub><hr><span style="font-size:17px;">Once <a href="./the-lost-labyrinths">The Lost Labyrinths</a> a1.2.1 was released, I started development on a prototype known as Embers. Its plot was wildly different from that of Fire Forge's, but it laid the groundwork for its mechanics.<br><br>After establishing FF's plot and layout, I began work on it at the beginning of 2024, and it's been in the oven ever since. It'll be out (hopefully) by late November.</span>
-        </div>
-        <div class="sector3 list-circle">
-          <h3>WHAT IT HAS TO OFFER</h3>
-          <img src="https://file.garden/Yhwc9XZFah3TM9iw/screenies/ffScreenie3.png" alt="oops, looks like file garden is down. so sad" id="flex" style="float:left;margin-right:5px;">
-          <sub style="font-style:italic;">Cooking some "delicious" "treats" to eat.</sub><hr><span style="font-size:17px;"><li>???</li><li>???</li><li>???</li><li>???</li><li>???</li><li>???</li></span>
-        </div>
-      </main>
+      <div class="fadebox showoff" style="--dir:row;--align:left;">
+        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ffScreenie1.png" tabindex="0">
+        <span><b>Fire Forge</b> is a (shelved) tech-based game where you burn random junk in an open fire, climbing the odd tech tree along the way. Make weird materials, build contraptions, and chat with your wacky friend.<br><br>Starting off as a simple joke, this game's plot spirals into a chaotic mess of multi-management and growing a friendship, all to have something to do during summer break.</span>
+      </div>
       
-      <aside style="width:39%;" id="order-right">
-        <div class="sector3" style="padding-top:6px;text-align:center;">
-          <a class="buttonwide off" style="margin-top:5px;" href="#">Play it!</a><hr><a class="buttonwide off" href="#">Archive Page</a>
-        </div>
-        <div class="bubble">Back to <a href="../games">Games</a> page</div>
-        <hr style="margin-top:15px;">
-        <div class="sector2 scroll">
-          <h3>UPDATE LOG</h3><span class="smallfont">nothing for now... so sorry.</span>
-        </div>
-      </aside>
+      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
+        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ffscreenie2.png" tabindex="0">
+        <span>Once The Lost Labyrinths v1.2.1 was released, I started development on a prototype known as Embers. Its plot was wildly different from that of Fire Forge's, but it laid the groundwork for its mechanics.<br><br>After establishing FF's plot and layout, I began work on it at the beginning of 2024, and it's been in the oven ever since. Not sure if it'll ever be released, but I may come back to it later.</span>
+      </div>
+      
+      <div class="fadebox showoff" style="--dir:row;--align:left;">
+        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ffScreenie3.png" tabindex="0">
+        <span><b>It also features...</b><br><li>???</li><li>???</li><li>???</li><li>???</li><li>???</li><li>???</li></span>
+      </div>
+      
+      <div class="textbox updatelog">
+        <section>
+          <details style="margin-top:0px;">
+            <summary><b>Update Log</b></summary>
+            <main>nothing for now... sorry about that.</main>
+          </details>
+        </section>
+      </div>
+      
+      <hr>
       
     </div>
-  
+
     <footer-component></footer-component>
+    
+    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
+    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
+    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
+    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
+    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
+    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
+    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
+    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
+    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
   </body>
 </html>

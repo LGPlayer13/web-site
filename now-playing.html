@@ -6,19 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="./javascript/footer.js" type="text/javascript" defer></script>
-    <script src="./javascript/themes.js" type="text/javascript" defer></script>
 </head>
 <body>
     <style>
       body {
-        background-image: var(--sector-bg);
+        margin-bottom: 0%;
+        padding-bottom: 48px;
+        overflow-y: auto;
+      }
+      body, html, div {
+        color: white;
+        background: none;
+        text-align:left;
+        font-family: "Outfit", serif;
+        font-size: 19px;
+        font-weight: 400;
+        font-style: normal;
         text-shadow: 1px 1px 1.5px #000000;
+      }
+
+      .refresh {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
       }
       
       a:link {color: #e0e0e0;}
@@ -41,20 +55,11 @@
         </tr>
     </table>
     <!--<span class="refresh" onclick="window.location.reload()">&#128472;</span>-->
-    <img class="refresh" src="./images/site_refresh.png" width="11px" height="11px" onclick="window.location.reload()">
+    <img class="refresh" src="/images/decor/refresh.png" width="11px" height="11px" onclick="window.location.reload()">
   
-    <div class="box" style="display:none;padding-top:3px;padding-bottom:3px;background-color:var(--footer-bg);border-radius:0px 0px 28px 28px;border-style:solid;">
-      <b>you will absolutely NEVER see this message! take that!!</b>
-    </div>
-
-    <sub style="display:none;color:white;position:relative;margin:auto;margin-top:8px;right:0;left:0;display:block;text-align:center;text-shadow:1px 1px 1px #000000;"><b>Loading embed...</b>
-      <select id="selectTheme" style="display:none;">
-        <option>George</option>
-        <option>Cory</option>
-      </select>
-    </sub>
+    <!--<sub style="display:none;color:white;position:relative;margin:auto;margin-top:8px;right:0;left:0;display:block;text-align:center;text-shadow:1px 1px 1px #000000;"><b>Loading embed...</b></sub>-->
 </body>
 
-<script src="javascript/main.js"></script>
+<script src="/javascript/main.js"></script>
 
 </html>

@@ -4,51 +4,89 @@
     <title>LG Productions • Site Map</title>
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="./javascript/footer.js" type="text/javascript" defer></script>
-    <script src="./javascript/themes.js" type="text/javascript" defer></script>
-    <style>
-      body {
-        background-image: linear-gradient(135deg, #272727, #4c4c4c);
-      }
-    </style>
+    <script src="/javascript/extras.js" type="text/javascript" defer></script>
   </head>
-<body>
-    <div>
-      <p><a class="logo" href="./index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
-    </div>
-  
-    <ul class="topnav">
-      <li><a href="./index">Home</a></li>
-      <li><a href="./about">About</a></li>
-      <li><a href="./blog">Blog</a></li>
-      <li><a href="./games">Games</a></li>
-      <li><a href="./faq">FAQ</a></li>
-    </ul>
-  
-    <div class="container full" id="flex">
+  <body>
+    <header-component></header-component>
+    
+    <div id="container">
+
+      <h2>Site Map</h2>
+      <div class="textbox">
+        Not sure where to go? Well, this is the Site Map!<br>Find a board with the folder you're looking for, then click on a link!
+      </div>
       
-      <aside id="order-left">
-        <div class="sector2 list-circle">
-          <h3>ABOUT PAGES</h3><li><a href="about">About</a></li><li><a href="about-extras">About Extras</a></li><li><a href="faq">FAQ</a></li><li><a href="now-playing">Now Playing</a> (last.fm widget)</li><hr>
-          <h3>BLOG PAGES</h3><li><a href="./blog">Blog</a></li><li><a href="./posts/old-blog">Old Blog</a></li><li><a href="./posts/old-backlog">Old Backlog</a></li><li><a href="./posts/old-devlog">Old Devlog</a></li><hr>
-          <h3>MISC PAGES</h3><li><a href="art-gallery">Art Gallery</a></li><li><u style="color:#ff7676;cursor:default;">Devlog</u> (deleted)</li><li><a href="guestbook">Guestbook</a> (deprecated)</li><li><a href="not_found">Not Found</a> (404!)</li>
+      <hr>
+      
+      <div class="flex">
+        <div class="mapboard" style="transform:rotate(1deg);">
+          <h3>• Root •</h3>
+          <ul>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/art-gallery">Art Gallery</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/games">Games</a></li>
+            <li><a href="/patch-notes">Patch Notes</a></li>
+          </ul>
         </div>
-      </aside>
-      
-      <aside id="order-right">
-        <div class="sector2 list-circle">
-          <h3>GAME PAGES</h3><li><a href="games">Games</a> (root)</li><li><a href="./games/george-series">George Series</a></li><li><a href="./games/george-1r">George 1 Remastered</a></li><li><a href="./games/george-1.5">George 1.5</a></li><li><a href="./games/sids-adventure">Sid's Adventure</a></li><li><a href="./games/lgs-remastered-collection">LG's Remastered Collection</a></li><li><a href="./games/super-scratch-melee">Super Scratch Melee</a></li><li><a href="./games/the-lost-labyrinths">The Lost Labyrinths</a></li><li><a href="./games/fire-forge">Fire Forge</a></li><li><a href="./games/sms-24">Stone Mine Simulator 2024</a></li><li><a href="./games/completed-igm-games">Completed IGM Games</a></li><hr>
-          <h3>LORE PAGES</h3><li><a href="./lore/the-demon">The Demon</a></li><li><a href="./lore/the-demon-ii">The Demon II</a></li><li><a href="./lore/george-refs">George Refs</a></li><li><a href="./lore/george-geography">George Geography</a></li><li><a href="./lore/lg-productions-presentation">LG Productions Presentation</a></li>
+        <div class="mapboard" style="transform:rotate(-1.5deg);">
+          <h3>• Games •</h3>
+          <ul>
+            <li><a href="/games/george-series">George Series</a></li>
+            <ul>
+              <li><a href="/games/george-series/george-1r">George 1 Remastered</a></li>
+              <li><a href="/games/george-series/george-1.5">George 1.5</a></li>
+            </ul>
+            <li><a href="/games/sids-adventure">Sid's Adventure</a></li>
+            <li><a href="/games/lgs-remastered-collection">LG's Remastered Collection</a></li>
+            <li><a href="/games/super-scratch-melee">Super Scratch Melee</a></li>
+            <li><a href="/games/labyrinths-II">Labyrinths II</a></li>
+            <li><a href="/games/sms-24">Stone Mine Simulator '24</a></li>
+            <li><a href="/games/fire-forge">Fire Forge</a></li>
+          </ul>
         </div>
-      </aside>
+        <div class="mapboard" style="transform:rotate(-0.4deg);">
+          <h3>• Posts •</h3>
+          <ul>
+            <li><a href="/posts/old-blog">Old Blog</a></li>
+            <li><a href="/posts/old-backlog">Old Backlog</a></li>
+            <li><a href="/posts/old-devlog">Old Devlog</a></li>
+          </ul>
+        </div>
+        <div class="mapboard" style="transform:rotate(0.6deg);">
+          <h3>• Deprecated •</h3>
+          <ul>
+            <li><a class="deprecated" href="/about-extras">About Extras</a></li>
+            <li><a class="deprecated" href="/devlog">Devlog</a></li>
+            <li><a class="deprecated" href="/faq">FAQ</a></li>
+            <li><a class="deprecated" href="/guestbook">Guestbook</a></li>
+          </ul>
+        </div>
+      </div>
       
+      <hr>
+    
     </div>
     
     <footer-component></footer-component>
+    
+    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
+    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
+    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
+    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
+    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
+    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
+    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
+    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
+    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
+  
+    <img class="charhover" style="top:40%;left:18%;--delay:0s;" src="/images/decor/lostpinkthing.png" title="this man's only hope of escape is a damn triangle">
+    <img class="charhover" style="top:40%;left:77%;--delay:0.75s;" src="/images/decor/lostdorito.png" title="it's not that hard bro">
   </body>
 </html>

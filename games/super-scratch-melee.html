@@ -4,80 +4,69 @@
     <title>LG Productions • Super Scratch Melee</title>
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="../javascript/footer.js" type="text/javascript" defer></script>
-    <script src="../javascript/themes.js" type="text/javascript" defer></script>
-    <style>
-      .sector3 {text-align: left;overflow-y: auto;}
-      .sector3 h3 {text-align: center;}
-      .sector3 img {border: 3px outset var(--border2);border-radius: 11px;margin-top: 4px;width: 450px;}
-    </style>
+    <script src="/javascript/extras.js" type="text/javascript" defer></script>
   </head>
-<body>
-    <div>
-      <p><a class="logo" href="../index"><img src="../images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
-    </div>
-  
-    <ul class="topnav">
-      <li><a href="../index">Home</a></li>
-      <li><a href="../about">About</a></li>
-      <li><a href="../blog">Blog</a></li>
-      <li><a href="../games">Games</a></li>
-      <li><a href="../faq">FAQ</a></li>
-    </ul>
-  
-    <div class="container top" id="flex">
+  <body>
+    <header-component></header-component>
+    
+    <div id="container">
+
+      <img class="gamelogo" src="/images/games/ssmtitle.png" title="this game is ancient in terms of the latest lg releases" style="width:280px;">
+      <div class="textbox">
+        Released: 08/21/21<br>v1.2.1 • Turn-based fighting<br><sub>last update: 10/04/24</sub>
+      </div>
       
-      <main id="flexcolumn">
-        <div class="sector">
-          <h3><img src="../images/games/site_ssmtitle.png" title="this game is ancient in terms of the latest lg releases" style="width:330px;padding-top:3px;"></h3>
-          <div class="sector-text">
-            <p>Released <i>08/21/21</i> • Updated <i>10/04/24</i><br> v1.2.1 // Turn-based fighting</p>
-          </div>
-          <hr>
-        </div>
-      </main>
+      <div class="flex">
+        <a class="flexbubble" href="https://turbowarp.org/527774504/" target="_blank">Play it!</a>
+        <a class="flexbubble" href="https://turbowarp.org/778368273/" target="_blank">Sequel Demo</a>
+        <a class="flexbubble" href="https://turbowarp.org/564106795/" target="_blank">Soundtrack</a>
+      </div>
       
-    </div>
-  
-    <div class="container bottom" id="flex">
+      <hr>
       
-      <main id="flexcolumn">
-        <p class="subtext" style="color:#ff0000;font-weight:500;margin-top:6px;margin-bottom:-5px;">Compared to my latest releases, this game is very outdated and lower quality.</p>
-        <div class="sector3">
-          <h3>A CLASSIC ACTION-PACKED PROJECT</h3>
-          <img src="https://file.garden/Yhwc9XZFah3TM9iw/screenies/ssmScreenie1.png" alt="oops, looks like file garden is down. so sad" id="flex" style="float:left;margin-right:5px;">
-          <sub style="font-style:italic;">George and Silver engaging in a Stock battle.</sub><hr><span style="font-size:17px;"><i>Super Scratch Melee</i> is a turn-based fighting game where you choose to play as a fighter and duel in (somewhat) action-packed battles. Duke it out with a friend or a CPU in this action-packed, turn-based game, with over 10 fighters!<br><br>Boasting a whopping 14 fighters and several unique modes, this game has you fight against random characters, challenge different bosses, and customize a fighter of your own!</span>
-        </div>
-        <div class="sector3" style="text-align:right;">
-          <h3>HOW'D THIS HAPPEN</h3>
-          <img src="https://file.garden/Yhwc9XZFah3TM9iw/screenies/ssmScreenie2.png" alt="oops, looks like file garden is down. so sad" id="flex" style="float:right;margin-left:5px;">
-          <sub style="font-style:italic;">Ravioli using a Support while weakened in battle.</sub><hr><span style="font-size:17px;">After being inspired by classic Scratch games like Super Scratch Smash and Super Scratch Brawl (may its unfinished soul rest in piece), I felt the need to continue this fighting game trend.<br><br>Since I wasn't qualified to make a platforming-fighting game, I decided to go for a turn-based approach, while still keeping the "Super Scratch" title. It wasn't very good, but I look back on it fondly.</span>
-        </div>
-        <div class="sector3 list-circle">
-          <h3>WHAT IT HAS TO OFFER</h3>
-          <img src="https://file.garden/Yhwc9XZFah3TM9iw/screenies/ssmScreenie3.png" alt="oops, looks like file garden is down. so sad" id="flex" style="float:left;margin-right:5px;">
-          <sub style="font-style:italic;">Fire entering his first Classic Mode battle.</sub><hr><span style="font-size:17px;"><li>14 characters with unique movesets and abilities</li><li>18 different stages to play on, not including some boss-exclusives</li><li>4 bosses to duke out against in Classic Mode</li><li>A multitude of extras, including a Boss Rush and Shop for unlockables</li><li>Fully customizable Custom fighter, with different moves and looks to choose from</li><li>Stock and Timed battle types</li><li>Four difficulties to choose from in Classic Mode</li></span>
-        </div>
-      </main>
+      <div class="fadebox showoff" style="--dir:row;--align:left;">
+        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ssmScreenie1.png" tabindex="0">
+        <span><b>Super Scratch Melee</b> is a turn-based fighting game where you duel in (somewhat) action-packed battles. It was made back in 2021, and is an incredibly outdated game. Still recommend checking it out.<br><br>Boasting a whopping 14 fighters and several unique modes, this game has you fight against random characters, challenge different bosses, and customize a fighter of your own!</span>
+      </div>
       
-      <aside style="width:39%;" id="order-right">
-        <div class="sector3" style="padding-top:6px;text-align:center;">
-          <a class="buttonwide" style="margin-top:5px;" href="https://turbowarp.org/527774504/">Play it!</a><hr><a class="buttonwide" href="https://turbowarp.org/564106795/">Soundtrack</a><hr><a class="buttonwide" href="https://turbowarp.org/778368273/">Sequel Demo</a>
-        </div>
-        <div class="bubble">Back to <a href="../games">Games</a> page</div>
-        <hr style="margin-top:15px;">
-        <div class="sector2 scroll">
-          <h3>UPDATE LOG</h3><span class="smallfont"><i>10/04/24</i> - v1.2.1<li>removed UPRS ratings</li><li>some graphical enhancements</li><hr><i>04/03/22</i> - v1.2<li>2 new fighters, 3 new stages</li><li>added Shop for custom fighter</li><li>a multitude of bug fixes</li><hr><i>02/06/22</i> - v1.1.1<li>implemented fancy new renders</li><li>minor bug fixes, as per usual</li><hr><i>09/04/21</i> - v1.1<li>fixed issue with volume</li><li>fixed issue with level transitions</li><li>introduced new cutscenes</li><hr><i>08/29/24</i> - v1.0.1<li>fixed minor gameplay issues</li><li>repositioned some UI elements</li><li>lowered bg music volume</li><hr><i>08/21/21</i> - v1.0<li><b>released the game!</b></li><li>launched with 12 fighters</li><li>it has a classic mode!!!</li></span>
-        </div>
-      </aside>
+      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
+        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ssmScreenie2.png" tabindex="0">
+        <span>After being inspired by classic Scratch games like Super Scratch Smash and Super Scratch Brawl (may its unfinished soul rest in piece), I felt the need to continue this fighting game trend.<br><br>Since I wasn't qualified to make a platforming-fighting game, I decided to go for a turn-based approach, while still keeping the "Super Scratch" title. It wasn't very good, but I look back on it fondly.</span>
+      </div>
+      
+      <div class="fadebox showoff" style="--dir:row;--align:left;">
+        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ssmScreenie3.png" tabindex="0">
+        <span><b>It also features...</b><br><li>14 fighters with unique movesets and abilities</li><li>18+ different stages to fight on</li><li>4 bosses to duke out against in Classic Mode</li><li>A multitude of extras, including a Boss Rush and Shop for unlockables</li><li>A bonus customizable fighter (PLC)</li><li>Stock and Timed battle types</li><li>Four difficulties to choose from in Classic Mode</li></span>
+      </div>
+      
+      <div class="textbox updatelog">
+        <section>
+          <details style="margin-top:0px;">
+            <summary><b>Update Log</b></summary>
+            <main><i>10/04/24</i> - v1.2.1<li>removed UPRS ratings</li><li>some graphical enhancements</li><hr><i>04/03/22</i> - v1.2<li>2 new fighters, 3 new stages</li><li>added shop for Custom fighter</li><li>a multitude of bug fixes</li><hr><i>02/06/22</i> - v1.1.1<li>implemented fancy new renders</li><li>minor bug fixes, as per usual</li><hr><i>09/04/21</i> - v1.1<li>fixed issue with volume</li><li>fixed issue with level transitions</li><li>introduced new cutscenes</li><hr><i>08/29/24</i> - v1.0.1<li>fixed minor gameplay issues</li><li>repositioned some UI elements</li><li>lowered bg music volume</li><hr><i>08/21/21</i> - v1.0<li><b>released the game!</b></li><li>launched with 12 fighters</li><li>it has a classic mode!!!</li></main>
+          </details>
+        </section>
+      </div>
+      
+      <hr>
       
     </div>
-  
+
     <footer-component></footer-component>
+    
+    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
+    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
+    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
+    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
+    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
+    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
+    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
+    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
+    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
   </body>
 </html>

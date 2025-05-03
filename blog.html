@@ -4,80 +4,54 @@
     <title>LG Productions • Blog</title>
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="./javascript/footer.js" type="text/javascript" defer></script>
-    <script src="./javascript/themes.js" type="text/javascript" defer></script>
+    <script src="/javascript/extras.js" type="text/javascript" defer></script>
+    <script src="/javascript/blog.js" type="text/javascript" defer></script>
   </head>
   <body>
-    <div>
-      <p><a class="logo" href="./index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
-    </div>
-  
-    <ul class="topnav">
-      <li><a href="./index">Home</a></li>
-      <li><a href="./about">About</a></li>
-      <li><a id="active" href="./blog">Blog</a></li>
-      <li><a href="./games">Games</a></li>
-      <li><a href="./faq">FAQ</a></li>
-    </ul>
+    <header-component></header-component>
     
-    <div class="container top">
+    <div id="container">
+
+      <h2>Blog</h2>
+      <div class="textbox">
+        Welcome to my blog! This is where I rant about stuff that happens every so often. It's still relatively new, so there aren't too many entries yet.<hr>New posts are uploaded on the <i>first week</i> of every month.<br>Devlog posts are uploaded whenever I feel like it.<br><sub>this blog uses <a href="https://zonelets.net/" target="_blank">Zonelets</a> as a backend.</sub>
+      </div>
       
-      <main style="text-align:left;" id="flexcolumn">
-        <img class="bounce" src="./images/site_sparkyyy.png" title="this is sparky the... rhombus? yeah, it doesn't roll off the tongue as good. sorry" style="float:left;padding:0px 11px 2px 8px;width:65px;height:67px;"><h2>LG's Blog</h2><p style="margin:-2px 0px 16px 0px;font-size:16px;">Here's where I ramble about stuff that's going on in my life.</p>
-      </main>
+      <hr>
       
-    </div>
-    
-    <div class="container" id="flex">
+      <div class="textbox list">
+        <h3>Blog/Devlog Posts</h3>
+        <p id="postlistdiv"></p>
+      </div>
       
-      <main style="margin:auto;width:65%;" id="order-right">
-        <div class="sector">
-          <h3>BLOG/DEVLOG POSTS</h3>
-          <div class="sector-text" style="padding-left:6px;text-align:left;">
-            <div id="postlistdiv"></div>
-          </div>
-          <hr>
-        </div>
-        <p class="subtext">The blog is built with <a href='https://zonelets.net/'>Zonelets</a>. Thought I should mention that.</p>
-      </main>
+      <div class="flex">
+        <a class="flexbubble" href="/posts/old-blog">Old Blog</a>
+        <a class="flexbubble" href="/posts/old-backlog">Old Backlog</a>
+        <a class="flexbubble" href="/posts/old-devlog">Old Devlog</a>
+      </div>
       
-      <!--
-      <aside style="width:39%;" id="order-right">
-        <div class="sector2">
-          <h3>MISC. LORE POSTS</h3><a class="linkbutton" style="margin-bottom:7px;" href="./lore/the-demon"><b style="font-size:24px;">The Demon ★</b><br><span><i>December 2023</i> • Humor...?</span></a>
-          <a class="linkbutton" href="./lore/the-demon-ii"><b style="font-size:24px;">The Demon II ★</b><br><span style="color:var(--text-colordev);"><i>January 2024</i> • More humor...?</span></a>
-        </div>
-        <hr>
-        <div class="sector3" style="padding-top:6px;">
-          <a class="buttonwide" style="margin-top:5px;" href="./posts/old-blog">Old Blog</a><hr><a class="buttonwide" href="./posts/old-backlog">Old Backlog</a><hr><a class="buttonwide" href="./posts/old-devlog">Old Devlog</a>
-        </div>
-      </aside>
-      -->
-    </div>
-    
-    <div class="container bottom" id="flex">
-      
-      <aside id="order-left">
-        <div class="sector3" style="float:right;width:70%;">
-          <h3 style="margin-top:0px;">MISC. LORE POSTS</h3><a class="linkbutton" style="margin-bottom:7px;padding-bottom:10px;" href="./lore/the-demon"><b style="font-size:24px;">The Demon ★</b><br><sup><i>December 2023</i> • Humor...?</sup></a>
-          <a class="linkbutton" style="padding-bottom:10px;" href="./lore/the-demon-ii"><b style="font-size:24px;">The Demon II ★</b><br><sup style="color:var(--text-colordev);"><i>January 2024</i> • More humor...?</sup></a>
-        </div>
-      </aside>
-      
-      <aside id="order-right">
-        <div class="sector3" style="width:70%;">
-          <a class="buttonwide" style="margin-top:5px;" href="./posts/old-blog">Old Blog</a><hr><a class="buttonwide" href="./posts/old-backlog">Old Backlog</a><hr><a class="buttonwide" href="./posts/old-devlog">Old Devlog</a>
-        </div>
-      </aside>
+      <hr>
       
     </div>
     
-    <script src="./javascript/blog.js"></script>
     <footer-component></footer-component>
+    
+    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
+    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
+    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
+    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
+    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
+    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
+    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
+    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
+    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
+    
+    <img class="charhover" style="top:33%;left:22%;--delay:0s;" src="/images/decor/nerdcore.png" title="she must be reading the george lore if it's that thick">
+    <img class="charhover" style="top:46%;left:73%;--delay:0.75s;" src="/images/decor/patience.png" title="most patient lg products fan">
   </body>
 </html>

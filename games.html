@@ -4,103 +4,76 @@
     <title>LG Productions • Games</title>
     <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="./javascript/footer.js" type="text/javascript" defer></script>
-    <script src="./javascript/themes.js" type="text/javascript" defer></script>
-    <style>
-      img {border-radius: 8px;width: 100%;}
-    </style>
+    <script src="/javascript/extras.js" type="text/javascript" defer></script>
   </head>
-<body>
-    <div>
-      <p><a class="logo" href="./index"><img src="./images/site_lgproductionslogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a></p>
-    </div>
-  
-    <ul class="topnav">
-      <li><a href="./index">Home</a></li>
-      <li><a href="./about">About</a></li>
-      <li><a href="./blog">Blog</a></li>
-      <li><a id="active" href="./games">Games</a></li>
-      <li><a href="./faq">FAQ</a></li>
-    </ul>
-  
-    <div class="container top" id="flex">
-      
-      <main id="flexcolumn">
-        <div class="sector">
-          <h3>GAMES</h3>
-          <div class="sector-text">
-            <p>These are my dinky games that I make in my free time. Feel free to look around.<br><i>Scratch</i> games are at the <i>top</i>, <i>IGM</i> games are further below.</p>
-          </div>
-          <hr>
-        </div>
-      </main>
-      
-    </div>
+  <body>
+    <header-component></header-component>
     
-    <div class="marquee">
-      <marquee style="color:#ffe5e5;font-size:16px;">Latest release: <b>Stone Mine Simulator 2024</b> // Latest update: <b>George 1 Remastered</b></marquee>
-    </div>
-  
-    <div class="container">
-      
-      <span><h4>SCRATCH GAMES</h4><p class="subtext" style="margin-bottom:2px;">Widescreen ports of some games are available on my <a href="https://lgplayer13.itch.io/">itch.io page</a>.</span>
-      
-      <main id="flex">
-        <aside id="order-left">
-          <a class="bubble bubblehover" href="./games/george-series" style="padding-bottom:2px;"><img src="./images/games/site_georgeseriesThumb.png" title="includes george 1 and...!"><b style="font-size:22px;">George Series</b><br><sup><i>2021-2025</i> • Platformers</sup></a>
-        </aside>
-        
-        <aside id="order-middle">
-          <a class="bubble bubblehover" href="./games/sids-adventure" style="padding-bottom:2px;"><img src="./images/games/site_sidThumb.png" title="sid the science kid leaked episode"><b style="font-size:22px;">Sid's Adventure</b><br><sup><i>09/2023</i> • Side-scrolling</sup></a>
-        </aside>
+    <div id="container">
 
-        <aside id="order-right">
-          <a class="bubble bubblehover" href="./games/lgs-remastered-collection" style="padding-bottom:2px;"><img src="./images/games/site_remcolThumb.png" title="WHAT, that is so soon... AMAZING"><b style="font-size:22px;">LG's Remastered Collection</b><br><sup><i>03/2024</i> • Point-and-click</sup></a>
-        </aside>
-      </main>
+      <h2>Games</h2>
+      <div class="textbox">
+        These are the games I make in my free time. Feel free to look around, see what peaks your interest.<br>Each game is labelled with what engine it was made in.
+      </div>
+    
+      <div class="marquee">
+        <marquee style="color:#ffe5e5;font-size:16px;">Latest release: <b>Stone Mine Simulator 2024</b> // Latest update: <b>George 1 Remastered</b></marquee>
+      </div>
       
-      <main id="flex">
-        <aside id="order-left">
-          <!-- tbd -->
-        </aside>
-        
-        <aside id="order-middle">
-          <a class="bubble bubblehover" href="./games/super-scratch-melee" style="padding-bottom:2px;"><img src="./images/games/site_ssmThumb.png" title="super duper scratch blitz fighters ultimate"><b style="font-size:22px;">Super Scratch Melee</b><br><sup><i>2021-2022</i> • Turn-based</sup></a>
-        </aside>
-
-        <aside id="order-right">
-          <!-- tbd -->
-        </aside>
-      </main>
+      <hr>
       
-    </div>
-  
-    <div class="container bottom">
+      <div class="flex">
+        <a class="bubble blacktext" style="background-image:url(/images/linkimgs/georgeseriesbg.png);background-position:100% 58%;--bgcolor:#d68100;--bdcolor:#6b4000;" href="/games/george-series">
+          <img src="/images/linkimgs/georgeseriesicon.png"><h3>George Series <span style="--typecolor:#fffe6f;">Scratch</span></h3><p>Journey through the Asfard Archipelago and unravel the story of George the Triangle.<!--<br><sup style="vertical-align:baseline;"><b>genre:</b> platformer • <b>entries:</b> 1</sup>--></p>
+        </a>
+        <a class="bubble whitetext" style="background-image:url(/images/linkimgs/lab2bg.jpg);background-position:center;--bgcolor:#20734e;--bdcolor:#113c28;" href="/games/labyrinths-II">
+          <img src="/images/linkimgs/lab2icon.png"><h3>Labyrinths II <span style="--typecolor:#6f9cff;"><b style="color:#ffb0b0">(NEW!)</b> IGM</span></h3><p>Explore through many different labyrinths and fight through hordes of monsters!<br><sup style="vertical-align:baseline;"><b>(coming soon to IGM!)</b></sup></p>
+        </a>
+        <a class="bubble whitetext" style="background-image:url(/images/linkimgs/sidventurebg.png);background-position:0% 76%;--bgcolor:#4cbaff;--bdcolor:#0068a8;" href="/games/sids-adventure">
+          <img src="/images/linkimgs/sidventureicon.png"><h3>Sid's Adventure <span style="--typecolor:#fffe6f;">Scratch</span></h3><p>After an entire world was devastated by darkness, it's up to Sid to save it!</p>
+        </a>
+        <a class="bubble whitetext" style="background-image:url(/images/linkimgs/sms24bg.png);background-position:center;--bgcolor:#a9692b;--bdcolor:#553616;" href="/games/sms-24">
+          <img src="/images/linkimgs/sms24icon.png"><h3>Stone Mine Simulator '24 <span style="--typecolor:#6f9cff;">IGM</span></h3><p>Mine stone, buy strange buildings, and play minigames to mine more stone.</p>
+        </a>
+        <a class="bubble whitetext" style="background-image:url(/images/linkimgs/remcolbg.png);background-position:0% 40%;--bgcolor:#925cff;--bdcolor:#3a00ad;" href="/games/lgs-remastered-collection">
+          <img src="/images/linkimgs/remcolicon.png"><h3>Remastered Collection <span style="--typecolor:#fffe6f;">Scratch</span></h3><p>A big collection of the remasters and remaking of not-so-ancient history.</p>
+        </a>
+        <a class="bubble whitetext" style="background-image:url(/images/linkimgs/fireforgebg.jpg);background-position:center;--bgcolor:#e76d1f;--bdcolor:#78360d;" href="/games/fire-forge">
+          <img src="/images/linkimgs/fireforgeicon.png"><h3>Fire Forge <span style="--typecolor:#6f9cff;">IGM</span></h3><p>Make weird materials, build contraptions, and chat with your wacky friend.</p>
+        </a>
+        <a class="bubble blacktext" style="background-image:url(/images/linkimgs/ssmbg.png);background-position:0% 0%;--bgcolor:#f9a83a;--bdcolor:#945805;" href="/games/super-scratch-melee">
+          <img src="/images/linkimgs/ssmicon.png"><h3>Super Scratch Melee <span style="--typecolor:#fffe6f;">Scratch</span></h3><p>Duke it out in this action-packed, turn-based game, with over 10 fighters to pick from!</p>
+        </a>
+      </div>
+      <!-- <b style="color:#ffb0b0">(NEW!)</b> for new releases, keep for about a month -->
       
-      <span><h4>IGM GAMES</h4><p class="subtext" style="margin-bottom:2px;">Here's a neat list of <a href="./games/completed-igm-games">all the IGM games I've completed</a>.</span>
+      <div class="flex">
+        <a class="flexbubble" href="https://scratch.mit.edu/users/LGameMaker13" target="_blank">Scratch Page</a>
+        <a class="flexbubble" href="https://lgplayer13.itch.io/" target="_blank">Itch.io Page</a>
+      </div>
       
-      <main id="flex">
-        <aside id="order-left">
-          <a class="bubble bubblehover" href="./games/the-lost-labyrinths" style="padding-bottom:2px;"><img src="./images/games/site_tllThumb.png" title="wait is that gabe newell"><b style="font-size:22px;">The Lost Labyrinths</b><br><sup><i>08/2022</i> • Real-time fighting</sup></a>
-        </aside>
-        
-        <aside id="order-middle">
-          <a class="bubble bubblehover" href="./games/sms-24" style="padding-bottom:2px;"><img src="./images/games/site_sms24Thumb.png" title="made by our finest interns!"><b style="font-size:22px;">Stone Mine Simulator 2024</b><br><sup><i>08/2024</i> • Clicking/Idle</sup></a>
-        </aside>
-
-        <aside id="order-right">
-          <a class="bubble bubblehover" href="./games/fire-forge" style="padding-bottom:2px;"><img src="./images/games/site_ffThumb.png" title="some other third thing"><b style="font-size:22px;">Fire Forge</b><br><sup><i>In-dev</i> • Tech-based</sup></a>
-        </aside>
-      </main>
+      <hr>
       
     </div>
-    <!-- <b style="color:#ffb0b0">NEW!</b> for new releases, keep for about a month -->
 
     <footer-component></footer-component>
+    
+    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
+    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
+    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
+    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
+    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
+    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
+    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
+    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
+    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
+    
+    <img class="charhover" style="top:44%;left:16%;--delay:0s;" src="/images/decor/ragequitter.png" title="wonder which level he's playing ;)">
+    <img class="charhover" style="top:31%;left:79%;--delay:0.75s;" src="/images/decor/skilled%20warrior.png" title="click fred when dead">
   </body>
 </html>
