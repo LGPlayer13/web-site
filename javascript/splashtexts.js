@@ -58,8 +58,8 @@ var splashes = [
     "Bush hid the facts.",
     "I wanna defy the logic of all sex(x) laws.",
     // violence
-    "It's \"web site\" to me. I don't care what your \"website\" says.",
-    "Look here bucko, \"web site\" at least stands out and doesn't interfere with that awful, woke \"website\" community.",
+    'It\'s "web site" to me. I don\'t care what your "website" says.',
+    'Look here bucko, "web site" at least stands out and doesn\'t interfere with that awful, woke "website" community.',
     "Mid CSS?! My good man, you update your site's CSS every 2 months! <i>And you're not even the one making it!</i> You're one to talk.",
     "Oh, please. Your main page has a spinning... thing that you *always* complain about not working properly! Don't get me started on trying to resize the pages, or even the half-baked sub-pages!",
     "What bricks? You mean the ones I threw at your window at 2am in the morning?",
@@ -86,7 +86,7 @@ var splashes = [
     "I have a rash in an uncomfortable place.",
     "As I pull down this file menu, you will notice the word 'hope' does not appear. You will also notice there is no command M for 'miracle'.",
     "If bowling is an analogy for life, then bowling makes sense. Because it makes no f***in' sense.",
-    "\'In life is not if you nin or lose is if you me spice\', as the saying goes.",
+    "'In life is not if you nin or lose is if you me spice', as the saying goes.",
     "So, we're technically canon, right?",
     "This contact lense represents you, and my eye represents my eye.",
     "Typically, veggies can't be carried from room to room. However, since it was stuck in his head, this didn't apply.",
@@ -119,7 +119,7 @@ var splashes = [
     "What's it gonna take to shake the ill times?",
     "I'm thirsty- should be some orange juice in the fridge. ...I could go for a cup of coffee!",
     "I worked for George the Jumping Triangle, he's a fraud.",
-    "SAVㅤㅤHㅤㅤINCㅤSS",
+    "SAV⠀⠀H⠀⠀INC⠀SS",
     "We're so back. Actually, we've been here the whole time.",
     "This project has no meaningful contribution to society.",
     "Nothing puts a poop in a person's pants faster than talking about AI.",
@@ -135,6 +135,7 @@ var splashes = [
     "Where are my non-LG Productions-flavored blog posts?!",
     "For some reason, a lot of Minecraft Youtubers confuse 18 with 12.",
     "Where do these stairs go? ...They go up.",
+    "I would not put this in my top ten places I've ever been.",
     "This calls for an EMERGENCY FROG SITUATION.",
     "UI's are like jokes. If you have to explain them, they are not good.",
     "The [noun] Situation is [adjective].",
@@ -250,6 +251,7 @@ var splashes = [
     "Legally questionable!",
     "A lonely child is what you're gonna be when I sell you.",
     "Oh, these dudes? They're the villagers!",
+    "Coming in hot!",
     "That looks dubious to me. What do you think?",
     "I’ve checked every Gucci store on the planet looking for this baby.",
     "I f***ing hate it when the immutable power of the sun detonates in my room.",
@@ -261,11 +263,25 @@ var splashes = [
     "$29.99, none of that $60, multiplayer-only bullsh*t.",
     "I like you Jimmy, you're a spunky guy.",
     "This program is a cancer.",
+    "The world is big. Class dismissed.",
     "We're on Apple's magical black box, just in time for the holidays!",
     "Oh, you get crushes on cartoons? That's pretty cool.",
+    "Mc. Mangos. Is. Suspended. Hahahahahaha. And that's keepin' it real.",
+    "They're banging pots and pans, and chasing the game- sucking like lemons all over again.",
+    "Hey bubby, I think you dropped an apple.",
+    "Tomorrow is another day.",
+    "So many things have already gone wrong, and it's because I can't read.",
+    "Chadley, nobody cares about your stupid bathtub.",
+    "I like to wear soft clothing ('cause it makes me feel like I'm rough in comparison).",
+    "You found the [Moss]!",
+    "Think beyond antivirus, think Protegent.",
+    "Now, although historically accurate, this site does not contain giant enemy crabs.",
+    "I go in, fix one thing, and that causes 99 other things to fail.",
+    "Hello, you magnificent bag of stardust and questionable decisions!",
+    "Am I right lads, or am I right lads?",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
-    // i like this quote but it's too sensitive and kinda makes me upset thinking about it
+    // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
 ];
-document.getElementById("splashes").innerHTML = splashes[Math.floor(Math.random() * splashes.length)]
+document.getElementById("splashes").innerHTML = splashes[Math.floor(Math.random() * splashes.length)];
 //why
