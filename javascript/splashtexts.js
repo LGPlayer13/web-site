@@ -279,6 +279,7 @@ var splashes = [
     "I go in, fix one thing, and that causes 99 other things to fail.",
     "Hello, you magnificent bag of stardust and questionable decisions!",
     "Am I right lads, or am I right lads?",
+    "I don't like something you're hosting and I'm going to sue you!",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
