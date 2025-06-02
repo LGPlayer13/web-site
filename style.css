@@ -230,7 +230,7 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
 .list > p {padding-left:8px;}
 .list > ul {padding-left:28px;list-style-position: outside;}
 
-.updatelog main {padding:5px 10px 10px 10px;max-height:250px;font-size:16px;list-style-position:outside;overflow-y:auto;}
+.updatelog main {padding:5px 10px 10px 10px;max-height:250px;font-size:16px;list-style-position:inside;overflow-y:auto;}
 .updatelog hr {margin:8px auto;width:100%;}
 
 .showoff {display:flex;padding:13px 10px;width:71%;flex-direction:column;text-align:center;}
@@ -243,6 +243,8 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
 .off {opacity:0.5;cursor: not-allowed;}
 .othersite img {width:88px;height:31px;}
 .othersite:hover {opacity:0.55;}
+
+.flash {animation:flash 0.75s ease 0s 3 normal;}
 
 .rainbow-text {
   background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
@@ -320,7 +322,6 @@ details > ul {padding-left:28px;font-size:16px;}
   border-radius: 8px;
   margin: 7px;
   flex: 48%;
-  max-width:50%;
   height: auto;
   min-height: 95px;
   text-align: left;
@@ -392,6 +393,7 @@ a.flexbubble {color:white;text-decoration:none;text-shadow:1px 1px 1.5px #000000
 }
 @media only screen and (min-width: 1400px) {
   .charhover {display:grid;}
+  .bubble {max-width:50%;}
 }
 
 /* header and footer */
@@ -521,4 +523,10 @@ footer {text-shadow: 1.25px 1.25px 2px #000000;cursor:default;}
 @keyframes bounce {
   from {transform:scaleY(1.1)scaleX(0.9);}
   to {transform:scaleY(1)scaleX(1);}
+}
+
+@keyframes flash {
+  0% {box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25),0 0 8px rgba(255,244,232,0.5) inset;}
+  50% {box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25),0 0 16px rgba(255,244,232,1) inset;}
+  100% {box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25),0 0 8px rgba(255,244,232,0.5) inset;}
 }

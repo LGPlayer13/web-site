@@ -280,6 +280,12 @@ var splashes = [
     "Hello, you magnificent bag of stardust and questionable decisions!",
     "Am I right lads, or am I right lads?",
     "I don't like something you're hosting and I'm going to sue you!",
+    "I can't wait to drop off the Battle Bus and meet some of you on the battlefield in Fortnite.",
+    "Thou shall not steal, thou shall not murder, thou shall not hijack another man's Yoshi.",
+    "Acacia Wood came first, Minecraft was only a medium to realize it in.",
+    "The image you are requesting does not exist or is no longer available.",
+    "No problem here.",
+    "Can snails help your garden? Um, not really.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
