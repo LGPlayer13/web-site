@@ -286,6 +286,10 @@ var splashes = [
     "The image you are requesting does not exist or is no longer available.",
     "No problem here.",
     "Can snails help your garden? Um, not really.",
+    "This girl is so sweet... let's give her free bullets!",
+    "July 13th 2022. The silver bat incident.",
+    "I don't know what happened, and that's what you should always tell the police.",
+    "Like the West Coast, this land is beautiful, but I am homeless.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
