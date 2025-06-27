@@ -294,6 +294,8 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
   animation-iteration-count: 1;
 }
 
+.todo {position: absolute;text-align:left;}
+
 details > summary {
   background-color: #8c6235;
   border-radius: 6px;
