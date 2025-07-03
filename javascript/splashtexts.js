@@ -290,6 +290,8 @@ var splashes = [
     "July 13th 2022. The silver bat incident.",
     "I don't know what happened, and that's what you should always tell the police.",
     "Like the West Coast, this land is beautiful, but I am homeless.",
+    "Screw this, screw you, I have a right to sell drugs, I'm making a new nation!",
+    "Pilots' license? What for?",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it

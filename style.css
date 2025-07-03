@@ -240,7 +240,7 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
   .squareimg {margin:0 !important;}
 }
 
-.off {opacity:0.5;cursor: not-allowed;}
+.off {opacity:0.5;cursor:not-allowed;}
 .othersite img {width:88px;height:31px;}
 .othersite:hover {opacity:0.55;}
 
@@ -334,7 +334,7 @@ details > ul {padding-left:28px;font-size:16px;}
 }
 a.bubble {color:white;text-decoration:none;}
 .bubble > p {margin:0;padding-top:2px;padding-right:5px;height:auto;text-align:left;font-size:18px;line-height: 1.1;text-shadow:0 0 9px #000000;}
-.bubble > img {float:left;border:3px outset var(--bdcolor);border-radius:4px !important;margin-right:5px;max-width:90px;max-height:90px;}
+.bubble > img {float:left;border:3px outset var(--bdcolor);border-radius:4px !important;margin-right:5px;max-width:90px;max-height:90px;pointer-events:none;}
 .bubble > h3 {background:var(--bgcolor);border:0;border-bottom:2px dashed var(--bdcolor);border-radius:7px 7px 0 0;margin:0;width:auto;font-size:24px;text-shadow:1px 1px 1.5px #000000;}
 h3 > span {color:var(--typecolor);float:right;margin-top:4px;margin-right:7px;font-size:17px;font-weight:500;}
 
@@ -372,6 +372,18 @@ a.flexbubble {color:white;text-decoration:none;text-shadow:1px 1px 1.5px #000000
   position: fixed;
   top: 100px;
   left: 100px;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  z-index: -1;
+  animation: fadeloop 5s ease infinite;
+  animation-delay: var(--delay);
+}
+.bgimgmanual {
+  pointer-events: none;
+  position: fixed;
+  top: var(--top);
+  left: var(--left);
   width: auto;
   height: auto;
   opacity: 0;
