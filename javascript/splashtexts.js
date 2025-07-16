@@ -287,11 +287,16 @@ var splashes = [
     "No problem here.",
     "Can snails help your garden? Um, not really.",
     "This girl is so sweet... let's give her free bullets!",
+    "I'm sorry. I'm sorry about the pipes. I knew. I KNEW I shouldn't have done it.",
     "July 13th 2022. The silver bat incident.",
     "I don't know what happened, and that's what you should always tell the police.",
     "Like the West Coast, this land is beautiful, but I am homeless.",
     "Screw this, screw you, I have a right to sell drugs, I'm making a new nation!",
     "Pilots' license? What for?",
+    "Technoblade never dies!",
+    "You just saw a can of soda and the two neurons in your head fired for the first time in a week.",
+    "ZERO calories, ZERO sugar, ZERO fat, kids love it, tastes like flavor.",
+    "Black people, white people, men's team, women's team, coca-cola, pepsi-cola, rich people, poor people.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
