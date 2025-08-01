@@ -55,7 +55,7 @@ class Footer extends HTMLElement {
     this.innerHTML = `
     <footer>
       <p class="topfooter" style="margin-top:20px;">
-        &copy; 2023-2025 LG Productions • v3.0.2
+        &copy; 2023-2025 LG Productions • v3.0.3
       </p>
       <sup>hosted on <a href="https://neocities.org/" target="_blank">neocities</a> | <a href="/sitemap">site map</a> | <a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord server</a></sup>
     </footer>

@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
     <style>
       body {
         margin-bottom: 0%;
@@ -35,6 +33,13 @@
         right: 10px;
       }
       
+      td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 250px;
+      }
+      
       a:link {color: #e0e0e0;}
       a:visited {color: #e0e0e0;}
       a:hover {color: #ffffff;}
@@ -42,6 +47,8 @@
       
       #artist {color:#cfcfcf}
     </style>
+</head>
+<body>
     <table>
         <tr>
             <td rowspan="3"><img id="album-cover"></td>
