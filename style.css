@@ -98,7 +98,6 @@ ORDER FOR PROPERTIES
   padding: 13px 5px;
   width: 65%;
   font-size: 19px;
-  box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25);
 }
 .textbox > h3 {
   background-color: #956838;
@@ -159,7 +158,6 @@ ORDER FOR PROPERTIES
   font-size: 19px;
   list-style-position: inside;
   overflow-y:auto;
-  box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25);
 }
 
 /* terminal-like box */
@@ -172,12 +170,11 @@ ORDER FOR PROPERTIES
   margin: 10px auto;
   padding: 13px 10px;
   width: 70%;
-  height: 550px;
+  height: 520px;
   text-align: left;
   font-size: 19px;
   list-style-position: inside;
   text-shadow: 0 0 5px #187010;
-  box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25);
   overflow-y: auto;
 }
 .terminal > h3 {
@@ -196,7 +193,6 @@ ORDER FOR PROPERTIES
   width: 40%;
   height: fit-content;
   text-align: left;
-  box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25);
 }
 .mapboard > h3 {
   background-color: #855c26;
@@ -239,6 +235,8 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
   .showoff {flex-direction:var(--dir);text-align:var(--align);}
   .squareimg {margin:0 !important;}
 }
+
+.textbox,.listbox,.terminal,.mapboard,.floatbox {box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25);}
 
 .off {opacity:0.5;cursor:not-allowed;}
 .othersite img {width:88px;height:31px;}

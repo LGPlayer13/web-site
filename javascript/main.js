@@ -63,7 +63,7 @@ trackLinkElem.textContent = track
 userLinkElem = document.createElement('a')
 userLinkElem.href = "https://www.last.fm/user/" + username
 userLinkElem.target = "_blank"
-userLinkElem.textContent = (relative_time != null) ? relative_time : "Now playing..."
+userLinkElem.textContent = (relative_time != null) ? relative_time : "Now playing!"
 
 trackElem.appendChild(trackLinkElem)
 artistElem.textContent = artist
