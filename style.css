@@ -236,7 +236,8 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
   .squareimg {margin:0 !important;}
 }
 
-.textbox,.listbox,.terminal,.mapboard,.floatbox {box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25);}
+.textbox,.listbox,.terminal,.mapboard {box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25);}
+.floatbox {box-shadow:6px 6px 6px 0 rgba(0,0,0,0.25);}
 
 .off {opacity:0.5;cursor:not-allowed;}
 .othersite img {width:88px;height:31px;}
@@ -261,7 +262,10 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
 }
 .squareimg:hover {cursor:zoom-in;}
 .squareimg:active,.squareimg:focus {
+  border:5px solid #000000;
+  outline:100vh solid rgba(0,0,0,0.5);
   position: fixed;
+  padding:0;
   height: 90vh;
   width: auto;
   top: 50%;
@@ -269,6 +273,18 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
   z-index: 9999;
   transform: translate(-50%, -50%);
   cursor: default;
+}
+.focusbg {
+	background:rgba(0,0,0,0.75);
+	border:none;
+    position:absolute;
+    top:-2px;
+    left:-2px;
+    bottom:0;
+    right:0;
+    height:100vh;
+    width:100%;
+	z-index:3;
 }
 
 .art {
@@ -343,7 +359,14 @@ h3 > span {color:var(--typecolor);float:right;margin-top:4px;margin-right:7px;fo
 .noimage > p {padding-left:7px;}
 .noimage > h3 {padding-left:7px;}
 
-.bubble:hover {background:#d6a165;border-color:#b08353;box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25),0 0 16px rgba(255,244,232,1) inset;background-size: cover;}
+.bubble:hover {
+  background:#d6a165;
+  border-color:#b08353;
+  box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25),0 0 16px rgba(255,244,232,1) inset;
+  background-size: cover;
+  transition: transform 0.05s ease-in;
+  transform: scale(1.02,1.02);
+}
 /*.bubble:hover > img {border:3px solid var(--bdcolor);}*/
 
 .flexbubble {

@@ -310,6 +310,11 @@ var splashes = [
     "Experiencing interruptions? Find out why",
     "Remember, there's always money in the banana stand.",
     "He's a racist. Wait- wait, that's someone else!",
+    "I am approximately 3 seconds away from wreaking havoc on my undergarments.",
+    "It's not a masterpiece, it's a mistake.",
+    "555 indicates a fake phone number, plus the rest of it is different every time the page is refreshed.",
+    "Delaware ratified the U.S. Constitution in 1787.",
+    "You cannot verify a level if it has a start pos.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
