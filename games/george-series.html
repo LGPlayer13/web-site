@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/extras.js" type="text/javascript" defer></script>
+    <script src="/javascript/components.js" type="text/javascript" defer></script>
     <style>
       body {
         display: flex;
@@ -18,32 +18,41 @@
         padding: 0;
         height: 100vh;
         justify-content: center;
+        flex-direction: column;
         align-items: center;
       }
       
-      .header,.mapboard,.bubble,.archipelago {
-        pointer-events:none;
-        opacity:0;
-        animation:fadein 0.75s linear 1.75s 1 forwards;
+      header a,.mapboard,.absolute {
+        pointer-events: none;
+        opacity: 0;
+        animation: fadein 0.8s linear 1s 1 forwards;
+      }
+      .bubble {
+        pointer-events: none;
+        opacity: 0;
+        animation: fadedown 0.75s ease 0s 1 forwards;
       }
       
       .mapboard {top:var(--top);transition:0.2s;--opacity:1;}
       .mapboard:hover {top:-10px !important;}
       
-      @keyframes fadein {
-        0% {pointer-events:none;opacity:0;}
-        100% {pointer-events:auto;opacity:var(--opacity);}
+      .absolute {position:absolute;bottom:30px;}
+      footer {margin-top:0px;}
+      
+      @keyframes fadedown {
+        from {pointer-events:none;opacity:0;margin-top:35px;}
+        to {pointer-events:auto;opacity:var(--opacity);margin-top:7px;}
       }
     </style>
   </head>
   <body>
     <header style="position:absolute;top:18px;--opacity:1;">
-      <a class="header" href="/index"><img src="/images/decor/mainlogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a>
+      <a href="/index"><img src="/images/decor/mainlogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a>
     </header>
     
-    <a class="bubble blacktext" style="position:absolute;background-image:url(/images/linkimgs/george1bg.png);background-position:0% 5%;--bgcolor:#e09c3d;--bdcolor:#7b5014;width:450px;top:24%;left:46%;--opacity:1;animation-delay:1s" href="george-series/george-1r"><img src="/images/linkimgs/george1icon.png"><h3>George 1 Remastered</h3><p>The official remaster of George's first adventure on Asfard Archipelago.<br><sup style="vertical-align:baseline;"><b>status:</b> released!</sup></p></a>
-    <a class="bubble whitetext" style="position:absolute;background-image:url(/images/linkimgs/george1.5bg.png);background-position:0% 20%;--bgcolor:#52d1b4;--bdcolor:#1f7561;width:450px;top:70%;left:58%;--opacity:1;animation-delay:1.25s" href="george-series/george-1.5"><img src="/images/linkimgs/george1.5icon.png"><h3>George 1.5</h3><p>Find out what happens to George and Greg after their fight in the Labyrinth.<br><sup style="vertical-align:baseline;"><b>status:</b> in development</sup></p></a>
-    <a class="bubble blacktext off" style="position:absolute;background-image:url(/images/linkimgs/george2bg.png);background-position:0% 20%;--bgcolor:#ff9126;--bdcolor:#944a00;width:450px;top:56%;left:13%;--opacity:0.5;animation-delay:1.5s" href="#"><img src="/images/linkimgs/george2icon.png"><h3>George 2</h3><p>Fight against a new foe that threatens the survival of the <i>entire</i> archipelago.<br><sup style="vertical-align:baseline;"><b>status:</b> scrapped</sup></p></a>
+    <a class="bubble blacktext" style="position:absolute;background-image:url(/images/linkimgs/george1bg.png);background-position:0% 5%;--bgcolor:#e09c3d;--bdcolor:#7b5014;width:450px;top:24%;left:46%;--opacity:1;animation-delay:0.25s" href="george-series/george-1r"><img src="/images/linkimgs/george1icon.png"><h3>George 1 Remastered</h3><p>The official remaster of George's first adventure on Asfard Archipelago.<br><sup style="vertical-align:baseline;"><b>status:</b> released!</sup></p></a>
+    <a class="bubble whitetext" style="position:absolute;background-image:url(/images/linkimgs/george1.5bg.png);background-position:0% 20%;--bgcolor:#52d1b4;--bdcolor:#1f7561;width:450px;top:70%;left:58%;--opacity:1;animation-delay:0.5s" href="george-series/george-1.5"><img src="/images/linkimgs/george1.5icon.png"><h3>George 1.5</h3><p>Find out what happens to George and Greg after their fight in the Labyrinth.<br><sup style="vertical-align:baseline;"><b>status:</b> in development</sup></p></a>
+    <a class="bubble blacktext off" style="position:absolute;background-image:url(/images/linkimgs/george2bg.png);background-position:0% 20%;--bgcolor:#ff9126;--bdcolor:#944a00;width:450px;top:56%;left:13%;--opacity:0.5;animation-delay:0.75s" href="#"><img src="/images/linkimgs/george2icon.png"><h3>George 2</h3><p>Fight against a new foe that threatens the survival of the <i>entire</i> archipelago.<br><sup style="vertical-align:baseline;"><b>status:</b> scrapped</sup></p></a>
       
     <img src="../images/decor/asfard.png" style="display:block;max-width:100%;max-height:100%;" draggable="false">
     
@@ -67,12 +76,15 @@
       <h3>• Lore •</h3>
     </div>
     
-    <div class="archipelago" style="color:#c5a9ff;position:absolute;bottom:12px;font-size:30px;--opacity:1;"><b>- ASFARD ARCHIPELAGO -</b><br><sup style="color:white;font-size:16px;">&copy; 2023-2025 LG Productions</sup></div>
+    <div class="absolute">
+      <div class="archipelago" style="color:#c5a9ff;margin-top:100px;font-size:30px;--opacity:1;"><b>- ASFARD ARCHIPELAGO -</b></div>
+      <footer-component></footer-component>
+    </div>
     
-    <img class="bgimgmanual" style="--top:28%;--left:22%;animation-delay:2.78s" src="/images/bgshapes/waveshape.png">
-    <img class="bgimgmanual" style="--top:86%;--left:65%;animation-delay:3.43s" src="/images/bgshapes/waveshape.png">
-    <img class="bgimgmanual" style="--top:40%;--left:77%;animation-delay:5.29s" src="/images/bgshapes/waveshape.png">
-    <img class="bgimgmanual" style="--top:83%;--left:24%;animation-delay:6.51s" src="/images/bgshapes/waveLshape.png">
-    <img class="bgimgmanual" style="--top:14%;--left:50%;animation-delay:7.34s" src="/images/bgshapes/waveLshape.png">
+    <img class="bgimgmanual" style="--top:28%;--left:22%;animation-delay:1.78s" src="/images/bgshapes/waveshape.png">
+    <img class="bgimgmanual" style="--top:86%;--left:65%;animation-delay:2.43s" src="/images/bgshapes/waveshape.png">
+    <img class="bgimgmanual" style="--top:40%;--left:77%;animation-delay:4.29s" src="/images/bgshapes/waveshape.png">
+    <img class="bgimgmanual" style="--top:83%;--left:24%;animation-delay:5.51s" src="/images/bgshapes/waveLshape.png">
+    <img class="bgimgmanual" style="--top:14%;--left:50%;animation-delay:6.34s" src="/images/bgshapes/waveLshape.png">
   </body>
 </html>

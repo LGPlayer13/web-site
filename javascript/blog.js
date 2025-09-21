@@ -238,5 +238,6 @@ if (document.getElementById("footer")) {
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier
 //The <title> tag content is what shows up on browser tabs
 if (document.title === "Blog Post") {
-  document.title = currentPostTitle;
+  document.title = 'LG Productions • ' + currentPostTitle;
 }
+// LG here. wow this is the one thing i "coded" myself! i'm so smart for knowing how strings work!

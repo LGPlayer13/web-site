@@ -315,6 +315,12 @@ var splashes = [
     "555 indicates a fake phone number, plus the rest of it is different every time the page is refreshed.",
     "Delaware ratified the U.S. Constitution in 1787.",
     "You cannot verify a level if it has a start pos.",
+    "It looks like you may be using an ad blocker. Keep at it.",
+    "Guys, you are about to have a fantastic adventure with the famous characters of the George Series!",
+    "I see you are frustrated, would you like to be connected to a live agent?",
+    "Big Z isn't real. I made him up",
+    "He who befriends the oddest ball is the creepiest of them all.",
+    "Crafting elegant digital experiences with modern technologies.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it

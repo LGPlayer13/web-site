@@ -31,7 +31,7 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <header>
-      <a class="header" href="/index"><img src="/images/decor/mainlogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="margin-top:10px;width:310px;height:38px;object-fit:contain;"></a>
+      <a href="/index"><img src="/images/decor/mainlogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="margin-top:10px;width:310px;height:38px;object-fit:contain;"></a>
     </header>
   
     <ul class="navbar">
@@ -54,13 +54,15 @@ class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <footer>
-      <p class="topfooter" style="margin-top:20px;">
-        &copy; 2023-2025 LG Productions • v3.0.4
-      </p>
-      <sup>hosted on <a href="https://neocities.org/" target="_blank">neocities</a> | <a href="/sitemap">site map</a> | <a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord server</a></sup>
+      <sup style="display:flex;justify-content:center;">
+        <span>&copy; 2025 LG Productions • v3.0.5</span>
+        <span><a href="https://neocities.org/" target="_blank">neocities</a></span>
+        <span><a href="/sitemap">site map</a></span>
+        <span><a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord</a></span>
+      </sup>
     </footer>
     `;
-    // change ABOUT page and GEORGE SERIES page footer version when updating this
+    // change ABOUT page footer version when updating this
   }
 }
 
