@@ -321,6 +321,8 @@ var splashes = [
     "Big Z isn't real. I made him up",
     "He who befriends the oddest ball is the creepiest of them all.",
     "Crafting elegant digital experiences with modern technologies.",
+    "Unlike the Donner party, cows can be bread with wheat for an achievement in Minecraft.",
+    "I love being miserable and playing garbage. I want more.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
