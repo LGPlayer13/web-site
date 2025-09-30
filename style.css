@@ -149,9 +149,9 @@ ORDER FOR PROPERTIES
 */
 /* marquee */
 .marquee {
-  display:block;
-  margin:-5px auto 10px auto;
-  width:65%;
+  display: block;
+  margin: -5px auto 10px auto;
+  width: 65%;
 }
 
 /* list box */
@@ -576,9 +576,9 @@ footer a {color:white;}
 
 /* ANIMATIONS */
 @keyframes gradient {
-	0% {background-position:0% 50%;}
-	50% {background-position:100% 50%;}
-	100% {background-position:0% 50%;}
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
 }
 
 @keyframes fadeloop {

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
     <title>Last.fm Now Playing</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +18,7 @@
       body, html, div {
         color: white;
         background: none;
-        text-align:left;
+        text-align: left;
         font-family: "Outfit", serif;
         font-size: 19px;
         font-weight: 400;
@@ -35,18 +34,20 @@
       
       td {
         padding-left:3px;
-        max-width: 248px;
+        max-width: 245px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
       }
+      td img {border-radius:6px;margin-top:-7px;}
       
-      td img {border-radius:6px;}
+      #artist {line-height:1;}
+      #date {line-height:2;font-size:18px;}
       
-      a:link {color: #e0e0e0;}
-      a:visited {color: #e0e0e0;}
-      a:hover {color: #ffffff;}
-      a:active {color: #ffffff;}
+      a:link {color:#e0e0e0;text-decoration:none;}
+      a:visited {color:#e0e0e0;}
+      a:hover {color:#ffffff;text-decoration:underline;}
+      a:active {color:#ffffff;}
       
       #artist {color:#cfcfcf}
     </style>

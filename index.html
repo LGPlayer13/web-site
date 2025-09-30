@@ -31,7 +31,7 @@
     
       <div class="marquee">
         <marquee id="splashes" style="color:white;font-size:16px;"><script src="/javascript/splashtexts.js"></script></marquee>
-        <!-- <marquee style="font-size:16px;"><b class="rainbow-text">Today is my birthday!</b></marquee> saving it for next year, every year -->
+        <marquee id="birthday" style="font-size:16px;"><b class="rainbow-text">Today is my birthday!</b></marquee>
       </div>
 
       <hr>
@@ -103,6 +103,15 @@
     <img class="charhover" style="--top:31%;--left:80%;--delay:0.75s;" src="/images/decor/cor%20the%20e.png" title="this is cory. he has super mario sunshine knockoff powers">
     <img class="charhover" style="--top:85%;--left:23%;--delay:1.5s;" src="/images/decor/sparkyyy.png" title="sparky the rhombus: seen in everything except the games">
     
+    <!-- my first javascript (ever!) -->
+    <script>
+      const month = new Date().getMonth();
+      const date = new Date().getDate();
+      
+      document.getElementById("splashes").style.display = (month != 0 && date != 13) ? "block" : "none";
+      document.getElementById("birthday").style.display = (month == 0 && date == 13) ? "block" : "none";
+    </script>
+    
     <!-- script borrowed from fractyl's website -->
     <script>
       function SinceThen() {
@@ -122,7 +131,6 @@
           document.getElementById("days").innerHTML = "N/A";
         }
       };
-
 
       setInterval( function() {
       SinceThen();
