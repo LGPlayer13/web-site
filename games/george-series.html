@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <title>LG Productions • George Series</title>
-    <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
+    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="/javascript/components.js" type="text/javascript" defer></script>
+    <script src="/javascript/linkList.js" type="text/javascript" defer></script>
     <style>
       body {
         display: flex;
@@ -28,14 +29,20 @@
         animation: fadein 0.8s linear 1s 1 forwards;
       }
       .bubble {
+        position: absolute;
+        width: 450px;
         pointer-events: none;
         opacity: 0;
         animation: fadedown 0.75s ease 0s 1 forwards;
       }
+      .bubble:first-of-type {top:24%;left:46%;--opacity:1;animation-delay:0.25s;}
+      .bubble:nth-of-type(2) {top:70%;left:58%;--opacity:1;animation-delay:0.5s;}
+      .bubble:nth-of-type(3) {top:56%;left:13%;--opacity:0.5;cursor:not-allowed;animation-delay:0.75s;}
       
       .mapboard {top:var(--top);transition:0.2s;--opacity:1;}
       .mapboard:hover {top:-10px !important;}
       
+      .bgimg {display:none;}
       .absolute {position:absolute;bottom:30px;}
       footer {margin-top:0px;}
       
@@ -50,9 +57,7 @@
       <a href="/index"><img src="/images/decor/mainlogo.png" title="this graphic is the peak of my scratch career, can we get 3 likes guys" style="width:310px;height:38px;object-fit:contain;"></a>
     </header>
     
-    <a class="bubble blacktext" style="position:absolute;background-image:url(/images/linkimgs/george1bg.png);background-position:0% 5%;--bgcolor:#e09c3d;--bdcolor:#7b5014;width:450px;top:24%;left:46%;--opacity:1;animation-delay:0.25s" href="george-series/george-1r"><img src="/images/linkimgs/george1icon.png"><h3>George 1 Remastered</h3><p>The official remaster of George's first adventure on Asfard Archipelago.<br><sup style="vertical-align:baseline;"><b>status:</b> released!</sup></p></a>
-    <a class="bubble whitetext" style="position:absolute;background-image:url(/images/linkimgs/george1.5bg.png);background-position:0% 20%;--bgcolor:#52d1b4;--bdcolor:#1f7561;width:450px;top:70%;left:58%;--opacity:1;animation-delay:0.5s" href="george-series/george-1.5"><img src="/images/linkimgs/george1.5icon.png"><h3>George 1.5</h3><p>Find out what happens to George and Greg after their fight in the Labyrinth.<br><sup style="vertical-align:baseline;"><b>status:</b> in development</sup></p></a>
-    <a class="bubble blacktext off" style="position:absolute;background-image:url(/images/linkimgs/george2bg.png);background-position:0% 20%;--bgcolor:#ff9126;--bdcolor:#944a00;width:450px;top:56%;left:13%;--opacity:0.5;animation-delay:0.75s" href="#"><img src="/images/linkimgs/george2icon.png"><h3>George 2</h3><p>Fight against a new foe that threatens the survival of the <i>entire</i> archipelago.<br><sup style="vertical-align:baseline;"><b>status:</b> scrapped</sup></p></a>
+    <div id="linkList"></div>
       
     <img src="../images/decor/asfard.png" style="display:block;max-width:100%;max-height:100%;" draggable="false">
     
@@ -87,5 +92,13 @@
     <img class="bgimgmanual" style="--top:40%;--left:77%;animation-delay:4.29s" src="/images/bgshapes/waveshape.png">
     <img class="bgimgmanual" style="--top:83%;--left:24%;animation-delay:5.51s" src="/images/bgshapes/waveLshape.png">
     <img class="bgimgmanual" style="--top:14%;--left:50%;animation-delay:6.34s" src="/images/bgshapes/waveLshape.png">
+    
+    <script>
+      let linkArray = [
+        {name:"George 1 Remastered", desc:"The official remaster of George's first adventure on Asfard Archipelago.", alt:"v1.1.2", sup:"<b>status:</b> released!", link:"/games/george-series/george-1r", imgLink:"george1", bgColor:"#e09c3d", bdrColor:"#7b5014", bgPos:"0% 5%", color:"black", hasImg:1},
+        {name:"George 1.5", desc:"Find out what happens to George and Greg after their fight in the Labyrinth.", alt:"indev", sup:"<b>status:</b> in development", link:"/games/george-series/george-1.5", imgLink:"george1.5", bgColor:"#52d1b4", bdrColor:"#1f7561", bgPos:"0% 20%", color:"white", hasImg:1},
+        {name:"George 2", desc:"Fight against a new foe that threatens the survival of the <i>entire</i> archipelago.", alt:"N/A", sup:"<b>status:</b> scrapped", link:"#", imgLink:"george2", bgColor:"#ff9126", bdrColor:"#944a00", bgPos:"0% 20%", color:"black", hasImg:1}
+      ];
+    </script>
   </body>
 </html>

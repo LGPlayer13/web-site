@@ -275,7 +275,7 @@ var splashes = [
     "So many things have already gone wrong, and it's because I can't read.",
     "Chadley, nobody cares about your stupid bathtub.",
     "I like to wear soft clothing ('cause it makes me feel like I'm rough, in comparison).",
-    "You found the [Moss]!",
+    `You found the <span style="color:#6adf6c;">[Moss]</span>!`,
     "Think beyond antivirus, think Protegent.",
     "Now, although historically accurate, this site does not contain giant enemy crabs.",
     "I go in, fix one thing, and that causes 99 other things to fail.",

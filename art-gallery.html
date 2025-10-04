@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <title>LG Productions • Art Gallery</title>
-    <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
+    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,57 +18,47 @@
 
       <h2>Art Gallery</h2>
       <div class="textbox">
-        Yeah, I make art pieces from time to time. Usually when bored.<br>They're all sorted from <i>most recent</i> to <i>oldest</i>, top to bottom.<br><sub>pro tip: hover over the images for some witty remarks about them.</sub>
+        Yeah, I make art pieces from time to time. Usually when bored.<br>Vector art is on the top, sketches are below.<br><sub>pro tip: hover over the images for some witty remarks about them.</sub>
       </div>
       
       <hr>
       
-      <div class="textbox extended list">
-        <section>
-          <details open>
-            <summary><b>Vector Pieces</b></summary>
-            <img class="art" src="/images/artpieces/artpiece8.png" title="drew the guys (again)! look at how cool they look">
-            <img class="art" src="/images/artpieces/artpiece7.png" title="look at this little fella">
-            <img class="art" src="/images/artpieces/artpiece6.png" title="so... where does the shampoo go?">
-            <img class="art" src="/images/artpieces/artpiece5.png" title="hold up, this is an ANIMATION, not ART. exposed!!1!">
-            <img class="art" src="/images/artpieces/artpiece4.png" title="doritos gone fishin'">
-            <img class="art" src="/images/artpieces/artpiece3.png" title="an uncommon sparky appearance">
-            <img class="art" src="/images/artpieces/artpiece2.png" title="not too bad, probably even better than george 2">
-            <img class="art" src="/images/artpieces/artpiece1.png" title="cory main character confirmed? for real?!">
-          </details>
-        </section>
-      </div>
-      
-      <div class="textbox extended list">
-        <section>
-          <details>
-            <summary><b>Chromebook Sketches</b></summary>
-            <img class="art" src="/images/artpieces/georgies/georgie7.png" title="why is the lyric from Amnesiac? fake fan!!1!">
-            <img class="art" src="/images/artpieces/georgies/georgie6.png" title="i gave up on the rain halfway through">
-            <img class="art" src="/images/artpieces/georgies/georgie5.png" title="cannibalism (again, probably)">
-            <img class="art" src="/images/artpieces/georgies/georgie4.png" title="i got the deluxe version for NOTHING">
-            <img class="art" src="/images/artpieces/georgies/georgie3.png" title="i'm gonna be honest i don't really like this one">
-            <img class="art" src="/images/artpieces/georgies/georgie2.png" title="[Canon Death]">
-            <img class="art" src="/images/artpieces/georgies/georgie1.png" title="idk why this one is bigger than the rest">
-          </details>
-        </section>
+      <div id="artList" class="flex">
+        <img src="/images/artpieces/artpiece8.png" title="drew the guys (again)! look at how cool they look">
+        <img src="/images/artpieces/artpiece7.png" title="look at this little fella">
+        <img src="/images/artpieces/artpiece6.png" title="so... where does the shampoo go?">
+        <img src="/images/artpieces/artpiece5.png" title="hold up, this is an ANIMATION, not ART. exposed!!1!">
+        <img src="/images/artpieces/artpiece4.png" title="doritos gone fishin'">
+        <img src="/images/artpieces/artpiece3.png" title="an uncommon sparky appearance">
+        <img src="/images/artpieces/artpiece2.png" title="not too bad, probably even better than george 2">
+        <img src="/images/artpieces/artpiece1.png" title="cory main character confirmed? for real?!">
+        
+        <hr>
+        
+        <img src="/images/artpieces/georgies/georgie7.png" title="why is the lyric from Amnesiac? fake fan!!1!">
+        <img src="/images/artpieces/georgies/georgie6.png" title="i gave up on the rain halfway through">
+        <img src="/images/artpieces/georgies/georgie5.png" title="cannibalism (again, probably)">
+        <img src="/images/artpieces/georgies/georgie4.png" title="i got the deluxe version for NOTHING">
+        <img src="/images/artpieces/georgies/georgie3.png" title="i'm gonna be honest i don't really like this one">
+        <img src="/images/artpieces/georgies/georgie2.png" title="[Canon Death]">
+        <img src="/images/artpieces/georgies/georgie1.png" title="idk why this one is bigger than the rest">
       </div>
     
     </div>
   
     <footer-component></footer-component>
     
-    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
-    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
-    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
-    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
-    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
-    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
-    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
-    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
-    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
-    
     <img class="charhover" style="--top:28%;--left:17%;--delay:0s;" src="/images/decor/mastapeece.png" title="it feels good to be new.">
     <img class="charhover" style="--top:30%;--left:77%;--delay:0.75s;" src="/images/decor/painting101.png" title="no hands? ...problem!">
+    
+    <script>
+      const artList = document.querySelector("#artList");
+      const artListChildren = artList.querySelectorAll("img");
+
+      for (let i = 0; i < artListChildren.length; i++) {
+        artListChildren[i].classList.add("art");
+        artListChildren[i].tabIndex = 0;
+      }
+    </script>
   </body>
 </html>

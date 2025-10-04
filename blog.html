@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <title>LG Productions • Blog</title>
-    <link rel = "icon" href = "https://lgplayer13.neocities.org/transparentLG.png" type = "image/x-icon">
+    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,11 @@
       <hr>
       
       <div class="textbox list">
-        <h3>Blog/Devlog Posts</h3>
+        <div class="textboxflex">
+          <span id="blogCount" onclick="showPosts('blog')"></span>
+          <span id="devlogCount" onclick="showPosts('devlog')"></span>
+          <span onclick="showPosts('all')">All</span>
+        </div>
         <p id="postlistdiv"></p>
       </div>
       
@@ -39,17 +43,19 @@
     
     <footer-component></footer-component>
     
-    <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
-    <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
-    <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
-    <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
-    <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
-    <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
-    <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
-    <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
-    <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
-    
     <img class="charhover" style="--top:33%;--left:22%;--delay:0s;" src="/images/decor/nerdcore.png" title="she must be reading the george lore if it's that thick">
     <img class="charhover" style="--top:46%;--left:73%;--delay:0.75s;" src="/images/decor/patience.png" title="most patient lg products fan">
+    
+    <script>      
+      function showPosts(type) {
+        for (let i = 0; i < postListChildren.length; i++) {
+          if (postListChildren[i].classList.contains(type) || type === "all") {
+            postListChildren[i].style.display = "list-item";
+          } else {
+            postListChildren[i].style.display = "none";
+          }
+        }
+      }
+    </script>
   </body>
 </html>

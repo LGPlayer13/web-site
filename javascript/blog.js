@@ -31,22 +31,23 @@ let authorLink = "https://lgplayer13.neocities.org/"; // Enter your website, soc
   use a date it must still follow that format.*/
 
 let postsArray = [
-[ "posts/2025-09-03-Blog-Big-Ideas.html", encodeURI ( 'Big Ideas - Blog' ) ],
-[ "posts/2025-08-01-Blog-End-Summer.html", encodeURI ( 'End Of Summer - Blog' ) ],
-[ "posts/2025-07-03-Blog-Two-Weeks.html", encodeURI ( 'Two Weeks - Blog' ) ],
-[ "posts/2025-06-02-Blog-Sophomore-Year.html", encodeURI ( 'Sophomore Year Review - Blog' ) ],
-[ "posts/2025-05-23-Devlog-LabII-Alpha1.html", encodeURI ( 'Labyrinths II (Alpha 1) - Devlog' ) ],
-[ "posts/2025-05-03-Blog-Will-Calls.html", encodeURI ( 'Will Calls - Blog' ) ],
-[ "posts/2025-04-07-Blog-Over-Ocean.html", encodeURI ( 'Over the Ocean - Blog' ) ],
-[ "posts/2025-03-11-Devlog-New-Album.html", encodeURI ( 'Fragments of Waves - Devlog' ) ],
-[ "posts/2025-03-02-Blog-Worrywort.html", encodeURI ( 'Worrywort - Blog' ) ],
-[ "posts/2025-02-03-Blog-Part-III.html", encodeURI ( 'Part III - Blog' ) ],
-[ "posts/2025-01-03-Blog-Daydreaming.html", encodeURI ( 'Daydreaming - Blog' ) ],
-[ "posts/2024-12-31-Devlog-Year-Recap.html", encodeURI ( '2024 Recapped - Devlog' ) ],
-[ "posts/2024-12-01-Blog-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid - Blog' ) ],
-[ "posts/2024-11-16-Devlog-G1R-v1.1.html", encodeURI ( 'George 1R Update 1.1 - Devlog' ) ],
-[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again - Blog' ) ],
-[ "posts/2024-06-06-OldBlog-Freshman-Year.html", encodeURI ( 'Freshman Year Review - Old Blog' ) ]
+[ "posts/2025-10-04-Blog-Break-Tension.html", encodeURI ( 'Break the Tension - Blog' ), "blog" ],
+[ "posts/2025-09-03-Blog-Big-Ideas.html", encodeURI ( 'Big Ideas - Blog' ), "blog" ],
+[ "posts/2025-08-01-Blog-End-Summer.html", encodeURI ( 'End Of Summer - Blog' ), "blog" ],
+[ "posts/2025-07-03-Blog-Two-Weeks.html", encodeURI ( 'Two Weeks - Blog' ), "blog" ],
+[ "posts/2025-06-02-Blog-Sophomore-Year.html", encodeURI ( 'Sophomore Year Review - Blog' ), "blog" ],
+[ "posts/2025-05-23-Devlog-LabII-Alpha1.html", encodeURI ( 'Labyrinths II (Alpha 1) - Devlog' ), "devlog" ],
+[ "posts/2025-05-03-Blog-Will-Calls.html", encodeURI ( 'Will Calls - Blog' ), "blog" ],
+[ "posts/2025-04-07-Blog-Over-Ocean.html", encodeURI ( 'Over the Ocean - Blog' ), "blog" ],
+[ "posts/2025-03-11-Devlog-New-Album.html", encodeURI ( 'Fragments of Waves - Devlog' ), "devlog" ],
+[ "posts/2025-03-02-Blog-Worrywort.html", encodeURI ( 'Worrywort - Blog' ), "blog" ],
+[ "posts/2025-02-03-Blog-Part-III.html", encodeURI ( 'Part III - Blog' ), "blog" ],
+[ "posts/2025-01-03-Blog-Daydreaming.html", encodeURI ( 'Daydreaming - Blog' ), "blog" ],
+[ "posts/2024-12-31-Devlog-Year-Recap.html", encodeURI ( '2024 Recapped - Devlog' ), "devlog" ],
+[ "posts/2024-12-01-Blog-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid - Blog' ), "blog" ],
+[ "posts/2024-11-16-Devlog-G1R-v1.1.html", encodeURI ( 'George 1R Update 1.1 - Devlog' ), "devlog" ],
+[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again - Blog' ), "blog" ],
+[ "posts/2024-06-06-OldBlog-Freshman-Year.html", encodeURI ( 'Freshman Year Review - Old Blog' ), "blog" ]
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -121,19 +122,19 @@ if ( currentIndex > -1 ) {
   if (  postDateFormat.test ( postsArray[currentIndex][0].slice( 6,17 ) ) ) {
     let monthSlice = postsArray[currentIndex][0].slice( 11,13 );
     let month = "";
-    if ( monthSlice === "01") { month = "Jan";}
-    else if ( monthSlice === "02") { month = "Feb";}
-    else if ( monthSlice === "03") { month = "Mar";}
-    else if ( monthSlice === "04") { month = "Apr";}
+    if ( monthSlice === "01") { month = "January";}
+    else if ( monthSlice === "02") { month = "February";}
+    else if ( monthSlice === "03") { month = "March";}
+    else if ( monthSlice === "04") { month = "April";}
     else if ( monthSlice === "05") { month = "May";}
-    else if ( monthSlice === "06") { month = "Jun";}
-    else if ( monthSlice === "07") { month = "Jul";}
-    else if ( monthSlice === "08") { month = "Aug";}
-    else if ( monthSlice === "09") { month = "Sep";}
-    else if ( monthSlice === "10") { month = "Oct";}
-    else if ( monthSlice === "11") { month = "Nov";}
-    else if ( monthSlice === "12") { month = "Dec";}
-	niceDate = postsArray[currentIndex][0].slice( 14,16 ) + " " + month + ", " + postsArray[currentIndex][0].slice( 6,10 );
+    else if ( monthSlice === "06") { month = "June";}
+    else if ( monthSlice === "07") { month = "July";}
+    else if ( monthSlice === "08") { month = "August";}
+    else if ( monthSlice === "09") { month = "September";}
+    else if ( monthSlice === "10") { month = "October";}
+    else if ( monthSlice === "11") { month = "November";}
+    else if ( monthSlice === "12") { month = "December";}
+	niceDate = month + " " + postsArray[currentIndex][0].slice( 14,16 ) + ", " + postsArray[currentIndex][0].slice( 6,10 );
   }
 }
 
@@ -240,4 +241,19 @@ if (document.getElementById("footer")) {
 if (document.title === "Blog Post") {
   document.title = 'LG Productions • ' + currentPostTitle;
 }
-// LG here. wow this is the one thing i "coded" myself! i'm so smart for knowing how strings work!
+
+// Adding the assigned classes to each post (LG-made!)
+const postList = document.querySelector("#postlistdiv");
+const postListChildren = postList.querySelectorAll("li");
+
+let blogPosts = 0;
+let devlogPosts = 0;
+
+for (let i = 0; i < postListChildren.length; i++) {
+  postListChildren[i].classList.add(postsArray[i][2]);
+  if (postsArray[i][2] == "blog") {blogPosts += 1;}
+  else if (postsArray[i][2] == "devlog") {devlogPosts += 1;}
+}
+
+document.getElementById("blogCount").innerHTML = "Blog (" + blogPosts + ")";
+document.getElementById("devlogCount").innerHTML = "Devlog (" + devlogPosts + ")";
