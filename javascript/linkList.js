@@ -10,5 +10,6 @@ for (let i = 0; i < linkArray.length; i++) {
 const linkListChildren = linkList.querySelectorAll("a");
 
 for (let i = 0; i < linkListChildren.length; i++) {
-    if (linkListChildren[i].href.includes("http") && !linkListChildren[i].href.includes("localhost")) {linkListChildren[i].target = "_blank";}
+    ref = linkListChildren[i].href;
+    if (!(ref.includes("localhost") || ref.startsWith("https://lgplayer13.neocities.org"))) {linkListChildren[i].target = "_blank";}
 }
