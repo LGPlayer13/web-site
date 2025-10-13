@@ -30,7 +30,7 @@ class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <footer>
-      <sup style="display:flex;justify-content:center;">
+      <sup>
         <span>&copy; 2025 LG Productions • v3.1</span>
         <span><a href="https://neocities.org/" target="_blank">neocities</a></span>
         <span><a href="/sitemap">site map</a></span>

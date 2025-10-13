@@ -26,9 +26,10 @@
     <div id="container">
 
       <div class="textbox" style="margin-top:10px;">
-        <span style="font-size:22px;font-weight:bold;">Welcome to the LG Productions web site!</span><br>Good morning! I'm LG, a moody teen who makes games (sometimes).<br>This is my <i title="the space is very much intentional">web site</i>, where I rant about and show off my stuff.<br><sub>pronouns: he/him | est. <span id="days"></span> days ago</sub>
+        <span style="font-size:22px;font-weight:bold;">Welcome to the LG Productions web site!</span><br>Good morning! I'm LG, a moody teen who makes games (sometimes).<br>This is my <i title="the space is very much intentional">web site</i>, where I rant about and show off my stuff.
+        <br>
+        <sub><span>pronouns: he/him</span><span id="days"></span></sub>
       </div>
-      <!-- est. april 13, 2023 -->
     
       <div class="marquee">
         <marquee id="splashes" style="color:white;font-size:16px;"><script src="/javascript/splashtexts.js"></script></marquee>
@@ -41,7 +42,7 @@
         <h3 style="text-align:center;">Latest Announcement</h3><p style="text-align:center;">A new grand (concept) has been released for a particular purple square!<br><sup style="vertical-align:baseline;">Click to visit the project on Scratch.</sup></p>
       </a>
       -->
-      <div id="linkList" class="flex"></div>
+      <div id="linkList" class="flex indexList"></div>
       
       <div class="fadebox" style="cursor:default;">
         <a href="/art-gallery">Art Gallery</a> • <a href="https://lgplayer13.atabook.org/">Guestbook</a> • <a href="/patch-notes">Patch Notes</a>
@@ -104,7 +105,7 @@
         var days = difference / (1000 * 3600 * 24); 
         var days = Math.round(days);
 
-        document.getElementById("days").innerHTML = days;
+        document.getElementById("days").innerHTML = "est. " + days + " days ago";
 
         if (difference < 0) {
           clearInterval(SinceThen);

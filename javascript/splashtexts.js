@@ -301,7 +301,7 @@ var splashes = [
     "Black people, white people, men's team, women's team, coca-cola, pepsi-cola, rich people, poor people.",
     "You need to activate Windows before you can personalize your PC.",
     "Killing a baby donkey is a bad idea in practice.",
-    "Did you hear about the noob who tried to hypnotize an Enderman? He was destroyed.",
+    "You might have chronic schizophrenia if you're drowning and think you'll respawn.",
     "If a player was born in Sweden, raised in America, and died in Mexico, what does that make him? Deceased.",
     "I'm the first second-generation Blizzard employee.",
     "My god, happy birthday, we got a gun.",
@@ -324,9 +324,17 @@ var splashes = [
     "Unlike the Donner party, cows can be bread with wheat for an achievement in Minecraft.",
     "I love being miserable and playing garbage. I want more.",
     "No Instagrammy, no Snappychat.",
+    "You are not signed in and will be unable to save the game.",
+    "I did not mean to hit publish, oops.",
+    "Plans starting at $29.99 a month.",
+    "Ping pong balls are great for ping, but not for pong.",
+    "The world's not ready for Silly Steven!",
+    "R is a programming language.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
 ];
-document.getElementById("splashes").innerHTML = splashes[Math.floor(Math.random() * splashes.length)];
-//why
+min = 1;
+max = Math.ceil(splashes.length);
+funChance = Math.floor(Math.random() * (max - min + 1)) + min;
+document.getElementById("splashes").innerHTML = (funChance == 1) ? `${splashes.length} splashes and counting!` : splashes[Math.floor(Math.random() * splashes.length)];

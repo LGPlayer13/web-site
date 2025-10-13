@@ -267,7 +267,7 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
 
 .off {opacity:0.5;cursor:not-allowed;}
 .othersite img {width:88px;height:31px;}
-.othersite:hover {opacity:0.55;}
+.othersite:hover {filter:brightness(1.5) saturate(0.75);}
 
 .flash {animation:flash 0.75s ease 0s 3 normal;}
 
@@ -396,13 +396,15 @@ a.bubble {color:white;text-decoration:none;}
   margin: 0;
   width: auto;
   font-size: 24px;
+  transition: box-shadow 0.1s;
   text-shadow: 1px 1px 1.5px #000000;
 }
 h3 span {
+  position: absolute;
   color: var(--typecolor);
-  float: right;
   margin-top: 4px;
   margin-right: 7px;
+  right: 0;
   font-size: 17px;
   font-weight: 500;
 }
@@ -419,10 +421,19 @@ h3 span {
   border-color:#b08353;
   box-shadow:4px 4px 4px 0 rgba(0,0,0,0.25),0 0 16px rgba(255,244,232,1) inset;
   background-size: cover;
-  transition: transform 0.05s ease-in;
+  transition: transform 0.05s ease-in, box-shadow 0.1s;
   transform: scale(1.02,1.02);
 }
-/*.bubble:hover > img {border:3px solid var(--bdcolor);}*/
+.bubble:hover h3 {box-shadow:0 5px 16px rgba(255,244,232,0.8) inset;}
+/*.bubble:hover > img {border:3px solid var(--bdcolor);}
+
+.indexList a:first-child {
+  max-width: 100%;
+  min-height: 80px;
+  text-align: center;
+  flex: 100%;
+}
+.indexList a:first-child p {text-align:center;}*/
 
 .flexbubble {
   display: block;
@@ -517,8 +528,9 @@ header a {
 }
 
 footer {margin-top: 32px;text-shadow: 1.25px 1.25px 2px #000000;}
-footer span {margin:0 8px;}
 footer a {color:white;}
+footer sup,.textbox sup {display:flex;justify-content:center;}
+footer span,.textbox span {margin:0 8px;}
 
 /* navbar */
 .navbar {
@@ -607,7 +619,7 @@ footer a {color:white;}
 
 @keyframes fadeloop {
   0% {opacity:0}
-  50% {opacity:0.5}
+  50% {opacity:0.3}
   100% {opacity:0}
 }
 
