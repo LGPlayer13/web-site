@@ -595,7 +595,7 @@ footer span,.textbox span {margin:0 8px;}
 }
 
 /* scrollbar customization! it works now!! */
-::-webkit-scrollbar {width:16px;}
+::-webkit-scrollbar {width:initial;}
 ::-webkit-scrollbar-track {background:#6e4c29;}
 ::-webkit-scrollbar-thumb {background:#ab773f;background-clip:content-box;border-radius:10px;border:3px solid transparent;}
 ::-webkit-scrollbar-thumb:hover {background:#c48949;background-clip:content-box;}
