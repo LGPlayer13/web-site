@@ -330,6 +330,10 @@ var splashes = [
     "Ping pong balls are great for ping, but not for pong.",
     "The world's not ready for Silly Steven!",
     "R is a programming language.",
+    "How we you take i a little a place it La A Little I took a like... On did.",
+    "You're a cinephile, I watch Family Guy.",
+    "Hang on while Windows reports the problem to Microsoft..",
+    "Water, fire, air, and dirt. F***in' magnets, how do they work?",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
