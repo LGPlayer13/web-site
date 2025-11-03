@@ -67,6 +67,12 @@ ORDER FOR PROPERTIES
   width: 1400px;
   max-width: 64%;
 }
+#blogcontainer > p {
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 17px;
+}
+
 .flex {
   /* border: 1px solid black; */
   display: flex;
@@ -116,7 +122,7 @@ ORDER FOR PROPERTIES
 .textboxflex span {
   background: #956838;
   border-radius: 6px 6px 0 0;
-  margin-bottom: -10px;
+  margin: 0 0 -10px 0 !important;
   padding: 8px 2px;
   flex: 1;
   transition: background-color 0.1s;
@@ -245,7 +251,10 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
 .deprecated:hover {color:#ffdfdf}
 
 .extended {width:85%;}
-.extendedblog {padding:13px 18px;width:fit-content;}
+
+.extendedblog {padding:13px 18px;width:fit-content;line-height:1.8em;}
+.extendedblog p:first-child {margin-top:10px;}
+.extendedblog p:last-child {margin-bottom:10px;}
 
 .list,.updatelog {padding:0;text-align:left;}
 .list p {padding-left:8px;}
@@ -314,10 +323,7 @@ a > .textbox:hover {color:#ffb263;background:rgba(0,0,0,0.5);}
   filter: none;
 }
 
-#artList hr {
-  margin: 10px;
-  width: 70%;
-}
+#artList hr {margin:10px;width:70%;}
 
 .gamelogo {
   margin-top: 17px;
