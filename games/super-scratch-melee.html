@@ -1,69 +1,109 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Super Scratch Melee</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
-
-      <img class="gamelogo" src="/images/games/ssmtitle.png" title="this game is ancient in terms of the latest lg releases" style="width:280px;">
-      <div class="textbox">
-        Released on 08/21/21<br>v1.2.1 • Turn-based fighting<br><sub>last update: 10/04/24</sub>
-      </div>
-      
-      <div class="flex">
-        <a class="flexbubble" href="https://turbowarp.org/527774504/" target="_blank">Play it!</a>
-        <a class="flexbubble" href="https://turbowarp.org/778368273/" target="_blank">Sequel Demo</a>
-        <a class="flexbubble" href="https://turbowarp.org/564106795/" target="_blank">Soundtrack</a>
-      </div>
-      
-      <hr>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ssmScreenie1.jpg" tabindex="0">
-        <section><b>Super Scratch Melee</b> is a turn-based fighting game where you duel in (somewhat) action-packed battles. It was made back in 2021, and is an incredibly outdated game. Still recommend checking it out.<br><br>Boasting a whopping 14 fighters and several unique modes, this game has you fight against random characters, challenge different bosses, and customize a fighter of your own!</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ssmScreenie2.jpg" tabindex="0">
-        <section>After being inspired by classic Scratch games like Super Scratch Smash and Super Scratch Brawl (may its unfinished soul rest in piece), I felt the need to continue this fighting game trend.<br><br>Since I wasn't qualified to make a platforming-fighting game, I decided to go for a turn-based approach, while still keeping the "Super Scratch" title. It wasn't very good, but I look back on it fondly.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ssmScreenie3.jpg" tabindex="0">
-        <section><b>It also features...</b><br>
-          <ul><li>14 fighters with unique movesets and abilities</li><li>18+ different stages to fight on</li><li>4 bosses to duke out against in Classic Mode</li><li>A multitude of extras, including a Boss Rush and Shop for unlockables</li><li>A bonus customizable fighter (PLC)</li><li>Stock and Timed battle types</li><li>Four difficulties to choose from in Classic Mode</li></ul>
-        </section>
-      </div>
-      
-      <div class="textbox updatelog">
-        <section>
-          <details style="margin-top:0px;">
-            <summary><b>Update Log</b></summary>
+    <head>
+        <title>LG Productions • Super Scratch Melee</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(88, 57, 29, 0.87);
+                --bgGradient2: rgba(124, 104, 37, 0.87);
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div id="container">
+            
+            <aside></aside>
+            
             <main>
-              <i>10/04/24</i> - v1.2.1<ul><li>removed UPRS ratings</li><li>some graphical enhancements</li></ul><hr>
-              <i>04/03/22</i> - v1.2<ul><li>2 new fighters, 3 new stages</li><li>added shop for Custom fighter</li><li>a multitude of bug fixes</li></ul><hr>
-              <i>02/06/22</i> - v1.1.1<ul><li>implemented fancy new renders</li><li>minor bug fixes, as per usual</li></ul><hr>
-              <i>09/04/21</i> - v1.1<ul><li>fixed issue with volume</li><li>fixed issue with level transitions</li><li>introduced new cutscenes</li></ul><hr>
-              <i>08/29/24</i> - v1.0.1<ul><li>fixed minor gameplay issues</li><li>repositioned some UI elements</li><li>lowered bg music volume</li></ul><hr>
-              <i>08/21/21</i> - v1.0<ul><li><b>released the game!</b></li><li>launched with 12 fighters</li><li>it has a classic mode!!!</li></ul>
-            </main>
-          </details>
-        </section>
-      </div>
-      
-    </div>
+                <img class="gamelogo" src="/images/games/ssmtitle.png" title="this game is ancient in terms of the latest lg releases" style="width: 280px;">
+                <div class="box">
+                    <p>Released on 08/21/21<br>v1.2.1 • Turn-based, fighting</p>
+                    <sup>last update: 10/04/24</sup>
+                </div>
 
-    <footer-component></footer-component>
-  </body>
+                <div class="bubbleCont">
+                    <a class="bubble" href="https://turbowarp.org/527774504/" target="_blank">Play it!</a>
+                    <a class="bubble" href="https://turbowarp.org/778368273/" target="_blank">Sequel Demo</a>
+                    <a class="bubble" href="https://turbowarp.org/564106795/" target="_blank">Soundtrack</a>
+                </div>
+                
+                <hr>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/ssmScreenie1.jpg" alt="character select screen" tabindex="0">
+                    <p><b>Super Scratch Melee</b> is a turn-based fighting game where you duel in (somewhat) action-packed battles.<br>It was made back in 2021, and is an incredibly outdated game. Still recommend checking it out.<br><br>Boasting a whopping 14 fighters and several unique modes, this game has you fight against random characters, challenge different bosses, and customize a fighter of your own!</p>
+                </div>
+                
+                <div class="shinyBox showoff" style="--align: right;">
+                    <p>Being inspired by classic Scratch games like Super Scratch Smash and Super Scratch Brawl (may it rest in piece), I felt the need to continue this fighting game trend.<br><br>Since I wasn't qualified to make a platforming-fighting game, I decided to go for a turn-based approach, while still keeping the "Super Scratch" title.<br>It wasn't very good, but I still look back on it fondly.</p>
+                    <img class="magnify" src="/images/games/screenies/ssmScreenie2.jpg" alt="battle between Silver and Ravioli" tabindex="0">
+                </div>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/ssmScreenie3.jpg" alt="frank giving milk to Isaac and Xhander" tabindex="0">
+                    <section>
+                        <p><b>It also features...</b></p>
+                        <ul>
+                            <li>14 fighters with unique movesets and abilities</li>
+                            <li>18+ different stages to fight on</li>
+                            <li>4 bosses to duke out against in Classic Mode</li>
+                            <li>A multitude of extras, including a Boss Rush and Shop for unlockables</li>
+                            <li>A bonus customizable fighter (PLC)</li>
+                            <li>Stock and Timed battle types</li>
+                            <li>Four difficulties to choose from in Classic Mode</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="collapse">
+                    <details>
+                        <summary><b>Update Log</b></summary>
+                        <div class="scroll">
+                            <section>
+                                <p><b>v1.2.1</b> - <i>10/04/24</i></p>
+                                <ul><li>removed UPRS ratings</li><li>some graphical enhancements</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.2</b> - <i>04/03/22</i></p>
+                                <ul><li>2 new fighters, 3 new stages</li><li>added shop for Custom fighter</li><li>a multitude of bug fixes</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.1.1</b> - <i>02/06/22</i></p>
+                                <ul><li>implemented fancy new renders</li><li>minor bug fixes, as per usual</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.1</b> - <i>09/04/21</i></p>
+                                <ul><li>fixed issue with volume</li><li>fixed issue with level transitions</li><li>introduced new cutscenes</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0.1</b> - <i>08/29/21</i></p>
+                                <ul><li>fixed minor gameplay issues</li><li>repositioned some UI elements</li><li>lowered bg music volume</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0</b> - <i>08/21/21</i></p>
+                                <ul><li><b>released the game!</b></li><li>launched with 12 fighters</li><li>it has a classic mode!!!</li></ul>
+                            </section>
+                        </div>
+                    </details>
+                </div>
+            </main>
+            
+            <aside></aside>
+      
+        </div>
+        
+        <footer-component></footer-component>
+    </body>
 </html>

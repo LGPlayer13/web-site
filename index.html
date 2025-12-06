@@ -1,123 +1,183 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Home</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta name="description" content="Welcome to the World of LG Productions.">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-    <script src="/javascript/blog.js" type="text/javascript" defer></script>
-    <script src="/javascript/linkList.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <!--
-      is any of this code good even after 2 major updates? eh, probably not.
-      my web design teacher is gonna look at this and be like "what the hell happened here?"
-      don't worry junior year starts soon... actually, it's already started!
-    -->
-    
-    <header-component></header-component>
-    
-    <div id="container">
-
-      <div class="textbox" style="margin-top:10px;">
-        <span style="font-size:22px;font-weight:bold;">Welcome to the LG Productions web site!</span><br>Good morning! I'm LG, a moody teen who makes games (sometimes).<br>This is my <i title="the space is very much intentional">web site</i>, where I rant about and show off my stuff.
-        <br>
-        <sub><span>pronouns: he/him</span><span id="days"></span></sub>
-      </div>
-    
-      <div class="marquee">
-        <marquee id="splashes" style="color:white;font-size:16px;"><script src="/javascript/splashtexts.js"></script></marquee>
-        <marquee id="birthday" style="display:none;font-size:16px;"><b class="rainbow-text">Today is my birthday!</b></marquee>
-      </div>
-
-      <hr>
-      <!-- scrapped middle bubble
-      <a class="bubble blacktext noimage" title="posted on 08/04/25" style="background-image:url(/images/linkimgs/latestannouncement.png);background-position:100% 78%;--bgcolor:#a7896c;--bdcolor:#90775f;max-width:100%;min-height:80px;" href="https://scratch.mit.edu/projects/1201248086/" target="_blank">
-        <h3 style="text-align:center;">Latest Announcement</h3><p style="text-align:center;">A new grand (concept) has been released for a particular purple square!<br><sup style="vertical-align:baseline;">Click to visit the project on Scratch.</sup></p>
-      </a>
-      -->
-      <div id="linkList" class="flex indexList"></div>
-      
-      <div class="fadebox" style="cursor:default;">
-        <a href="/art-gallery">Art Gallery</a> • <a href="https://lgplayer13.atabook.org/">Guestbook</a> • <a href="/patch-notes">Patch Notes</a>
-      </div>
-      
-      <hr>
-      
-      <div class="textbox list">
-        <h3>Recent Posts</h3>
-        <p id="recentpostlistdiv"></p>
-      </div>
-      
-      <div class="flex" style="--width:60%;">
-        <div class="flexfadebox" style="padding-top:14px;padding-bottom:0px;--flex:35%;">
-          <script type="text/javascript" src="//counter1.fc2.com/counter.php?id=40031905&main=1"></script>
-          <noscript><img src="//counter1.fc2.com/counter_img.php?id=40031905&main=1" /></noscript>
-          <br><sup style="line-height:0;">unique visitors!</sup>
+    <head>
+        <title>LG Productions • Home</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="description" content="Welcome to the World of LG Productions.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <script src="/javascript/linkList.js" type="text/javascript" defer></script>
+        <script src="/javascript/blog.js" type="text/javascript" defer></script>
+        <style>
+            main > sup {display: block;margin: 20px auto;}
+            .linkList {margin: 20px auto;width: calc(85% + 25px);}
+            .linkBubble {flex: 1;margin: 0 5px;width: 48%;}
+            
+            .showoff img {
+                margin: 3px;
+                width: 70px;
+                height: auto;
+                object-fit: contain;
+            }
+            
+            .shinyBox {
+                border: 3px solid black;
+                padding: 10px 5px;
+            }
+            .shinyBox p {margin-right: 5px;}
+            
+            .board {
+                position: absolute;
+                background: url(/images/linkimgs/plankbg.jpg);
+                border: 4px double #261600;
+                border-radius: 12px;
+                width: 50%;
+                bottom: -30px;
+                right: -15px;
+                box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+                transform: rotate(-1deg);
+            }
+            
+            #recentpostlistdiv ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            #recentpostlistdiv li {width: auto;}
+            #recentpostlistdiv a {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                font-size: 18px;
+                font-family: "Indie Flower", cursive;
+                text-align: center;
+                text-shadow: none;
+            }
+            #recentpostlistdiv a:not(:hover) {color: white;}
+            
+            .siteButtons {
+                position: relative;
+                margin-top: 10px;
+                width: 60%;
+            }
+            .siteButtons p {margin-bottom: 10px;transform: rotate(2deg);}
+            .siteButtons img {filter: drop-shadow(0 0 6px rgba(0,0,0,0.5));}
+            
+            .clickEm {
+                position: relative;
+                width: 150px;
+                top: 70px;
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div id="container">
+            
+            <aside>
+                <a href="/games"><img class="linkChar" src="/images/decor/justGeorge.svg" title="for a guy with no fingers, he certainly holds it well" style="--top:140px;"><span>Games</span></a>
+                <img class="clickEm decor" src="/images/sketches/clickSketch.gif" alt="arrow pointing up to George">
+            </aside>
+            
+            <main>
+                <h1>Welcome to the <span class="hotpink">LG Productions</span> web site!</h1><span class="solidpink">I'm a moody teen who makes games.</span>
+                <sup><span>pronouns: he/him</span><span id="days" /></sup>
+                
+                <marquee id="splashes"><script src="/javascript/splashtexts.js"></script></marquee>
+                <marquee id="birthday" style="display:none;"><b class="rainbow-text">Today is my birthday!</b></marquee>
+                
+                <div class="shinyBox">
+                    <div class="showoff">
+                        <img class="decor" src="/images/sketches/georgeSketch.gif" alt="drawing of the George Series logo">
+                        <p>Good morning! I'm <b>LG</b>, a moody teen who makes games (sometimes). This is my <span class="em" title="the space is very much intentional">web site</span>, where I rant and show off the things I make.<br>I still have a ways to go with my game dev journey, but it'll pay off soon.</p>
+                    </div>
+                    
+                    <hr class="short">
+                    
+                    <div class="showoff">
+                        <img class="decor" src="/images/sketches/htmlSketch.gif" alt="drawing of the HTML5 logo">
+                        <p>This web site was started as a neat little project in 2023, back when I didn't know the difference between padding and margins.<br>It's evolved into something much bigger than it was back then, and I'm grateful for that. <i>Feel free to have a look around!</i></p>
+                    </div>
+                </div>
+                
+                <div class="fade">
+                    <p><b>Latest Announcement:</b> <a href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">George 1 Widescreen Port released!</a></p>
+                </div>
+                
+                <div class="flex linkList"></div>
+                
+                <div class="bubbleCont">
+                    <a class="bubble" href="/art-gallery">Art Gallery</a>
+                    <a class="bubble" href="https://lgplayer13.atabook.org/">Guestbook</a>
+                    <a class="bubble" href="/patch-notes">Patch Notes</a>
+                </div>
+                
+                <hr>
+                
+                <div class="box background smallText" style="--bg: url(/images/background/quakcers.jpg);--pos: 0 50%;--dim: 0.5;">
+                    <p>Oh, and one more thing before you leave: I have a <b>blog!</b> (click Sparky for more)<br>New posts are written each month—this is the latest one.</p>
+                    <div class="board">
+                        <p id="recentpostlistdiv"></p>
+                    </div>
+                </div>
+                
+                <div class="siteButtons">
+                    <p>take it! it's <b>yours</b>!</p>
+                    <img src="/images/sites/lgbutton.gif"><span style="margin: 5px;"/><img src="/images/sites/lgbuttonstatic.png">
+                </div>
+            </main>
+            
+            <aside>
+                <a href="/about"><img class="linkChar" src="/images/decor/justCory.svg" title="it's you!" style="--top:40px;--delay: 0.75s;"><span>About</span></a>
+                <a href="/blog"><img class="linkChar" src="/images/decor/justSparks.svg" title="this a lore book or something?" style="--top:50px;--delay: 1.5s;"><span>Blog</span></a>
+            </aside>
         </div>
-        <div class="flexfadebox" style="padding-bottom:0px;--flex:35%;">
-          <img src="/images/sites/lgbutton.gif"><span style="margin:5px;"/><img src="/images/sites/lgbuttonstatic.png">
-          <br><sup style="line-height:0;">here's my <b>site button</b>!</sup>
-        </div>
-      </div>
-      
-    </div>
+        
+        <footer-component></footer-component>
+        
+        <!-- my first javascript (ever!) -->
+        <script>
+            const month = new Date().getMonth();
+            const date = new Date().getDate();
+            
+            document.getElementById("splashes").style.display = (month != 0 && date != 13) ? "inline-block" : "none";
+            document.getElementById("birthday").style.display = (month == 0 && date == 13) ? "inline-block" : "none";
+            if (month == 11) {document.body.innerHTML += `<div class="hangingDecor" style="--img: url(/images/background/christMass.png)"></div>`;} 
+            
+            let linkArray = [
+                {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", genres:"narrative, platforming", link:"/games/george-series", imgLink:"georgeseries", bgPos:"0% 60%", list:0},
+                {name:"Labyrinths II", desc:"Explore through many different labyrinths and fight through hordes of monsters!", ver:"a1.1", genres:"text-based, dungeon crawler", link:"/games/labyrinths-II", imgLink:"lab2", list:0}
+            ]
+        </script>
     
-    <footer-component></footer-component>
-    
-    <img class="charhover" style="--top:41%;--left:13%;--delay:0s;" src="/images/decor/gregoe.png" title="here's george. people like to call this man a dorito">
-    <img class="charhover" style="--top:31%;--left:80%;--delay:0.75s;" src="/images/decor/cor%20the%20e.png" title="this is cory. he has super mario sunshine knockoff powers">
-    <img class="charhover" style="--top:85%;--left:23%;--delay:1.5s;" src="/images/decor/sparkyyy.png" title="sparky the rhombus: seen in everything except the games">
-    
-    <!-- my first javascript (ever!) -->
-    <script>
-      const month = new Date().getMonth();
-      const date = new Date().getDate();
-      
-      document.getElementById("splashes").style.display = (month != 0 && date != 13) ? "block" : "none";
-      document.getElementById("birthday").style.display = (month == 0 && date == 13) ? "block" : "none";
-      
-      let linkArray = [
-        {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", alt:"", sup:"", link:"/games/george-series", imgLink:"georgeseries", bgColor:"#d68100", bdrColor:"#6b4000", bgPos:"100% 58%", color:"black", hasImg:1},
-        {name:"Latest Announcement", desc:"The official widescreen port for George 1 Remastered is now available!", alt:"09/29/25", sup:"<i>Click to visit the project on itch.io.</i>", link:"https://lgplayer13.itch.io/george-1-remastered-widescreen-port", imgLink:"george1", bgColor:"#e09c3d", bdrColor:"#7b5014", bgPos:"0% 5%", color:"black", hasImg:1},
-        {name:"More Games", desc:"A bunch of my other Scratch and IGM games can be found in the Games page. They're pretty decent.", alt:"", sup:"", link:"games", imgLink:"games", bgColor:"#b5b5b5", bdrColor:"#5e5e5e", bgPos:"0% 40%", color:"white", hasImg:0},
-        {name:"About Me!", desc:"Was the header not enough for you? Eh, there's a lot more to know, I guess.", alt:"", sup:"", link:"about", imgLink:"aboutme", bgColor:"#ef5b3b", bdrColor:"#89220b", bgPos:"10% 50%", color:"white", hasImg:0},
-        {name:"Blog", desc:"I like to write stuff. Sometimes it can be mildly entertaining, but anything can happen here.", alt:"", sup:"", link:"blog", imgLink:"blog", bgColor:"#d3b07c", bdrColor:"#7e5c2a", bgPos:"0% 50%", color:"black", hasImg:0},
-        {name:"...feeling lost?", desc:"If you have no idea where to go, check out the site map! Consider it this site's \"table of contents\".", alt:"", sup:"", link:"sitemap", imgLink:"sitemap", bgColor:"#825c30", bdrColor:"#432f19", bgPos:"0% 17%", color:"white", hasImg:0}
-      ];
-    </script>
-    
-    <!-- script borrowed from fractyl's website -->
-    <script>
-      function SinceThen() {
-
-        var then = new Date("04/13/2023"); 
-        var today = new Date(); 
-        today.setHours(0, 0, 0, 0);
-
-        var difference = today.getTime() - then.getTime(); 
-        var days = difference / (1000 * 3600 * 24); 
-        var days = Math.round(days);
-
-        document.getElementById("days").innerHTML = "est. " + days + " days ago";
-
-        if (difference < 0) {
-          clearInterval(SinceThen);
-          document.getElementById("days").innerHTML = "N/A";
-        }
-      };
-
-      setInterval( function() {
-      SinceThen();
-      }, 1000);
-
-      SinceThen();
-    </script>
-  </body>
+        <!-- script borrowed from fractyl's website -->
+        <script>
+            function SinceThen() {
+                
+                var then = new Date("04/13/2023"); 
+                var today = new Date(); 
+                today.setHours(0, 0, 0, 0);
+                
+                var difference = today.getTime() - then.getTime(); 
+                var days = difference / (1000 * 3600 * 24); 
+                var days = Math.round(days);
+                
+                document.getElementById("days").innerHTML = "est. " + days + " days ago";
+                
+                if (difference < 0) {
+                    clearInterval(SinceThen);
+                    document.getElementById("days").innerHTML = "N/A";
+                }
+            };
+            
+            setInterval( function() {
+                SinceThen();
+            }, 1000);
+            
+            SinceThen();
+        </script>
+    </body>
 </html>

@@ -1,61 +1,126 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Blog</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-    <script src="/javascript/blog.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
+    <head>
+        <title>LG Productions • Blog</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <script src="/javascript/blog.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(67, 65, 3, 0.87);
+                --bgGradient2: rgba(103, 85, 8, 0.87);
+            }
+            
+            .board {
+                background-image: url(/images/linkimgs/plankbg.jpg);
+                border: 6px double #261600;
+                outline: 2px solid #261600;
+                border-radius: 6px;
+                margin: 10px auto;
+                padding: 0;
+                width: 85%;
+            }
+            .board div {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            
+            .toggle {
+                flex: 1;
+                background: #4c341b;
+                border-bottom: 2px solid #261600;
+                padding: 8px;
+                transition: 0.2s;
+                cursor: default;
+            }
+            .toggle:hover {
+                background: #76512a;
+                cursor: pointer;
+            }
+            
+            #postlistdiv ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            #postlistdiv a {
+                display: block;
+                color: black;
+                background: url(/images/background/blogPaper.png) no-repeat center;
+                border-radius: 6px;
+                margin: 5px auto;
+                padding: 10px 0;
+                width: 85%;
+                font-size: 19px;
+                font-family: "Indie Flower", cursive;
+                text-shadow: none;
+                transition: 0.2s;
+            }
+            #postlistdiv a:hover {transform: scaleX(1.05);}
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div class="hangingDecor" style="--img: url(/images/background/hangingLeaves.png);"></div>
 
-      <h2>Blog</h2>
-      <div class="textbox">
-        Welcome to my blog! This is where I rant about stuff that happens in my life. New posts are uploaded on the first week of every month.<hr>Devlog posts are uploaded when new projects release.<br>Some repackaged Old Blog posts are also found below.<br><sub>this blog uses <a href="https://zonelets.net/" target="_blank">Zonelets</a> as a backend.</sub>
-      </div>
-      
-      <hr>
-      
-      <div class="textbox list">
-        <div class="textboxflex">
-          <span id="blogCount" onclick="showPosts('blog')"></span>
-          <span id="devlogCount" onclick="showPosts('devlog')"></span>
-          <span onclick="showPosts('all')">All</span>
+        <div id="container">
+            
+            <aside>
+                <img class="charHover" src="/images/decor/tearjerker.png" style="position: absolute;width: 110px;top: 380px;right: 10px;" title="oh come on, it can't be THAT bad" alt="sparky crying and covering her face">
+            </aside>
+            
+            <main>
+                <h1>Blog</h1>
+                
+                <div class="box background" style="--bg: url(/images/background/field.jpg);--pos: 50% 60%;">
+                    <p>Welcome to my blog! This is where I rant about stuff that happens in my life. New posts are uploaded on the first week of every month.</p>
+                    <hr>
+                    <p>Devlog posts are uploaded when new projects release.<br>Some repackaged Old Blog posts are also found below.</p>
+                </div>
+                <sup>this blog uses <a href="https://zonelets.net/" target="_blank">Zonelets</a> as a backend.</sup>
+                
+                <hr>
+
+                <div class="board">
+                    <div>
+                        <span id="blogCount" class="toggle" onclick="showPosts('blog')"></span>
+                        <span id="devlogCount" class="toggle" onclick="showPosts('devlog')"></span>
+                        <span class="toggle" onclick="showPosts('all')">All</span>
+                    </div>
+                    <p id="postlistdiv"></p>
+                </div>
+
+                <div class="bubbleCont">
+                    <a class="bubble" href="/posts/old-blog">Old Blog</a>
+                    <a class="bubble" href="/posts/old-backlog">Old Backlog</a>
+                    <a class="bubble" href="/posts/old-devlog">Old Devlog</a>
+                </div>
+                <sup><b>note:</b> these are legacy pages, and aren't up to par with the latest pages.</sup>
+            </main>
+            
+            <aside>
+                <img class="charHover" src="/images/decor/nerdcore2.png" style="position: absolute;width: 130px;top: 300px;left: 0;--delay: 0.75s;" title="no no no, you had it right before" alt="audrey holding up a book, confused">
+            </aside>
+
         </div>
-        <p id="postlistdiv"></p>
-      </div>
-      
-      <div class="flex">
-        <a class="flexbubble" href="/posts/old-blog">Old Blog</a>
-        <a class="flexbubble" href="/posts/old-backlog">Old Backlog</a>
-        <a class="flexbubble" href="/posts/old-devlog">Old Devlog</a>
-      </div>
-      
-    </div>
-    
-    <footer-component></footer-component>
-    
-    <img class="charhover" style="--top:33%;--left:22%;--delay:0s;" src="/images/decor/nerdcore.png" title="she must be reading the george lore if it's that thick">
-    <img class="charhover" style="--top:46%;--left:73%;--delay:0.75s;" src="/images/decor/patience.png" title="most patient lg products fan">
-    
-    <script>      
-      function showPosts(type) {
-        for (let i = 0; i < postListChildren.length; i++) {
-          if (postListChildren[i].classList.contains(type) || type === "all") {
-            postListChildren[i].style.display = "list-item";
-          } else {
-            postListChildren[i].style.display = "none";
-          }
-        }
-      }
-    </script>
-  </body>
+
+        <footer-component></footer-component>
+
+        <script>
+            function showPosts(type) {
+                for (let i = 0; i < postListChildren.length; i++) {
+                    if (postListChildren[i].classList.contains(type) || type === "all") {
+                        postListChildren[i].style.display = "list-item";
+                    } else {
+                        postListChildren[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </body>
 </html>

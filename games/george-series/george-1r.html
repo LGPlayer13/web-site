@@ -1,70 +1,114 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • George 1 Remastered</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
-
-      <img class="gamelogo" src="/images/games/g1title.png" title="the calm before the storm" style="width:340px;">
-      <div class="textbox">
-        Released on 05/07/23<br>v1.1.2 • Platformer<br><sub>last update: 09/29/25</sub>
-      </div>
-      
-      <div class="flex">
-        <a class="flexbubble" href="https://turbowarp.org/698343364/" target="_blank">Play it!</a>
-        <a class="flexbubble" href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">itch.io Port</a>
-        <a class="flexbubble" href="https://turbowarp.org/485819865/" target="_blank">Play the original!</a>
-      </div>
-      
-      <hr>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/george1rScreenie1.jpg" tabindex="0">
-        <section><b>George 1 Remastered</b> is a reimagining of the very first entry in the George Series. In celebration of my Scratch account's 3-year-anniversary, this project was made as a commemoration of my time there.<br><br>Taking what little the original project had, this game completely overhauls it with polished graphics, slightly more engaging gameplay, and new features that breathe life into this simple platforming game.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/george1rScreenie2.jpg" tabindex="0">
-        <section>Inspired by classic Scratch platformers such as Chirpy the Penguin and Speedy, the original version of George 1 aimed to expand this little character I made for an animation nobody's ever seen.<br><br>It introduces staple characters like Greg and Cory to expand the universe, making it stand out and become something pretty special. A sequel is planned, but is currently going through... issues.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:0% 0%;" src="/images/games/screenies/george1rScreenie3.jpg" tabindex="0">
-        <section><b>It also features...</b><br>
-          <ul><li>Five base levels that offer challenging gameplay</li><li>Animated cutscenes, providing context for whatever the hell is happening</li><li>The Museum, filled with unseen content</li><li>Speedrun Mode, which allows players to race for the record time</li><li>Endless Mode, which brings infinite fun for the whole family</li><li>Bonus Level 6: the <i>ultimate</i> challenge!!</li><li>Cool <a href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">widescreen port</a> hosted on itch.io</li></ul>
-        </section>
-      </div>
-      
-      <div class="textbox updatelog">
-        <section>
-          <details style="margin-top:0px;">
-            <summary><b>Update Log</b></summary>
+    <head>
+        <title>LG Productions • George 1 Remastered</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(88, 57, 29, 0.87);
+                --bgGradient2: rgba(124, 104, 37, 0.87);
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div id="container">
+            
+            <aside></aside>
+            
             <main>
-              <i>09/29/25</i> - v1.1.2<ul><li>released widescreen port</li><li>slight graphic improvements</li><li>changed some dialogue</li></ul><hr>
-              <i>11/26/24</i> - v1.1.1<ul><li>added crouching</li><li>reworked bosses 2-3 attacks</li><li>some minor changes</li></ul><hr>
-              <i>11/20/24</i> - v1.1.0<ul><li>added Extra Modes</li><li>many graphical improvements</li><li>heavily optimized code/sprites</li></ul><hr>
-              <i>05/20/24</i> - v1.0.3<ul><li>changed level toponyms</li><li>more efficient asset loading</li></ul><hr>
-              <i>03/24/24</i> - v1.0.2<ul><li>fixed issue with volume</li><li>fixed issue with level transitions</li><li>introduced new cutscenes</li></ul><hr>
-              <i>03/22/24</i> - v1.0.1<ul><li>slight asset optimization</li><li>fixed major bug involving a sign</li><li>fixed other misc. bugs</li></ul><hr>
-              <i>05/07/23</i> - v1.0<ul><li><b>released the game!</b></li><li>launched with 5 levels</li><li>introduced new cutscenes</li></ul>
-            </main>
-          </details>
-        </section>
-      </div>
-      
-    </div>
+                <img class="gamelogo" src="/images/games/g1title.png" title="the calm before the storm" style="width: 340px;">
+                <div class="box">
+                    <p>Released on 05/07/23<br>v1.1.2 • Comedic narrative, platformer</p>
+                    <sup>last update: 09/29/25</sup>
+                </div>
 
-    <footer-component></footer-component>
-  </body>
+                <div class="bubbleCont">
+                    <a class="bubble" href="https://turbowarp.org/698343364/" target="_blank">Play it!</a>
+                    <a class="bubble" href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">itch.io Port</a>
+                    <a class="bubble" href="https://turbowarp.org/485819865/" target="_blank">Play the original!</a>
+                </div>
+                
+                <hr>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/g1rScreenie1.jpg" alt="george swimming in water" tabindex="0">
+                    <p><b>George 1 Remastered</b> is a reimagining of the very first entry in the George Series. In celebration of my Scratch account's 3-year-anniversary, this project was made as a commemoration of my time there.<br><br>Taking what little the original project had, this game completely overhauls it with polished graphics, slightly more engaging gameplay, and new features that breathe life into this simple platforming game.</p>
+                </div>
+                
+                <div class="shinyBox showoff" style="--align: right;">
+                    <p>Inspired by classic Scratch platformers such as Chirpy the Penguin and Speedy, the original version of George 1 aimed to expand this little character I made for an animation nobody's ever seen.<br><br>It introduces staple characters like Greg and Cory to expand the universe, making it stand out and become something pretty special.<br>A sequel is planned, but is currently going through... hell.</p>
+                    <img class="magnify" src="/images/games/screenies/g1rScreenie2.jpg" alt="george navigating past lava blocks" tabindex="0">
+                </div>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/g1rScreenie3.jpg" alt="cutscene featuring Cory in Cloud Central" tabindex="0">
+                    <section>
+                        <p><b>It also features...</b></p>
+                        <ul>
+                            <li>Five base levels that offer challenging gameplay</li>
+                            <li>Animated cutscenes, providing context for whatever the hell is happening</li>
+                            <li>The Museum, filled with unseen content</li>
+                            <li>Speedrun Mode, which allows players to race for the record time</li>
+                            <li>Endless Mode, which brings infinite fun for the whole family</li>
+                            <li>Bonus Level 6: the <i>ultimate</i> challenge!!</li>
+                            <li>Cool <a href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">widescreen port</a> hosted on itch.io</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="collapse">
+                    <details>
+                        <summary><b>Update Log</b></summary>
+                        <div class="scroll">
+                            <section>
+                                <p><b>v1.1.2</b> - <i>09/29/25</i></p>
+                                <ul><li>released widescreen port</li><li>slight graphic improvements</li><li>changed some dialogue</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.1.1</b> - <i>11/26/24</i></p>
+                                <ul><li>added crouching</li><li>reworked bosses 2-3 attacks</li><li>some minor changes</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.1</b> - <i>11/20/24</i></p>
+                                <ul><li>added Extra Modes</li><li>many graphical improvements</li><li>heavily optimized code/sprites</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0.3</b> - <i>05/20/24</i></p>
+                                <ul><li>changed level toponyms</li><li>more efficient asset loading</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0.2</b> - <i>03/24/24</i></p>
+                                <ul><li>fixed issue with volume</li><li>fixed issue with level transitions</li><li>introduced new cutscenes</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0.1</b> - <i>03/22/24</i></p>
+                                <ul><li>slight asset optimization</li><li>fixed major bug involving a sign</li><li>fixed other misc. bugs</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0</b> - <i>05/07/23</i></p>
+                                <ul><li><b>released the game!</b></li><li>launched with 5 levels</li><li>introduced new cutscenes</li></ul>
+                            </section>
+                        </div>
+                    </details>
+                </div>
+            </main>
+            
+            <aside></aside>
+      
+        </div>
+        
+        <footer-component></footer-component>
+    </body>
 </html>

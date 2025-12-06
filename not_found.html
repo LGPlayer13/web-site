@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • 404!</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLGgray.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-    <style>
-      body {
-        background-image:linear-gradient(135deg,rgba(99,60,13,1) 0%, rgba(59,100,38,1) 50%, rgba(94,88,34,1) 100%);
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container">
-    
-      <h1>404!</h1>
-      <p style="color:white;position:relative;margin:auto;right:0;left:0;display:block;text-align:center;text-shadow:1px 1px 1px #000000;font-size:17px;"><i>Looks like this page doesn't exist. That's a shame.<br>Not entirely sure where you were headed...</i></p>
-      
-      <br>
-      
-      <div class="flex">
-        <a class="flexbubble" href="/index">Back to Home</a>
-      </div>
-    
-    </div>
-    
-    <img class="charhover" style="--top:17%;--left:70%;--delay:0s;" src="/images/decor/sidworried.png" title="how did we get here?">
-  </body>
+    <head>
+        <title>LG Productions • 404!</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <style>
+            body {
+                --bgGradient1: rgba(4, 4, 4, 0.87);
+                --bgGradient2: rgba(0, 0, 0, 0.95);
+            }
+            
+            img {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6));
+                animation: hover 3s ease-in-out infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            
+            <aside></aside>
+            
+            <main>
+                <h1>404!</h1>
+                <p><i>Looks like this page doesn't exist. That's a shame.<br>Not entirely sure where you were headed...</i></p>
+
+                <br>
+
+                <a class="bubble" href="/index">Back to Home</a>
+            </main>
+            
+            <aside>
+                <img src="/images/decor/sidworried.png" title="where are we now?">
+            </aside>
+            
+        </div>
+    </body>
 </html>

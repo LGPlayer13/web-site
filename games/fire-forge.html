@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Fire Forge</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
+    <head>
+        <title>LG Productions • Fire Forge</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(88, 57, 29, 0.87);
+                --bgGradient2: rgba(124, 104, 37, 0.87);
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div id="container">
+            
+            <aside></aside>
+            
+            <main>
+                <img class="gamelogo" src="/images/games/fftitle.png" title="bro who fired forge???" style="width: 200px;">
+                <div class="box">
+                    <p>Released on --/--/--<br>v1.0 (alpha) • Humor, tech tree</p>
+                    <sup>last update: --/--/--</sup>
+                </div>
 
-      <img class="gamelogo" src="/images/games/fftitle.png" title="bro who fired forge???" style="width:200px;">
-      <div class="textbox">
-        Released on --/--/--<br>v1.0 (alpha) • Tech-based/humor<br><sub>last update: --/--/--</sub>
-      </div>
+                <div class="bubbleCont">
+                    <a class="bubble off" href="#">Play it!</a>
+                    <a class="bubble off" href="#">Archive Page</a>
+                </div>
+                
+                <hr>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/ffScreenie1.jpg" alt="burning of a wood scrap" tabindex="0">
+                    <p><b>Fire Forge</b> is a (shelved) tech-based game where you burn random junk in an open fire, climbing the odd tech tree along the way.<br>Make weird materials, build contraptions, and chat with your wacky friend.<br><br>Starting off as a simple joke, this game's plot spirals into a chaotic mess of multi-management and growing a friendship, all to have something to do during summer break.</p>
+                </div>
+                
+                <div class="shinyBox showoff" style="--align: right;">
+                    <p>Once The Lost Labyrinths a1.2.1 was released, I started development on a prototype known as Embers.<br>Its plot was wildly different from that of Fire Forge's, but it laid the groundwork for its mechanics.<br><br>After establishing FF's plot and layout, I began work on it at the beginning of 2024, and it's been in the oven ever since.<br><br>Not sure if it'll ever be released, but I may come back to it later.</p>
+                    <img class="magnify" src="/images/games/screenies/ffScreenie2.jpg" alt="burning and friend foraging mechanics" tabindex="0">
+                </div>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/ffScreenie3.jpg" alt="cooking mechanic and its tutorial" tabindex="0">
+                    <section>
+                        <p><b>It also features...</b></p>
+                        <ul>
+                            <li>???</li>
+                            <li>???</li>
+                            <li>???</li>
+                            <li>???</li>
+                            <li>???</li>
+                            <li>???</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="collapse">
+                    <details>
+                        <summary><b>Update Log</b></summary>
+                        <p>nothing for now, sorry about that.</p>
+                    </details>
+                </div>
+            </main>
+            
+            <aside></aside>
       
-      <div class="flex">
-        <a class="flexbubble off" href="#">Play it!</a>
-        <a class="flexbubble off" href="#">Archive Page</a>
-      </div>
-      
-      <hr>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ffScreenie1.jpg" tabindex="0">
-        <section><b>Fire Forge</b> is a (shelved) tech-based game where you burn random junk in an open fire, climbing the odd tech tree along the way. Make weird materials, build contraptions, and chat with your wacky friend.<br><br>Starting off as a simple joke, this game's plot spirals into a chaotic mess of multi-management and growing a friendship, all to have something to do during summer break.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ffScreenie2.jpg" tabindex="0">
-        <section>Once The Lost Labyrinths v1.2.1 was released, I started development on a prototype known as Embers. Its plot was wildly different from that of Fire Forge's, but it laid the groundwork for its mechanics.<br><br>After establishing FF's plot and layout, I began work on it at the beginning of 2024, and it's been in the oven ever since. Not sure if it'll ever be released, but I may come back to it later.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/ffScreenie3.jpg" tabindex="0">
-        <section><b>It also features...</b><br><ul><li>???</li><li>???</li><li>???</li><li>???</li><li>???</li><li>???</li></ul></section>
-      </div>
-      
-      <div class="textbox updatelog">
-        <section>
-          <details style="margin-top:0px;">
-            <summary><b>Update Log</b></summary>
-            <main>nothing for now... sorry about that.</main>
-          </details>
-        </section>
-      </div>
-      
-    </div>
-
-    <footer-component></footer-component>
-  </body>
+        </div>
+        
+        <footer-component></footer-component>
+    </body>
 </html>

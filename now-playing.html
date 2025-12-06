@@ -1,74 +1,125 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>Last.fm Now Playing</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-      body {
-        margin-bottom: 0%;
-        padding-bottom: 48px;
-        overflow-y: auto;
-      }
-      body, html, div {
-        color: white;
-        background: none;
-        text-align: left;
-        font-family: "Outfit", serif;
-        font-size: 19px;
-        font-weight: 400;
-        font-style: normal;
-        text-shadow: 1px 1px 1.5px #000000;
-      }
+    <head>
+        <title>Last.fm Now Playing</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+            
+            body {
+                color: white;
+                margin-bottom: 0;
+                padding-bottom: 48px;
+                overflow-y: auto;
+                text-shadow: 1.25px 1.25px 2px black;
+                font-size: 18px;
+                font-family: "Varela Round", sans-serif;
+            }
+            
+            #container {
+                display: flex;
+                margin-top: 23px;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #container > main {display: flex;width: 65%;}
+            
+            #album-cover {
+                position: relative;
+                border: 8px outset #da4b29;
+                border-radius: 16px 16px 0 0;
+                margin: 0;
+                width: 80px;
+                height: 80px;
+                z-index: 1;
+            }
+            ul {
+                background: rgba(0,0,0,0.5);
+                border-radius: 0 12px 12px 0;
+                margin-left: -5px;
+                padding: 15px 8px;
+                width: 100%;
+                list-style-type: none;
+            }
+            
+            #container > img {height: fit-content;}
+            
+            .recordPlayer {
+                position: relative;
+                background: #862e19;
+                border-radius: 0 0 14px 14px;
+                margin-top: -6px;
+                height: 35px;
+                text-align: center;
+                text-shadow: none;
+                z-index: 1;
+            }
+            .recordPlayer span {
+                color: #ff7857;
+                background: black;
+                border-radius: 6px;
+                padding: 0 5px;
+                text-shadow: 0 0 4px #ff7857;
+                cursor: default;
+            }
 
-      .refresh {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-      }
-      
-      td {
-        padding-left:3px;
-        max-width: 245px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-      td img {border-radius:6px;margin-top:-7px;}
-      
-      #artist {line-height:1;}
-      #date {line-height:2;font-size:18px;}
-      
-      a:link {color:#e0e0e0;text-decoration:none;}
-      a:visited {color:#e0e0e0;}
-      a:hover {color:#ffffff;text-decoration:underline;}
-      a:active {color:#ffffff;}
-      
-      #artist {color:#cfcfcf}
-    </style>
-  </head>
-  <body>
-      <table>
-          <tr>
-              <td rowspan="3"><img title="cool music" id="album-cover"></td>
-              <td id="track"></td>
-          </tr>
-          <tr>
-              <td id="artist"></td>
-          </tr>
-          <tr>
-              <td id="date"></td>
-          </tr>
-      </table>
-      <!--<span class="refresh" onclick="window.location.reload()">&#128472;</span>-->
-      <img class="refresh" src="/images/decor/refresh.png" width="11px" height="11px" onclick="window.location.reload()">
+            #track, #artist, #date {
+                max-width: 99%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            #date {padding-top: 10px;}
+            
+            a {color: #f62e84;text-decoration: none;}
+            a:hover {color: #ff8bbd;text-decoration-line: underline;}
 
-      <!--<sub style="display:none;color:white;position:relative;margin:auto;margin-top:8px;right:0;left:0;display:block;text-align:center;text-shadow:1px 1px 1px #000000;"><b>Loading embed...</b></sub>-->
-  </body>
-  <script src="/javascript/lastfm.js"></script>
+            .refresh {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
+            .chorus {width: 180px;transform: translate(-5px, -12px);filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));}
+            
+            #disc {
+                position: absolute;
+                width: 80px;
+                top: 0;
+                left: 16px;
+                z-index: -1;
+            }
+            ul:not(:has(li)) + .disc {display: none;}
+            
+            @keyframes disc {
+                100% {transform: rotate(360deg);}
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            
+            <main>
+                <section>
+                    <img id="album-cover" src="/images/background/pitchBlack.png" title="cool music">
+                    <div class="recordPlayer"><span>13</span></div>
+                </section>
+                <ul>
+                    <li id="track"></li>
+                    <li id="artist"></li>
+                    <li id="date"></li>
+                </ul>
+                <img id="disc" src="/images/decor/disc.svg" alt="spinning disc">
+            </main>
+            <img class="chorus" src="/images/decor/chorusKids.png" title="the terrific trio no one asked for" alt="max, robert, and pop singing along">
+            
+        </div>
+        
+        <img class="refresh" src="/images/decor/refresh.png" width="11px" height="11px" onclick="window.location.reload()" alt="refresh button">
+    </body>
+    <script src="/javascript/lastfm.js"></script>
 </html>

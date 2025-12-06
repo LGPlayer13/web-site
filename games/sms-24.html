@@ -1,66 +1,93 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • SMS '24</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
-
-      <img class="gamelogo" src="/images/games/sms24title.png" title="miners, not minors" style="width:340px;">
-      <div class="textbox">
-        Released on 08/08/24<br>v1.1 • Clicking/idle<br><sub>last update: 08/15/24</sub>
-      </div>
-      
-      <div class="flex">
-        <a class="flexbubble" href="https://orteil.dashnet.org/igm/?g=https://file.garden/Yhwc9XZFah3TM9iw/SMS%20%2724.txt" target="_blank">Play it!</a>
-        <a class="flexbubble" href="https://igmgames.github.io/games/g/sms24.html" target="_blank">Archive Page</a>
-        <a class="flexbubble" href="https://www.reddit.com/r/idlegamemaker/comments/1enleqr/stone_mine_simulator_2024/" target="_blank">Reddit Post</a>
-      </div>
-      
-      <hr>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/sms24Screenie1.jpg" tabindex="0">
-        <section><b>Stone Mine Simulator 2024</b> (aka <b>SMS '24</b>) is a clicker game where mine stone, buy strange buildings, and play minigames to mine more stone.<br><br>As you start off with nothing but a pickaxe and hopes and dreams, you slowly make your way up the tech tree to research different upgrades and oddities to achieve ultimate production.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/sms24Screenie2.jpg" tabindex="0">
-        <section>Before the school year started, I wanted to make one last project before my life became flooded with homework and chores. I thought making a neat clicker game would be great for this.<br><br>The original Stone Mine Simulator games were greatly lacking in quality and decent art, so this release aimed to revisit what them, properly fleshing them out with balanced mechanics and improved artwork.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/sms24Screenie3.jpg" tabindex="0">
-        <section><b>It also features...</b><br>
-          <ul><li>7 base buildings, with 3 more unlockable through research</li><li>Over 80 upgrades with amusing flavor texts</li><li>Over 100 achievements to unlock + 3 secret ones</li><li>Research system with 5 different trees of unique upgrades</li><li>Spellbook minigame for casting spells</li><li>Bakery minigame to provide passive buffs</li></ul>
-        </section>
-      </div>
-      
-      <div class="textbox updatelog">
-        <section>
-          <details style="margin-top:0px;">
-            <summary><b>Update Log</b></summary>
+    <head>
+        <title>LG Productions • SMS '24</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(88, 57, 29, 0.87);
+                --bgGradient2: rgba(124, 104, 37, 0.87);
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div id="container">
+            
+            <aside></aside>
+            
             <main>
-              <i>08/15/24</i> - v1.1<ul><li>added 2 new buildings</li><li>new tier of building upgrades</li><li>16 more Stone upgrades</li><li>much more efficient code</li></ul><hr>
-              <i>08/10/24</i> - v1.0.1<ul><li>introduced four Magma upgrades</li><li>buffed some upgrades & made some cheaper</li><li>fixed some minor inconsistencies</li></ul><hr>
-              <i>08/08/24</i> - v1.0<ul><li><b>released the game!</b></li><li>contains 8 buildings, over 60 upgrades, and 81 (+3) achievements</li><li>research system w/ two minigames</li></ul>
-            </main>
-          </details>
-        </section>
-      </div>
-      
-    </div>
+                <img class="gamelogo" src="/images/games/sms24title.png" title="miners, not minors" style="width: 340px;">
+                <div class="box">
+                    <p>Released on 08/08/24<br>v1.1 • Clicker, idle</p>
+                    <sup>last update: 08/15/24</sup>
+                </div>
 
-    <footer-component></footer-component>
-  </body>
+                <div class="bubbleCont">
+                    <a class="bubble" href="https://orteil.dashnet.org/igm/?g=https://file.garden/Yhwc9XZFah3TM9iw/SMS%20%2724.txt" target="_blank">Play it!</a>
+                    <a class="bubble" href="https://igmgames.github.io/games/g/sms24.html" target="_blank">Archive Page</a>
+                    <a class="bubble" href="https://www.reddit.com/r/idlegamemaker/comments/1enleqr/stone_mine_simulator_2024/" target="_blank">Reddit Post</a>
+                </div>
+                
+                <hr>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/sms24Screenie1.jpg" alt="start of the game, with three buildings" tabindex="0">
+                    <p><b>Stone Mine Simulator 2024</b> (aka <b>SMS '24</b>) is a clicker game where mine stone, buy strange buildings, and play minigames to mine more stone.<br><br>As you start off with nothing but a pickaxe and hopes and dreams, you slowly make your way up the tech tree to research different upgrades and oddities to achieve ultimate production.</p>
+                </div>
+                
+                <div class="shinyBox showoff" style="--align: right;">
+                    <p>Before the school year started, I wanted to make one last project before my life became flooded with homework and chores. I thought making a neat clicker game would be great for this.<br><br>The original Stone Mine Simulator games were greatly lacking in quality and decent art, so this release aimed to revisit what them, properly fleshing them out with balanced mechanics and improved artwork.</p>
+                    <img class="magnify" src="/images/games/screenies/sms24Screenie2.jpg" alt="production after buying the first excavator" tabindex="0">
+                </div>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/sms24Screenie3.jpg" alt="middling progression just before research" tabindex="0">
+                    <section>
+                        <p><b>It also features...</b></p>
+                        <ul>
+                            <li>7 base buildings, with 3 more unlockable through research</li>
+                            <li>Over 80 upgrades with amusing flavor texts</li>
+                            <li>Over 100 achievements to unlock + 3 secret ones</li>
+                            <li>Research system with 5 different trees of unique upgrades</li>
+                            <li>Spellbook minigame for casting spells</li>
+                            <li>Bakery minigame to provide passive buffs</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="collapse">
+                    <details>
+                        <summary><b>Update Log</b></summary>
+                        <div class="scroll">
+                            <section>
+                                <p><b>v1.1</b> - <i>08/15/24</i></p>
+                                <ul><li>added 2 new buildings</li><li>new tier of building upgrades</li><li>16 more Stone upgrades</li><li>much more efficient code</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0.1</b> - <i>08/10/24</i></p>
+                                <ul><li>introduced four Magma upgrades</li><li>buffed some upgrades & made some cheaper</li><li>fixed some minor inconsistencies</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0</b> - <i>08/08/24</i></p>
+                                <ul><li><b>released the game!</b></li><li>contains 8 buildings, over 60 upgrades, and 81 (+3) achievements</li><li>research system w/ two minigames</li></ul>
+                            </section>
+                        </div>
+                    </details>
+                </div>
+            </main>
+            
+            <aside></aside>
+      
+        </div>
+        
+        <footer-component></footer-component>
+    </body>
 </html>

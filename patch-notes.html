@@ -1,196 +1,432 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Patch Notes</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
+    <head>
+        <title>LG Productions • Patch Notes</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(12,12,12,0.87);
+                --bgGradient2: rgba(4,4,4,0.87);
+            }
+            
+            #frame {
+                background: #262626;
+                border: 24px outset #bab2a6;
+                border-radius: 8px;
+            }
+            
+            #monitor {
+                display: flex;
+                color: #16ff00;
+                background: #4b4741;
+                border: 20px inset #9f978b;
+                border-radius: 10px;
+                margin: 2px 2px 0;
+                height: 560px;
+                max-height: 700px;
+                text-align: left;
+                align-items: center;
+            }
+            
+            #screen {
+                background: #020202;
+                border-radius: 28px;
+                padding: 16px;
+                width: 100%;
+                height: 528px;
+                overflow-y: auto;
+                text-shadow: 0 0 5px #187010;
+                box-shadow: 0 0 20px #187010 inset;
+                font-family: Consolas, "courier new";
+            }
+            #screen::-webkit-scrollbar {display: none;}
+            
+            .monitor-base {
+                position: relative;
+                background: #66615b;
+                border: 24px solid #66615b;
+                border-radius: 8px;
+                margin-top: 2px;
+                padding: 0 16px;
+                height: 20px;
+                & span {
+                    position: absolute;
+                    top: -6px;
+                    z-index: 5;
+                }
+            }
+            
+            .button {
+                background: #7c776f;
+                border: 3px outset #928b82;
+                width: 70px;
+                height: 25px;
+            }
+            .button:active {border-style: inset;}
+            
+            .button:first-child {left: 15px;}
+            .button:nth-child(2) {left: 100px;}
+            .button:nth-child(3) {width: 25px;right: 35px;}
+            
+            .glow {
+                background: white;
+                width: 12px;
+                height: 31px;
+                right: 15px;
+                box-shadow: 0 0 5px white;
+            }
+            
+            .monitor-base::after {
+                display: inline-block;
+                position: absolute;
+                content: "Mine! Co.";
+                color: #aaa397;
+                top: -3px;
+                left: 0;
+                right: 0;
+                font-size: 20px;
+                font-weight: bold;
+                text-shadow: -2px 0 #1f1c1b, 0 2px #1f1c1b, 2px 0 #1f1c1b, 0 -2px #1f1c1b;
+                z-index: 2;
+            }
+            
+            h1, h2, h3 {font-family: Consolas, "courier new";}
+            
+            section {margin: 30px 20px;}
+            section div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            section div ~ b {font-size: 14px;}
+            ul {list-style-type: none;}
+            
+            .blink {animation: blink 1s step-start infinite;}
+            
+            .miningAway {
+                position: absolute;
+                bottom: 0;
+                left: -2px;
+            }
+            
+            @keyframes blink {
+                0%, 100% {opacity: 0;}
+                50% {opacity: 1;}
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
 
-      <h2>Patch Notes</h2>
-    
-      <div class="fadebox">
-        This is a list of all the past updates this site has gone through.<br>Older details might be more vague, since those versions are lost.
-      </div>
-      
-      <div class="terminal">
-        <h3>Site Updates</h3>
-        <i>10/4/25</i> - v3.1
-          <ul>
-            <li><b>the Javascript update!</b></li>
-            <li>new system for displaying link buttons</li>
-            <li>added post sorting to the Blog page</li>
-            <li>redesigned Art Gallery page</li>
-            <li>wrote some more fun javascript things</li>
-          </ul>
-        <hr><i>09/21/25</i> - v3.0.5
-          <ul>
-            <li>added some new CSS animations</li>
-            <li>streamlined and rewrote some more things</li>
-            <li>simplified the footer with a cleaner look</li>
-          </ul>
-        <hr><i>09/03/25</i> - v3.0.4
-          <ul>
-            <li>new CSS effects (button hover, image previews, etc.)</li>
-            <li>rewrote some pages and their bad code</li>
-            <li>fixed a few spelling mistakes and broken links</li>
-          </ul>
-        <hr><i>08/01/25</i> - v3.0.3
-          <ul>
-            <li>added latest announcement bubble to the index page</li>
-            <li>touched up the About page a bit</li>
-            <li>decent number of new splashes</li>
-          </ul>
-        <hr><i>07/03/25</i> - v3.0.2
-          <ul>
-            <li>overhauled the George Series page (fun stuffs)</li>
-            <li>fiddled with CSS a bit</li>
-            <li>a few new splashes</li>
-          </ul>
-        <hr><i>05/23/25</i> - v3.0.1
-          <ul>
-            <li>minor additions/adjustments everywhere</li>
-            <li>certain elements now scale better when zoomed</li>
-            <li>optimized all images (faster loading!)</li>
-          </ul>
-        <hr><i>05/03/25</i> - v3.0
-          <ul>
-            <li><b>2-year anniversary overhaul!</b></li>
-            <li>completely changed site layout</li>
-            <li>my characters now litter each page</li>
-            <li>removed/merged useless pages</li>
-            <li>more appealing colors and ease of access</li>
-          </ul>
-        <hr><i>03/11/25</i> - v2.1.3
-          <ul>
-            <li>small CSS changes</li>
-            <li>changed Bandcamp links</li>
-            <li>a few more splashes</li>
-          </ul>
-        <hr><i>01/03/25</i> - v2.1.2
-          <ul>
-            <li><b>happy new year!</b></li>
-            <li>simplified Blog page</li>
-            <li>edits to some CSS</li>
-          </ul>
-        <hr><i>12/01/24</i> - v2.1.1
-          <ul>
-            <li>redesigned some page sections</li>
-            <li>new Lore sub-page</li>
-            <li>fixed minor CSS issues</li>
-          </ul>
-        <hr><i>11/02/24</i> - v2.1
-          <ul>
-            <li><b>fall season update!</b></li>
-            <li>improved site layout/design</li>
-            <li>overhauled the entire Blog</li>
-            <li>got bricks thrown at me</li>
-          </ul>
-        <hr><i>10/03/24</i> - v2.0.5
-          <ul>
-            <li>new Site Map page</li>
-            <li>changed Blog links</li>
-            <li>customized scrollbars</li>
-          </ul>
-        <hr><i>09/24/24</i> - v2.0.4
-          <ul>
-            <li>redesigned game sub-pages</li>
-            <li>overhauled Blog Backlog</li>
-            <li>some minor tweaks</li>
-          </ul>
-        <hr><i>09/16/24</i> - v2.0.3
-          <ul>
-            <li>three new themes!</li>
-            <li>few minor CSS additions</li>
-            <li>improved code</li>
-          </ul>
-        <hr><i>09/02/24</i> - v2.0.2
-          <ul>
-            <li>some QOL changes</li>
-            <li>new secret page</li>
-            <li>misc. fixes/reworks</li>
-          </ul>
-        <hr><i>08/15/24</i> - v2.0.1
-          <ul>
-            <li>embeds in index</li>
-            <li>new guestbook (again)</li>
-            <li>new widgets in About</li>
-          </ul>
-        <hr><i>08/03/24</i> - v2.0
-          <ul>
-            <li>finished incomplete pages</li>
-            <li>moved back to Neocities</li>
-            <li>tidied up some things</li>
-          </ul>
-        <hr><i>08/01/24</i> - v2.0 (beta)
-          <ul>
-            <li>complete web site overhaul</li>
-            <li>couple pages added and removed</li>
-            <li>still plenty of unfinished pages</li>
-            <li>splashes moved to home page</li>
-          </ul>
-        <hr><i>07/15/24</i> - v1.2.2
-          <ul>
-            <li>added music page (very short-lived)</li>
-            <li>new secret page</li>
-          </ul>
-        <hr><i>06/07/24</i> - v1.2.1
-          <ul>
-            <li>web site redesign</li>
-            <li>new Guestbook page</li>
-            <li>removed Lore page</li>
-          </ul>
-        <hr><i>04/19/24</i> - v1.2
-          <ul>
-            <li>revamped web site layout</li>
-            <li>streamlined development w/ Brackets</li>
-            <li>proper announcements</li>
-          </ul>
-        <hr><i>01/27/24</i> - v1.1
-          <ul>
-            <li>added a few new icons</li>
-            <li>some minor CSS changes</li>
-          </ul>
-        <hr><i>01/13/24</i> - v1.0.1
-          <ul>
-            <li><b>15th birthday update!</b></li>
-            <li>added Lore page</li>
-            <li>tidied up details</li>
-          </ul>
-        <hr><i>01/01/24</i> - v1.0
-          <ul>
-            <li><b>new year's update!</b></li>
-            <li>finalized unfinished pages</li>
-            <li>established blog</li>
-          </ul>
-        <hr><i>08/15/23</i> - alpha
-          <ul>
-            <li>new GitHub site</li>
-            <li>added unfinished Games page</li>
-            <li>abandoned Neocities site</li>
-          </ul>
-        <hr><i>04/13/23</i> - pre-alpha
-          <ul>
-            <li>established the site</li>
-            <li>looks quite ugly</li>
-            <li>ah well</li>
-          </ul>
-      </div>
-      
-    </div>
-    
-    <footer-component></footer-component>
-    
-    <img class="charhover" style="--top:33%;--left:19%;--delay:0s;" src="/images/decor/abitheavy.png" title="please don't drop that, this thing was expensive">
-    <img class="charhover" style="--top:39%;--left:74%;--delay:0.75s;" src="/images/decor/eyecandy.png" title="mesmerizing, i know">
-  </body>
+        <div id="container">
+            
+            <aside></aside>
+            
+            <main>
+                <div id="frame">
+                    <div id="monitor">
+                        <div id="screen">
+                            <!-- very proud of this page :))) -->
+                            
+                            <h2>Patch Notes</h2>
+                            <p>This is a list of all the past updates this site has gone through.<br>Older details might be more vague, since those versions are lost.</p>
+                            
+                            <section>
+                                <div><span>v4.0</span><i>12/06/25</i></div>
+                                <b>christmas season overhaul!</b>
+                                <ul>
+                                    <li>third major, site-wide overhaul</li>
+                                    <li>pages now more experimental than conformed</li>
+                                    <li>mosts layout the same, but w/ added content</li>
+                                    <li>higher use of gradients, glass, and darker colors</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div><span>v3.1</span><i>10/04/25</i></div>
+                                <ul>
+                                    <li>the javascript update!</li>
+                                    <li>new system for displaying link buttons</li>
+                                    <li>added post sorting to the Blog page</li>
+                                    <li>redesigned Art Gallery page</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v3.0.5<i>09/21/25</i></div>
+                                <ul>
+                                    <li>added some new CSS animations</li>
+                                    <li>streamlined and rewrote some more things</li>
+                                    <li>simplified the footer with a cleaner look</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v3.0.4<i>09/03/25</i></div>
+                                <ul>
+                                    <li>new CSS effects (button hover, image previews, etc.)</li>
+                                    <li>rewrote some pages and their bad code</li>
+                                    <li>fixed a few spelling mistakes and broken links</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v3.0.3<i>08/01/25</i></div>
+                                <ul>
+                                    <li>added latest announcement bubble to the index page</li>
+                                    <li>touched up the About page a bit</li>
+                                    <li>decent number of new splashes</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v3.0.2<i>07/03/25</i></div>
+                                <ul>
+                                    <li>overhauled the George Series page (fun stuffs)</li>
+                                    <li>fiddled with CSS a bit</li>
+                                    <li>a few new splashes</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v3.0.1<i>05/23/25</i></div>
+                                <ul>
+                                    <li>minor additions/adjustments everywhere</li>
+                                    <li>certain elements now scale better when zoomed</li>
+                                    <li>optimized all images (faster loading!)</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v3.0<i>05/03/25</i></div>
+                                <b>2-year anniversary overhaul!</b>
+                                <ul>
+                                    <li>completely changed site layout</li>
+                                    <li>my characters now litter each page</li>
+                                    <li>removed/merged useless pages</li>
+                                    <li>more appealing colors and ease of access</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.1.3<i>03/11/25</i></div>
+                                <ul>
+                                    <li>small CSS changes</li>
+                                    <li>changed Bandcamp links</li>
+                                    <li>a few more splashes</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.1.2<i>01/03/25</i></div>
+                                <ul>
+                                    <li>happy new year!</li>
+                                    <li>simplified Blog page</li>
+                                    <li>edits to some CSS</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.1.1<i>12/01/24</i></div>
+                                <ul>
+                                    <li>redesigned some page sections</li>
+                                    <li>new Lore sub-page</li>
+                                    <li>fixed minor CSS issues</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.1<i>11/02/24</i></div>
+                                <b>fall season redesign!</b>
+                                <ul>
+                                    <li>improved site layout/design</li>
+                                    <li>overhauled the entire Blog</li>
+                                    <li>got bricks thrown at me</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.0.5<i>10/03/24</i></div>
+                                <ul>
+                                    <li>new Site Map page</li>
+                                    <li>changed Blog links</li>
+                                    <li>customized scrollbars</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.0.4<i>09/24/24</i></div>
+                                <ul>
+                                    <li>redesigned game sub-pages</li>
+                                    <li>overhauled Blog Backlog</li>
+                                    <li>some minor tweaks</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.0.3<i>09/16/24</i></div>
+                                <ul>
+                                    <li>three new themes!</li>
+                                    <li>few minor CSS additions</li>
+                                    <li>improved code</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.0.2<i>09/02/24</i></div>
+                                <ul>
+                                    <li>some QOL changes</li>
+                                    <li>new secret page</li>
+                                    <li>misc. fixes/reworks</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.0.1<i>08/15/24</i></div>
+                                <ul>
+                                    <li>embeds in index</li>
+                                    <li>new guestbook (again)</li>
+                                    <li>new widgets in About</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.0<i>08/03/24</i></div>
+                                <ul>
+                                    <li>finished incomplete pages</li>
+                                    <li>moved back to Neocities</li>
+                                    <li>tidied up some things</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v2.0 (beta)<i>08/01/24</i></div>
+                                <b>first major overhaul!</b>
+                                <ul>
+                                    <li>complete web site overhaul</li>
+                                    <li>couple pages added and removed</li>
+                                    <li>still plenty of unfinished pages</li>
+                                    <li>splashes moved to home page</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v1.2.2<i>07/15/24</i></div>
+                                <ul>
+                                    <li>added music page (very short-lived)</li>
+                                    <li>new secret page</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v1.2.1<i>06/07/24</i></div>
+                                <ul>
+                                    <li>web site redesign</li>
+                                    <li>new Guestbook page</li>
+                                    <li>removed Lore page</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v1.2<i>04/19/24</i></div>
+                                <ul>
+                                    <li>revamped web site layout</li>
+                                    <li>streamlined development w/ Brackets</li>
+                                    <li>proper announcements</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v1.1<i>01/27/24</i></div>
+                                <ul>
+                                    <li>added a few new icons</li>
+                                    <li>some minor CSS changes</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v1.0.1<i>01/13/24</i></div>
+                                <ul>
+                                    <li>15th birthday update!</li>
+                                    <li>added Lore page</li>
+                                    <li>tidied up details</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>v1.0<i>01/01/24</i></div>
+                                <b>new year's revival!</b>
+                                <ul>
+                                    <li>finalized unfinished pages</li>
+                                    <li>established blog</li>
+                                    <li>new posts every 2 days (???)</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>alpha<i>08/15/23</i></div>
+                                <ul>
+                                    <li>new GitHub site</li>
+                                    <li>added unfinished Games page</li>
+                                    <li>abandoned Neocities site</li>
+                                </ul>
+                            </section>
+                            
+                            <section>
+                                <div>pre-alpha<i>04/13/23</i></div>
+                                <ul>
+                                    <li>made the site in a couple hours</li>
+                                    <li>kinda starting to regret it</li>
+                                    <li>ah well</li>
+                                </ul>
+                            </section>
+                            
+                            &gt;<span class="blink">_</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="monitor-base">
+                    <span class="button"></span>
+                    <span class="button"></span>
+                    <span class="button" onclick="toggleMonitor()"></span>
+                    
+                    <span class="glow"></span>
+                </div>
+            
+            </main>
+            
+            <aside>
+                <img class="miningAway" src="/images/decor/miningAway.png" title="weak men create hard times. you know that">
+            </aside>
+            
+        </div>
+        
+        <footer-component></footer-component>
+        
+        <script>
+            const screen = document.getElementById("screen");
+            const glow = document.querySelector(".glow");
+            
+            function toggleMonitor() {
+                if (screen.innerHTML != "") {
+                    screen.innerHTML = "";
+                    screen.style.background = "black";
+                    screen.style.boxShadow = "none";
+                    glow.style.background = "#080808";
+                    glow.style.boxShadow = "none";
+                } else {
+                    screen.innerHTML = `Property of Mine! Co.<br>Running stable version 6.02.1023<br><br>&gt;<span class="blink">_</span>`;
+                    screen.style.background = "#020202";
+                    screen.style.boxShadow = "0 0 20px #187010 inset";
+                    glow.style.background = "white";
+                    glow.style.boxShadow = "0 0 5px white";
+                }
+            }
+        </script>
+    </body>
 </html>

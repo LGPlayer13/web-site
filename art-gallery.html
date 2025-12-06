@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Art Gallery</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
+    <head>
+        <title>LG Productions • Art Gallery</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(60, 97, 11, 0.87);
+                --bgGradient2: rgba(62, 129, 21, 0.87);
+            }
+            
+            .art {
+                border: 6px solid #e5c694;
+                margin: 5px;
+                width: 44%;
+                transition: 0.2s;
+            }
+            .art:not(:focus):hover {
+                transform: rotate(-1deg) scale(1.02);
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
     
-    <div id="container">
+        <div id="container">
+            
+            <aside>
+                <img class="charHover" src="/images/decor/mastapeece.png" style="position: absolute;top: 280px;right: 25px;--delay: 0.75s;" title="it feels good to be new." alt="audrey holding up a book, confused">
+            </aside>
+            
+            <main>
+                <h2>Art Gallery</h2>
+                <div class="box background" style="--bg: url(/images/background/mountainous.jpg);--pos: 0 70%;--size: 100%;">
+                    <p>Yeah, I make art pieces from time to time. Usually when bored.<br>Vector art is on the top, sketches are below.</p>
+                    <sup>pro tip: hover over the images for some witty remarks about them.</sup>
+                </div>
+                
+                <hr>
+                
+                <div class="flex">
+                    <img src="/images/artpieces/artpiece8.png" title="drew the guys (again)! look at how cool they look">
+                    <img src="/images/artpieces/artpiece7.png" title="look at this little fella">
+                    <img src="/images/artpieces/artpiece6.png" title="so... where does the shampoo go?">
+                    <img src="/images/artpieces/artpiece5.png" title="hold up, this is an ANIMATION, not ART. exposed!!1!">
+                    <img src="/images/artpieces/artpiece4.png" title="doritos gone fishin'">
+                    <img src="/images/artpieces/artpiece3.png" title="an uncommon sparky appearance">
+                    <img src="/images/artpieces/artpiece2.png" title="not too bad, probably even better than george 2">
+                    <img src="/images/artpieces/artpiece1.png" title="cory main character confirmed? for real?!">
 
-      <h2>Art Gallery</h2>
-      <div class="textbox">
-        Yeah, I make art pieces from time to time. Usually when bored.<br>Vector art is on the top, sketches are below.<br><sub>pro tip: hover over the images for some witty remarks about them.</sub>
-      </div>
-      
-      <hr>
-      
-      <div id="artList" class="flex">
-        <img src="/images/artpieces/artpiece8.png" title="drew the guys (again)! look at how cool they look">
-        <img src="/images/artpieces/artpiece7.png" title="look at this little fella">
-        <img src="/images/artpieces/artpiece6.png" title="so... where does the shampoo go?">
-        <img src="/images/artpieces/artpiece5.png" title="hold up, this is an ANIMATION, not ART. exposed!!1!">
-        <img src="/images/artpieces/artpiece4.png" title="doritos gone fishin'">
-        <img src="/images/artpieces/artpiece3.png" title="an uncommon sparky appearance">
-        <img src="/images/artpieces/artpiece2.png" title="not too bad, probably even better than george 2">
-        <img src="/images/artpieces/artpiece1.png" title="cory main character confirmed? for real?!">
-        
-        <hr>
-        
-        <img src="/images/artpieces/georgies/georgie7.png" title="why is the lyric from Amnesiac? fake fan!!1!">
-        <img src="/images/artpieces/georgies/georgie6.png" title="i gave up on the rain halfway through">
-        <img src="/images/artpieces/georgies/georgie5.png" title="cannibalism (again, probably)">
-        <img src="/images/artpieces/georgies/georgie4.png" title="i got the deluxe version for NOTHING">
-        <img src="/images/artpieces/georgies/georgie3.png" title="i'm gonna be honest i don't really like this one">
-        <img src="/images/artpieces/georgies/georgie2.png" title="[Canon Death]">
-        <img src="/images/artpieces/georgies/georgie1.png" title="idk why this one is bigger than the rest">
-      </div>
-    
-    </div>
-  
-    <footer-component></footer-component>
-    
-    <img class="charhover" style="--top:28%;--left:17%;--delay:0s;" src="/images/decor/mastapeece.png" title="it feels good to be new.">
-    <img class="charhover" style="--top:30%;--left:77%;--delay:0.75s;" src="/images/decor/painting101.png" title="no hands? ...problem!">
-    
-    <script>
-      const artList = document.querySelector("#artList");
-      const artListChildren = artList.querySelectorAll("img");
+                    <hr>
 
-      for (let i = 0; i < artListChildren.length; i++) {
-        artListChildren[i].classList.add("art");
-        artListChildren[i].tabIndex = 0;
-      }
-    </script>
-  </body>
+                    <img src="/images/artpieces/georgies/georgie7.png" title="why is the lyric from Amnesiac? fake fan!!1!">
+                    <img src="/images/artpieces/georgies/georgie6.png" title="i gave up on the rain halfway through">
+                    <img src="/images/artpieces/georgies/georgie5.png" title="cannibalism (again, probably)">
+                    <img src="/images/artpieces/georgies/georgie4.png" title="i got the deluxe version for NOTHING">
+                    <img src="/images/artpieces/georgies/georgie3.png" title="i'm gonna be honest i don't really like this one">
+                    <img src="/images/artpieces/georgies/georgie2.png" title="[Canon Death]">
+                    <img src="/images/artpieces/georgies/georgie1.png" title="idk why this one is bigger than the rest">
+                </div>
+            </main>
+            
+            <aside>
+                <img class="charHover" src="/images/decor/painting101.png" style="position: absolute;top: 200px;left: 25px;--delay: 0.75s;" title="sparky but why are you blue?" alt="audrey holding up a book, confused">
+            </aside>
+
+        </div>
+
+        <footer-component></footer-component>
+    
+        <script>
+            const artListChildren = document.querySelectorAll(".flex img");
+
+            for (let i = 0; i < artListChildren.length; i++) {
+                artListChildren[i].classList.add("art");
+                artListChildren[i].tabIndex = 0;
+            }
+        </script>
+    </body>
 </html>

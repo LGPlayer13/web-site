@@ -31,7 +31,7 @@ var splashes = [
     "A cheeseburger, for eating? Eat it.",
     "The jungle is on fire, go go run go go get to spaceship.",
     "That's a dead kid. Yup.",
-    "What even are generations anyway? Like, are you talking about Pokémon generations? How about Sonic Generations?",
+    "So... come here often?",
     "Hmm. We don't know the lyrics for this one.",
     "You'll have to guess the lyrics for this one.",
     "Looks like we don't have the lyrics for this song.",
@@ -198,7 +198,7 @@ var splashes = [
     "Ron’s Ron shirt was just as bad as Ron himself.",
     "They looked at the door, screaming about how closed it was.",
     "h",
-    "Max, what do you want for dinner? <b>Justice</b>, with a side order of spaghetti.",
+    "Max, what do you want for dinner?",
     "Free spring rolls and prawn crackers appreciated; toilet seat broken.",
     "Suggest to confine child and observe behavior.",
     "Contributed to alcohol abuse statistics; Love and laughter shared.",
@@ -334,11 +334,23 @@ var splashes = [
     "You're a cinephile, I watch Family Guy.",
     "Hang on while Windows reports the problem to Microsoft..",
     "Water, fire, air, and dirt. F***in' magnets, how do they work?",
+    "And so begins the revolution.",
+    "I wake up, then I go to bed! I wake up, then I go to bed! I wake up, then I go to bed!",
+    "I don't really know what to put here. This backing track is pretty dang cool.",
+    "Talking to your friends can be hard if your coaming your hair at the same time",
+    "The end is nigh, the end is null",
+    "I'm on the world wide web. That flips my hat backwards!",
+    "Okay, it's nighttime, and there's four dudes in my bed.",
+    "We need to get the dodge out of hell. This cave is hell. This world is hell.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
 ];
-min = 1;
-max = Math.ceil(splashes.length);
-funChance = Math.floor(Math.random() * (max - min + 1)) + min;
-document.getElementById("splashes").innerHTML = (funChance == 1) ? `${splashes.length} splashes and counting!` : splashes[Math.floor(Math.random() * splashes.length)];
+
+function randomNum(max) {
+    return Math.floor(Math.random() * max);
+}
+
+const totalSplashes = splashes.length;
+const funChance = randomNum(totalSplashes) + 1;
+document.getElementById("splashes").innerHTML = (funChance == 1) ? `${totalSplashes} splash texts and counting!` : splashes[randomNum(totalSplashes)];

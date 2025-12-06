@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • George 1.5</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
+    <head>
+        <title>LG Productions • George 1.5</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(88, 57, 29, 0.87);
+                --bgGradient2: rgba(124, 104, 37, 0.87);
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div id="container">
+            
+            <aside></aside>
+            
+            <main>
+                <img class="gamelogo" src="/images/games/g15title.png" title="2026, anyone?" style="width: 370px;">
+                <div class="box">
+                    <p>Released on --/--/--<br>v1.0 • Narrative, scrolling platformer</p>
+                    <sup>last update: --/--/--</sup>
+                </div>
 
-      <img class="gamelogo" src="/images/games/g15title.png" title="four years, four engines" style="width:370px;">
-      <div class="textbox">
-        Released on --/--/--<br>v1.0 • Scrolling platformer<br><sub>last update: --/--/--</sub>
-      </div>
+                <div class="bubbleCont">
+                    <a class="bubble off" href="#">Play it!</a>
+                    <a class="bubble off" href="#">itch.io Port</a>
+                    <a class="bubble" href="https://hyphen-lost.bandcamp.com/album/george-15-hidden-depths-original-beta-soundtrack" target="_blank">OST (beta)</a>
+                </div>
+                
+                <hr>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/g15Screenie1.jpg" alt="george running through a labyrinth" tabindex="0">
+                    <p><b>George 1.5</b> is an upcoming platformer game that is the chapter between the first and the next.<br>Explore the forgotten parts of the archipelago as George goes on a physical and mental journey he'll never forget.<br><br>After over 3 and a half years of development hell and constantly switching engines, the next installment in the George Series is in a stable engine, taking place right after where the first left off.</p>
+                </div>
+                
+                <div class="shinyBox showoff" style="--align: right;">
+                    <p>Months after the original George 1 was released, work on George 2 began. Inspired by a multitude of other Scratch platformers, it was slated to release mid-late 2022. However, those plans eventually fell through.<br><br>After going through four engines in total, I decided to scrap George 2 and start a new "in-between" chapter of the series. Its story is much more fleshed out and well-written than its predecessor's, and the gameplay is <i>much</i> more smooth and stable.</p>
+                    <img class="magnify" src="/images/games/screenies/g15Screenie2.jpg" alt="george and greg inspecting a terminal" tabindex="0">
+                </div>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/g15Screenie3.jpg" alt="george jumping off a dripleaf" tabindex="0">
+                    <section>
+                        <p><b>It also features...</b></p>
+                        <ul>
+                            <li>Five base levels packed with unique mechanics, hazards, and bosses</li>
+                            <li>Plentiful cutscenes throughout the game, both animated and in-game</li>
+                            <li>Bloated asset count to ensure memory leaks</li>
+                            <li>Multiple post-launch updates planned</li>
+                            <li>Original soundtrack by hyphen-lost!</li>
+                            <li>Pausing, saving, ranks, timeline, and more!</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="collapse">
+                    <details>
+                        <summary><b>Update Log</b></summary>
+                        <p>nothing for now, sorry about that.</p>
+                    </details>
+                </div>
+            </main>
+            
+            <aside></aside>
       
-      <div class="flex">
-        <a class="flexbubble off" href="#">Play it!</a>
-        <a class="flexbubble off" href="#">Itch.io Port</a>
-        <a class="flexbubble" href="https://hyphen-lost.bandcamp.com/album/george-15-hidden-depths-original-beta-soundtrack" target="_blank">OST (beta)</a>
-      </div>
-      
-      <hr>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/g15Screenie1.jpg" tabindex="0">
-        <section><b>George 1.5</b> is an upcoming platformer game that is the chapter between the first and the next. Explore the most unknown parts of the archipelago as George goes on a physical and mental journey he'll never forget.<br><br>After over 3 and a half years of development hell and constantly switching engines, the next installment in the George Series is in a stable engine, taking place right after where the first left off.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
-        <img class="squareimg" style="--position:50% 0%;" src="/images/games/screenies/g15Screenie2.jpg" tabindex="0">
-        <section>Months after the original George 1 was released, work on George 2 began. Inspired by a multitude of other Scratch platformers, it was slated to release mid-late 2022. However, those plans eventually fell through.<br><br>After going through four engines in total, I decided to scrap George 2 and start a new "in-between" chapter of the series. Its story is much more fleshed out and well-written than its predecessor's, and the gameplay is <i>much</i> more smooth and stable.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:95% 0%;" src="/images/games/screenies/g15Screenie3.jpg" tabindex="0">
-        <section><b>It also features...</b><br>
-          <ul><li>Five base levels packed with unique mechanics, hazards, and bosses</li><li>Plentiful cutscenes throughout the game, both animated and in-game</li><li>Bloated asset count to ensure memory leaks</li><li>Multiple post-launch updates planned</li><li>Original soundtrack by hyphen-lost!</li><li>Pausing, saving, ranks, timeline, and more!</li></ul>
-        </section>
-      </div>
-      
-      <div class="textbox updatelog">
-        <section>
-          <details style="margin-top:0px;">
-            <summary><b>Update Log</b></summary>
-            <main>nothing for now... sorry about that.</main>
-          </details>
-        </section>
-      </div>
-      
-    </div>
-
-    <footer-component></footer-component>
-  </body>
+        </div>
+        
+        <footer-component></footer-component>
+    </body>
 </html>

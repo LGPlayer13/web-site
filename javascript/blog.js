@@ -31,6 +31,7 @@ let authorLink = "https://lgplayer13.neocities.org/"; // Enter your website, soc
   use a date it must still follow that format.*/
 
 let postsArray = [
+[ "posts/2025-12-06-Blog-Be-Thankful.html", encodeURI ( 'To Be Thankful - Blog' ), "blog" ],
 [ "posts/2025-11-02-Blog-Nothing-Changes.html", encodeURI ( 'Nothing Changes - Blog' ), "blog" ],
 [ "posts/2025-10-04-Blog-Break-Tension.html", encodeURI ( 'Break the Tension - Blog' ), "blog" ],
 [ "posts/2025-09-03-Blog-Big-Ideas.html", encodeURI ( 'Big Ideas - Blog' ), "blog" ],
@@ -71,7 +72,8 @@ const postDateFormat = /\d{4}\-\d{2}\-\d{2}\-/;
 //Check if you are in posts (if so, the links will have to go up a directory)
 let relativePath = ".";
 if ( url.includes("posts/") ) {
-  relativePath = "..";
+    relativePath = "..";
+    document.querySelector("main").innerHTML += `<div class="fade"><div id="nextprev"></div></div>`;
 }
 
 //Generate the Header HTML, a series of list items containing links.
@@ -92,93 +94,91 @@ if ( ! currentFilename.endsWith(".html") ) {
 }
 let i;
 for (i = 0; i < postsArray.length; i++) {
-  if ( postsArray[i][0] === currentFilename ) {
-    currentIndex = i;
-  }
+    if ( postsArray[i][0] === currentFilename ) {
+        currentIndex = i;
+    }
 }
 
 //Convert the post url to readable post name. E.g. changes "2020-10-10-My-First-Post.html" to "My First Post"
 //Or pass along the "special characters" version of the title if one exists
 function formatPostTitle(i) {
-  // Check if there is an alternate post title
-  if ( postsArray[i].length > 1 ) {
-    //Remember how we had to use encodeURI for special characters up above? Now we use decodeURI to get them back.
-    return decodeURI(postsArray[i][1]);
-  } else { 
-  //If there is no alternate post title, check if the post uses the date format or not, and return the proper title
-	if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-	  return postsArray[i][0].slice(17,-5).replace(/-/g," ");
+    // Check if there is an alternate post title
+    if ( postsArray[i].length > 1 ) {
+        //Remember how we had to use encodeURI for special characters up above? Now we use decodeURI to get them back.
+        return decodeURI(postsArray[i][1]);
     } else {
-      return postsArray[i][0].slice(6,-5).replace(/-/g," ");
+        //If there is no alternate post title, check if the post uses the date format or not, and return the proper title
+        if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
+          return postsArray[i][0].slice(17,-5).replace(/-/g," ");
+        } else {
+          return postsArray[i][0].slice(6,-5).replace(/-/g," ");
+        }
     }
-  }
 }
 
 //Get the current post title and date (if we are on a post page)
 let currentPostTitle = "";
 let niceDate = "";
 if ( currentIndex > -1 ) {
-  currentPostTitle = formatPostTitle( currentIndex );
-  //Generate the "nice to read" version of date
-  if (  postDateFormat.test ( postsArray[currentIndex][0].slice( 6,17 ) ) ) {
-    let monthSlice = postsArray[currentIndex][0].slice( 11,13 );
-    let month = "";
-    if ( monthSlice === "01") { month = "January";}
-    else if ( monthSlice === "02") { month = "February";}
-    else if ( monthSlice === "03") { month = "March";}
-    else if ( monthSlice === "04") { month = "April";}
-    else if ( monthSlice === "05") { month = "May";}
-    else if ( monthSlice === "06") { month = "June";}
-    else if ( monthSlice === "07") { month = "July";}
-    else if ( monthSlice === "08") { month = "August";}
-    else if ( monthSlice === "09") { month = "September";}
-    else if ( monthSlice === "10") { month = "October";}
-    else if ( monthSlice === "11") { month = "November";}
-    else if ( monthSlice === "12") { month = "December";}
-	niceDate = month + " " + postsArray[currentIndex][0].slice( 14,16 ) + ", " + postsArray[currentIndex][0].slice( 6,10 );
-  }
+    currentPostTitle = formatPostTitle( currentIndex );
+    //Generate the "nice to read" version of date
+    if (  postDateFormat.test ( postsArray[currentIndex][0].slice( 6,17 ) ) ) {
+        let monthSlice = postsArray[currentIndex][0].slice( 11,13 );
+        let month = "";
+        if ( monthSlice === "01") { month = "January";}
+        else if ( monthSlice === "02") { month = "February";}
+        else if ( monthSlice === "03") { month = "March";}
+        else if ( monthSlice === "04") { month = "April";}
+        else if ( monthSlice === "05") { month = "May";}
+        else if ( monthSlice === "06") { month = "June";}
+        else if ( monthSlice === "07") { month = "July";}
+        else if ( monthSlice === "08") { month = "August";}
+        else if ( monthSlice === "09") { month = "September";}
+        else if ( monthSlice === "10") { month = "October";}
+        else if ( monthSlice === "11") { month = "November";}
+        else if ( monthSlice === "12") { month = "December";}
+        niceDate = month + " " + postsArray[currentIndex][0].slice( 14,16 ) + ", " + postsArray[currentIndex][0].slice( 6,10 );
+    }
 }
 
 //Generate the Post List HTML, which will be shown on the "Archive" page.
 
 function formatPostLink(i) {
-  let postTitle_i = "";
-  if ( postsArray[i].length > 1 ) {
-    postTitle_i = decodeURI(postsArray[i][1]);
-  } else {
-	if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-	  postTitle_i = postsArray[i][0].slice(17,-5).replace(/-/g," ");
+    let postTitle_i = "";
+    if ( postsArray[i].length > 1 ) {
+        postTitle_i = decodeURI(postsArray[i][1]);
     } else {
-      postTitle_i = postsArray[i][0].slice(6,-5).replace(/-/g," ");
+        if ( postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
+            postTitle_i = postsArray[i][0].slice(17,-5).replace(/-/g," ");
+        } else {
+            postTitle_i = postsArray[i][0].slice(6,-5).replace(/-/g," ");
+        }
     }
-  }
-  if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
-  } else {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
-  }
+    if ( postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
+        return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
+    } else {
+        return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
+    }
 }
 
 let postListHTML = "<ul>";
-for ( let i = 0; i < postsArray.length; i++ ) {
-  postListHTML += formatPostLink(i);
-}
+for ( let i = 0; i < postsArray.length; i++ ) { postListHTML += formatPostLink(i); }
 postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
-let recentPostsCutoff = 5; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
+let recentPostsCutoff = 1; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
 let recentPostListHTML = "<ul>";
 let numberOfRecentPosts = Math.min( recentPostsCutoff, postsArray.length );
 for ( let i = 0; i < numberOfRecentPosts; i++ ) {
-  recentPostListHTML += formatPostLink(i);
+    recentPostListHTML += formatPostLink(i);
 }
 /*If you've written more posts than can fit in the Recent Posts List,
   then we'll add a link to the archive so readers can find the rest of
   your wonderful posts and be filled with knowledge.*/
-if ( postsArray.length > recentPostsCutoff ) {
-  recentPostListHTML += '<li class="moreposts"><a href=' + relativePath + '/blog>\u00BB more posts</a></li></ul>';
+if ( (postsArray.length > recentPostsCutoff) && (67 > 69) ) {
+    recentPostListHTML += '<li class="moreposts"><a href=' + relativePath + '/blog>\u00BB more posts</a></li></ul>';
 } else {
-  recentPostListHTML += "</ul>";
+    recentPostListHTML += "</ul>";
 }
 
 //Generate the Next and Previous Post Links HTML
@@ -190,17 +190,17 @@ let prevlink = "";
  a "Next Post" link, right? And vice versa with the oldest 
  post! That's what the following code handles.*/
 if ( postsArray.length < 2 ) {
-  nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a>';
+    nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a>';
 } else if ( currentIndex === 0 ) {
-  prevlink = postsArray[currentIndex + 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a> | <a href="'+ relativePath + '/' + prevlink +'">Previous Post \u00BB</a>';
+    prevlink = postsArray[currentIndex + 1][0];
+    nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a> | <a href="'+ relativePath + '/' + prevlink +'">Previous Post \u00BB</a>';
 } else if ( currentIndex === postsArray.length - 1 ) {
-  nextlink = postsArray[currentIndex - 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/' + nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a>';
+    nextlink = postsArray[currentIndex - 1][0];
+    nextprevHTML = '<a href="' + relativePath + '/' + nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a>';
 } else if ( 0 < currentIndex && currentIndex < postsArray.length - 1 ) {
-  nextlink = postsArray[currentIndex - 1][0];
-  prevlink = postsArray[currentIndex + 1][0];
-  nextprevHTML = '<a href="' + relativePath + '/'+ nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a> | <a href="' + relativePath + '/'+ prevlink +'">Previous Post \u00BB</a>';
+    nextlink = postsArray[currentIndex - 1][0];
+    prevlink = postsArray[currentIndex + 1][0];
+    nextprevHTML = '<a href="' + relativePath + '/'+ nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a> | <a href="' + relativePath + '/'+ prevlink +'">Previous Post \u00BB</a>';
 }
 
 //-----------------------------
@@ -212,35 +212,26 @@ if ( postsArray.length < 2 ) {
   one particular blog post where we don't want the footer to appear, 
   we simply don't put a <div id="footer"> on that page.*/
 
-if (document.getElementById("nextprev")) {
-  document.getElementById("nextprev").innerHTML = nextprevHTML;
-}
-if (document.getElementById("postlistdiv")) {
-  document.getElementById("postlistdiv").innerHTML = postListHTML;
-}
-if (document.getElementById("recentpostlistdiv")) {
-  document.getElementById("recentpostlistdiv").innerHTML = recentPostListHTML;
-}
-if (document.getElementById("header")) {
-  document.getElementById("header").innerHTML = headerHTML;
-}
-if (document.getElementById("blogTitleH1")) {
-  document.getElementById("blogTitleH1").innerHTML = blogTitle;
-}
-if (document.getElementById("postTitleH1")) {
-  document.getElementById("postTitleH1").innerHTML = currentPostTitle;
-}
-if (document.getElementById("postDate")) {
-  document.getElementById("postDate").innerHTML = niceDate;
-}
-if (document.getElementById("footer")) {
-  document.getElementById("footer").innerHTML = footerHTML;
-}
+if (document.getElementById("nextprev")) { document.getElementById("nextprev").innerHTML = nextprevHTML; }
+if (document.getElementById("postlistdiv")) { document.getElementById("postlistdiv").innerHTML = postListHTML; }
+if (document.getElementById("recentpostlistdiv")) { document.getElementById("recentpostlistdiv").innerHTML = recentPostListHTML; }
+if (document.getElementById("header")) { document.getElementById("header").innerHTML = headerHTML; }
+if (document.getElementById("blogTitleH1")) { document.getElementById("blogTitleH1").innerHTML = blogTitle; }
+if (document.getElementById("postTitleH1")) { document.getElementById("postTitleH1").innerHTML = currentPostTitle; }
+if (document.getElementById("postDate")) { document.getElementById("postDate").innerHTML = niceDate; }
+if (document.getElementById("footer")) { document.getElementById("footer").innerHTML = footerHTML; }
 
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier
 //The <title> tag content is what shows up on browser tabs
 if (document.title === "Blog Post") {
-  document.title = 'LG Productions • ' + currentPostTitle;
+    document.title = 'LG Productions • ' + currentPostTitle;
+
+    document.querySelector(".indicator").style.setProperty("--indicMsg", `'Post #${(postsArray.length - currentIndex)}'`);
+    document.querySelector(".fade").style.width = "45%";
+
+    const root = document.documentElement;
+    root.style.setProperty("--bgGradient1", "rgba(67, 65, 3, 0.87)");
+    root.style.setProperty("--bgGradient2", "rgba(103, 85, 8, 0.87)");
 }
 
 // Adding the assigned classes to each post (LG-made!)
@@ -251,9 +242,9 @@ let blogPosts = 0;
 let devlogPosts = 0;
 
 for (let i = 0; i < postListChildren.length; i++) {
-  postListChildren[i].classList.add(postsArray[i][2]);
-  if (postsArray[i][2] == "blog") {blogPosts += 1;}
-  else if (postsArray[i][2] == "devlog") {devlogPosts += 1;}
+    postListChildren[i].classList.add(postsArray[i][2]);
+    if (postsArray[i][2] == "blog") { blogPosts += 1; }
+    else if (postsArray[i][2] == "devlog") { devlogPosts += 1; }
 }
 
 document.getElementById("blogCount").innerHTML = "Blog (" + blogPosts + ")";

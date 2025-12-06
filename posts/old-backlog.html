@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Old Backlog</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-    <style>
-      body {
-        background-image:linear-gradient(135deg,rgba(99,60,13,1) 0%, rgba(59,100,38,1) 50%, rgba(94,88,34,1) 100%);
-      }
-    </style>
-  </head>
-  <body>
-    <header-component></header-component>
+    <head>
+        <title>LG Productions • Old Backlog</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(106, 106, 106, 0.87);
+                --bgGradient2: rgba(77, 77, 77, 0.95);
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
     
-    <div id="container">
+        <div id="container">
+            
+            <aside></aside>
+            
+            <main>
+                <h1>Old Backlog</h1>
+                
+                <div class="box">
+                    <p>This page details the different types of posts seen in the <a href="./old-blog">Old Blog</a>.<br>During its time, you were able to select a year to visit at the bottom.</p>
+                </div>
 
-      <h2>Old Backlog</h2>
-      <div class="textbox">
-        This page details the different types of posts seen in the <a href="./old-blog">Old Blog</a>.<br>During its time, you were able to select a year to visit at the bottom.
-      </div>
-      
-      <hr>
-      
-      <div class="fadebox extended" style="background:rgba(117,135,28,0.6);">
-        <h3>GREEN POSTS</h3>Usually saved for more casual and light-hearted topics.<br>These are the most common type of post, and are seen frequently throughout the blog.
-        <br><sub><b>NOTE:</b> Posts labeled as "Green?" are usually more <a style="color:#ec4747;">red</a> in tone.</sub>
-      </div>
-      <div class="fadebox extended" style="background:rgba(182,37,37,0.6);">
-        <h3>RED POSTS</h3>Whenever I get upset or angry about something, I'll rant about it in these types of posts.<br>These, more aggresive and rant-y posts, will only come once in a long while.
-      </div>
-      <div class="fadebox extended" style="background:rgba(50,90,201,0.6);">
-        <h3>BLUE POSTS</h3>These are an uncommon type of post, specifically for when I feel especially sad and lonely.<br>I usually vent and go on about my struggles in these posts, and it can get <i>personal</i>.
-      </div>
-      <div class="fadebox extended" style="background:rgba(28,159,110,0.6);">
-        <h3>MIDWAY POSTS</h3>The <i>least common</i> type of blog post, also being much newer than the other colors.<br>These are reserved for topics that I feel are important and imminent enough to warrant their own blog post.
-      </div>
-      
-    </div>
+                <hr>
+
+                <div class="box" style="background: rgba(117,135,28,0.5);">
+                    <h3>GREEN POSTS</h3><p>Usually saved for more casual and light-hearted topics.<br>These are the most common type of post, and are seen frequently throughout the blog.</p><sup><b>NOTE:</b> Posts labeled as "Green?" are usually more <a style="color:#ec4747;">red</a> in tone.</sup>
+                </div>
+                <div class="box" style="background: rgba(182,37,37,0.5);">
+                    <h3>RED POSTS</h3><p>Whenever I get upset or angry about something, I'll rant about it in these types of posts.<br>These, more aggresive and rant-y posts, will only come once in a long while.</p>
+                </div>
+                <div class="box" style="background: rgba(50,90,201,0.5);">
+                    <h3>BLUE POSTS</h3><p>These are an uncommon type of post, specifically for when I feel especially sad and lonely.<br>I usually vent and go on about my struggles in these posts, and it can get <i>personal</i>.</p>
+                </div>
+                <div class="box" style="background: rgba(28,159,110,0.5);">
+                    <h3>MIDWAY POSTS</h3><p>The <i>least common</i> type of blog post, also being much newer than the other colors.<br>These are reserved for topics that I feel are important and imminent enough to warrant their own blog post.</p>
+                </div>
+            </main>
+            
+            <aside></aside>
+
+        </div>
     
-    <footer-component></footer-component>
-  </body>
+        <footer-component></footer-component>
+    </body>
 </html>

@@ -1,68 +1,103 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Sid's Adventure</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
-
-      <img class="gamelogo" src="/images/games/sidtitle.png" title="thanks to you, my grade will go from a 0 to a 5!" style="width:340px;">
-      <div class="textbox">
-        Released on 09/30/23<br>v1.0.4 • Side-scrolling<br><sub>last update: 08/10/25</sub>
-      </div>
-      
-      <div class="flex">
-        <a class="flexbubble" href="https://turbowarp.org/686788244/" target="_blank">Play it!</a>
-        <a class="flexbubble" href="https://lgplayer13.itch.io/sids-adventure-widescreen-port" target="_blank">itch.io Port</a>
-        <a class="flexbubble" href="https://www.youtube.com/watch?v=bZFcKEJZ-dM" target="_blank">Watch Trailer</a>
-      </div>
-      
-      <hr>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:70% 0%;" src="/images/games/screenies/sidScreenie1.jpg" tabindex="0">
-        <section><b>Sid's Adventure</b> is a side-scrolling game where you play as Sid, who wakes up to find himself in a colorless void. After the entire world was devastated by darkness, it's up to him to save it!<br><br>Featuring over 7 quirky characters and 15 tasks to complete, this game has you talk to people, do fun little quests, and explore around the area. It's pretty wacky.</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row-reverse;--align:right;">
-        <img class="squareimg" style="--position:45% 0%;" src="/images/games/screenies/sidScreenie2.jpg" tabindex="0">
-        <section>Starting off as a shelved project back from mid-2022, I decided to revive this project after being burnt out from the development hell that was George 2.<br><br>Inspired by nothing in particular, the game features a unique cast of characters that are all based off real-life shapes! (except for Robert, who doesn't really fit but he's still there anyway)</section>
-      </div>
-      
-      <div class="fadebox showoff" style="--dir:row;--align:left;">
-        <img class="squareimg" style="--position:88% 0%;" src="/images/games/screenies/sidScreenie3.jpg" tabindex="0">
-        <section><b>It also features...</b><br>
-          <ul><li>1 chapter so far, with more to come later (maybe)</li><li>8 characters, all with different personalities and witty dialogue</li><li>17 total tasks, most of which have you doing questionable chores</li><li>Semi-reliable saving and loading system<br><li>An actual, kinda well-put-together <a href="https://www.youtube.com/watch?v=bZFcKEJZ-dM" target="_blank">trailer</a></li><li>Neat <a href="https://lgplayer13.itch.io/sids-adventure-widescreen-port" target="_blank">widescreen port</a> hosted on itch.io</li></ul>
-        </section>
-      </div>
-      
-      <div class="textbox updatelog">
-        <section>
-          <details style="margin-top:0px;">
-            <summary><b>Update Log</b></summary>
+    <head>
+        <title>LG Productions • Sid's Adventure</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(88, 57, 29, 0.87);
+                --bgGradient2: rgba(124, 104, 37, 0.87);
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div id="container">
+            
+            <aside></aside>
+            
             <main>
-              <i>08/10/25</i> - v1.0.4<ul><li>few bug fixes and graphical updates</li><li>now in parity with the widescreen port</li></ul><hr>
-              <i>09/21/24</i> - v1.0.3<ul><li>minor graphical improvements</li><li>fixed saving and loading bugs</li></ul><hr>
-              <i>01/17/24</i> - v1.0.2<ul><li>clicking the Task gives dialogue</li><li>fixed text engine bug</li></ul><hr>
-              <i>10/02/23</i> - v1.0.1<ul><li>fixed painting minigame bug</li><li>minor dialogue changes</li><li>slight menu tweaks</li></ul><hr>
-              <i>09/30/23</i> - v1.0<ul><li><b>released the game!</b></li><li>launched with a colorful cast of characters</li><li>...and Robert</li></ul>
-            </main>
-          </details>
-        </section>
-      </div>
-      
-    </div>
+                <img class="gamelogo" src="/images/games/sidtitle.png" title="thanks to you, my grade will go from a 0 to a 5!" style="width: 340px;">
+                <div class="box">
+                    <p>Released on 09/30/23<br>v1.0.4 • Story-based, side-scrolling</p>
+                    <sup>last update: 08/10/25</sup>
+                </div>
 
-    <footer-component></footer-component>
-  </body>
+                <div class="bubbleCont">
+                    <a class="bubble" href="https://turbowarp.org/686788244/" target="_blank">Play it!</a>
+                    <a class="bubble" href="https://lgplayer13.itch.io/sids-adventure-widescreen-port" target="_blank">itch.io Port</a>
+                    <a class="bubble" href="https://www.youtube.com/watch?v=bZFcKEJZ-dM" target="_blank">Watch Trailer</a>
+                </div>
+                
+                <hr>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/sidScreenie1.jpg" alt="sid and pop in the colorless world" tabindex="0">
+                    <p><b>Sid's Adventure</b> is a side-scrolling game where you play as Sid, who wakes up to find himself in a colorless void.<br><br>After the entire world was devastated by darkness, it's up to him to save it!<br><br>Featuring over 7 quirky characters and 15 tasks to complete, this game has you talk to people, do fun little quests, and explore around the area. It's pretty wacky.</p>
+                </div>
+                
+                <div class="shinyBox showoff" style="--align: right;">
+                    <p>Starting off as a shelved project back from mid-2022, I decided to revive this project after being burnt out from the development hell that was George 2.<br><br>Inspired by nothing in particular, the game features a unique cast of characters that are all based off real-life shapes!<br>(except for Robert, who doesn't really fit but he's still there anyway)</p>
+                    <img class="magnify" src="/images/games/screenies/sidScreenie2.jpg" alt="robert, sid, and sandy after a heated argument" tabindex="0">
+                </div>
+                
+                <div class="shinyBox showoff">
+                    <img class="magnify" src="/images/games/screenies/sidScreenie3.jpg" alt="a strange portal at the end of the game" tabindex="0">
+                    <section>
+                        <p><b>It also features...</b></p>
+                        <ul>
+                            <li>1 chapter so far, with more to come later (maybe)</li>
+                            <li>8 characters, all with different personalities and witty dialogue</li>
+                            <li>17 total tasks, most of which have you doing questionable chores</li>
+                            <li>Semi-reliable saving and loading system</li>
+                            <li>An actual, kinda well-put-together <a href="https://www.youtube.com/watch?v=bZFcKEJZ-dM" target="_blank">trailer</a></li>
+                            <li>Neat <a href="https://lgplayer13.itch.io/sids-adventure-widescreen-port" target="_blank">widescreen port</a> hosted on itch.io</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="collapse">
+                    <details>
+                        <summary><b>Update Log</b></summary>
+                        <div class="scroll">
+                            <section>
+                                <p><b>v1.0.4</b> - <i>08/10/25</i></p>
+                                <ul><li>few bug fixes and graphical updates</li><li>now in parity with the widescreen port</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0.3</b> - <i>09/21/24</i></p>
+                                <ul><li>minor graphical improvements</li><li>fixed saving and loading bugs</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0.2</b> - <i>01/17/24</i></p>
+                                <ul><li>clicking the Task gives dialogue</li><li>fixed text engine bug</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0.1</b> - <i>10/02/23</i></p>
+                                <ul><li>fixed painting minigame bug</li><li>minor dialogue changes</li><li>slight menu tweaks</li></ul>
+                            </section>
+                            <hr>
+                            <section>
+                                <p><b>v1.0</b> - <i>09/30/23</i></p>
+                                <ul><li><b>released the game!</b></li><li>launched with a colorful cast of characters</li><li>...and Robert</li></ul>
+                            </section>
+                        </div>
+                    </details>
+                </div>
+            </main>
+            
+            <aside></aside>
+      
+        </div>
+        
+        <footer-component></footer-component>
+    </body>
 </html>

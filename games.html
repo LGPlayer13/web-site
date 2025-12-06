@@ -1,54 +1,87 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <title>LG Productions • Games</title>
-    <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css" type="text/css" media="all">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="/javascript/components.js" type="text/javascript" defer></script>
-    <script src="/javascript/linkList.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-    <header-component></header-component>
-    
-    <div id="container">
-
-      <h2>Games</h2>
-      <div class="textbox">
-        These are the games I make in my free time. Feel free to look around, see what peaks your interest.<br>Each game is labeled with its current version.
-      </div>
-      
-      <hr>
-      
-      <div id="linkList" class="flex"></div>
-      <!-- <b style="color:#ffb0b0">(NEW!)</b> for new releases, keep for about a week or so -->
-      
-      <div class="flex">
-        <a class="flexbubble" href="https://scratch.mit.edu/users/LGameMaker13" target="_blank">Scratch Page</a>
-        <a class="flexbubble" href="https://lgplayer13.itch.io/" target="_blank">itch.io Page</a>
-      </div>
-      
-    </div>
-
-    <footer-component></footer-component>
-    
-    <img class="charhover" style="--top:44%;--left:15%;--delay:0s;" src="/images/decor/ragequitter.png" title="absolute ragebait">
-    <img class="charhover" style="--top:31%;--left:80%;--delay:0.75s;" src="/images/decor/skilled%20warrior.png" title="click fred when dead">
-    
-    <script>
-      let linkArray = [
-        {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", alt:"", sup:"", link:"/games/george-series", imgLink:"georgeseries", bgColor:"#d68100", bdrColor:"#6b4000", bgPos:"100% 58%", color:"black", hasImg:1},
-        {name:"Labyrinths II", desc:"Explore through many different labyrinths and fight through hordes of monsters!", alt:"a1.1", sup:"", link:"/games/labyrinths-II", imgLink:"lab2", bgColor:"#20734e", bdrColor:"#113c28", bgPos:"center", color:"white", hasImg:1},
-        {name:"Sid's Adventure", desc:"After an entire world was devastated by darkness, it's up to Sid to save it!", alt:"v1.0.4", sup:"", link:"/games/sids-adventure", imgLink:"sidventure", bgColor:"#4cbaff", bdrColor:"#0068a8", bgPos:"0% 76%", color:"white", hasImg:1},
-        {name:"Stone Mine Simulator '24", desc:"Mine stone, buy strange buildings, and play minigames to mine more stone.", alt:"v1.1", sup:"", link:"/games/sms-24", imgLink:"sms24", bgColor:"#a9692b", bdrColor:"#553616", bgPos:"center", color:"white", hasImg:1},
-        {name:"LG's Remastered Collection", desc:"A big collection of the remasters and remaking of not-so-ancient history.", alt:"v1.0.1", sup:"", link:"/games/lgs-remastered-collection", imgLink:"remcol", bgColor:"#925cff", bdrColor:"#3a00ad", bgPos:"0% 40%", color:"white", hasImg:1},
-        {name:"Fire Forge", desc:"Make weird materials, build contraptions, and chat with your wacky friend.", alt:"N/A", sup:"", link:"/games/fire-forge", imgLink:"fireforge", bgColor:"#e76d1f", bdrColor:"#78360d", bgPos:"center", color:"white", hasImg:1},
-        {name:"Super Scratch Melee", desc:"Duke it out in this action-packed, turn-based game, with over 10 fighters to pick from!", alt:"v1.2.1", sup:"", link:"/games/super-scratch-melee", imgLink:"ssm", bgColor:"#f9a83a", bdrColor:"#945805", bgPos:"0% 0%", color:"black", hasImg:1}
-      ];
-    </script>
-  </body>
+    <head>
+        <title>LG Productions • Games</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <script src="/javascript/linkList.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                --bgGradient1: rgba(95, 48, 6, 0.87);
+                --bgGradient2: rgba(128, 62, 6, 0.87);
+            }
+            
+            .fixed {
+                opacity: 0.75;
+                position: fixed;
+                animation: hover 5s ease-in-out infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <img class="fixed" src="/images/decor/games/alienThing.png" style="width: 150px;left: 14%;top: 20%;" draggable="false">
+        <img class="fixed" src="/images/decor/games/bike2.png" style="width: 70px;right: 5%;top: 38%;" draggable="false">
+        <img class="fixed" src="/images/decor/games/shocked.png" style="width: 100px;left: 5%;top: 46%;" draggable="false">
+        <img class="fixed" src="/images/decor/games/mrGreen.svg" style="width: 70px;right: 15%;top: 56%;">
+        <img class="fixed" src="/images/decor/games/ragequitter.png" style="width: 85px;right: 35%;top: 3%;" draggable="false">
+        <img class="fixed" src="/images/decor/games/skilledWarrior.svg" style="width: 95px;left: 30%;bottom: 10%;">
+        <img class="fixed" src="/images/decor/games/bicycle5.png" style="width: 80px;left: 41%;top: 37%;" draggable="false">
+        
+        <div id="container">
+            
+            <aside></aside>
+            
+            <main>
+                <h2>Games</h2>
+                <div class="box">
+                    <p>These are the games I make whenever I feel the need to work on something. Feel free to look around, see what peaks your interest.<br>Each game is labeled with its current version, unless it's a series.</p>
+                </div>
+                
+                <hr>
+                
+                <h3 class="heading">Scratch Games</h3>
+                <div class="flex linkList"></div>
+                <div class="fade">
+                    <p>some widescreen ports of my games can be found on my <a href="https://lgplayer13.itch.io/" target="_blank">itch.io page</a>.<br>you can also visit my <a href="https://scratch.mit.edu/users/LGameMaker13" target="_blank">Scratch page</a> for more stuff.</p>
+                </div>
+                
+                <h3 class="heading">IGM Games</h3>
+                <div class="flex linkList"></div>
+                
+                <div class="bubbleCont">
+                    <a class="bubble" href="https://orteil.dashnet.org/igm/help.html" target="_blank">IGM Handbook</a>
+                    <a class="bubble" href="https://igmgames.github.io/index.html" target="_blank">IGM Games Archive</a>
+                </div>
+            </main>
+            
+            <aside></aside>
+            
+        </div>
+        
+        <footer-component></footer-component>
+        
+        <script>
+            const fixedList = document.querySelectorAll(".fixed");
+            for (let i = 0; i < fixedList.length; i++) {
+                let delay = 0.3 * i;
+                fixedList[i].style.animationDelay = delay.toString() + "s";
+            }
+            
+            let linkArray = [
+                {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", genres:"narrative, platforming", link:"/games/george-series", imgLink:"georgeseries", bgPos:"0% 60%", list:0},
+                {name:"Sid's Adventure", desc:"After an entire world was devastated by darkness, it's up to Sid to save it!", ver:"v1.0.4", genres:"story-based, side-scrolling", link:"/games/sids-adventure", imgLink:"sidventure", bgPos:"0% 67%", list:0},
+                {name:"Remastered Collection", desc:"A big collection of the remasters and remaking of not-so-ancient history.", ver:"v1.0.1", genres:"top-down, arcade", link:"/games/lgs-remastered-collection", imgLink:"remcol", list:0},
+                {name:"Super Scratch Melee", desc:"Duke it out in this action-packed, turn-based game, with over 10 fighters to pick from!", ver:"v1.2.1", genres:"turn-based, fighting", link:"/games/super-scratch-melee", imgLink:"ssm", list:0},
+                
+                {name:"Labyrinths II", desc:"Explore through many different labyrinths and fight through hordes of monsters!", ver:"a1.1", genres:"text-based, dungeon crawler", link:"/games/labyrinths-II", imgLink:"lab2", list:1},
+                {name:"Stone Mine Simulator '24", desc:"Mine stone, buy strange buildings, and play minigames to mine more stone.", ver:"v1.1", genres:"clicker, idle", link:"/games/sms-24", imgLink:"sms24", list:1},
+                {name:"Fire Forge", desc:"Make weird materials, build contraptions, and chat with your wacky friend.", ver:"N/A", genres:"humor, tech tree", link:"/games/fire-forge", imgLink:"fireforge", list:1}
+            ];
+        </script>
+    </body>
 </html>
