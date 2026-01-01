@@ -23,11 +23,7 @@
                 padding: 0;
                 width: 85%;
             }
-            .board div {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 20px;
-            }
+            .board div {display: flex;justify-content: center;}
             
             .toggle {
                 flex: 1;
@@ -37,10 +33,15 @@
                 transition: 0.2s;
                 cursor: default;
             }
-            .toggle:hover {
-                background: #76512a;
-                cursor: pointer;
+            .toggle:hover {background: #76512a;cursor: pointer;}
+            
+            #postlistdiv {
+                margin: 0;
+                padding: 10px 0;
+                max-height: 420px;
+                overflow: auto;
             }
+            #postlistdiv::-webkit-scrollbar {display: none;}
             
             #postlistdiv ul {
                 margin: 0;

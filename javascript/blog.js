@@ -31,6 +31,7 @@ let authorLink = "https://lgplayer13.neocities.org/"; // Enter your website, soc
   use a date it must still follow that format.*/
 
 let postsArray = [
+[ "posts/2025-12-31-Devlog-Year-Recap.html", encodeURI ( '2025 Recapped - Devlog' ), "devlog" ],
 [ "posts/2025-12-06-Blog-Be-Thankful.html", encodeURI ( 'To Be Thankful - Blog' ), "blog" ],
 [ "posts/2025-11-02-Blog-Nothing-Changes.html", encodeURI ( 'Nothing Changes - Blog' ), "blog" ],
 [ "posts/2025-10-04-Blog-Break-Tension.html", encodeURI ( 'Break the Tension - Blog' ), "blog" ],

@@ -21,6 +21,7 @@ for (let i = 0; i < linkArray.length; i++) {
 const linkListChildren = document.querySelectorAll("a.linkBubble");
 
 for (let i = 0; i < linkListChildren.length; i++) {
-    ref = linkListChildren[i].href;
-    if (!(ref.includes("localhost") || ref.startsWith("https://lgplayer13.neocities.org"))) {linkListChildren[i].target = "_blank";}
+    child = linkListChildren[i];
+    if (!(child.href.includes("localhost") || child.href.startsWith("https://lgplayer13.neocities.org"))) {child.target = "_blank";}
+    if (linkArray[i].new == 1) {child.classList.add("new");}
 }

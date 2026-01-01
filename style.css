@@ -254,7 +254,7 @@ details[open] summary {border-radius: 15px 15px 0 0;}
 
 .bubble {
     display: inline-block;
-    color: white;
+    color: white !important;
     border: 2px solid #c7c7c7;
     border-style: solid none none solid;
     border-radius: 20px;
@@ -267,8 +267,7 @@ details[open] summary {border-radius: 15px 15px 0 0;}
     transition: 0.2s;
     z-index: 1;
 }
-.bubble:hover {
-    color: white;
+.bubble:not(.off):hover {
     background: var(--bg) !important;
     border-color: #e3e3e3;
     text-shadow: 1.25px 1.25px 2px black, 0 0 4px #fff;
@@ -325,6 +324,18 @@ details[open] summary {border-radius: 15px 15px 0 0;}
     --pos: center;
 }
 .linkBubble:hover {border-color: white;box-shadow: 0 0 24px white inset;}
+
+.linkBubble.new::after {
+    content: "NEW!";
+    color: #ff7eb4;
+    position: absolute;
+    bottom: -10px;
+    right: -9px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black, 0 0 6px #e22a78;
+    transform: rotate(-3deg);
+}
 
 .linkBubble p {
     margin: 5px 0;
