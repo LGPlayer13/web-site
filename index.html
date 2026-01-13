@@ -88,7 +88,7 @@
                 <sup><span>pronouns: he/him</span><span id="days" /></sup>
                 
                 <marquee id="splashes"><script src="/javascript/splashtexts.js"></script></marquee>
-                <marquee id="birthday" style="display:none;"><b class="rainbow-text">Today is my birthday!</b></marquee>
+                <marquee id="birthday" style="display: none;"><b class="rainbow-text">Oh hey, today is my birthday!</b></marquee>
                 
                 <div class="shinyBox">
                     <div class="showoff">
@@ -144,13 +144,21 @@
             const month = new Date().getMonth();
             const date = new Date().getDate();
             
-            document.getElementById("splashes").style.display = !(month == 0 && date == 13) ? "inline-block" : "none";
-            document.getElementById("birthday").style.display = (month == 0 && date == 13) ? "inline-block" : "none";
-            if (month == 11) {document.body.innerHTML += `<div class="hangingDecor" style="--img: url(/images/background/christMass.png)"></div>`;} 
+            // christmas lights
+            if (month == 11) {document.body.innerHTML += `<div class="hangingDecor" style="--img: url(/images/background/christMass.png)"></div>`;}
+            
+            // birthday stuffs
+            if (month == 0 && date == 13) {
+                document.getElementById("splashes").style.display = "none";
+                document.getElementById("birthday").style.display = "inline-block";
+                
+                document.body.innerHTML += `<div class="hangingDecor" style="--img: url(/images/background/birthdayDecor.png)"></div>`;
+                document.body.style.backgroundImage = `linear-gradient(135deg, rgba(76, 57, 96, 0.87), rgba(112, 41, 69, 0.87)), url("/images/background/checkeredbg.png")`;
+            }
             
             let linkArray = [
                 {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", genres:"narrative, platforming", link:"/games/george-series", imgLink:"georgeseries", bgPos:"0% 60%", list:0},
-                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.0", new:1, genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:0}
+                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.1", new:1, genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:0}
             ]
         </script>
     
