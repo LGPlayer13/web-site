@@ -15,6 +15,7 @@
             }
             
             .board {
+                position: relative;
                 background-image: url(/images/linkimgs/plankbg.jpg);
                 border: 6px double #261600;
                 outline: 2px solid #261600;
@@ -22,6 +23,7 @@
                 margin: 10px auto;
                 padding: 0;
                 width: 85%;
+                box-shadow: 0 3px 6px rgba(42,22,0,0.7);
             }
             .board div {display: flex;justify-content: center;}
             
@@ -30,16 +32,19 @@
                 background: #4c341b;
                 border-bottom: 2px solid #261600;
                 padding: 8px;
-                transition: 0.2s;
+                transition: background 0.2s;
                 cursor: default;
             }
-            .toggle:hover {background: #76512a;cursor: pointer;}
+            .toggle:hover, #extend:hover {
+                background: #76512a;
+                cursor: pointer;
+            }
             
             #postlistdiv {
                 margin: 0;
                 padding: 10px 0;
-                max-height: 420px;
                 overflow: auto;
+                transition: max-height 0.25s ease;
             }
             #postlistdiv::-webkit-scrollbar {display: none;}
             
@@ -62,6 +67,21 @@
                 transition: 0.2s;
             }
             #postlistdiv a:hover {transform: scaleX(1.05);}
+            
+            #extend {
+                color: #f8ca8a;
+                position: absolute;
+                background: #4c341b;
+                border: 3px solid #261600;
+                border-radius: 50%;
+                padding: 3px 8.2px;
+                bottom: -14px;
+                right: -20px;
+                font-size: 27px;
+                text-shadow: none;
+                transition: background 0.2s;
+                cursor: default;
+            }
         </style>
     </head>
     <body>
@@ -93,7 +113,8 @@
                         <span id="devlogCount" class="toggle" onclick="showPosts('devlog')"></span>
                         <span class="toggle" onclick="showPosts('all')">All</span>
                     </div>
-                    <p id="postlistdiv"></p>
+                    <p id="postlistdiv" style="max-height: 420px;"></p>
+                    <div id="extend" onclick="extendList()">⬇</div>
                 </div>
 
                 <div class="bubbleCont">
@@ -113,6 +134,8 @@
         <footer-component></footer-component>
 
         <script>
+            const extend = document.getElementById("extend");
+            
             function showPosts(type) {
                 for (let i = 0; i < postListChildren.length; i++) {
                     if (postListChildren[i].classList.contains(type) || type === "all") {
@@ -120,6 +143,16 @@
                     } else {
                         postListChildren[i].style.display = "none";
                     }
+                }
+            }
+            
+            function extendList() {
+                if (postList.style.maxHeight == "420px") {
+                    postList.style.maxHeight = "675px";
+                    extend.innerHTML = "⬆";
+                } else {
+                    postList.style.maxHeight = "420px";
+                    extend.innerHTML = "⬇";
                 }
             }
         </script>

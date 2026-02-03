@@ -15,9 +15,14 @@
             }
             
             .fixed {
-                opacity: 0.75;
+                opacity: 0;
                 position: fixed;
-                animation: hover 5s ease-in-out infinite;
+                animation: hover 5s ease-in-out var(--delay) infinite, popIn 0.5s ease var(--delayP) forwards;
+            }
+            
+            @keyframes popIn {
+                0% {transform: scale(0.1);}
+                100% {opacity: 0.75;}
             }
         </style>
     </head>
@@ -69,7 +74,8 @@
             const fixedList = document.querySelectorAll(".fixed");
             for (let i = 0; i < fixedList.length; i++) {
                 let delay = 0.3 * i;
-                fixedList[i].style.animationDelay = delay.toString() + "s";
+                fixedList[i].style.setProperty('--delay', delay.toString() + "s");
+                fixedList[i].style.setProperty('--delayP', (delay / 9).toString() + "s");
             }
             
             let linkArray = [
@@ -78,7 +84,7 @@
                 {name:"Remastered Collection", desc:"A big collection of the remasters and remaking of not-so-ancient history.", ver:"v1.0.1", genres:"top-down, arcade", link:"/games/lgs-remastered-collection", imgLink:"remcol", list:0},
                 {name:"Super Scratch Melee", desc:"Duke it out in this action-packed, turn-based game, with over 10 fighters to pick from!", ver:"v1.2.1", genres:"turn-based, fighting", link:"/games/super-scratch-melee", imgLink:"ssm", list:0},
                 
-                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.1", new:1, genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:1},
+                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.1", genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:1},
                 {name:"Labyrinths II", desc:"Explore through many different labyrinths and fight through hordes of monsters!", ver:"a1.2", genres:"text-based, dungeon crawler", link:"/games/labyrinths-II", imgLink:"lab2", list:1},
                 {name:"Stone Mine Simulator '24", desc:"Mine stone, buy strange buildings, and play minigames to mine more stone.", ver:"v1.1", genres:"clicker, idle", link:"/games/sms-24", imgLink:"sms24", list:1},
                 {name:"Fire Forge", desc:"Make weird materials, build contraptions, and chat with your wacky friend.", ver:"N/A", genres:"humor, tech tree", link:"/games/fire-forge", imgLink:"fireforge", list:1}

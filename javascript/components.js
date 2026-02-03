@@ -25,7 +25,7 @@ class Footer extends HTMLElement {
         this.innerHTML = `
             <footer>
                 <sup>
-                    <span>&copy; LG Productions 2026 • v4.0</span>
+                    <span>&copy; LG Productions 2026 • v4.0.1</span>
                     <span><a href="/sitemap">site map</a></span>
                     <span><a href="https://neocities.org/" target="_blank">neocities</a></span>
                     <span><a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord</a></span>

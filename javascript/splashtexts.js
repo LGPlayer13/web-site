@@ -344,6 +344,10 @@ var splashes = [
     "We need to get the dodge out of hell. This cave is hell. This world is hell.",
     "What happens when an invincible bridge meets resurresctive antimatter?",
     "Your honour, shut up. You weren’t even there.",
+    "The disk in drive A: is not the Font disk.",
+    "My favorite M**vel Superhero's D**key Kong!",
+    "versatile⠀⠀summary",
+    "Alice went timidly up to the door, and stood there.",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it

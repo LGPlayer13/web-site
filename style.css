@@ -13,11 +13,12 @@ body {
     background-image: linear-gradient(135deg, var(--bgGradient1), var(--bgGradient2)), url("/images/background/checkeredbg.png");
     background-repeat: no-repeat, repeat;
     background-attachment: fixed;
-    background-size: auto, 1.5%;
+    background-size: auto, 29px;
     margin: 0;
     text-align: center;
     text-shadow: 1.25px 1.25px 2px black;
     font-family: "Varela Round", sans-serif;
+    animation: bgScroll 3.5s linear infinite;
 }
 
 #container {
@@ -102,6 +103,7 @@ h2 + h3 {margin-top: 0;}
     height: auto;
     font-size: 18px;
     transition: 0.2s;
+    box-shadow: 0 3px 6px rgba(8,0,36,0.7);
 }
 .box:not(:has(.indicator:hover)):hover, .indicator:hover {
     background: rgba(0,0,0,0.6);
@@ -116,13 +118,14 @@ h2 + h3 {margin-top: 0;}
     margin: 20px auto;
     padding: 10px 0;
     width: 80%;
+    box-shadow: 0 0 1px #cbcbcb;
 }
 
 .shinyBox {
     background: none;
-    border: 3px solid #9d7180;
-    border-radius: 20px;
+    border: 1px solid rgba(157,113,128,1);
     padding: 10px;
+    box-shadow: 0 -3px 10px -1px rgb(157,113,128) inset, 0 3px 6px rgba(8,0,36,0.7);
 }
 .shinyBox:hover {background: rgba(255,255,255,0.1);}
 .shinyBox, .shinyBox:hover {
@@ -184,6 +187,7 @@ h2 + h3 {margin-top: 0;}
     font-size: 16px;
     overflow: hidden;
     transition: 0s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 .collapse:has(details[open]), .collapse:not(:has(details[open])):has(summary:hover) {background: rgba(50,50,50,0.5);}
 .collapse .scroll {max-height: 250px;overflow: auto;}
@@ -263,7 +267,7 @@ details[open] summary {border-radius: 15px 15px 0 0;}
     width: fit-content;
     font-size: 18px;
     text-decoration: none !important;
-    box-shadow: 0 0 6px rgba(255,255,255,0.5) inset;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset, 0 2px 5px rgba(19,17,20,0.6);
     transition: 0.2s;
     z-index: 1;
 }
@@ -320,10 +324,14 @@ details[open] summary {border-radius: 15px 15px 0 0;}
     width: 45%;
     text-align: left;
     text-decoration: none !important;
-    transition: 0.2s;
+    transition: 0.25s ease;
+    box-shadow: 0 0 0 white inset, 0 2px 5px rgba(6,5,6,0.6);
     --pos: center;
 }
-.linkBubble:hover {border-color: white;box-shadow: 0 0 24px white inset;}
+.linkBubble:hover {
+    border-color: white;
+    box-shadow: 0 0 24px white inset, 0 2px 5px rgba(139,109,151,0.6);
+}
 
 .linkBubble.new::after {
     content: "NEW!";
@@ -552,6 +560,10 @@ marquee {
 
 /* ANIMATIONS */
 
+@keyframes bgScroll {
+    100% {background-position: 0, 58px 58px;}
+}
+
 @keyframes fadeloop {
     0% {opacity: 0}
     50% {opacity: 0.3}
@@ -570,5 +582,7 @@ marquee {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .linkChar, .charHover, .hangingLeaves {animation: none !important;}
+    body, .linkChar, .charHover, .hangingLeaves {
+        animation: none !important;
+    }
 }

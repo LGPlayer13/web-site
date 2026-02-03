@@ -23,8 +23,9 @@
             }
             
             .shinyBox {
-                border: 3px solid black;
+                border: 1px solid rgba(255,255,255,0.2);
                 padding: 10px 5px;
+                box-shadow: 0 -2px 9px -2px rgba(255,255,255,0.6) inset, 0 3px 6px rgba(8,0,36,0.7);
             }
             .shinyBox p {margin-right: 5px;}
             
@@ -58,15 +59,15 @@
             }
             #recentpostlistdiv a:not(:hover) {color: white;}
             
-            .siteButtons {
+            #siteButtons {
                 position: relative;
                 margin-top: 10px;
                 width: 60%;
             }
-            .siteButtons p {margin-bottom: 10px;transform: rotate(2deg);}
-            .siteButtons img {filter: drop-shadow(0 0 6px rgba(0,0,0,0.5));}
+            #siteButtons p {margin-bottom: 10px;transform: rotate(2deg);}
+            #siteButtons img {filter: drop-shadow(0 0 6px rgba(0,0,0,0.5));}
             
-            .clickEm {
+            #clickEm {
                 position: relative;
                 width: 150px;
                 top: 70px;
@@ -80,7 +81,7 @@
             
             <aside>
                 <a href="/games"><img class="linkChar" src="/images/decor/justGeorge.svg" title="for a guy with no fingers, he certainly holds it well" alt="george with a familiar remote" style="--top:140px;"><span>Games</span></a>
-                <img class="clickEm decor" src="/images/sketches/clickSketch.gif" alt="arrow pointing up to George">
+                <img id="clickEm" class="decor" src="/images/sketches/clickSketch.gif" alt="arrow pointing up to George">
             </aside>
             
             <main>
@@ -125,7 +126,7 @@
                     </div>
                 </div>
                 
-                <div class="siteButtons">
+                <div id="siteButtons">
                     <p>take it! it's <b>yours</b>!</p>
                     <img src="/images/sites/lgbutton.gif"><span style="margin: 5px;"/><img src="/images/sites/lgbuttonstatic.png">
                 </div>
@@ -133,7 +134,7 @@
             
             <aside>
                 <a href="/about"><img class="linkChar" src="/images/decor/justCory.svg" title="it's you!" alt="cory holding up a mirror" style="--top:40px;--delay: 0.75s;"><span>About</span></a>
-                <a href="/blog"><img class="linkChar" src="/images/decor/justSparks.svg" title="this a lore book or something?" alt="sparky reading a book" style="--top:50px;--delay: 1.5s;"><span>Blog</span></a>
+                <a href="/blog"><img class="linkChar" src="/images/decor/justSparks.svg" title="the lore goes deep i tell you" alt="sparky reading a book" style="--top:50px;--delay: 1.5s;"><span>Blog</span></a>
             </aside>
         </div>
         
@@ -158,7 +159,7 @@
             
             let linkArray = [
                 {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", genres:"narrative, platforming", link:"/games/george-series", imgLink:"georgeseries", bgPos:"0% 60%", list:0},
-                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.1", new:1, genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:0}
+                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.1", genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:0}
             ]
         </script>
     
