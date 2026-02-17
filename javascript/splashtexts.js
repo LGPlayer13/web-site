@@ -348,6 +348,11 @@ var splashes = [
     "My favorite M**vel Superhero's D**key Kong!",
     "versatile⠀⠀summary",
     "Alice went timidly up to the door, and stood there.",
+    "Turnabout is fair play, but you should really look where you're going.",
+    "Enter my amazing world of fun and fantasy intrigue",
+    "BillVPN is your go-to VPN for downloading torrents and emailing zip bombs to your neighbors.",
+    "Great job. Time to pause.",
+    "Ask not what others can do for you, but what you can do for others. -Sonic",
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it

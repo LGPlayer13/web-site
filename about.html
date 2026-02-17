@@ -20,6 +20,11 @@
                 max-width: 130px;
                 box-shadow: 6px 6px 6px 0 rgba(0,0,0,0.25);
             }
+
+            #siteList {cursor: default;}
+            
+            #siteList a img {width: 88px;height: 31px;}
+            #siteList a:hover {filter:brightness(1.5) saturate(0.75);}
         </style>
     </head>
     <body>
@@ -120,7 +125,7 @@
                     <iframe style="width: 80%;height: 160px;" id="player-frame" src="now-playing.html" title="now playing widget" frameborder="0" scrolling="no"></iframe>
                 </div>
                 
-                <div class="fade siteList">
+                <div id="siteList" class="fade">
                     <p style="margin: 5px;">other cool websites (visit them)</p>
                     <a href="https://hyphen-lost.neocities.org/" target="_blank"><img src="/images/sites/hyphenbutton.gif" title="hyphen was here. he is not here now" loading="lazy"></a>
                     <a href="https://rylieeric.neocities.org/" target="_blank"><img src="/images/sites/ryliebutton.gif" title="not a furry, don't ask." loading="lazy"></a>

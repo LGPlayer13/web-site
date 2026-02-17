@@ -409,9 +409,6 @@ aside a span {
 }
 aside a:hover span {opacity: 1;bottom: -10px;}
 
-.siteList a img {width: 88px;height: 31px;}
-.siteList a:hover {filter:brightness(1.5) saturate(0.75);}
-
 #logo, .gridBox img, .art, .gamelogo {
     filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
 }
@@ -571,9 +568,8 @@ marquee {
 }
 
 @keyframes hover {
-    0% {transform: translate(0, 0);}
+    0%, 100% {transform: translate(0, 0);}
     50% {transform: translate(0, 30px);}
-    100% {transform: translate(0, 0);}
 }
 
 @keyframes fellOff {
