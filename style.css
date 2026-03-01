@@ -54,7 +54,7 @@ header {
 }
 header.fit {width: fit-content;}
 
-h1, h2, h3, h1 + span, .blogText .header {
+h1, h2, h3, h1 + span, #blogText .header {
     font-family: "Momo Trust Display", sans-serif;
 }
 h1 {font-size: 34px;}
@@ -79,7 +79,7 @@ h2 + h3 {margin-top: 0;}
     transition: 0.2s;
 }
 
-.blogText .header {
+#blogText .header {
     font-size: 26px;
     font-weight: bold;
 }
@@ -268,15 +268,15 @@ details[open] summary {border-radius: 15px 15px 0 0;}
     font-size: 18px;
     text-decoration: none !important;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset, 0 2px 5px rgba(19,17,20,0.6);
-    transition: 0.2s;
+    transition: text-shadow 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     z-index: 1;
 }
 .bubble:not(.off):hover {
     background: var(--bg) !important;
     border-color: #e3e3e3;
-    text-shadow: 1.25px 1.25px 2px black, 0 0 4px #fff;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
     box-shadow: 0 0 9px rgba(255,255,255,0.8) inset;
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .indicator {
@@ -486,7 +486,7 @@ aside a:hover span {opacity: 1;bottom: -10px;}
     animation-delay: var(--delay);
 }
 
-/* MISC. CLASSES */
+/* MISC. RULES */
 
 hr {
     border: 0;
@@ -501,14 +501,34 @@ hr.short {
     width: 75%;
 }
 
-.blogText {padding: 10px 20px;font-size: 17px;line-height: 2.2;}
+#blogTitle {
+    background: url(/images/background/blogTitle.png) no-repeat;
+    background-position-x: center;
+    background-size: 450px;
+    padding: 10px 0;
+}
 
-.blogText p {margin: 15px 0;}
-.blogText p:first-child {margin-top: 5px;}
-.blogText sup:last-child {margin-top: -10px;}
+#blogText {
+    padding: 10px 20px;
+    font-size: 17px;
+    line-height: 2.2;
+}
+#blogText::after {
+    content: "-LG";
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    transform: rotate(3deg);
+}
 
-.blogText ul {text-align: center;}
-.blogText li {width: 100%;}
+#blogText p {margin: 15px 0;}
+#blogText p:first-child {margin-top: 5px;}
+#blogText sup:last-child {margin-top: -10px;}
+
+#blogText ul {text-align: center;}
+#blogText li {width: 100%;}
 
 .smallText {font-size: 15px;}
 .smallText p {margin: 10px 5px;}
@@ -521,7 +541,7 @@ hr.short {
     text-shadow: none;
     filter: drop-shadow(1.25px 1.25px 1px black);
 }
-.solidpink {color: #ea70bc;}
+.solidpink, #blogText::after {color: #ea70bc;}
 
 .em {
     text-decoration-line: underline;
@@ -548,12 +568,7 @@ marquee {
     width: 80%;
 }
 
-.blogTitle {
-    background: url(/images/background/blogTitle.png) no-repeat;
-    background-position-x: center;
-    background-size: 450px;
-    padding: 10px 0;
-}
+code {background: rgba(0,0,0,0.6);}
 
 /* ANIMATIONS */
 
