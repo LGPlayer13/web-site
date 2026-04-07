@@ -31,30 +31,31 @@ let authorLink = "https://lgplayer13.neocities.org/"; // Enter your website, soc
   use a date it must still follow that format.*/
 
 let postsArray = [
-[ "posts/2026-03-01-Blog-Wrong-Way.html", encodeURI ( 'Wrong Way - Blog' ), "blog" ],
-[ "posts/2026-02-16-Devlog-Web-404.html", encodeURI ( 'Web Design 404 - Devlog' ), "devlog" ],
-[ "posts/2026-02-02-Blog-Stranded-Lullaby.html", encodeURI ( 'Stranded Lullaby - Blog' ), "blog" ],
-[ "posts/2026-01-07-Blog-Another-Day.html", encodeURI ( 'Maybe Another Day... - Blog' ), "blog" ],
-[ "posts/2025-12-31-Devlog-Year-Recap.html", encodeURI ( '2025 Recapped - Devlog' ), "devlog" ],
-[ "posts/2025-12-06-Blog-Be-Thankful.html", encodeURI ( 'To Be Thankful - Blog' ), "blog" ],
-[ "posts/2025-11-02-Blog-Nothing-Changes.html", encodeURI ( 'Nothing Changes - Blog' ), "blog" ],
-[ "posts/2025-10-04-Blog-Break-Tension.html", encodeURI ( 'Break the Tension - Blog' ), "blog" ],
-[ "posts/2025-09-03-Blog-Big-Ideas.html", encodeURI ( 'Big Ideas - Blog' ), "blog" ],
-[ "posts/2025-08-01-Blog-End-Summer.html", encodeURI ( 'End Of Summer - Blog' ), "blog" ],
-[ "posts/2025-07-03-Blog-Two-Weeks.html", encodeURI ( 'Two Weeks - Blog' ), "blog" ],
-[ "posts/2025-06-02-Blog-Sophomore-Year.html", encodeURI ( 'Sophomore Year Review - Blog' ), "blog" ],
-[ "posts/2025-05-23-Devlog-LabII-Alpha1.html", encodeURI ( 'Labyrinths II (Alpha 1) - Devlog' ), "devlog" ],
-[ "posts/2025-05-03-Blog-Will-Calls.html", encodeURI ( 'Will Calls - Blog' ), "blog" ],
-[ "posts/2025-04-07-Blog-Over-Ocean.html", encodeURI ( 'Over the Ocean - Blog' ), "blog" ],
-[ "posts/2025-03-11-Devlog-New-Album.html", encodeURI ( 'Fragments of Waves - Devlog' ), "devlog" ],
-[ "posts/2025-03-02-Blog-Worrywort.html", encodeURI ( 'Worrywort - Blog' ), "blog" ],
-[ "posts/2025-02-03-Blog-Part-III.html", encodeURI ( 'Part III - Blog' ), "blog" ],
-[ "posts/2025-01-03-Blog-Daydreaming.html", encodeURI ( 'Daydreaming - Blog' ), "blog" ],
-[ "posts/2024-12-31-Devlog-Year-Recap.html", encodeURI ( '2024 Recapped - Devlog' ), "devlog" ],
-[ "posts/2024-12-01-Blog-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid - Blog' ), "blog" ],
-[ "posts/2024-11-16-Devlog-G1R-v1.1.html", encodeURI ( 'George 1R Update 1.1 - Devlog' ), "devlog" ],
-[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again - Blog' ), "blog" ],
-[ "posts/2024-06-06-OldBlog-Freshman-Year.html", encodeURI ( 'Freshman Year Review - Old Blog' ), "blog" ]
+[ "posts/2026-04-07-Blog-Cant-Remember.html", encodeURI ( "A Dream I Can't Remember" ), "blog", `mood swings, history class hate, a special visit` ],
+[ "posts/2026-03-01-Blog-Wrong-Way.html", encodeURI ( 'Wrong Way' ), "blog", `straying away from school, killing time` ],
+[ "posts/2026-02-16-Devlog-Web-404.html", encodeURI ( 'Web Design 404' ), "devlog", `rant about a web design class` ],
+[ "posts/2026-02-02-Blog-Stranded-Lullaby.html", encodeURI ( 'Stranded Lullaby' ), "blog", `actively avoiding others, struggling` ],
+[ "posts/2026-01-07-Blog-Another-Day.html", encodeURI ( 'Maybe Another Day...' ), "blog", `two concerts, initiation issues, merry Christmas` ],
+[ "posts/2025-12-31-Devlog-Year-Recap.html", encodeURI ( '2025 Recapped' ), "devlog", `summary of my 2025` ],
+[ "posts/2025-12-06-Blog-Be-Thankful.html", encodeURI ( 'To Be Thankful' ), "blog", `mood swings, fine play, too much school` ],
+[ "posts/2025-11-02-Blog-Nothing-Changes.html", encodeURI ( 'Nothing Changes' ), "blog", `severe demotivation, incredibly boring year` ],
+[ "posts/2025-10-04-Blog-Break-Tension.html", encodeURI ( 'Break the Tension' ), "blog", `chore-like rehearsals, self-deprication, devlopment resurgence` ],
+[ "posts/2025-09-03-Blog-Big-Ideas.html", encodeURI ( 'Big Ideas' ), "blog", `brand new classes, religion rant, lack of social interaction` ],
+[ "posts/2025-08-01-Blog-End-Summer.html", encodeURI ( 'End Of Summer' ), "blog", `"be more social", ideas for productivity` ],
+[ "posts/2025-07-03-Blog-Two-Weeks.html", encodeURI ( 'Two Weeks' ), "blog", `big ol' trip to Europe` ],
+[ "posts/2025-06-02-Blog-Sophomore-Year.html", encodeURI ( 'Sophomore Year Review' ), "blog", `overall review of Sophomore Year` ],
+[ "posts/2025-05-23-Devlog-LabII-Alpha1.html", encodeURI ( 'Labyrinths II (Alpha 1)' ), "devlog", `sequel to The Lost Labyrinths + linux` ],
+[ "posts/2025-05-03-Blog-Will-Calls.html", encodeURI ( 'Will Calls' ), "blog", `major site update, spring break, grade issues` ],
+[ "posts/2025-04-07-Blog-Over-Ocean.html", encodeURI ( 'Over the Ocean' ), "blog", `talk about writing, fun w/ theatre gang` ],
+[ "posts/2025-03-11-Devlog-New-Album.html", encodeURI ( 'Fragments of Waves' ), "devlog", `new album, that's all` ],
+[ "posts/2025-03-02-Blog-Worrywort.html", encodeURI ( 'Worrywort' ), "blog", `overly depressing, self-harm, social issues` ],
+[ "posts/2025-02-03-Blog-Part-III.html", encodeURI ( 'Part III' ), "blog", `nothing-burger school, zig-zag mood` ],
+[ "posts/2025-01-03-Blog-Daydreaming.html", encodeURI ( 'Daydreaming' ), "blog", `trip to san fran, first depressive episodes` ],
+[ "posts/2024-12-31-Devlog-Year-Recap.html", encodeURI ( '2024 Recapped' ), "devlog", `summary of my 2024` ],
+[ "posts/2024-12-01-Blog-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid' ), "blog", `the start of my theatre journey` ],
+[ "posts/2024-11-16-Devlog-G1R-v1.1.html", encodeURI ( 'George 1R Update 1.1' ), "devlog", `big update to George 1 Remastered` ],
+[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again' ), "blog", `start of the new blog` ],
+[ "posts/2024-06-06-OldBlog-Freshman-Year.html", encodeURI ( 'Freshman Year Review' ), "blog", `old post, details bland Freshman year` ]
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -108,6 +109,7 @@ for (i = 0; i < postsArray.length; i++) {
 //Or pass along the "special characters" version of the title if one exists
 function formatPostTitle(i) {
     // Check if there is an alternate post title
+        console.log(document.getElementById(blogTitle));
     if ( postsArray[i].length > 1 ) {
         //Remember how we had to use encodeURI for special characters up above? Now we use decodeURI to get them back.
         return decodeURI(postsArray[i][1]);
@@ -151,7 +153,8 @@ if ( currentIndex > -1 ) {
 function formatPostLink(i) {
     let postTitle_i = "";
     if ( postsArray[i].length > 1 ) {
-        postTitle_i = decodeURI(postsArray[i][1]);
+        let postType = postsArray[i][2];
+        postTitle_i = decodeURI(postsArray[i][1]) + " - " + postType.charAt(0).toUpperCase() + postType.slice(1);
     } else {
         if ( postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
             postTitle_i = postsArray[i][0].slice(17,-5).replace(/-/g," ");
@@ -231,7 +234,7 @@ if (document.getElementById("footer")) { document.getElementById("footer").inner
 if (document.title === "Blog Post") {
     document.title = 'LG Productions • ' + currentPostTitle;
 
-    document.querySelector(".indicator").style.setProperty("--indicMsg", `'Post #${(postsArray.length - currentIndex)}'`);
+    document.querySelector(".indicator").style.setProperty("--indicMsg", `'Post #${(postsArray.length - currentIndex)} (${postsArray[currentIndex][2]})'`);
     document.querySelector(".fade").style.width = "45%";
 
     const root = document.documentElement;
@@ -248,9 +251,11 @@ let devlogPosts = 0;
 
 for (let i = 0; i < postListChildren.length; i++) {
     postListChildren[i].classList.add(postsArray[i][2]);
+    postListChildren[i].title = postsArray[i][3];
     if (postsArray[i][2] == "blog") { blogPosts += 1; }
     else if (postsArray[i][2] == "devlog") { devlogPosts += 1; }
 }
-
+/*
 document.getElementById("blogCount").innerHTML = "Blog (" + blogPosts + ")";
 document.getElementById("devlogCount").innerHTML = "Devlog (" + devlogPosts + ")";
+*/
