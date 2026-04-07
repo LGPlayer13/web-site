@@ -3,10 +3,11 @@
     <head>
         <title>Last.fm Now Playing</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
             
             body {
@@ -28,6 +29,12 @@
             }
             #container > main {display: flex;width: 65%;}
             
+            main > section {
+                border-radius: 16px;
+                height: fit-content;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            }
+            
             #album-cover {
                 position: relative;
                 border: 8px outset #da4b29;
@@ -38,11 +45,12 @@
                 z-index: 1;
             }
             ul {
-                background: rgba(0,0,0,0.5);
-                border-radius: 0 12px 12px 0;
-                margin-left: -5px;
-                padding: 15px 8px;
-                width: 100%;
+                background: rgba(0,0,0,0.4);
+                border: 2px dotted #862e19;
+                border-radius: 0 8px 8px 0;
+                margin-left: -4px;
+                padding: 8px 8px;
+                width: 95%;
                 list-style-type: none;
             }
             
@@ -68,29 +76,66 @@
             }
 
             #track, #artist, #date {
-                max-width: 99%;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
             }
             #date {padding-top: 10px;}
             
+            #track {
+                font-size: 19px;
+                font-family: "Momo Trust Display", sans-serif;
+                text-shadow: 0 0 4px rgba(246,46,132,0.6), 1.25px 1.25px 3px rgba(0,0,0,0.75);
+                transform: rotate(-0.5deg);
+            }
+            #artist {
+                font-family: "Momo Trust Display", sans-serif;
+                text-shadow: 1.25px 1.25px 3px rgba(0,0,0,0.75);
+                transform: rotate(-0.25deg);
+            }
+            #date {
+                margin-top: 6px;
+                font-weight: 600;
+                text-shadow: 1.25px 1.25px 3px rgba(0,0,0,0.75);
+                transform: rotate(0.5deg);
+            }
+            
             a {color: #f62e84;text-decoration: none;}
             a:hover {color: #ff8bbd;text-decoration-line: underline;}
 
-            .refresh {
+            #notice {
+                opacity: 0.7;
+                position: absolute;
+                top: 9px;
+                margin-top: 8px;
+                font-size: 14px;
+                text-shadow: none;
+                pointer-events: none;
+            }
+
+            #refresh {
+                opacity: 0.7;
                 position: absolute;
                 top: 0;
                 left: 0;
+                transition: opacity 0.1s;
+            }
+            #refresh:hover {
+                opacity: 1;
             }
             
-            .chorus {width: 180px;transform: translate(-5px, -12px);filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));}
+            #chorus {
+                width: 180px;
+                transform: translate(-5px, -12px);
+                filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+            }
             
             #disc {
                 position: absolute;
                 width: 80px;
-                top: 0;
+                top: 2px;
                 left: 16px;
+                filter: drop-shadow(0 0 2px white);
                 z-index: -1;
             }
             ul:not(:has(li)) + .disc {display: none;}
@@ -108,18 +153,20 @@
                     <img id="album-cover" src="/images/background/pitchBlack.png" title="cool music">
                     <div class="recordPlayer"><span>13</span></div>
                 </section>
+                
                 <ul>
+                    <li id="notice">last.fm widget (more music taste!!)</li>
                     <li id="track"></li>
                     <li id="artist"></li>
                     <li id="date"></li>
                 </ul>
                 <img id="disc" src="/images/decor/disc.svg" alt="spinning disc">
             </main>
-            <img class="chorus" src="/images/decor/chorusKids.png" title="the terrific trio no one asked for" alt="max, robert, and pop singing along">
+            <img id="chorus" src="/images/decor/chorusKids.png" title="the terrific trio no one asked for" alt="max, robert, and pop singing along">
             
         </div>
         
-        <img class="refresh" src="/images/decor/refresh.png" width="11px" height="11px" onclick="window.location.reload()" alt="refresh button">
+        <img id="refresh" src="/images/decor/refresh.png" width="11px" height="11px" onclick="window.location.reload()" alt="refresh button" title="click to refresh the embed">
     </body>
     <script src="/javascript/lastfm.js"></script>
 </html>

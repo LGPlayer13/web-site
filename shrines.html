@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Shrines</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            body {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+                --bgGradient1: rgba(226, 226, 226, 0.87);
+                --bgGradient2: rgba(197, 197, 197, 0.87);
+            }
+            
+            main {
+                display: flex;
+                top: -45px;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            
+            /* bg stuffs */
+            #water {
+                position: fixed;
+                background-image: url("/images/background/shrineWater.svg"), linear-gradient(rgba(0,0,0,0.2));
+                background-repeat: repeat-x, repeat;
+                background-size: 80%, cover;
+                width: 100%;
+                height: 24%;
+                bottom: 13%;
+                animation: waterFlow 30s linear infinite, waterRise 5s ease-in-out infinite;
+            }
+            #ground {
+                position: fixed;
+                background: url("/images/background/shrineGround.svg") repeat;
+                background-size: contain;
+                width: 100%;
+                height: 23%;
+                bottom: 0;
+                box-shadow: 0 0 20px rgba(0,0,0,0.25);
+            }
+            
+            #shrinePortal {
+                position: fixed;
+                top: 5%;
+                right: 7%;
+                filter: drop-shadow(5px 7px 6px #000) opacity(0.5) blur(1px);
+                pointer-events: none;
+            }
+            
+            /* shrine buttons */
+            .shrine {
+                color: black !important;
+                position: relative;
+                background: white;
+                border: 3px solid black;
+                border-radius: 20px;
+                margin: 8px;
+                padding: 6px 2px;
+                width: 50%;
+                font-size: 24px;
+                font-weight: bold;
+                text-shadow: none;
+                text-decoration: none !important;
+                transition: background 0.4s, border 0.2s, width 0.4s ease;
+                box-shadow: 4px 4px 3px #7b7b7b;
+            }
+            
+            .shrine:not(.off) {
+                &::before {content: '>';}
+                &::after {content: '<';}
+            }
+            .shrine:not(.off) {
+                &::before, &::after {
+                    opacity: 0;
+                    margin: 0 5px;
+                    transition: opacity 0.2s, margin 0.2s;
+                }
+            }
+            
+            .shrine:not(.off):hover {
+                background: #bb98ff;
+                border-color: #6518ff;
+                width: 53%;
+                
+                &::before, &::after {
+                    opacity: 1;
+                    margin: 0 12px;
+                }
+            }
+            
+            /* the sidster */
+            #sidster {
+                position: absolute;
+                width: 6%;
+                bottom: 18.5%;
+                left: -7%;
+                animation: sidWalk 5s linear 1;
+            }
+            @keyframes sidWalk {
+                100% {left: 100%;}
+            }
+            
+            /* misc. + animations */
+            .bgimg {display: none;}
+            
+            .absolute {position: absolute;bottom: 30px;}
+            footer {margin: 5px;text-shadow: 0 0 20px black, 1.25px 1.25px 2px black;}
+            
+            @keyframes waterFlow {
+                100% {background-position-x: calc(100vw * -0.8), 0;}
+            }
+            @keyframes waterRise {
+                50% {transform: translateY(8px);}
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+        
+        <div id="water"></div>
+        <div id="ground"></div>
+        <a id="shrinePortal"><img src="/images/decor/shrinePortal1.svg"></a>
+        
+        <img id="sidster" src="/images/decor/sidWalk.svg">
+    
+        <div id="container">
+            
+            <main id="shrinesList">
+                <h1>Shrines</h1>
+                
+                <a class="shrine new" href="/shrines/mojib-ribbon">Mojib-Ribbon</a>
+                <a class="shrine off" href="#">???</a>
+                
+                <sup style="margin-top: 10px;">what are shrines? i dunno, why don't you find out!</sup>
+            </main>
+            <!-- next up: double S -->
+    
+        </div>
+        
+        <div class="absolute">
+            <footer-component></footer-component>
+        </div>
+        
+        <script>
+            const sid = document.getElementById("sidster");
+            const shrines = document.getElementById("shrinesList").querySelectorAll("a");
+            
+            sidster.style.animationDelay = Math.round(Math.random() * (60 - 25) + 25) + "s";
+            
+            for (let i = 0; i < shrines.length; i++) {
+                if (shrines[i].classList.contains("new")) {
+                    shrines[i].innerHTML += `<span class="new">NEW!</span>`;
+                }
+            }
+        </script>
+    </body>
+</html>

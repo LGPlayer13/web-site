@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         <title>LG Productions • Blog</title>
-        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/style.css" type="text/css" media="all">
@@ -32,10 +32,10 @@
                 background: #4c341b;
                 border-bottom: 2px solid #261600;
                 padding: 8px;
-                transition: background 0.2s;
+                transition: background 0.2s, border 0.2s, letter-spacing 0.4s;
                 cursor: default;
             }
-            .toggle:hover, #extend:hover {
+            .toggle:hover, #extend:hover, .blogYear:hover {
                 background: #76512a;
                 cursor: pointer;
             }
@@ -43,6 +43,7 @@
             #postlistdiv {
                 margin: 0;
                 padding: 10px 0;
+                min-height: 250px;
                 overflow: auto;
                 transition: max-height 0.25s ease;
             }
@@ -66,6 +67,7 @@
                 text-shadow: none;
                 transition: 0.2s;
             }
+            #postlistdiv li:has(a:visited) {filter: brightness(0.9);}
             #postlistdiv a:hover {transform: scaleX(1.05);}
             
             #extend {
@@ -81,6 +83,38 @@
                 text-shadow: none;
                 transition: background 0.2s;
                 cursor: default;
+            }
+            
+            #blogYearDiv {
+                display: flex;
+                position: absolute;
+                width: 140px;
+                max-height: 200px;
+                right: -73px;
+                top: 50px;
+                overflow: auto;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+            }
+            #blogYearDiv::-webkit-scrollbar {display: none;}
+            
+            .blogYear {
+                position: relative;
+                background: #4c341b;
+                border: 2px solid #261600;
+                border-radius: 4px;
+                margin: 2px 0;
+                padding: 8px 2px;
+                width: 50%;
+                transition: background 0.2s, border 0.2s, letter-spacing 0.4s;
+                box-shadow: 0 2px 5px rgba(42,22,0,0.7);
+                cursor: default;
+            }
+            .blogYear.active, .toggle.active {
+                border-color: wheat;
+                font-weight: bold;
+                letter-spacing: 1.8px;
             }
         </style>
     </head>
@@ -98,10 +132,10 @@
             <main>
                 <h1>Blog</h1>
                 
-                <div class="box background" style="--bg: url(/images/background/field.jpg);--pos: 50% 60%;">
+                <div class="box background" style="--bg: url(/images/background/blogField.png);--pos: 0 50%;">
                     <p>Welcome to my blog! This is where I rant about stuff that happens in my life. New posts are uploaded on the first week of every month.</p>
                     <hr>
-                    <p>Devlog posts are uploaded when new projects release.<br>Some repackaged Old Blog posts are also found below.</p>
+                    <p>Devlog posts are uploaded whenever, typically with new projects.<br>Some repackaged Old Blog posts are also found below.</p>
                 </div>
                 <sup>this blog uses <a href="https://zonelets.net/" target="_blank">Zonelets</a> as a backend.</sup>
                 
@@ -109,11 +143,18 @@
 
                 <div class="board">
                     <div>
-                        <span id="blogCount" class="toggle" onclick="showPosts('blog')"></span>
-                        <span id="devlogCount" class="toggle" onclick="showPosts('devlog')"></span>
-                        <span class="toggle" onclick="showPosts('all')">All</span>
+                        <span id="blogCount" class="toggle" onclick="showPosts('blog')">Blog</span>
+                        <span id="devlogCount" class="toggle" onclick="showPosts('devlog')">Devlog</span>
+                        <span class="toggle active" onclick="showPosts('all')">All</span>
                     </div>
                     <p id="postlistdiv" style="max-height: 420px;"></p>
+                    
+                    <div id="blogYearDiv">
+                        <div class="blogYear">2026</div>
+                        <div class="blogYear">2025</div>
+                        <div class="blogYear">2024</div>
+                    </div>
+                    
                     <div id="extend" onclick="extendList()">⬇</div>
                 </div>
 
@@ -127,6 +168,8 @@
             
             <aside>
                 <img class="charHover" src="/images/decor/nerdcore2.png" style="position: absolute;width: 130px;top: 300px;left: 0;--delay: 0.75s;" title="no no no, you had it right before" alt="audrey holding up a book, confused">
+                
+                
             </aside>
 
         </div>
@@ -135,10 +178,23 @@
 
         <script>
             const extend = document.getElementById("extend");
+            const blogYears = document.querySelectorAll(".blogYear");
+            const blogToggles = document.querySelectorAll(".toggle");
             
+            let selectedType = "all";
+            let selectedYear;
+            
+            // showing posts by type (e.g. blog, devlog)
             function showPosts(type) {
+                selectedType = type;
+                
+                for (let x = 0; x < blogToggles.length; x++) {
+                    if (blogToggles[x].innerHTML.toLowerCase().includes(selectedType)) { blogToggles[x].className = "toggle active"; }
+                    else { blogToggles[x].className = "toggle" }
+                }
+                
                 for (let i = 0; i < postListChildren.length; i++) {
-                    if (postListChildren[i].classList.contains(type) || type === "all") {
+                    if ((postListChildren[i].classList.contains(selectedType) || selectedType === "all") && (postListChildren[i].innerHTML.includes(selectedYear) || selectedYear === undefined))  {
                         postListChildren[i].style.display = "list-item";
                     } else {
                         postListChildren[i].style.display = "none";
@@ -146,6 +202,7 @@
                 }
             }
             
+            // extending the post list division
             function extendList() {
                 if (postList.style.maxHeight == "420px") {
                     postList.style.maxHeight = "675px";
@@ -154,6 +211,21 @@
                     postList.style.maxHeight = "420px";
                     extend.innerHTML = "⬇";
                 }
+            }
+            
+            // sorting posts by year (the buttons that do it)
+            for (let i = 0; i < blogYears.length; i++) {
+                blogYears[i].addEventListener("click", function () {
+                    if (blogYears[i].className == ("blogYear")) {
+                        for (let x = 0; x < blogYears.length; x++) { blogYears[x].className = "blogYear"; }
+                        blogYears[i].className = "blogYear active";
+                        selectedYear = blogYears[i].innerHTML;
+                    } else {
+                        blogYears[i].className = "blogYear";
+                        selectedYear = undefined;
+                    }
+                    showPosts(selectedType);
+                });
             }
         </script>
     </body>

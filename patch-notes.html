@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         <title>LG Productions • Patch Notes</title>
-        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/style.css" type="text/css" media="all">
@@ -21,7 +21,6 @@
             
             #monitor {
                 display: flex;
-                color: #16ff00;
                 background: #4b4741;
                 border: 20px inset #9f978b;
                 border-radius: 10px;
@@ -33,6 +32,7 @@
             }
             
             #screen {
+                color: #16ff00;
                 background: #020202;
                 border-radius: 28px;
                 padding: 16px;
@@ -44,6 +44,12 @@
                 font-family: Consolas, "courier new";
             }
             #screen::-webkit-scrollbar {display: none;}
+            
+            #screen::selection {
+                color: black;
+                background: #16ff00;
+                text-shadow: none;
+            }
             
             .monitor-base {
                 position: relative;
@@ -106,8 +112,13 @@
             ul {list-style-type: none;}
             
             .blink {animation: blink 1s step-start infinite;}
-            
-            .miningAway {
+            #bowlOfGrain {
+                position: absolute;
+                width: 126px;
+                top: -29px;
+                right: 60px;
+            }
+            #miningAway {
                 position: absolute;
                 bottom: 0;
                 left: -2px;
@@ -127,6 +138,7 @@
             <aside></aside>
             
             <main>
+                <img id="bowlOfGrain" src="/images/decor/bowlOfGrain.png" title="great. look at what you've done" alt="spilled bowl of cheerios">
                 <div id="frame">
                     <div id="monitor">
                         <div id="screen">
@@ -134,6 +146,17 @@
                             
                             <h2>Patch Notes</h2>
                             <p>This is a list of every past update this site has gone through.<br>Older details may be more vague, since those versions are lost.</p>
+                            
+                            <section>
+                                <div><span>v4.1</span><i>04/07/26</i></div>
+                                <ul>
+                                    <!--<li>made my first shrine! find it if you can</li>-->
+                                    <li>added sorting Blog posts by years + hover text</li>
+                                    <li>new announcement bubble and status on homepage</li>
+                                    <li>polished up various pages (e.g. About, Gallery)</li>
+                                    <li>the shrine is coming soon...</li>
+                                </ul>
+                            </section>
                             
                             <section>
                                 <div><span>v4.0.1</span><i>02/02/26</i></div>
@@ -410,7 +433,7 @@
             </main>
             
             <aside>
-                <img class="miningAway" src="/images/decor/miningAway.png" title="weak men create hard times. you know that" alt="cory looking tired with a pickaxe on the ground">
+                <img id="miningAway" src="/images/decor/miningAway.png" title="weak men create hard times. you know that" alt="cory looking tired with a pickaxe on the ground">
             </aside>
             
         </div>

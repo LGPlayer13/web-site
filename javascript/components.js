@@ -25,9 +25,9 @@ class Footer extends HTMLElement {
         this.innerHTML = `
             <footer>
                 <sup>
-                    <span>&copy; LG Productions 2026 • v4.0.1</span>
+                    <span>&copy; LG Productions 2026 • v4.1</span>
                     <span><a href="/sitemap">site map</a></span>
-                    <span><a href="https://neocities.org/" target="_blank">neocities</a></span>
+                    <span><a href="https://neocities.org/site/lgplayer13" target="_blank">neocities</a></span>
                     <span><a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord</a></span>
                 </sup>
             </footer>
@@ -48,9 +48,19 @@ class Footer extends HTMLElement {
 
 customElements.define('footer-component', Footer);
 
+// auto-link showoff imgs
+const showoffs = document.querySelectorAll(".showoff a:has(img)");
+console.log(showoffs);
+
+if (showoffs.length > 0) {
+    for (let i = 0; i < showoffs.length; i++) {
+        showoffs[i].href = showoffs[i].children[0].src;
+    }
+}
+
+// background shapes
 let imgs = document.getElementsByClassName('bgimg');
 
-// v stands for very bad and not good way of doing things
 for (let v = 0; v < imgs.length; v++) {
     let thisImg = imgs[v];
     randomTop = getRandomNumber(5, 87);

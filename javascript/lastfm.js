@@ -3,6 +3,8 @@ const LASTFM_API_KEY = "bc9bce1b2aa2905563de941ff9e8b448";
 const username = "LGPlayer13"; // change username here
 const url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&format=json&api_key=" + LASTFM_API_KEY + "&limit=1&user=" + username;
 
+console.log(url);
+
 // make API call
 function httpGet(url) {
     var xmlHttp = new XMLHttpRequest();
@@ -46,7 +48,7 @@ if (last_track.date) {
     relative_time = relativeTime(unix_date, date_text);
 }
 var now_playing = (last_track["@attr"] == undefined) ? false : true;
-var imageLink = last_track.image[1]["#text"];
+var imageLink = last_track.image[2]["#text"];
 
 trackElem = document.getElementById('track');
 artistElem = document.getElementById('artist');
@@ -68,6 +70,7 @@ userLinkElem.textContent = (relative_time != null) ? relative_time : "Now playin
 // fun disc spinning things
 if (relative_time == null) {
     document.getElementById("disc").style.animation = "disc 1s linear infinite";
+    document.getElementById("chorus").src = "/images/decor/chorusKids2.png";
 }
 
 trackElem.appendChild(trackLinkElem);

@@ -2,7 +2,7 @@
 <html lang="en-US">
     <head>
         <title>LG Productions • Home</title>
-        <link rel="icon" href="https://lgplayer13.neocities.org/transparentLG.png" type="image/x-icon">
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
         <meta name="description" content="Welcome to the World of LG Productions.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
@@ -17,13 +17,14 @@
             
             .showoff img {
                 margin: 3px;
+                padding: 8px;
                 width: 70px;
                 height: auto;
                 object-fit: contain;
             }
             
             .shinyBox {
-                border: 1px solid rgba(255,255,255,0.2);
+                border: 1px solid rgba(255,255,255,0.5);
                 padding: 10px 5px;
                 box-shadow: 0 -2px 9px -2px rgba(255,255,255,0.6) inset, 0 3px 6px rgba(8,0,36,0.7);
             }
@@ -34,8 +35,7 @@
                 background: url(/images/linkimgs/plankbg.jpg);
                 border: 4px double #261600;
                 border-radius: 12px;
-                width: 50%;
-                min-width: 400px;
+                min-width: 50%;
                 bottom: -30px;
                 right: -15px;
                 box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
@@ -61,7 +61,7 @@
             
             #siteButtons {
                 position: relative;
-                margin-top: 10px;
+                margin-top: 13px;
                 width: 60%;
             }
             #siteButtons p {margin-bottom: 10px;transform: rotate(2deg);}
@@ -72,10 +72,100 @@
                 width: 150px;
                 top: 70px;
             }
+            
+            /* status cafe embed */
+            #statuscafe > div {
+                display: inline;
+                margin: 0 7px;
+            }
+            #statuscafe-content {opacity: 0.8;}
+            
+            #statusBadge {
+                position: absolute;
+                bottom: -8px;
+                right: -10px;
+                transform: rotate(-2deg);
+            }
+            
+            /* latest announcement bubble */
+            #announcement {
+                display: flex;
+                position: fixed;
+                height: 64px;
+                top: 23px;
+                left: 23px;
+                text-align: left;
+                text-decoration: none !important;
+                align-items: center;
+                z-index: 2;
+            }
+            
+            #anBubble {
+                opacity: 0.4;
+                position: absolute;
+                border-radius: 100px;
+                margin: 0;
+                padding: 6px;
+                width: 50px;
+                height: 50px;
+                left: 0;
+                animation: bubbleRotate 3s linear 0.2s infinite, bubbleBGScroll 13s ease-in-out infinite;
+            }
+            
+            #anText {
+                color: #ddd;
+                opacity: 0.7;
+                margin: 0 20px;
+                max-height: 40px;
+                font-size: 14px;
+                pointer-events: none;
+                transition: opacity 0.3s, margin 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+                transform: translateY(2px) rotate(0.7deg);
+                scroll-behavior: smooth;
+                overflow: hidden;
+                z-index: 1;
+            }
+            #anText .solidpink {font-size: 18px;}
+            
+            /* hovering over the announcement bubble */
+            #announcement:hover {
+                & #anBubble {
+                    opacity: 1;
+                    background-image: linear-gradient(rgba(0,0,0,0.4)), url("/images/linkimgs/george1bg.jpg") !important;
+                    border-color: #c7c7c7;
+                    width: 100%;
+                    animation: bubbleBGScroll 20s ease-in-out infinite;
+                    --bgY: 25%;
+                }
+                & #anText {
+                    opacity: 1;
+                    margin-left: 30px;
+                    text-shadow: 0 0 3px rgba(255,255,255,0.5), 1.25px 1.25px 2px black;
+                    transform: scale(1.06);
+                }
+                & #anText .solidpink {text-shadow: 0 0 3px rgb(234,112,188,0.9), 1.25px 1.25px 2px black;}
+            }
+            
+            @keyframes bubbleRotate {
+                100% {transform: rotate(360deg);}
+            }
+            @keyframes bubbleBGScroll {
+                0%, 100% {background-position: 0, 0% var(--bgY);}
+                50% {background-position: 0, 100% var(--bgY);}
+            }
         </style>
     </head>
     <body>
         <header-component></header-component>
+        
+        <a id="announcement" href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">
+            <div id="anBubble"></div>
+            <div id="anText">
+                <span>Latest Announcement:</span><br>
+                <b class="solidpink">George 1 Widescreen Port</b><br>
+                <span>The official, long-awaited itch.io port of G1R!</span>
+            </div>
+        </a>
         
         <div id="container">
             
@@ -86,7 +176,7 @@
             
             <main>
                 <h1>Welcome to the <span class="hotpink">LG Productions</span> web site!</h1><span class="solidpink">I'm a moody teen who makes games.</span>
-                <sup><span>pronouns: he/him</span><span id="days" /></sup>
+                <sup><span id="days" /></sup>
                 
                 <marquee id="splashes"><script src="/javascript/splashtexts.js"></script></marquee>
                 <marquee id="birthday" style="display: none;"><b class="rainbow-text">Oh hey, today is my birthday!</b></marquee>
@@ -101,25 +191,26 @@
                     
                     <div class="showoff">
                         <img class="decor" src="/images/sketches/htmlSketch.gif" alt="drawing of the HTML5 logo">
-                        <p>This web site was started as a neat little project in 2023, back when I didn't know the difference between padding and margins.<br>It's evolved into something much bigger than it was back then, and I'm grateful for that. <i>Feel free to have a look around!</i></p>
+                        <p>This web site was started as a neat little project in 2023, back when I didn't know the difference between padding and margins.<br>Ever since then, it's grown into something I'm now quite fond of. It's not going anywhere, so feel free to take a stroll.</p>
                     </div>
                 </div>
                 
                 <div class="fade">
-                    <p><b>Latest Announcement:</b> <a href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">George 1 Widescreen Port released!</a></p>
+                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=lgplayer13" defer></script>
+                    <img id="statusBadge" src="https://status.cafe/users/lgplayer13/badge.png" alt="status.cafe badge">
                 </div>
                 
                 <div class="flex linkList"></div>
                 
                 <div class="bubbleCont">
-                    <a class="bubble" href="/art-gallery">Art Gallery</a>
+                    <a class="bubble" href="/gallery">Gallery</a>
                     <a class="bubble" href="https://lgplayer13.atabook.org/">Guestbook</a>
                     <a class="bubble" href="/patch-notes">Patch Notes</a>
                 </div>
                 
                 <hr>
                 
-                <div class="box background smallText" style="--bg: url(/images/background/quakcers.jpg);--pos: 0 50%;--dim: 0.5;">
+                <div class="box background smallText" style="--bg: url(/images/background/quakcers.png);--pos: 0 15%;--dim: 0.5;">
                     <p>Oh, and one more thing before you leave: I have a <b>blog!</b> (click Sparky for more)<br>New posts are written each month—this is the latest one.</p>
                     <div class="board">
                         <p id="recentpostlistdiv"></p>
@@ -127,7 +218,7 @@
                 </div>
                 
                 <div id="siteButtons">
-                    <p>take it! it's <b>yours</b>!</p>
+                    <p class="fadedText">take it! it's <b>yours</b>!</p>
                     <img src="/images/sites/lgbutton.gif"><span style="margin: 5px;"/><img src="/images/sites/lgbuttonstatic.png">
                 </div>
             </main>
@@ -145,6 +236,11 @@
             const month = new Date().getMonth();
             const date = new Date().getDate();
             
+            let linkArray = [
+                {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", genres:"narrative, platforming", link:"/games/george-series", imgLink:"georgeseries", bgPos:"0% 60%", list:0},
+                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.1", genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:0}
+            ]
+            
             // christmas lights
             if (month == 11) {document.body.innerHTML += `<div class="hangingDecor" style="--img: url(/images/background/christMass.png)"></div>`;}
             
@@ -157,10 +253,17 @@
                 document.body.style.backgroundImage = `linear-gradient(135deg, rgba(76, 57, 96, 0.87), rgba(112, 41, 69, 0.87)), url("/images/background/checkeredbg.png")`;
             }
             
-            let linkArray = [
-                {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", genres:"narrative, platforming", link:"/games/george-series", imgLink:"georgeseries", bgPos:"0% 60%", list:0},
-                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.1", genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:0}
-            ]
+            // announcement bubble scrolling
+            const announcement = document.getElementById("announcement");
+            const anText = document.getElementById("anText");
+            
+            announcement.addEventListener("mouseover", function () {
+                anText.scrollTop = anText.scrollHeight;
+            });
+            announcement.addEventListener("mouseout", function () {
+                anText.scrollTop = 0;
+            });
+            
         </script>
     
         <!-- script borrowed from fractyl's website -->
@@ -175,7 +278,7 @@
                 var days = difference / (1000 * 3600 * 24); 
                 var days = Math.round(days);
                 
-                document.getElementById("days").innerHTML = "est. " + days + " days ago";
+                document.getElementById("days").innerHTML = "est. April 13, 2023 (" + days + " days ago)";
                 
                 if (difference < 0) {
                     clearInterval(SinceThen);

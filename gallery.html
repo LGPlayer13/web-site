@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Gallery</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            html {scroll-behavior: smooth;}
+            body {
+                --bgGradient1: rgba(60, 97, 11, 0.87);
+                --bgGradient2: rgba(62, 129, 21, 0.87);
+            }
+            
+            h3, .fadedText {width: 100%;}
+            .fadedText {margin-top: 0;}
+            
+            .artFlex {
+                background: rgba(0,0,0,0.5);
+                border: 3px solid black;
+                border-radius: 16px;
+                margin: auto;
+                padding: 3px 3%;
+                width: 80%;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            }
+            
+            a:has(.art) {
+                margin: 5px;
+                transition: transform 0.15s;
+            }
+            .art {
+                border: 2px solid #78a757;
+                width: 164px;
+                height: 164px;
+                filter: sepia(0.33);
+                transition: border 0.15s, filter 0.15s;
+                object-fit: cover;
+            }
+            
+            a:has(.art):hover {
+                transform: rotate(-1deg) scale(1.02);
+                & .art:not([src*="sketches"]) {
+                    border-color: white;
+                    filter: none;
+                }
+                & .art[src*="sketches"] {border-color: black;}
+            }
+        </style>
+    </head>
+    <body>
+        <header-component></header-component>
+    
+        <div id="container">
+            
+            <aside>
+                <img class="charHover" src="/images/decor/mastapeece.png" style="position: absolute;top: 280px;right: 25px;" title="it feels good to be new." alt="isaac with a scribbled on face">
+            </aside>
+            
+            <main>
+                <h2>Gallery</h2>
+                <div class="box background" style="--bg: url(/images/background/pongd.png);--pos: 0 30%;--dim: 0.65;">
+                    <p>Welcome to my gallery! This is where non-game creations of mine are displayed.<br>Each category can be found through the bubbles below.<br><sub>Pro tip: hover over the images for some witty remarks about them.</sub></p>
+                </div>
+                
+                <div class="bubbleCont">
+                    <a class="bubble" href="#artpieces">Art Pieces</a>
+                    <a class="bubble" href="#sketches">Sketches</a>
+                    <a class="bubble" href="#photography">Photography</a>
+                </div>
+                
+                <hr>
+                
+                <div class="artFlex">
+                    <h3 id="artpieces">Art Pieces</h3>
+                    <p class="fadedText">made in the best vector editor i know, Scratch dot mit dot edu</p>
+                    
+                    <a><img src="/gallery/artpieces/artpiece8.png" title="drew the guys (again)! look at how cool they look"></a>
+                    <a><img src="/gallery/artpieces/artpiece7.png" title="look at this little fella"></a>
+                    <a><img src="/gallery/artpieces/artpiece6.png" title="so... where does the shampoo go?"></a>
+                    <a><img src="/gallery/artpieces/artpiece5.png" title="hold up, this is an ANIMATION, not ART. exposed!!1!"></a>
+                    <a><img src="/gallery/artpieces/artpiece4.png" title="doritos gone fishin'"></a>
+                    <a><img src="/gallery/artpieces/artpiece3.png" title="an uncommon sparky appearance"></a>
+                    <a><img src="/gallery/artpieces/artpiece2.png" title="not too bad, probably even better than george 2"></a>
+                    <a><img src="/gallery/artpieces/artpiece1.png" title="cory main character confirmed? for real?!"></a>
+                </div>
+
+                <hr>
+
+                <div class="artFlex">
+                    <h3 id="sketches">Sketches</h3>
+                    <p class="fadedText">drawn on a school chromebook during intense periods of boredom</p>
+                    
+                    <a><img src="/gallery/sketches/georgie7.png" title="why is the lyric from Amnesiac? fake fan!!1!"></a>
+                    <a><img src="/gallery/sketches/georgie6.png" title="i gave up on the rain halfway through"></a>
+                    <a><img src="/gallery/sketches/georgie5.png" title="cannibalism (again, probably)"></a>
+                    <a><img src="/gallery/sketches/georgie4.png" title="i got the deluxe version for NOTHING"></a>
+                    <a><img src="/gallery/sketches/georgie3.png" title="i'm gonna be honest i don't really like this one"></a>
+                    <a><img src="/gallery/sketches/georgie2.png" title="[Canon Death]"></a>
+                    <a><img src="/gallery/sketches/georgie1.png" title="idk why this one is bigger than the rest"></a>
+                </div>
+
+                <hr>
+
+                <div class="artFlex">
+                    <h3 id="photography">Photography</h3>
+                    <p class="fadedText">very amateur photographer, but i think some of my pics are cool</p>
+                    
+                    <a><img src="/gallery/photography/26-02-24.jpg" title="god is coming in five days"></a>
+                    <a><img src="/gallery/photography/26-02-19.jpg" title="some of these read like alt texts, if you haven't noticed"></a>
+                    <a><img src="/gallery/photography/25-11-12.jpg" title="top-level parking at a Grizzly Bear concert"></a>
+                    <a><img src="/gallery/photography/25-06-21.jpg" title="the garden in Versailles"></a>
+                    <a><img src="/gallery/photography/25-06-18.jpg" title="nah i'm definitely not afraid of heights"></a>
+                    <a><img src="/gallery/photography/25-06-16.jpg" title="'squaaawkk'"></a>
+                    <a><img src="/gallery/photography/25-06-13.jpg" title="high dell burg"></a>
+                    <a><img src="/gallery/photography/25-06-12_2.jpg" title="windmill isle: act 1, zone 3, section 6"></a>
+                    <a><img src="/gallery/photography/25-06-12_1.jpg" title="agony"></a>
+                    <a><img src="/gallery/photography/24-12-28.jpg" title="the rainbow over the building in San Francisco"></a>
+                    <a><img src="/gallery/photography/24-12-27.jpg" title="first ever plane ride"></a>
+                    <a><img src="/gallery/photography/24-10-29.jpg" title="minty fresh!"></a>
+                    <a><img src="/gallery/photography/24-07-04.jpg" title="this ain't any old S"></a>
+                    <a><img src="/gallery/photography/24-05-29.jpg" title="pure garbage"></a>
+                </div>
+            </main>
+            
+            <aside>
+                <img class="charHover" src="/images/decor/painting101.png" style="position: absolute;top: 200px;left: 25px;--delay: 0.75s;" title="sparky but why are you blue?" alt="sandy with two jars of paint">
+            </aside>
+
+        </div>
+
+        <footer-component></footer-component>
+    
+        <script>
+            const artListChildren = document.querySelectorAll(".artFlex a");
+
+            for (let i = 0; i < artListChildren.length; i++) {
+                artListChildren[i].href = artListChildren[i].children[0].src;
+                artListChildren[i].children[0].classList.add("art");
+            }
+        </script>
+    </body>
+</html>
