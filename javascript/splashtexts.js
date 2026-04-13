@@ -362,6 +362,8 @@ var splashes = [
     "I just drank 2000ml of nitroglycerin. Am I chill", // from a reddit post on r/google
     "Go for a Perfect!", // rhythm heaven
     `There's no "I" in "prawn"!`, // also rhythm heaven (fever)
+    "An object stuck to velcro will remain stuck to velcro unless acted upon by an outside force.", // from a reddit post on r/rareinsults
+    "I hate this site. My irl grandmother married the skeleton from minecraft", // yt comment
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
