@@ -321,7 +321,7 @@ var splashes = [
     "Big Z isn't real. I made him up", // schaffrillas quote productions
     "He who befriends the oddest ball is the creepiest of them all.", // gumball quote (The Guy)
     "Crafting elegant digital experiences with modern technologies.", // literal dev portfolio
-    "Unlike the Donner party, cows can be bread with wheat for an achievement in Minecraft.", // bearman3600 quote
+    "Unlike the Donner party, cows can be bred with wheat for an achievement in Minecraft.", // bearman3600 quote
     "I love being miserable and playing garbage. I want more.", // bearman3600 quote
     "No Instagrammy, no Snappychat.", // some movie completely unrelated to DOAWK
     "You are not signed in and will be unable to save the game.", // games for windows LIVE
@@ -364,6 +364,10 @@ var splashes = [
     `There's no "I" in "prawn"!`, // also rhythm heaven (fever)
     "An object stuck to velcro will remain stuck to velcro unless acted upon by an outside force.", // from a reddit post on r/rareinsults
     "I hate this site. My irl grandmother married the skeleton from minecraft", // yt comment
+    "should i drink d stream more often shw wiol.l youm guys watch ity????/", // beer
+    "You are accused of a crime. Murder!!!!", // from a criminal justice assignment of mine
+    "McAfee - when the solution is worse than the problem.", // from a reddit post on r/mildlyinfuriating
+    "UvuvwevwevweOnyetenvewveUgwemubwemOssas", // UvuvwevwevweOnyetenvewveUgwemubwemOssas SODA
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
