@@ -385,8 +385,7 @@ a {color: #f62e84;text-decoration: none;}
 a:hover {color: #ff8bbd;text-decoration-line: underline;}
 
 #logo {
-    width: 90%;
-    height: 90%;
+    width: 69%;
     object-fit: contain;
 }
 

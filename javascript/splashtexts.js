@@ -368,6 +368,7 @@ var splashes = [
     "You are accused of a crime. Murder!!!!", // from a criminal justice assignment of mine
     "McAfee - when the solution is worse than the problem.", // from a reddit post on r/mildlyinfuriating
     "UvuvwevwevweOnyetenvewveUgwemubwemOssas", // UvuvwevwevweOnyetenvewveUgwemubwemOssas SODA
+    "Always blue! Always blue! Always blue!", // from Silicon Valley
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
