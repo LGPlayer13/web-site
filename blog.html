@@ -70,6 +70,8 @@
             #postlistdiv li:has(a:visited) {filter: brightness(0.9);}
             #postlistdiv a:hover {transform: scaleX(1.05);}
             
+            #postlistdiv li.devlog {filter: brightness(0.75);}
+            
             #extend {
                 color: #f8ca8a;
                 position: absolute;
@@ -133,7 +135,7 @@
                 <h1>Blog</h1>
                 
                 <div class="box background" style="--bg: url(/images/background/blogField.png);--pos: 0 50%;">
-                    <p>Welcome to my blog! This is where I rant about stuff that happens in my life. New posts are uploaded on the first week of every month.</p>
+                    <p>Welcome to my blog! This is where I rant about stuff that happens in my life. New posts are uploaded on the first week of every month.<br><span class="fadedText">It serves as a diary more than anything, and I don't expect you to actually read all of it.</span></p>
                     <hr>
                     <p>Devlog posts are uploaded whenever, typically with new projects.<br>Some repackaged Old Blog posts are also found below.</p>
                 </div>
@@ -143,9 +145,9 @@
 
                 <div class="board">
                     <div>
+                        <span class="toggle active" onclick="showPosts('all')">All</span>
                         <span id="blogCount" class="toggle" onclick="showPosts('blog')">Blog</span>
                         <span id="devlogCount" class="toggle" onclick="showPosts('devlog')">Devlog</span>
-                        <span class="toggle active" onclick="showPosts('all')">All</span>
                     </div>
                     <p id="postlistdiv" style="max-height: 420px;"></p>
                     

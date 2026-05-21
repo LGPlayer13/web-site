@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap'); /* HEADER FONT */
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap'); /* MAIN FONT */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); /* MAIN FONT */
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); /* BLOG FONT */
 
@@ -395,11 +396,14 @@ a:hover {color: #ff8bbd;text-decoration-line: underline;}
     width: 80%;
     top: var(--top);
     object-fit: contain;
-    transition: filter 0.2s;
     animation: hover 3s ease-in-out var(--delay) infinite;
+    transition: filter 0.2s, transform 0.2s;
     filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6));
+    --reach: 30px;
 }
-.linkChar:hover {filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6)) drop-shadow(0 0 6px white) brightness(110%);}
+.linkChar:hover {
+    filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6)) drop-shadow(0 0 6px white) brightness(110%);
+}
 
 a:has(.linkChar) {position: relative;}
 a:has(.linkChar) span {
@@ -431,6 +435,7 @@ a:has(.linkChar):hover span {
 .charHover {
     animation: hover 3s ease-in-out var(--delay) infinite;
     filter: drop-shadow(4px 4px 5px black);
+    --reach: 30px;
 }
 .floatImg {
     position: absolute;
@@ -546,7 +551,7 @@ hr.short {
     transform: rotate(3deg);
 }
 
-#blogText p {margin: 15px 0;}
+#blogText p {margin: 15px 0;font-family: "Varela", sans-serif;}
 #blogText p:first-child {margin-top: 5px;}
 #blogText sup:last-child {margin-top: -10px;}
 
@@ -640,7 +645,7 @@ code {background: rgba(0,0,0,0.6);}
 
 @keyframes hover {
     0%, 100% {transform: translate(0, 0);}
-    50% {transform: translate(0, 30px);}
+    50% {transform: translate(0, var(--reach));}
 }
 
 @keyframes fellOff {
