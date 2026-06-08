@@ -30,33 +30,35 @@ let authorLink = "https://lgplayer13.neocities.org/"; // Enter your website, soc
 /*UPDATE: as of version 1.3, you may omit the date if you would like. But if you
   use a date it must still follow that format.*/
 
+// Date (yyyy-mm-dd), Title, Type (blog/devlog), Word Count
 let postsArray = [
-[ "posts/2026-05-04-Blog-Blue-Moon.html", encodeURI ( "Blue Moon" ), "blog", `college essay, end of musical, new game?!` ],
-[ "posts/2026-04-07-Blog-Cant-Remember.html", encodeURI ( "A Dream I Can't Remember" ), "blog", `mood swings, history class hate, a special visit` ],
-[ "posts/2026-03-01-Blog-Wrong-Way.html", encodeURI ( 'Wrong Way' ), "blog", `straying away from school, killing time` ],
-[ "posts/2026-02-16-Devlog-Web-404.html", encodeURI ( 'Web Design 404' ), "devlog", `rant about a web design class` ],
-[ "posts/2026-02-02-Blog-Stranded-Lullaby.html", encodeURI ( 'Stranded Lullaby' ), "blog", `actively avoiding others, struggling` ],
-[ "posts/2026-01-07-Blog-Another-Day.html", encodeURI ( 'Maybe Another Day...' ), "blog", `two concerts, initiation issues, merry Christmas` ],
-[ "posts/2025-12-31-Devlog-Year-Recap.html", encodeURI ( '2025 Recapped' ), "devlog", `summary of my 2025` ],
-[ "posts/2025-12-06-Blog-Be-Thankful.html", encodeURI ( 'To Be Thankful' ), "blog", `mood swings, fine play, too much school` ],
-[ "posts/2025-11-02-Blog-Nothing-Changes.html", encodeURI ( 'Nothing Changes' ), "blog", `severe demotivation, incredibly boring year` ],
-[ "posts/2025-10-04-Blog-Break-Tension.html", encodeURI ( 'Break the Tension' ), "blog", `chore-like rehearsals, self-deprication, devlopment resurgence` ],
-[ "posts/2025-09-03-Blog-Big-Ideas.html", encodeURI ( 'Big Ideas' ), "blog", `brand new classes, religion rant, lack of social interaction` ],
-[ "posts/2025-08-01-Blog-End-Summer.html", encodeURI ( 'End Of Summer' ), "blog", `"be more social", ideas for productivity` ],
-[ "posts/2025-07-03-Blog-Two-Weeks.html", encodeURI ( 'Two Weeks' ), "blog", `big ol' trip to Europe` ],
-[ "posts/2025-06-02-Blog-Sophomore-Year.html", encodeURI ( 'Sophomore Year Review' ), "blog", `overall review of Sophomore Year` ],
-[ "posts/2025-05-23-Devlog-LabII-Alpha1.html", encodeURI ( 'Labyrinths II (Alpha 1)' ), "devlog", `sequel to The Lost Labyrinths + linux` ],
-[ "posts/2025-05-03-Blog-Will-Calls.html", encodeURI ( 'Will Calls' ), "blog", `major site update, spring break, grade issues` ],
-[ "posts/2025-04-07-Blog-Over-Ocean.html", encodeURI ( 'Over the Ocean' ), "blog", `talk about writing, fun w/ theatre gang` ],
-[ "posts/2025-03-11-Devlog-New-Album.html", encodeURI ( 'Fragments of Waves' ), "devlog", `new album, that's all` ],
-[ "posts/2025-03-02-Blog-Worrywort.html", encodeURI ( 'Worrywort' ), "blog", `overly depressing, self-harm, social issues` ],
-[ "posts/2025-02-03-Blog-Part-III.html", encodeURI ( 'Part III' ), "blog", `nothing-burger school, zig-zag mood` ],
-[ "posts/2025-01-03-Blog-Daydreaming.html", encodeURI ( 'Daydreaming' ), "blog", `trip to san fran, first depressive episodes` ],
-[ "posts/2024-12-31-Devlog-Year-Recap.html", encodeURI ( '2024 Recapped' ), "devlog", `summary of my 2024` ],
-[ "posts/2024-12-01-Blog-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid' ), "blog", `the start of my theatre journey` ],
-[ "posts/2024-11-16-Devlog-G1R-v1.1.html", encodeURI ( 'George 1R Update 1.1' ), "devlog", `big update to George 1 Remastered` ],
-[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again' ), "blog", `start of the new blog` ],
-[ "posts/2024-06-06-OldBlog-Freshman-Year.html", encodeURI ( 'Freshman Year Review' ), "blog", `old post, details bland Freshman year` ]
+[ "posts/2026-06-07-Blog-Junior-Year.html", encodeURI ( "Junior Year Review" ), "blog", 5452 ],
+[ "posts/2026-05-04-Blog-Blue-Moon.html", encodeURI ( "Blue Moon" ), "blog", 2572 ],
+[ "posts/2026-04-07-Blog-Cant-Remember.html", encodeURI ( "A Dream I Can't Remember" ), "blog", 2714 ],
+[ "posts/2026-03-01-Blog-Wrong-Way.html", encodeURI ( 'Wrong Way' ), "blog", 2127 ],
+[ "posts/2026-02-16-Devlog-Web-404.html", encodeURI ( 'Web Design 404' ), "devlog", 1869 ],
+[ "posts/2026-02-02-Blog-Stranded-Lullaby.html", encodeURI ( 'Stranded Lullaby' ), "blog", 1730 ],
+[ "posts/2026-01-07-Blog-Another-Day.html", encodeURI ( 'Maybe Another Day...' ), "blog", 1833 ],
+[ "posts/2025-12-31-Devlog-Year-Recap.html", encodeURI ( '2025 Recapped' ), "devlog", 2170 ],
+[ "posts/2025-12-06-Blog-Be-Thankful.html", encodeURI ( 'To Be Thankful' ), "blog", 1675 ],
+[ "posts/2025-11-02-Blog-Nothing-Changes.html", encodeURI ( 'Nothing Changes' ), "blog", 1735 ],
+[ "posts/2025-10-04-Blog-Break-Tension.html", encodeURI ( 'Break the Tension' ), "blog", 2079 ],
+[ "posts/2025-09-03-Blog-Big-Ideas.html", encodeURI ( 'Big Ideas' ), "blog", 2108 ],
+[ "posts/2025-08-01-Blog-End-Summer.html", encodeURI ( 'End Of Summer' ), "blog", 1779 ],
+[ "posts/2025-07-03-Blog-Two-Weeks.html", encodeURI ( 'Two Weeks' ), "blog", 3440 ],
+[ "posts/2025-06-02-Blog-Sophomore-Year.html", encodeURI ( 'Sophomore Year Review' ), "blog", 3408 ],
+[ "posts/2025-05-23-Devlog-LabII-Alpha1.html", encodeURI ( 'Labyrinths II (Alpha 1)' ), "devlog", 1448 ],
+[ "posts/2025-05-03-Blog-Will-Calls.html", encodeURI ( 'Will Calls' ), "blog", 2681 ],
+[ "posts/2025-04-07-Blog-Over-Ocean.html", encodeURI ( 'Over the Ocean' ), "blog", 2806 ],
+[ "posts/2025-03-11-Devlog-New-Album.html", encodeURI ( 'Fragments of Waves' ), "devlog", 957 ],
+[ "posts/2025-03-02-Blog-Worrywort.html", encodeURI ( 'Worrywort' ), "blog", 2612 ],
+[ "posts/2025-02-03-Blog-Part-III.html", encodeURI ( 'Part III' ), "blog", 1975 ],
+[ "posts/2025-01-03-Blog-Daydreaming.html", encodeURI ( 'Daydreaming' ), "blog", 1719 ],
+[ "posts/2024-12-31-Devlog-Year-Recap.html", encodeURI ( '2024 Recapped' ), "devlog", 979 ],
+[ "posts/2024-12-01-Blog-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid' ), "blog", 1295 ],
+[ "posts/2024-11-16-Devlog-G1R-v1.1.html", encodeURI ( 'George 1R Update 1.1' ), "devlog", 566 ],
+[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again' ), "blog", 1178 ],
+[ "posts/2024-06-06-OldBlog-Freshman-Year.html", encodeURI ( 'Freshman Year Review' ), "blog", 2089 ]
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -80,7 +82,6 @@ const postDateFormat = /\d{4}\-\d{2}\-\d{2}\-/;
 let relativePath = ".";
 if ( url.includes("posts/") ) {
     relativePath = "..";
-    document.querySelector("main").innerHTML += `<div class="fade"><div id="nextprev"></div></div>`;
 }
 
 //Generate the Header HTML, a series of list items containing links.
@@ -201,17 +202,17 @@ let prevlink = "";
  a "Next Post" link, right? And vice versa with the oldest 
  post! That's what the following code handles.*/
 if ( postsArray.length < 2 ) {
-    nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a>';
+    nextprevHTML = '<a class="bubble off">prev</a><a class="bubble" href="/blog">back</a><a class="bubble off">next</a>';
 } else if ( currentIndex === 0 ) {
     prevlink = postsArray[currentIndex + 1][0];
-    nextprevHTML = '<a href="' + relativePath + '/index.html">Home</a> | <a href="'+ relativePath + '/' + prevlink +'">Previous Post \u00BB</a>';
+    nextprevHTML = '<a class="bubble" href="/'+ prevlink +'">prev</a><a class="bubble" href="/blog">back</a><a class="bubble off">next</a>';
 } else if ( currentIndex === postsArray.length - 1 ) {
     nextlink = postsArray[currentIndex - 1][0];
-    nextprevHTML = '<a href="' + relativePath + '/' + nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a>';
+    nextprevHTML = '<a class="bubble off">prev</a><a class="bubble" href="/blog">back</a><a class="bubble" href="/' + nextlink +'">next</a>';
 } else if ( 0 < currentIndex && currentIndex < postsArray.length - 1 ) {
     nextlink = postsArray[currentIndex - 1][0];
     prevlink = postsArray[currentIndex + 1][0];
-    nextprevHTML = '<a href="' + relativePath + '/'+ nextlink +'">\u00AB Next Post</a> | <a href="' + relativePath + '/index.html">Home</a> | <a href="' + relativePath + '/'+ prevlink +'">Previous Post \u00BB</a>';
+    nextprevHTML = '<a class="bubble" href="/'+ prevlink +'">prev</a><a class="bubble" href="/blog">back</a><a class="bubble" href="/' + nextlink +'">next</a>';
 }
 
 //-----------------------------
@@ -223,27 +224,43 @@ if ( postsArray.length < 2 ) {
   one particular blog post where we don't want the footer to appear, 
   we simply don't put a <div id="footer"> on that page.*/
 
-if (document.getElementById("nextprev")) { document.getElementById("nextprev").innerHTML = nextprevHTML; }
+if (document.getElementById("blogNav")) { document.getElementById("blogNav").innerHTML += nextprevHTML; }
 if (document.getElementById("postlistdiv")) { document.getElementById("postlistdiv").innerHTML = postListHTML; }
 if (document.getElementById("recentpostlistdiv")) { document.getElementById("recentpostlistdiv").innerHTML = recentPostListHTML; }
-if (document.getElementById("header")) { document.getElementById("header").innerHTML = headerHTML; }
+// if (document.getElementById("header")) { document.getElementById("header").innerHTML = headerHTML; }
 if (document.getElementById("blogTitleH1")) { document.getElementById("blogTitleH1").innerHTML = blogTitle; }
 if (document.getElementById("postTitleH1")) { document.getElementById("postTitleH1").innerHTML = currentPostTitle; }
-if (document.getElementById("postDate")) { document.getElementById("postDate").innerHTML = niceDate; }
+if (document.getElementById("postDate")) { document.getElementById("postDate").innerHTML = niceDate + ' | <span id="words" />'; }
 if (document.getElementById("footer")) { document.getElementById("footer").innerHTML = footerHTML; }
 
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier
 //The <title> tag content is what shows up on browser tabs
 if (document.title === "Blog Post") {
     document.title = 'LG Productions • ' + currentPostTitle;
-
     document.querySelector(".indicator").style.setProperty("--indicMsg", `'Post #${(postsArray.length - currentIndex)} (${postsArray[currentIndex][2]})'`);
-    document.querySelector(".fade").style.width = "45%";
 
     const root = document.documentElement;
-    root.style.setProperty("--bgGradient1", "rgba(67, 65, 3, 0.87)");
-    root.style.setProperty("--bgGradient2", "rgba(103, 85, 8, 0.87)");
+    root.style.setProperty("--bgGradient1", "rgba(3,55,32,0.87)");
+    root.style.setProperty("--bgGradient2", "rgba(103,85,8,0.87)");
+    
+    const navbox = document.getElementById("links");
+    const sections = document.getElementById("blogText").querySelectorAll('h3:not([id^="post"])');
+
+    for (let i = 0; i < sections.length; i++) {
+        let id = sections[i].id;
+        navbox.innerHTML += `<a href="#${id}">${id}.</a>`;
+    }
+    //navbox.innerHTML += '<a href="#bottom"></a>';
 }
+
+// Add necessary subtitles + word count
+const r = document.querySelector(':root');
+const subtitle = getComputedStyle(r).getPropertyValue('--subtitle');
+
+if (subtitle.length > 0) {
+    document.getElementById("postTitleH1").innerHTML += ` <span>${subtitle}</span>`;
+}
+if (document.getElementById("words") != null) {document.getElementById("words").innerHTML = postsArray[currentIndex][3] + " words";}
 
 // Adding the assigned classes to each post (LG-made!)
 const postList = document.querySelector("#postlistdiv");
@@ -251,13 +268,16 @@ const postListChildren = postList.querySelectorAll("li");
 
 let blogPosts = 0;
 let devlogPosts = 0;
+let wordCount = 0;
 
 for (let i = 0; i < postListChildren.length; i++) {
     postListChildren[i].classList.add(postsArray[i][2]);
-    postListChildren[i].title = postsArray[i][3];
+    if (postsArray[i][3] != undefined) {wordCount += Number(postsArray[i][3]);}
+    
     if (postsArray[i][2] == "blog") { blogPosts += 1; }
     else if (postsArray[i][2] == "devlog") { devlogPosts += 1; }
 }
+console.log("Total word count: " + wordCount);
 /*
 document.getElementById("blogCount").innerHTML = "Blog (" + blogPosts + ")";
 document.getElementById("devlogCount").innerHTML = "Devlog (" + devlogPosts + ")";

@@ -25,7 +25,7 @@ class Footer extends HTMLElement {
         this.innerHTML = `
             <footer>
                 <sup>
-                    <span>&copy; LG Productions 2026 • v4.1</span>
+                    <span>&copy; LG Productions 2026 • v4.1 (beta)</span>
                     <span><a href="/sitemap">site map</a></span>
                     <span><a href="https://neocities.org/site/lgplayer13" target="_blank">neocities</a></span>
                     <span><a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord</a></span>
@@ -50,7 +50,6 @@ customElements.define('footer-component', Footer);
 
 // auto-link showoff imgs
 const showoffs = document.querySelectorAll(".showoff a:has(img)");
-console.log(showoffs);
 
 if (showoffs.length > 0) {
     for (let i = 0; i < showoffs.length; i++) {

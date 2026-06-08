@@ -3,82 +3,156 @@
     <head>
         <title>LG Productions • Home</title>
         <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
-        <meta name="description" content="Welcome to the World of LG Productions.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/style2.css" type="text/css" media="all">
         <script src="/javascript/components.js" type="text/javascript" defer></script>
-        <script src="/javascript/linkList.js" type="text/javascript" defer></script>
         <script src="/javascript/blog.js" type="text/javascript" defer></script>
         <style>
-            main > sup {display: block;margin: 20px auto;}
-            .linkList {margin: 20px auto;width: calc(85% + 25px);}
-            .linkBubble {flex: 1;margin: 0 5px;width: 48%;}
+            #container {margin: 5% auto 10px;}
+            article:first-of-type {grid-area: main;}
             
-            .showoff img {
-                margin: 3px;
-                padding: 8px;
-                width: 70px;
-                height: auto;
-                object-fit: contain;
+            /* news article */
+            
+            #news {
+                background-image: linear-gradient(rgba(0,0,0,0.4)), url("/images/linkimgs/george1bg.jpg") !important;
+                background-position: center, 70% 20%;
+                min-height: 150px;
+                z-index: 2;
+            }
+            #news .bubble {
+                margin: 0;
+                margin-left: 7px;
             }
             
-            .shinyBox {
-                border: 1px solid rgba(255,255,255,0.5);
-                padding: 10px 5px;
-                box-shadow: 0 -2px 9px -2px rgba(255,255,255,0.6) inset, 0 3px 6px rgba(8,0,36,0.7);
+            #newsLink {
+                position: absolute;
+                width: 100%;
+                bottom: 5px;
+                left: 0;
+                text-align: center;
             }
-            .shinyBox p {margin-right: 5px;}
+            #newsGuy {
+                position: absolute;
+                width: 85px;
+                bottom: -10px;
+                right: -45px;
+                transition: transform 0.2s;
+                filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.5));
+            }
+            #news:hover #newsGuy {transform: rotate(-4deg) scale(1.075);}
             
-            .board {
+            /* blog article + board */
+            
+            #blog {
+                grid-area: blog;
+                margin-top: 6px;
+                padding: 0;
+            }
+            #postBoard {
                 position: absolute;
                 background: url(/images/linkimgs/plankbg.jpg);
                 border: 4px double #261600;
                 border-radius: 12px;
-                min-width: 50%;
-                bottom: -30px;
+                min-width: 60%;
+                bottom: -32px;
                 right: -15px;
                 box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
                 transform: rotate(-1deg);
             }
             
-            #recentpostlistdiv ul {
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
-            }
-            #recentpostlistdiv li {width: auto;}
-            #recentpostlistdiv a {
-                display: block;
-                margin: 0 auto;
-                width: 100%;
-                font-size: 18px;
-                font-family: "Indie Flower", cursive;
-                text-align: center;
-                text-shadow: none;
+            #recentpostlistdiv {
+                margin: 7px 5px;
+                & ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+                & li {
+                    padding: 1px 15px;
+                    width: auto;
+                }
+                & a {
+                    display: block;
+                    margin: 0 auto;
+                    width: 100%;
+                    font-size: 17px;
+                    font-family: "Fuzzy Bubbles", sans-serif;
+                    letter-spacing: -1px;
+                    text-align: center;
+                    text-shadow: none;
+                }
             }
             #recentpostlistdiv a:not(:hover) {color: white;}
             
-            #siteButtons {
-                position: relative;
-                margin-top: 13px;
-                width: 60%;
+            .round {
+                display: inline-block;
+                color: white !important;
+                border: 2px solid #c7c7c7;
+                border-style: solid none none solid;
+                border-radius: 50%;
+                margin: 5px 12px;
+                width: 60px;
+                height: 60px;
+                box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset, 0 2px 5px rgba(19,17,20,0.6);
             }
-            #siteButtons p {margin-bottom: 10px;transform: rotate(2deg);}
-            #siteButtons img {filter: drop-shadow(0 0 6px rgba(0,0,0,0.5));}
             
             #clickEm {
-                position: relative;
+                position: absolute;
                 width: 150px;
-                top: 70px;
+                bottom: -20px;
+                right: -40%;
             }
             
-            /* status cafe embed */
-            #statuscafe > div {
-                display: inline;
-                margin: 0 7px;
+            .grid {
+                grid-template-areas:
+                    "marquee marquee"
+                    "main ."
+                    "main ."
+                    "blog blog";
+                grid-template-columns: 5fr 3fr;
             }
-            #statuscafe-content {opacity: 0.8;}
+            
+            /* status.cafe widget */
+            
+            #status {
+                color: black;
+                position: absolute;
+                background: #ffecc8;
+                border-radius: 32px;
+                padding: 4px 20px;
+                width: 250px;
+                bottom: 25%;
+                left: -59%;
+                font-size: 14px;
+                text-shadow: none;
+                box-shadow: 0 0 1px #cbcbcb;
+                animation: hover 3s ease-in-out var(--delay) infinite;
+                --reach: 9px;
+            }
+            #status:hover {animation: none;}
+            
+            #status::before, #status::after {
+                content: '';
+                position: absolute;
+                background: #ffecc8;
+                border-radius: 32px;
+                width: 30px;
+                height: 30px;
+                pointer-events: none;
+            }
+            #status::before {
+                top: -22px;
+                left: 25px;
+                animation: speechPulse 1.5s ease-in-out infinite;
+            }
+            #status::after {
+                width: 25px;
+                height: 25px;
+                top: -47px;
+                left: 55px;
+                animation: speechPulse 1.5s ease-in-out 0.75s infinite;
+            }
             
             #statusBadge {
                 position: absolute;
@@ -86,164 +160,82 @@
                 right: -10px;
                 transform: rotate(-2deg);
             }
+            #statuscafe-content {opacity: 0.8;}
             
-            /* latest announcement bubble */
-            #announcement {
-                display: flex;
-                position: fixed;
-                height: 64px;
-                top: 23px;
-                left: 23px;
-                text-align: left;
-                text-decoration: none !important;
-                align-items: center;
-                z-index: 2;
-            }
-            
-            #anBubble {
-                opacity: 0.4;
-                position: absolute;
-                border-radius: 100px;
-                margin: 0;
-                padding: 6px;
-                width: 50px;
-                height: 50px;
-                left: 0;
-                animation: bubbleRotate 3s linear 0.2s infinite, bubbleBGScroll 20s ease-in-out infinite;
-            }
-            /* sorry FireFox users! you're browser is UnCOMPATIBLE! */
-            @supports (-moz-appearance: none) {
-                #anBubble {animation: bubbleBGScroll 20s ease-in-out infinite;}
-            }
-            
-            #anText {
-                color: #ddd;
-                opacity: 0.7;
-                margin: 0 20px;
-                max-height: 40px;
-                font-size: 14px;
-                pointer-events: none;
-                transition: opacity 0.3s, margin 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
-                transform: translateY(2px) rotate(0.7deg);
-                scroll-behavior: smooth;
-                overflow: hidden;
-                z-index: 1;
-            }
-            #anText .solidpink {font-size: 18px;}
-            
-            /* hovering over the announcement bubble */
-            #announcement:hover {
-                & #anBubble {
-                    opacity: 1;
-                    background-image: linear-gradient(rgba(0,0,0,0.4)), url("/images/linkimgs/george1bg.jpg") !important;
-                    border-color: #c7c7c7;
-                    width: 100%;
-                    animation: bubbleBGScroll 20s ease-in-out infinite;
-                    --bgY: 25%;
-                }
-                & #anText {
-                    opacity: 1;
-                    margin-left: 30px;
-                    text-shadow: 0 0 3px rgba(255,255,255,0.5), 1.25px 1.25px 2px black;
-                    transform: scale(1.06);
-                }
-                & #anText .solidpink {text-shadow: 0 0 3px rgb(234,112,188,0.9), 1.25px 1.25px 2px black;}
-            }
-            
-            @keyframes bubbleRotate {
-                100% {transform: rotate(360deg);}
-            }
-            @keyframes bubbleBGScroll {
-                0%, 100% {background-position: 0, 0% var(--bgY);}
-                50% {background-position: 0, 100% var(--bgY);}
+            @keyframes speechPulse {
+                0%, 100% {}
+                50% {transform: scale(1.1);}
             }
         </style>
     </head>
     <body>
-        <header-component></header-component>
-        
-        <a id="announcement" href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">
-            <div id="anBubble"></div>
-            <div id="anText">
-                <span>Latest Announcement:</span><br>
-                <b class="solidpink">George 1 Widescreen Port</b><br>
-                <span>The official, long-awaited itch.io port of G1R!</span>
-            </div>
-        </a>
-        
         <div id="container">
+            <div id="header" style="margin-bottom: 7px;">
+                <img id="newLogo" src="/images/decor/newLGLogo.png">
+                <img class="decor" src="/images/sketches/seriesSketch.gif">
+            </div>
+            <span class="solidpink">"I'm a moody teen who makes games."</span>
             
-            <aside>
-                <a href="/games"><img class="linkChar" src="/images/decor/justGeorge.svg" title="for a guy with no fingers, he certainly holds it well" alt="george with a familiar remote" style="--top:140px;"><span>Games</span></a>
-                <img id="clickEm" class="decor" src="/images/sketches/clickSketch.gif" alt="arrow pointing up to George">
-            </aside>
+            <br><br>
             
-            <main>
-                <h1>Welcome to the <span class="hotpink">LG Productions</span> web site!</h1><span class="solidpink">I'm a moody teen who makes games.</span>
-                <sup><span id="days" /></sup>
-                
+            <div class="grid">
                 <marquee id="splashes"><script src="/javascript/splashtexts.js"></script></marquee>
                 <marquee id="birthday" style="display: none;"><b class="rainbow-text">Oh hey, today is my birthday!</b></marquee>
                 
-                <div class="shinyBox">
-                    <div class="showoff">
-                        <img class="decor" src="/images/sketches/georgeSketch.gif" alt="drawing of the George Series logo">
-                        <p>Good morning! I'm <b>LG</b>, a moody teen who makes games (sometimes). This is my <span class="em" title="the space is very much intentional">web site</span>, where I rant and show off the things I make.<br>I still have a ways to go with my game dev journey, but it'll pay off soon.</p>
-                    </div>
-                    
-                    <hr class="short">
-                    
-                    <div class="showoff">
-                        <img class="decor" src="/images/sketches/htmlSketch.gif" alt="drawing of the HTML5 logo">
-                        <p>This web site was started as a neat little project in 2023, back when I didn't know the difference between padding and margins.<br>Ever since then, it's grown into something I'm now quite fond of. It's not going anywhere, so feel free to take a stroll.</p>
-                    </div>
-                </div>
+                <a href="/about" style="left: -52%;--width: 208px;"><img class="linkChar" src="/images/decor/creepah.png" title="now with no 3D!"><span>About</span></a>
                 
-                <div class="fade">
+                <div id="status">
                     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=lgplayer13" defer></script>
                     <img id="statusBadge" src="https://status.cafe/users/lgplayer13/badge.png" alt="status.cafe badge">
                 </div>
                 
-                <div class="flex linkList"></div>
+                <article>
+                    <h3>who is he?</h3>
+                    <p>Good morning! I'm <b>LG</b>, a moody teen who makes games (sometimes).<br>Welcome to my <abbr title="the space is very much intentional">web site</abbr>, where I rant about life and show off the things I make.</p>
+
+                    <h3>what is this?</h3>
+                    <p>This web site was started as a neat little project in 2023, back when I didn't know the difference between padding and margins.</p><p>If you can't tell, it's grown a lot since then. Feel free to take a stroll.</p>
+                    
+                    <div style="text-align: center;">
+                        <span class="fadedText">take it! it's <b>yours</b>!</span>
+                        <br>
+                        <img src="/images/sites/lgbutton.gif"><img style="margin: 0 5px;" src="/images/sites/lgbuttonstatic.png">
+                    </div>
+                </article>
                 
-                <div class="bubbleCont">
-                    <a class="bubble" href="/gallery">Gallery</a>
-                    <a class="bubble" href="https://lgplayer13.atabook.org/">Guestbook</a>
-                    <a class="bubble" href="/patch-notes">Patch Notes</a>
-                </div>
+                <article id="news">
+                    <h3>news <span>09/30/25</span></h3>
+                    <p>The official, long-awaited itch.io port of G1R has released to the masses!</p>
+                    <a class="bubble" href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port" target="_blank">Go now!</a>
+                    <img id="newsGuy" src="/images/decor/newsGuy.png" title="he had seventeen-thousand seeds!">
+                </article>
+                <article id="links">
+                    <h3>links</h3>
+                    <a href="/gallery">Gallery</a><a href="https://lgplayer13.atabook.org/">Guestbook</a><a href="/patch-notes">Patch Notes</a><a href="#">???</a>
+                </article>
                 
-                <hr>
-                
-                <div class="box background smallText" style="--bg: url(/images/background/quakcers.png);--pos: 0 15%;--dim: 0.5;">
-                    <p>Oh, and one more thing before you leave: I have a <b>blog!</b> (click <span class="em" title="the yellow one with wings">Sparky</span> for more)<br>New posts are written each month—this is the latest one.</p>
-                    <div class="board">
+                <article id="blog" class="background" style="--bg: url(/images/background/quakcers.png);--pos: 0 15%;--dim: 0.6;">
+                    <p>Oh, and one more thing: I have a <b>blog</b> (click <abbr title="the yellow one with wings">Sparky</abbr> for more)! New posts are written whenever; the latest one is below.</p>
+                    <div id="postBoard">
                         <p id="recentpostlistdiv"></p>
                     </div>
-                </div>
+                </article>
                 
-                <div id="siteButtons">
-                    <p class="fadedText">take it! it's <b>yours</b>!</p>
-                    <img src="/images/sites/lgbutton.gif"><span style="margin: 5px;"/><img src="/images/sites/lgbuttonstatic.png">
-                </div>
-            </main>
+                <a href="/games" style="right: -55%;--width: 192px;--delay: 0.75s;"><img class="linkChar" src="/images/decor/justGeorge.svg" title="for a guy with no fingers, he certainly holds it well" alt="george with a familiar remote"><span>Games</span></a>
+                <a href="/blog" style="bottom: 16%;right: -46%;--width: 192px;--delay: 1.5s;"><img class="linkChar" src="/images/decor/justSparks.svg" title="the lore goes deep i tell you" alt="sparky reading a book"><span>Blog</span></a>
+                
+                <img id="clickEm" class="decor" src="/images/sketches/clickSketch.gif" alt="arrow pointing up to George">
+            </div>
             
-            <aside>
-                <a href="/about"><img class="linkChar" src="/images/decor/justCory.svg" title="it's you!" alt="cory holding up a mirror" style="--top:40px;--delay: 0.75s;"><span>About</span></a>
-                <a href="/blog"><img class="linkChar" src="/images/decor/justSparks.svg" title="the lore goes deep i tell you" alt="sparky reading a book" style="--top:50px;--delay: 1.5s;"><span>Blog</span></a>
-            </aside>
-        </div>
+            <br><br>
         
-        <footer-component></footer-component>
+            <footer-component></footer-component>
+        </div>
         
         <!-- my first javascript (ever!) -->
         <script>
             const month = new Date().getMonth();
             const date = new Date().getDate();
-            
-            let linkArray = [
-                {name:"George Series", desc:"Journey through the Asfard Archipelago and unravel the story of George the Triangle.", genres:"narrative, platforming", link:"/games/george-series", imgLink:"georgeseries", bgPos:"0% 60%", list:0},
-                {name:"After Hours X", desc:"Make it through the last five days 'til Christmas for that sweet holiday bonus.", ver:"v1.1.1", genres:"horror, point-n'-click", link:"/games/after-hours-x", imgLink:"ahx", list:0}
-            ]
             
             // christmas lights
             if (month == 11) {document.body.innerHTML += `<div class="hangingDecor" style="--img: url(/images/background/christMass.png)"></div>`;}
@@ -256,45 +248,6 @@
                 document.body.innerHTML += `<div class="hangingDecor" style="--img: url(/images/background/birthdayDecor.png)"></div>`;
                 document.body.style.backgroundImage = `linear-gradient(135deg, rgba(76, 57, 96, 0.87), rgba(112, 41, 69, 0.87)), url("/images/background/checkeredbg.png")`;
             }
-            
-            // announcement bubble scrolling
-            const announcement = document.getElementById("announcement");
-            const anText = document.getElementById("anText");
-            
-            announcement.addEventListener("mouseover", function () {
-                anText.scrollTop = anText.scrollHeight;
-            });
-            announcement.addEventListener("mouseout", function () {
-                anText.scrollTop = 0;
-            });
-            
-        </script>
-    
-        <!-- script borrowed from fractyl's website -->
-        <script>
-            function SinceThen() {
-                
-                var then = new Date("04/13/2023"); 
-                var today = new Date(); 
-                today.setHours(0, 0, 0, 0);
-                
-                var difference = today.getTime() - then.getTime(); 
-                var days = difference / (1000 * 3600 * 24); 
-                var days = Math.round(days);
-                
-                document.getElementById("days").innerHTML = "est. April 13, 2023 (" + days + " days ago)";
-                
-                if (difference < 0) {
-                    clearInterval(SinceThen);
-                    document.getElementById("days").innerHTML = "N/A";
-                }
-            };
-            
-            setInterval( function() {
-                SinceThen();
-            }, 1000);
-            
-            SinceThen();
         </script>
     </body>
 </html>

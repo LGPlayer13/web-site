@@ -124,6 +124,17 @@
                 left: -2px;
             }
             
+            details {padding-left: 40px;}
+            details p {
+                margin-top: 5px;
+                font-size: 14px;
+            }
+            summary {
+                background: none !important;
+                padding: 3px 0;
+                font-size: inherit;
+            }
+            
             @keyframes blink {
                 0%, 100% {opacity: 0;}
                 50% {opacity: 1;}
@@ -148,13 +159,27 @@
                             <p>This is a list of every past update this site has gone through.<br>Older details may be more vague, since those versions are lost.</p>
                             
                             <section>
-                                <div><span>v4.1</span><i>04/07/26</i></div>
+                                <div><span>v4.1 (beta)</span><i>06/07/26</i></div>
                                 <ul>
-                                    <!--<li>made my first shrine! find it if you can</li>-->
+                                    <li>overhauled the homepage with a new grid layout</li>
+                                    <li>overhauled the blog post pages</li>
+                                    <li>reworked every post to be in named sections</li>
+                                </ul>
+                                <details>
+                                    <summary>More about the beta</summary>
+                                    <p>This version started off as an experimental index page, as I was growing less and less satisfied with the current layout of the site.<br>I soon began working on overhauling the blog post pages, as they were long overdue for a makeover. This was in the middle of finals week, however, and I couldn't get anything done besides those blog pages.</p>
+                                    <p>Since the (last) monthly blog post was due, I had to push the site in its current form. And thus, it called for a beta version.<br>You might also notice that we're stil on v4.1, and that's intentional. The scale of this update and the last are not comparable in the slightest, so that version has been renamed to v4.0.2.</p>
+                                    <p>This update is not v5.0 because it still has the "4.0 design", similar to how v2.1 wasn't v3.0. I may have gotten bricks thrown at me, but it was worth it.<br>The full release of the update will have every page completely redesigned, and a devlog post will be released alongside it. Stay tuned!</p>
+                                </details>
+                            </section>
+                            
+                            <section>
+                                <div><span>v4.0.2</span><i>04/07/26</i></div>
+                                <ul>
                                     <li>added sorting Blog posts by years + hover text</li>
                                     <li>new announcement bubble and status on homepage</li>
                                     <li>polished up various pages (e.g. About, Gallery)</li>
-                                    <li>the shrine is coming soon...</li>
+                                    <li>started work on the first shrine</li>
                                 </ul>
                             </section>
                             

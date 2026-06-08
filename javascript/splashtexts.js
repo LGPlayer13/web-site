@@ -370,6 +370,7 @@ var splashes = [
     "UvuvwevwevweOnyetenvewveUgwemubwemOssas", // UvuvwevwevweOnyetenvewveUgwemubwemOssas SODA
     "Always blue! Always blue! Always blue!", // from Silicon Valley
     "I feel like a heavy weight has been lifted from my shoulders.", // from the new tomodachi life
+    "An idiot admires complexity, a genius admires simplicity.", // terry davis quote
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it
