@@ -10,7 +10,7 @@
 
 body {
     color: white;
-    background-image: linear-gradient(135deg, var(--bgGradient1), var(--bgGradient2)), url("/images/background/checkeredbg.png");
+    background-image: linear-gradient(135deg, var(--bgGradient1), var(--bgGradient2)), url("/images/backgrounds/checkeredbg.png");
     background-repeat: no-repeat, repeat;
     background-attachment: fixed;
     background-size: auto, 29px;
@@ -23,20 +23,22 @@ body {
 }
 
 #container {
-    display: inline-block;
-    margin: 6% auto 10px;
+    position: relative;
+    margin: 12vh auto 10px;
+    max-width: var(--width);
+    z-index: 1;
+    --width: 560px;
+    
+    &:has(#blogText) {--width: 42%;}
 }
 
 div[class^="grid"] {
-    display: inline-grid;
+    display: grid;
     position: relative;
-    margin: 5px;
-    width: 560px;
     gap: 6px 10px;
     
     /* blog posts */
     &:has(#blogText) {
-        width: 720px;
         grid-template-areas:
             ". text"
             ". text";
@@ -44,22 +46,12 @@ div[class^="grid"] {
     }
 }
 
-#header img {margin: 0 10px;}
-
-#newLogo {
-    width: 360px;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
-}
-.decor {width: 120px;}
-.solidpink {
-    opacity: 0.9;
-    font-size: 21px;
-    font-weight: bold;
-    font-family: "Momo Trust Display", sans-serif;
-    font-style: italic;
-}
-
-/* 'ERS */
+/* 'ERS
+ * <h1> - page title heading
+ * <h2> - page subtitles
+ * <h3> - article headings
+ * <h4> - article subheadings (for blog posts)
+ * */
 
 header {
     position: absolute;
@@ -68,26 +60,12 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 header.fit {width: fit-content;}
 
-h1, h2, h3:not([id^="post"]), h1 + span, #blogText .header {
+h1, h2, #blogText .header {
     font-family: "Momo Trust Display", sans-serif;
-}
-h1 {font-size: 34px;}
-h1:has(+ span) {margin-bottom: 0;}
-h1 + span {font-size: 25px;font-weight: bold;}
-
-h2 {font-size: 28px;}
-h3 {margin: 10px;font-size: 22px;}
-
-h2:has(+h2) {margin-bottom: 3px;}
-h2 + h3 {margin-top: 0;}
-
-h3 span {
-    font-family: "Varela Round", sans-serif;
-    font-weight: initial;
-    font-size: 12px;
 }
 
 .heading {
@@ -100,15 +78,55 @@ h3 span {
     width: 69%;
     object-fit: contain;
 }
+#newLogo {
+    width: stretch;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+}
 
 footer {
     opacity: 0.9;
-    margin: 28px auto 8px;
+    position: relative;
+    margin: 2em auto 1em;
     font-size: 18px;
+    z-index: 2;
 }
 footer a {color: white;}
 footer sup {display: flex;justify-content: center;}
 footer span, sup span {margin: 0 8px;}
+
+/* TITLES */
+
+#title {
+    position: relative;
+    margin-bottom: 7px;
+}
+#title:has(h1) {
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 22px 13px 8px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+#title h1 {
+    margin: 0;
+    text-shadow: 1.25px 1.25px 2px black, 0 0 8px rgba(255,255,255,0.4);
+    font-size: 38px;
+}
+#title span {
+    border-left: 2px solid rgba(255,255,255,0.5);
+    margin-left: 2px;
+    padding-left: 8px;
+}
+
+#title img {margin: 0 10px;}
+#title:has(h1) img {
+    opacity: 0.7;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    height: 85%;
+}
 
 /* ARTICLES (grid boxes) */
 
@@ -122,28 +140,36 @@ article {
     width: stretch;
     text-align: left;
     text-shadow: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 4px rgba(0,0,0,0.45);
     transition: border 0.2s;
 }
 article:hover {border-color: #c3c3c3;}
 
-article h3 {
+article > h2 {
     background: rgba(255,255,255,0.15);
     margin: 0 0 5px;
     padding-left: 10px;
     font-size: 21px;
     text-align: left;
     &.gloomy {background: linear-gradient(to right, rgba(255,255,255,0.15), rgba(255,0,0,0.15));}
+    &:last-child {margin: 0;}
+    
+    & span {
+        font-family: "Varela Round", sans-serif;
+        font-weight: initial;
+        font-size: 12px;
+    }
 }
-article h3:last-child {margin: 0;}
+article > h3 {padding-left: 15px;}
 
 article p:not(#recentpostlistdiv) {
     padding: 0 6px;
     text-indent: 2em;
 }
-article q {
+article q, article p.center {
     display: block;
     text-align: center;
+    text-indent: 0 !important;
 }
 
 #links {
@@ -165,45 +191,55 @@ article q {
 
 .background {
     background-image: linear-gradient(rgba(var(--hue),var(--dim))), var(--bg) !important;
-    background-position: var(--pos) !important;
+    background-position: center !important;
     background-size: cover !important;
     --hue: 0,0,0;
-    --pos: 0% 0%;
     --dim: 0.6;
+}
+.blank {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* BLOG STUFFS */
 
 #blogTitle {
-    background: url(/images/background/blogTitle.png) no-repeat left;
+    background: url(/images/backgrounds/blogTitle.png) no-repeat left;
     background-size: 450px;
     margin: auto;
-    padding: 10px;
-    width: 700px;
+    padding: 10px 0;
     text-align: left;
 }
 #blogText {
     grid-area: text;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     border-radius: 12px 3px 3px 12px;
-    height: 500px;
+    height: 520px;
     line-height: 1.5;
     overflow: auto;
-}
-
-#blogText h4 {
-    border-bottom: 1px dashed rgba(255,255,255,0.4);
-    margin: 15px auto -5px;
-    padding-left: 10px;
-    width: 96%;
-    font-size: 18px;
-}
-#blogText q {
-    opacity: 0.7;
-    margin: auto;
-    width: 90%;
-    line-height: 1.3;
-    font-size: 14px;
+    
+    & h2 {font-size: 22px;}
+    & h3 {margin: 15px auto -5px;}
+    & h3[id^="post"] {
+        border-style: dashed none dashed none !important;
+        margin: 0 0 14px;
+        padding-left: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+    & q {
+        opacity: 0.7;
+        margin: auto;
+        width: 90%;
+        line-height: 1.3;
+        font-size: 14px;
+    }
 }
 
 #blogNav #links { /* chapter selection box */
@@ -211,8 +247,8 @@ article q {
     & a {color: #e2f62e;}
 }
 
-#postTitleH1, #postDate {font-family: "Fuzzy Bubbles", sans-serif;}
-#postTitleH1 {
+#postTitle, #postDate {font-family: "Fuzzy Bubbles", sans-serif;}
+#postTitle {
     margin: 30px 0 5px;
     font-size: 36px;
     letter-spacing: -1.2px;
@@ -224,17 +260,9 @@ article q {
 #postDate {
     margin: 0 0 28px;
     padding-left: 10px;
-    font-size: 18px;
     font-weight: normal;
 }
 
-h3[id^="post"] {
-    border-style: dashed none dashed none !important;
-    margin: 0 0 14px;
-    padding-left: 0;
-    text-align: center;
-    font-size: 18px;
-}
 #postWarning {
     color: #ffa3a3;
     background: rgba(255,116,116,0.15);
@@ -253,7 +281,7 @@ h3[id^="post"] {
 
 /* BUBBLES */
 
-.bubble, #anBubble {
+.bubble, #anBubble, a.game {
     display: inline-block;
     color: white !important;
     border: 2px solid #c7c7c7;
@@ -268,12 +296,13 @@ h3[id^="post"] {
     transition: opacity 0.5s ease, width 0.2s ease, text-shadow 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     z-index: 1;
 }
-.bubble:not(.off):hover, #announcement:hover #anBubble {
+.bubble:not(.off):hover, #announcement:hover #anBubble, a.game:hover {
     border-color: #e3e3e3;
     text-shadow: 0 0 5px rgba(255,255,255,0.5);
     box-shadow: 0 0 9px rgba(255,255,255,0.8) inset;
     transform: scale(1.05);
 }
+a.game:hover {transform: scale(1.02);}
 .bubble:not(.off) {background: var(--bg) !important;}
 
 div:has(#links) > .bubble {
@@ -313,6 +342,50 @@ div:has(#links) > .bubble {
 .indicator:hover::after {
     content: var(--indicMsg);
     text-align: right
+}
+
+/* LINKS */
+
+a {color: #f62e84;text-decoration: none;}
+a:hover {color: #ff8bbd;text-decoration-line: underline;}
+
+.charLink {
+    position: absolute;
+    width: var(--width);
+}
+
+.charLink img {
+    position: relative;
+    margin: var(--top) auto;
+    width: 100%;
+    top: var(--top);
+    object-fit: contain;
+    transition: filter 0.2s, transform 0.2s;
+    filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6));
+}
+.charLink span {
+    opacity: 0;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bold;
+    pointer-events: none;
+    transition: opacity 0.2s, bottom 0.2s;
+    z-index: 1;
+}
+
+.charLink:hover {
+    & img {
+        transform: scale(1.015);
+        filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6)) drop-shadow(0 0 6px white) brightness(110%);
+    }
+    & span {
+        opacity: 1;
+        bottom: -10px;
+    }
 }
 
 /* LINK BUBBLES */
@@ -364,54 +437,16 @@ div:has(#links) > .bubble {
 .linkBubble span.urgent {color: #ff40a9;}
 .linkBubble span.float {float: right;margin-top: 5px;}
 
-/* LINKS */
+/* IMAGES */
 
-a {color: #f62e84;text-decoration: none;}
-a:hover {color: #ff8bbd;text-decoration-line: underline;}
-
-.linkChar {
-    position: relative;
-    margin: var(--top) auto;
-    width: 100%;
-    top: var(--top);
-    object-fit: contain;
-    transition: filter 0.2s, transform 0.2s;
-    filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6));
-}
-.linkChar:hover {
-    transform: scale(1.015);
-    filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6)) drop-shadow(0 0 6px white) brightness(110%);
-}
-
-a:has(.linkChar) {
-    position: absolute;
-    width: var(--width);
-}
-a:has(.linkChar) span {
-    opacity: 0;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 20px;
-    font-weight: bold;
-    pointer-events: none;
-    transition: opacity 0.2s, bottom 0.2s;
-    z-index: 1;
-}
-a:has(.linkChar):hover span {
-    opacity: 1;
-    bottom: -10px;
+.decor {
+    width: 120px;
+    filter: drop-shadow(2px 2px rgba(0,0,0,0.6));
 }
 
 #logo, .gridBox img, .gamelogo, a:has(.art) {
     filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
 }
-
-/* IMAGES */
-
-.decor {filter: drop-shadow(2px 2px rgba(0,0,0,0.6));}
 
 .bgimg {
     opacity: 0;
@@ -439,20 +474,22 @@ a:has(.linkChar):hover span {
     z-index: -1;
 }
 
-/* MISC. RULES */
+/* HORIZONTAL LINES */
 
-hr {
-    border: 0;
-    border-bottom: 2px dashed rgba(0,0,0,0.6);
+hr {border: 0;}
+
+#container > hr {
+    border-bottom: 6px dotted rgba(0,0,0,0.6);
+    margin: 8px auto;
+    width: 15%;
+}
+article hr {
+    border-bottom: 2px dashed black;
     margin: 17px auto;
     width: 90%;
 }
-hr.short {
-    border: 0;
-    border-bottom: 2px dashed rgba(255,255,255,0.5);
-    margin: 10px auto;
-    width: 75%;
-}
+
+/* TEXT STYLING */
 
 .hotpink {
     color: transparent;
@@ -462,15 +499,22 @@ hr.short {
     text-shadow: none;
     filter: drop-shadow(1.25px 1.25px 1px black);
 }
+.solidpink {
+    opacity: 0.9;
+    margin: 0 0 1em;
+    font-style: italic;
+}
 .solidpink, #blogText::after {color: #ea70bc;}
 
-.fadedText {
+.faded {
     opacity: 0.7;
     margin-top: 8px;
     font-size: 14px;
     text-shadow: none;
     pointer-events: none;
 }
+
+/* MISC. RULES */
 
 .off {
     opacity: 0.5;
@@ -498,13 +542,13 @@ marquee {
 
 @keyframes scrollingText {
     0% {transform: translateX(100%);}
-    100% {transform: translateX(-100%)}
+    100% {transform: translateX(-100%);}
 }
 
 @keyframes fadeloop {
-    0% {opacity: 0}
-    50% {opacity: 0.3}
-    100% {opacity: 0}
+    0% {opacity: 0;}
+    50% {opacity: 0.3;}
+    100% {opacity: 0;}
 }
 
 @keyframes hover {
@@ -522,7 +566,7 @@ marquee {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    body, .linkChar, .charHover, .hangingLeaves, #shrinePortal {
+    body, .charLink, .charHover, .hangingLeaves, #shrinePortal {
         animation: none !important;
     }
 }

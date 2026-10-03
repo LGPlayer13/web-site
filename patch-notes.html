@@ -5,18 +5,35 @@
         <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
         <script src="/javascript/components.js" type="text/javascript" defer></script>
         <style>
+            :root {
+                --hue: #91592e;
+            }
             body {
-                --bgGradient1: rgba(12,12,12,0.87);
-                --bgGradient2: rgba(4,4,4,0.87);
+                display: grid;
+                background-image: url("https://raw.githubusercontent.com/LGPlayer13/igm-games/main/SMS24/darkWoodBG.png");
+                background-size: 100% 100%;
+                height: 100vh;
+                align-items: center;
+                animation: none;
+            }
+
+            main {gap: 0;}
+            #container {
+                margin: 0 auto;
+                width: var(--width);
             }
             
+            article {box-shadow: none;}
+            p {text-indent: 0 !important;}
+
             #frame {
                 background: #262626;
                 border: 24px outset #bab2a6;
                 border-radius: 8px;
+                padding: 0;
             }
             
             #monitor {
@@ -25,8 +42,6 @@
                 border: 20px inset #9f978b;
                 border-radius: 10px;
                 margin: 2px 2px 0;
-                height: 560px;
-                max-height: 700px;
                 text-align: left;
                 align-items: center;
             }
@@ -42,14 +57,21 @@
                 text-shadow: 0 0 5px #187010;
                 box-shadow: 0 0 20px #187010 inset;
                 font-family: Consolas, "courier new";
+                scrollbar-width: none;
+
+                &::selection {
+                    color: black !important;
+                    background: #16ff00 !important;
+                    text-shadow: none;
+                }
             }
-            #screen::-webkit-scrollbar {display: none;}
-            
-            #screen::selection {
-                color: black;
-                background: #16ff00;
-                text-shadow: none;
+            #screen::-webkit-scrollbar {display: none !important;}
+
+            article h2::selection, summary::selection {
+                background: #16ff00 !important;
             }
+            a {color: #16ff00 !important;}
+            a:hover {background: none !important;}
             
             .monitor-base {
                 position: relative;
@@ -59,6 +81,8 @@
                 margin-top: 2px;
                 padding: 0 16px;
                 height: 20px;
+                text-align: center;
+
                 & span {
                     position: absolute;
                     top: -6px;
@@ -117,22 +141,53 @@
                 width: 126px;
                 top: -29px;
                 right: 60px;
+                z-index: 1;
             }
             #miningAway {
                 position: absolute;
-                bottom: 0;
-                left: -2px;
+                bottom: -25px;
+                right: -148px;
             }
             
-            details {padding-left: 40px;}
-            details p {
-                margin-top: 5px;
-                font-size: 14px;
+            details:not(.big) {
+                padding-left: 40px;
+                & summary {
+                    color: #16ff00;
+                    background: none;
+                    border: none;
+                    margin: 0;
+                    padding: 4px 0;
+                    font-size: inherit;
+                    font-weight: normal;
+                }
+                & p {
+                    padding: 0;
+                    font-size: 14px;
+                }
             }
-            summary {
-                background: none !important;
-                padding: 3px 0;
-                font-size: inherit;
+
+            .bgimg {display: none;}
+
+            /* fun terminal things */
+
+            .input-line {
+                display: flex;
+                & div {
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+            input {
+                flex: 1;
+                color: #16ff00;
+                background: none;
+                border: none;
+                font-family: Consolas, "courier new";
+                font-size: medium;
+
+                &:focus-visible {
+                    outline: none;
+                }
             }
             
             @keyframes blink {
@@ -142,30 +197,40 @@
         </style>
     </head>
     <body>
-        <header-component></header-component>
-
         <div id="container">
-            
-            <aside></aside>
-            
             <main>
-                <img id="bowlOfGrain" src="/images/decor/bowlOfGrain.png" title="great. look at what you've done" alt="spilled bowl of cheerios">
-                <div id="frame">
+                <img id="bowlOfGrain" src="/images/sprites/bowlOfGrain.png" title="great. look at what you've done" alt="spilled bowl of cheerios">
+
+                <article id="frame" class="article-wide">
                     <div id="monitor">
                         <div id="screen">
                             <!-- very proud of this page :))) -->
                             
                             <h2>Patch Notes</h2>
-                            <p>This is a list of every past update this site has gone through.<br>Older details may be more vague, since those versions are lost.</p>
+                            <p>This is a list of every past update this site has gone through.<br>Older details may be more vague, since those versions are lost.<br><br><a href="/index.html">Go back home?</a></p>
+                            
+                            <section>
+                                <div><span>v5.0</span><i>10/03/26</i></div>
+                                <b>the web to end all sites!</b>
+                                <ul>
+                                    <li>overhauled (and i MEAN overhauled) every page</li>
+                                    <li>added THIRTEEN brand new pages!</li>
+                                    <li>redid the (Art) Gallery to include some cool sub-pages</li>
+                                    <li>redid the blog: made it look cooler and ditched the confusing stuff</li>
+                                    <li>added a site banner and redesigned the site button</li>
+                                    <li>properly organized the images folder</li>
+                                    <li>...and a whole lot more! have fun!</li>
+                                </ul>
+                            </section>
                             
                             <section>
                                 <div><span>v4.1 (beta)</span><i>06/07/26</i></div>
                                 <ul>
-                                    <li>overhauled the homepage with a new grid layout</li>
-                                    <li>overhauled the blog post pages</li>
-                                    <li>reworked every post to be in named sections</li>
+                                    <li>redesigned the homepage with a new grid layout</li>
+                                    <li>redid the blog post pages (badly)</li>
+                                    <li>gave every post 3-5 named sections</li>
                                 </ul>
-                                <details>
+                                <details class="h">
                                     <summary>More about the beta</summary>
                                     <p>This version started off as an experimental index page, as I was growing less and less satisfied with the current layout of the site.<br>I soon began working on overhauling the blog post pages, as they were long overdue for a makeover. This was in the middle of finals week, however, and I couldn't get anything done besides those blog pages.</p>
                                     <p>Since the (last) monthly blog post was due, I had to push the site in its current form. And thus, it called for a beta version.<br>You might also notice that we're stil on v4.1, and that's intentional. The scale of this update and the last are not comparable in the slightest, so that version has been renamed to v4.0.2.</p>
@@ -445,25 +510,18 @@
                             &gt;<span class="blink">_</span>
                         </div>
                     </div>
-                </div>
+                </article>
                 
-                <div class="monitor-base">
+                <article class="monitor-base article-wide">
                     <span class="button"></span>
                     <span class="button"></span>
                     <span class="button" onclick="toggleMonitor()"></span>
-                    
                     <span class="glow"></span>
-                </div>
-            
+                    
+                    <img id="miningAway" src="/images/sprites/miningAway.png" title="weak men create hard times. you know that" alt="cory looking tired with a pickaxe on the ground">
+                </article>
             </main>
-            
-            <aside>
-                <img id="miningAway" src="/images/decor/miningAway.png" title="weak men create hard times. you know that" alt="cory looking tired with a pickaxe on the ground">
-            </aside>
-            
         </div>
-        
-        <footer-component></footer-component>
         
         <script>
             const screen = document.getElementById("screen");
@@ -477,7 +535,7 @@
                     glow.style.background = "#080808";
                     glow.style.boxShadow = "none";
                 } else {
-                    screen.innerHTML = `Property of Mine! Co.<br>Running stable version 6.02.1023<br><br>&gt;<span class="blink">_</span>`;
+                    screen.innerHTML = `Property of Mine! Co.<br>Running stable version 6.02.1023<br><br>Feel free to run whatever commands below.<br>(NOTE: we haven't added any yet.)<br><br><div class="input-line"><div>&gt;</div><input type="text" id="command-prompt" autofocus></input></div>`;
                     screen.style.background = "#020202";
                     screen.style.boxShadow = "0 0 20px #187010 inset";
                     glow.style.background = "white";

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Concepts</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #be3232;
+                --darkHue: #361111;
+                --bgHue: #f9dbdb;
+            }
+            body {
+                background: #892525;
+                animation: none;
+            }
+            footer {--shadow: transparent;}
+
+            /* actual page stuff */
+
+			main {
+				gap: 6px;
+				& h1 {
+					background: var(--hue);
+					border-radius: 2em;
+					margin: 0;
+					padding: 10px;
+					text-align: center;
+				}
+			}
+			h1 span {
+				position: absolute;
+				background: var(--hue);
+				border-radius: 12px 12px 0 0;
+				padding: 2px 20px 0;
+				top: -23px;
+				left: 35px;
+				font-size: large;
+				text-shadow: none;
+				box-shadow: 3px 3px var(--darkHue);
+				z-index: -1;
+
+				& a {color: white !important;}
+			}
+            p {
+				padding: 0 1.17em !important;
+				text-indent: 0 !important;
+			}
+
+            .goHome {--bg: #e3a4b3;}
+            .bgimg {display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <a class="bubble headBack" href="/index.html">Head home?</a>
+
+            <main>
+                <h1>concept gallery<span>back to <a href="/art.html">art gallery</a></span></h1>
+
+                <article class="article-wide">
+					<h3>concepts for whatever</h3>
+					<p>despite being the most prominent section of this page, i had no idea where else to put these guys</p>
+					
+					<div class="art" style="--col: 4;">
+						<a><img src="images/concepts/newSidLook.png"></a>
+						<a><img src="images/concepts/oldGeorge3Logo.png"></a>
+						<a><img src="images/concepts/george2Chapters.png"></a>
+						<a><img src="images/concepts/asfardTopology.png"></a>
+						<a><img src="images/concepts/infinityPlayer2Demo.png"></a>
+						<a><img src="images/concepts/scrappedPlatformer.png"></a>
+						<a><img src="images/concepts/lgNewsTwo.png"></a>
+						<a><img src="images/concepts/sms2Logo.png"></a>
+						<a><img src="images/concepts/coryGetsACoupon.png"></a>
+						<a><img src="images/concepts/bugArtConcept.png"></a>
+					</div>
+
+					<h3>project sketches</h3>
+					<p>most of the time i end up making something better, but that's what these are for, i guess.</p>
+					
+					<div class="art">
+						<a><img src="images/project-sketches/rockwellNotFinal.png"></a>
+						<a><img src="images/project-sketches/lab2Menus.jpg"></a>
+						<a><img src="images/project-sketches/lab2Layouts.jpg"></a>
+						<a><img src="images/project-sketches/george1.5Logos.jpg"></a>
+						<a><img src="images/project-sketches/afterHoursCameras.jpg"></a>
+						<a><img src="images/project-sketches/afterHoursResults.jpg"></a>
+					</div>
+
+					<h3>web site sketches</h3>
+					<p>if you're not gonna write anything in a .txt file, draw it instead! concept art helps A LOT!</p>
+					
+					<div class="art">
+						<a><img src="images/site-sketches/web-site-5.jpeg"></a>
+						<a><img src="images/site-sketches/web-site-4.jpeg"></a>
+						<a><img src="images/site-sketches/web-site-3.jpeg"></a>
+						<a><img src="images/site-sketches/web-site-2.jpeg"></a>
+						<a><img src="images/site-sketches/web-site-1.jpeg"></a>
+					</div>
+                </article>
+            </main>
+            
+            <footer-component></footer-component>
+        </div>
+    </body>
+</html>

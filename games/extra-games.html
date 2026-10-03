@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Extra Games</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #148a8a;
+                --darkHue: #147a7a;
+                --bgHue: #dbf9f1;
+            }
+            body {
+                background-image: url(images/extras.png), linear-gradient(#96e6e6);
+                background-repeat: repeat;
+                background-size: 100px, auto;
+                animation: extraScroll 5s linear infinite;
+                --scroll: -100px;
+            }
+            @keyframes extraScroll {
+                100% {background-position: var(--scroll) var(--scroll), 0;}
+            }
+
+            footer {
+                --color: black;
+                --shadow: transparent;
+            }
+
+            article {
+                box-shadow: none;
+                & h2 {border: none;}
+            }
+            .lefty {padding: 0 2em;}
+            .bgimg {display: none;}
+
+            /* non-game things */
+
+            header {
+                margin-bottom: 2rem;
+                & h1, p {text-align: left;}
+                & p {font-size: large;}
+
+                & a {color: black !important;}
+            }
+            header h1 {
+                color: #7be2e2;
+                background: var(--hue);
+                padding: 5px .5em;
+            }
+            
+            #notice {
+                background: #e9c97b;
+                border-radius: 2em;
+                margin: 0 .5em;
+                padding: .25em .5em;
+                font-size: large;
+                text-align: center;
+            }
+
+            #goHome {
+                display: inline-block;
+                margin-top: 2em;
+
+                & a {
+                    color: black;
+                    margin: 0 1em;
+                }
+            }
+
+            /* and now for the gaminginginging */
+
+            .game {
+                display: flex;
+                margin: 1em;
+                justify-content: center;
+
+                & .icon {
+                    display: flex;
+                    flex: 2;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .icon img {width: 40%;}
+            
+            .game .desc {
+                flex: 3;
+                border: 2px solid var(--hue);
+                border-radius: 12px;
+                padding: 9px 0;
+
+                & h3 {
+                    color: white;
+                    background: var(--hue);
+                    border-radius: 12px;
+                    margin: 0 .1em;
+                    padding: 3px 10px 1px;
+                }
+                & p {text-indent: 0;}
+            }
+
+            a.play {
+                display: block;
+                color: #5f4f29;
+                background: linear-gradient(#ffbe1e, #e9ca7d);
+                border: 3px solid black;
+                border-radius: 1em;
+                margin: 0 .5em 0 auto;
+                width: fit-content;
+                padding: 3px 3em;
+                font-size: large;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            header h1, .game h3 {
+                &::selection {
+                    color: black;
+                    background: var(--bgHue);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>extra games</h1>
+            </header>
+
+            <main>
+                <article class="article-wide">
+                    <div id="notice">Notice!</div>
+                    <p class="lefty">You found some Extra Games!<br>These are sure to disappoint die-hard fans.<br><small>(If you're too disappointed, you can always <a href="/games.html">play something better</a>.)</small></p>
+                </article>
+
+                <article class="article-wide">
+                    <h2>a substantial lack of quality control</h2>
+
+                    <section class="game">
+                        <div class="icon"><img src="images/icons/infinity-player.png" alt="a pointer, arrow, and pencil"></div>
+                        <div class="desc">
+                            <h3>Infinity Player+</h3>
+                            <p><b>Released on:</b> 03/03/24<br>The official remaster of Infinity Player, which was released and subsequently deleted back in 2020.<br>NOTE: released as a part of the Plus Bundle.</p>
+                            <a class="play" href="https://turbowarp.org/628951894/">Play it!</a>
+                        </div>
+                    </section>
+
+                    <section class="game">
+                        <div class="icon"><img src="images/icons/eggwars.png" alt="an egg disguised as a bomb"></div>
+                        <div class="desc">
+                            <h3>EggWars+</h3>
+                            <p><b>Released on:</b> 03/03/24<br>The official remaster of EggWars, my first ever project on Scratch. It's hopefully less terrible.<br>NOTE: released as a part of the Plus Bundle.</p>
+                            <a class="play" href="https://turbowarp.org/1052362750/">Play it!</a>
+                        </div>
+                    </section>
+
+                    <section class="game">
+                        <div class="icon"><img src="images/icons/george-2-demo.png" alt="george and cory with beta designs"></div>
+                        <div class="desc">
+                            <h3>George 2: Redefined Demo</h3>
+                            <p><b>Released on:</b> 10/25/22<br>Play as George in an all-new, scrolling adventure! Journey through Asfard Island to find the mysterious force that holds Greg, the brother who passed away in George 1.</p>
+                            <a class="play" href="https://turbowarp.org/751275360/">Play it!</a>
+                        </div>
+                    </section>
+
+                    <section class="game">
+                        <div class="icon"><img src="images/icons/funnier-mod.png" alt="alfred holding some targets"></div>
+                        <div class="desc">
+                            <h3>A funny game: the funnier mod</h3>
+                            <p><b>Released on:</b> 02/10/22<br>A funny mod to increase the funniness of an already funny game.<br>Original game made by ManzanaProductions.</p>
+                            <a class="play" href="https://turbowarp.org/625536601/">Play it!</a>
+                        </div>
+                    </section>
+
+                    <section class="game">
+                        <div class="icon"><img src="images/icons/super-scratch-melee.png" alt="the fighter selection for george"></div>
+                        <div class="desc">
+                            <h3>Super Scratch Melee</h3>
+                            <p><b>Released on:</b> 08/21/21<br>Duke it out with a friend or a CPU in this action-packed, turn-based game, with over 10 fighters!<br>It's incredibly outdated, but one of my classics.</p>
+                            <a class="play" href="https://turbowarp.org/527774504/">Play it!</a>
+                        </div>
+                    </section>
+                </article>
+            </main>
+
+            <a class="goHome" href="/index.html">&lt;- Go back home?</a>
+            
+            <footer-component></footer-component>
+        </div>
+    </body>
+</html>

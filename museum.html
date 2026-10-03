@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Museum</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #786e15;
+                --darkHue: #2e2b11;
+                --bgHue: #e9e9df;
+            }
+            body {
+                background-image: linear-gradient(rgba(255, 230, 0, 0.1)), url(/images/backgrounds/stucco.jpg);
+                background-attachment: scroll;
+                background-repeat: repeat;
+                background-size: auto;
+                animation: none;
+            }
+            footer {
+                --color: black;
+                --shadow: transparent;
+            }
+
+            article > span {padding: 0 10px;}
+            .hotlinks a {font-size: x-large;}
+
+            .decisions {
+                display: block;
+                margin: auto;
+                width: 90%;
+            }
+            
+            .bgimg {display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <a href="/museum.html"><img class="banner" src="/images/sprites/siteBannerM.jpeg"></a>
+            </header>
+
+            <main>
+                <h1>Museum</h1>
+                
+                <article class="article-half">
+                    <h2>entrance to all facts fun</h2>
+                    <p>Want to know exactly how many Minecraft plushies are in LG's room? Well, you're in luck! The Museum contains three "exhibits" that each show a different part of LG Productions.</p>
+                    <p>Future plans for the Museum include a gift shop that gives you a random item when you leave, and (possibly) a fan art exhibit.</p>
+                    <p class="centered-text">Until then, enjoy everything it has to offer!</p>
+                    <img class="decisions" src="/images/sprites/decisions2.png" alt="isaac and robert yelling while audrey cleans her glasses" title="guys it's not that hard to decide">
+                </article>
+                
+                <div class="hotlinks article-half flex-column">
+                    <a href="museum/archives.html" style="--bg: url(museum/images/banner1.png);"><span>Archives</span></a>
+                    <a href="museum/collections.html" style="--bg: url(museum/images/banner2.jpg);--dim: 0.1;"><span>Collections</span></a>
+                    <a href="museum/photography.html" style="--bg: url(museum/images/banner3.jpg);"><span>Photography</span></a>
+                </div>
+
+                <article class="article-wide">
+                    <span>If you're done here, why not <a href="/index.html">go back home</a>?</span>
+                </article>
+            </main>
+            
+            <footer-component></footer-component>
+        </div>
+    
+        <script>
+            const photos = document.querySelectorAll(".photos a");
+
+            for (let i = 0; i < photos.length; i++) {
+                photos[i].href = photos[i].children[0].src;
+            }
+        </script>
+    </body>
+</html>

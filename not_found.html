@@ -5,40 +5,45 @@
         <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
         <style>
+            :root {
+                --bgGradient1: rgba(158, 158, 158, 0.87);
+                --bgGradient2: rgba(190, 190, 190, 0.87);
+            }
             body {
-                --bgGradient1: rgba(4, 4, 4, 0.87);
-                --bgGradient2: rgba(0, 0, 0, 0.95);
+                display: flex;
+                background: darkgray;
+                height: 100vh;
+                align-items: center;
+                animation: none;
             }
             
-            img {
-                position: absolute;
-                top: 80px;
-                left: 0;
-                filter: drop-shadow(4px 4px 0 rgba(0,0,0,0.6));
-                animation: hover 3s ease-in-out infinite;
+            h1 {
+                color: white;
+                text-shadow: 3px 3px var(--darkHue);
+            }
+            
+            #jorge {
+                filter: drop-shadow(2px 2px 2px black);
+                animation: waddle 2s step-start infinite;
+            }
+            @keyframes waddle {
+                0%, 100% {transform: rotate(-10deg);}
+                50% {transform: scaleX(-1) rotate(-10deg);}
             }
         </style>
     </head>
     <body>
         <div id="container">
+            <img id="jorge" src="/images/sprites/lostDorito.png" title="where are we now?" alt="george holding a map, yet looking lost">
             
-            <aside></aside>
+            <h1>this page doesn't exist!</h1>
+            <p>whoops! we didn't quite find what you're looking for.<br>press the button below to get back on your feet.</p>
             
-            <main>
-                <h1>404!</h1>
-                <p><i>Looks like this page doesn't exist. That's a shame.<br>Not entirely sure where you were headed...</i></p>
-
-                <br>
-
-                <a class="bubble" href="/index">Back to Home</a>
-            </main>
+            <br><br>
             
-            <aside>
-                <img src="/images/decor/sidworried.png" title="where are we now?" alt="sid looking worried">
-            </aside>
-            
+            <a class="bubble" href="/index.html">Head home?</a>
         </div>
     </body>
 </html>

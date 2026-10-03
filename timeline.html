@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Timeline</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: white;
+                --darkHue: white;
+                --bgHue: black;
+            }
+            body {
+                color: white;
+                background-image: linear-gradient(rgba(0,0,0,0.93)), url("images/backgrounds/clouds.png");
+                background-position: center;
+                background-size: cover;
+                animation: none;
+            }
+
+            footer {--shadow: transparent;}
+
+            #container > p {
+                color: #969696;
+                font-style: italic;
+            }
+            #container::selection, #markInfo::selection {
+                color: black;
+                background: var(--hue);
+            }
+
+            .headBack.bubble {
+                color: white !important;
+                &:hover {color: black !important;}
+            }
+
+            .bgimg {display: none;}
+
+            /* cloudy clouds */
+
+            .cloud {
+                opacity: 0;
+                position: absolute;
+                animation: cloud 1s ease var(--delay) forwards, cloudMove 7s infinite ease-in-out;
+                z-index: -1;
+                --x: -20px;
+
+                &:nth-of-type(even) {--x: 20px;}
+
+                &:first-of-type {
+                    left: 0;
+                    top: 7%;
+                }
+                &:nth-of-type(2) {
+                    right: 3%;
+                    top: 18%;
+                }
+                &:nth-of-type(3) {
+                    right: 28%;
+                    top: 30%;
+                }
+                &:nth-of-type(4) {
+                    left: 5%;
+                    top: 43%;
+                }
+                &:nth-of-type(5) {
+                    right: 10%;
+                    top: 54%;
+                }
+                &:nth-of-type(6) {
+                    left: 24%;
+                    top: 66%;
+                }
+                &:nth-of-type(7) {
+                    right: 18%;
+                    top: 79%;
+                }
+                &:last-of-type {
+                    left: 8%;
+                    top: 90%;
+                }
+            }
+            @keyframes cloud {
+                100% {opacity: 0.5;}
+            }
+            @keyframes cloudMove {
+                50% {transform: translateX(var(--x));}
+            }
+
+            /* timeline */
+
+            .timeline {
+                display: flex;
+                background: white;
+                border: 2px solid white;
+                margin: 0 auto;
+                padding: 8em 0;
+                width: 0;
+                transform: translateX(var(--x)) rotate(var(--d));
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                --x: 0;
+                --d: 0deg;
+
+                &:first-of-type {padding-top: 0;margin-top: 3em;}
+                &:last-of-type {padding-bottom: 0;margin-bottom: 3em;}
+
+                &.left {--x: -204px;}
+                &.right {--x: 204px;}
+
+                &.rotate-left {
+                    transform-origin: top right;
+                    margin-bottom: -87px;
+                    --d: 45deg;
+                }
+                &.rotate-right {
+                    transform-origin: top left;
+                    margin-bottom: -87px;
+                    --d: -45deg;
+                }
+            }
+            .timeline.rotate-left:has(+ .rotate-left) {
+                margin-bottom: -86px;
+            }
+
+            /* timeline "marks" (what do i call these?) */
+
+            .mark {
+                display: block;
+                position: relative;
+                background: black;
+                border: 4px solid white;
+                border-radius: 50%;
+                margin: 4em 0;
+                width: 30px;
+                height: 30px;
+                transition: background 0.15s ease, box-shadow 0.15s ease;
+
+                &:hover, &.lit {
+                    background: white;
+                    box-shadow: 0 0 10px 5px white;
+                    cursor: pointer;
+                }
+
+                &:first-child {margin-top: -4px;}
+                &:last-child {margin-bottom: -4px;}
+            }
+
+            .timeline.rotate-left .mark {transform: rotate(-45deg);}
+            .timeline.rotate-right .mark {transform: rotate(45deg);}
+
+            .mark span {
+                opacity: 0.5;
+                position: absolute;
+                width: 15rem;
+                height: fit-content;
+                top: 5px;
+                left: -16rem;
+                text-align: right;
+                transition: opacity 0.2s ease;
+                pointer-events: none;
+            }
+            .mark:hover, .mark.lit {
+                & span {opacity: 1;}
+            }
+
+            .mark span.alt {
+                left: initial;
+                right: -16rem;
+                text-align: left;
+            }
+
+            .mark img {
+                position: absolute;
+                image-rendering: pixelated;
+                pointer-events: none;
+            }
+
+            /* info dialog */
+
+            #dialog {
+                opacity: 0;
+                position: fixed;
+                background: rgba(0,0,0,0.5);
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                transition: opacity 0.5s ease, right 0.5s ease;
+                pointer-events: none;
+                z-index: 5;
+
+                &.open {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+            
+            #markInfo {
+                display: inline-block;
+                position: relative;
+                background: black;
+                border: 2px solid white;
+                margin: 3em 0;
+                padding: 1em;
+                max-width: 50rem;
+                max-height: 50%;
+                overflow: auto;
+            }
+
+            #markInfo span {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+            }
+            #markInfo .close {
+                border: 2px solid white;
+                width: 22px;
+                height: 22px;
+                left: initial;
+                right: 5px;
+
+                &:hover {
+                    color: black;
+                    background: white;
+                    cursor: pointer;
+                }
+            }
+
+            #markInfo > img {
+                display: block;
+                margin: auto;
+            }
+            p img {
+                margin: 1em;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <a class="bubble headBack" href="/index.html">Head home?</a>
+
+            <h1>Timeline</h1>
+            <p>Browse through the (not-so) ancient history of the guy who made this...</p>
+
+            <div class="timeline">
+                <div class="mark">
+                    <span>Ye olden days</span>
+                    <img style="right: -12rem;" src="/images/gifs/start.gif">
+                </div>
+                <div class="mark">
+                    <span>The chromebook</span>
+                </div>
+            </div>
+            <div class="timeline rotate-left">
+                <div class="mark">
+                    <span>Idle discovery</span>
+                </div>
+            </div>
+            <div class="timeline left rotate-right">
+                <div class="mark">
+                    <span>Short-lived memories</span>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="mark">
+                    <span>Discord shenanigans</span>
+                </div>
+                <div class="mark">
+                    <span>Parental guidance</span>
+                </div>
+            </div>
+            <div class="timeline rotate-right">
+                <div class="mark">
+                    <span>The scratch</span>
+                </div>
+            </div>
+            <div class="timeline right rotate-left">
+                <div class="mark">
+                    <span>You've been egged</span>
+                </div>
+            </div>
+            <div class="timeline rotate-left">
+                <div class="mark">
+                    <span>Choose your fighter</span>
+                </div>
+            </div>
+            <div class="timeline left rotate-right">
+                <div class="mark">
+                    <span>The sequel</span>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="mark">
+                    <span>Branching out</span>
+                </div>
+            </div>
+            <div class="timeline rotate-right">
+                <div class="mark">
+                    <span>Stone simulation</span>
+                </div>
+            </div>
+            <div class="timeline right rotate-left">
+                <div class="mark">
+                    <span>Lost below</span>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="mark">
+                    <span>Jumping ahead</span>
+                </div>
+            </div>
+            <div class="timeline"></div>
+            <div class="timeline">
+                <div class="mark">
+                    <span>Old yellow bricks</span>
+                </div>
+            </div>
+
+            <img class="cloud" src="/images/decor/cloud.png">
+            <img class="cloud" src="/images/decor/cloud.png">
+            <img class="cloud" src="/images/decor/cloud.png">
+            <img class="cloud" src="/images/decor/cloud.png">
+            <img class="cloud" src="/images/decor/cloud.png">
+            <img class="cloud" src="/images/decor/cloud.png">
+            <img class="cloud" src="/images/decor/cloud.png">
+            <img class="cloud" src="/images/decor/cloud.png">
+            
+            <footer-component></footer-component>
+        </div>
+
+        <div id="dialog" class="closed">
+            <div id="markInfo"></div>
+        </div>
+
+        <script>
+            // used some of my IGM knowledge for this one
+            
+            const infoArray = [
+                "<p>In the beginning, there was everything. Except LG.<br>Fast forward a few bajillion years, and now LG exists!</p><p>He's currently nine years old, and living a relatively uneventful life. Birthdays, holidays, sick days; it's all the same ol' thing.</p><p>I wouldn't say this kid is particularly good at anything, although I've noticed he's alarmingly vulgar for his age. Drawing stick figures killing each other in cold blood... violent, eh?</p><p>This kid is boring. I think he could do with a little... motivation.</p>",
+                `<p>What do I mean by "motivation"?. Well, this kid needs something to do!</p><p>Clearly he's not going anywhere as an artist. And his writing is about as thought-provoking as the rash on my foot. But maybe, just maybe... he'd do better in the digital world?</p><p>His dad seems to agree, because he's just taken LG to a local Staples.<br>LG isn't terribly amused, but what his dad pulls out of the bag is about to change his life.</p><p>Why, it's a Chromebook! Unbeknownst to LG, this slow, weak, borderline unusable device will stick with him for a long while.</p>`,
+                `<p>He's progressing quite well. He hasn't installed any viruses, hasn't learned what a boob looks like, and doesn't know what Reddit is yet. So far, so good.</p><p>LG is past ten years old now, and it looks like he's found something great. Some sort of online gaming tool. Perhaps it could be of use to him.</p><p>He's taken a liking to this new tool of his. Apparently its name is Idle Game Maker, or IGM, and it has a fairly active userbase online. They appear to have established a "forum" of sorts.</p><p>LG has been welcomed into this forum, and seems to be doing quite well for himself. Look, he's even posting about a new game of his! He's called it Cow Clicker.</p><img src="images/timeline/screenie1.png" alt="LG's post about his game on a forum"><p>LG is making a lovely home for himself here. I do hope it lasts.</p>`,
+                "<p>Well, isn't that peculiar. The forum LG joined just a minute ago is shutting down. I suppose I spoke too soon. Well, this timing is rather poor.</p><p>Our dear LG had been growing quite accustomed to the site, and now he's already being forced to move out. Isn't that just rude? Guess this is a good time to teach him that not all good things last forever.</p><p>But there's no use crying over spilled milk, is there now? Lucky for us, a new opportunity has presented itself. The forum is redirecting LG to a new site, one that calls itself Discord.<br>Hmm... this seems new. A forum is timeless, but what on earth is this Discord? Is it a new type of forum? Is it live chatting? What awaits us in this new domain?</p><p>I have an inkling that this may be a tad too much for LG to handle. After all, his age has just barely reached the double digits. Only time will tell.</p>",
+                `<p>This kid may just be more capable than I thought! He's not doing too shabby for his first time on a site like this. Especially on a place where the some of the most depraved, socially inept individuals lurk, LG seems to be doing just fine.</p><p>It helps that this "server" (as they call it) is decently friendly. Though, I'll bet that ten-year-old LG would be considered "cringe" by today's standards.</p><img src="images/timeline/screenie2.png" alt="LG introducing himself on Discord"><p>I'm not sure how long LG can hide this activity from his parents, though. They, particularly his mother, aren't too keen on their son talking to strangers online.</p><p>And, to be honest, I would be worried too.</p>`,
+                "<p>Oh, dear. I'm afraid I have successfully predicted the worst. LG's parents have discovered his online activities. And, well, they aren't terribly thrilled.</p><p>His parents are scouring his computer for everything he's been hiding from them. Browser history, online messages, and even his e-mail. Nothing is safe from the fury of a middle-aged mother and lackluster support of a middle-aged father.</p><p>As for LG? He's cowering in his room watching Pokémon. A part of me has to wonder why he chose his specific cartoon to watch. Suppose he was bored of Gumball for the time being.</p><p>His parents have finally closed his computer. They reluctantly hand it back to LG, but only after he promises to stop using Discord. He slams the door shut, now alone, with no faceless text bubbles to keep him company.</p>",
+                `<p>Thankfully, this rut would not last too long. In the wake of a global pandemic, LG has found himself bored once more. He browses the internet, relentlessly searching for productive things to do.</p><p>As his search proves fruitless, LG is reminded of a certain site his father recommended to him not too long ago. A site called Scratch, made by MIT, labeled with an EDU.</p><img src="images/timeline/screenie3.png" alt="The homepage of Scratch in 2019"><p>This site is almost entirely based around creating stories to share with everyone on this vast, digital landscape. It aims to teach children how to code, but uses block-based programming instead of a traditional text editor.</p><p>I thought that one Idle Game making site would be enought to keep LG occupied, but I was clearly incorrect in that assumption. Let's delve further into LG's creative side, shall we?</p>`,
+                `<p>There are worse ways to begin a career, I'll tell you that much. So far, LG has made a handful of projects. Most are shelved or deleted within a few days, but there are a few diamonds in the rough.</p><p><img src="images/timeline/screenie4.png" alt="The title screen of EggWars">First we have EggWars, which LG created less than a week after signing up for Scratch. I'm not much of a "gamer" myself, so actually playing these games was certainly a unique experience.</p><p>This game... how do I describe it... it looks exactly like how you'd picture an eleven-year-old's first game. Stolen music, scribbled graphics, janky movement; it has all the bells and whistles.</p><p>LG's next few games are somewhat less interesting. A stone clicking game, a "tycoon" game, and a Geometry Dash knockoff. As much fun as EggWars was, I believe I'll have to skip these next few.</p><p>But let's look on the bright side. LG may have just found a new place to call home! It looks stable enough, and is even aimed toward children this time around. We may be in for a treat.</p>`,
+                `<p>A year has gone by since LG's days as a novice coder, and it appears he's ready to take on a new challenge. He recently endulged in a fighting game of sorts, called Super Scratch Smash.<br>The game had you duke it out against a variety of characters from the Scratch website, and LG has vowed to create his own version of it.</p><p>The only issue, however, is that LG hasn't exactly evolved much in terms of his coding prowise (his code is ass). So, instead of a platforming game, he plans on creating a turn-base game.</p><p><img src="images/timeline/screenie5.png" alt="a battle in Super Scratch Melee">While this idea is novel, it is certainly lacking in the "cool" factor. This doesn't dissaude LG, though, as he's already making swift progress on the game's mechanics.</p><p>One thing is for certain, however. LG has actually started forming his own small community with this game of his.</p><p>Granted, there isn't a terrible amount of members in this community, but they're all surprisingly supportive of a game that pales in comparison to everything else.</p>`,
+                `<p>I may have skipped over something important earlier. My apologies, I suppose I found myself caught up in LG's fighting game shenanigans. You see, LG made another game before Super Scratch Melee. A very important game.</p><p>He called the game "George the Jumping Triangle". It is a platforming game.<br><br>Now, when I said important, I didn't mean "remarkable", did I? It didn't receive much attention at launch, and still hasn't to this day. Though, I'm getting ahead of myself here, sorry about that. Making games isn't about obtaining "likes" or watching numbers rise, no, it's about enjoying it.</p><p>But it seems LG isn't stopping at one game. It had its charm, and brought forth an entire world to build upon in future entries. And it appears that LG plans on doing just that, how exciting!</p><p>Hopefully this entry can spark the beginning of even more friendships and programming growth!</p>`,
+                `<p>The game is coming to fruition! While it is lacking in graphics and music and just about everything else, it's a noticeable improvement over his previous works. Looks like we're slated to have a proper release on our hands.</p><img src="images/timeline/screenie6.png" alt="George and Tom in a George 2 demo"><p>LG hasn't put all his eggs in one basket, however. He's partaken is a surprising number of other projects as well. A game jam entry, a one-sprite game, a few mods for other projects, and he even made the logo which you've seen on this very web site!</p><p>At this point in time, LG has made a few friends for himself. To this day, he struggles to understand what friendship is, but he's lucky to have a few more friendly faces to cheer him on.<br>There's no time to lose, though. The sequel to George 1, aptly titled George 2, needs to release at some point. Come, let us hasten toward a full adventure!</p>`,
+                `<p>...Well. It seems LG has already pivoted. A stone mining game? Wait, hasn't he already made one of these before? Ah yes, back when he was using Idle Game Maker, of course! Those games of his exited my stream of consciousness almost immediately after that whole Discord situation.</p><p>But wait, I'm putting the cart before the horse here. What happened to George 2? LG decides to put out a half-baked demo for the world to see, and what, he's leaving it at that?</p><p><img src="images/timeline/screenie7.png" alt="The title screen of EggWars">I hate to break it to the child, but this game is not a looker. The bum couldn't even be bothered to store his icons properly!<br>Hmph. I would call LG a procrastinator, but he is technically working. Though, I'd greatly prefer if the kid spent his time on something with more... substance.</p><p>Perhaps I'm being too harsh again. Who am I to tell him what to do with his precious time? At least he's found his way back into that Discord community he lost all those years ago.</p>`,
+                `<p>Now, this is very interesting indeed. LG has actually started to make the rounds within the Idle Game Maker community. Only eight months have passed at this point in time, so this news is quite shocking!</p><p>While I don't condone this kind of reckless behavior, LG's now making a game called "The Lost Labyrinths". The community has taken a liking to this game, despite its release being rather short notice.</p><img src="images/timeline/screenie8.png" alt="some gameplay from "><p>I will say, normally I'd be quite upset about LG wasting even more time of his, but he's putting it to good use! Why yes, George 2 may be in limbo, but at the very least LG is enjoying himself.</p><p>His skills are on the rise, too. While everything displayed here still pales in comparison to the feats LG achieves these days, can't you such a statement apply to anyone? Compare your first time partaking in a hobby compared to how it typically goes today. Surely there's a difference, isn't there?</p>`,
+                "<p>Jumping ahead about a year, and things are still running about the same as usual. Development on that Labyrinths game has slowed down dramatically, though LG's Scratch account is receiving a sizeable amount of activity.</p><p>So far, he's started on a sequel to Super Scratch Melee, made a full remaster of George the Jumping Triangle, and has even dabbled in making animations!<br>However... I worry about the years to come. I have this sinking feeling that things will come to progress even slower. Down to a crawl, even. I'm not quite sure where I've gotten this feeling from, but it's been haunting me for a decent while now.</p><p>Perhaps I'm simply being overly paranoid. This is my first time doing anything like this, and the sudden change of pace has probably taken me aback.<br>Ah- I don't mean to ramble. Like our dear LG, I too fear change. Though, I won't dabble into his social troubles, as I believe he's done a stellar job of documenting that debacle.</p><p>I hope LG continues to make progress on these projects of his. I don't know how much longer I have to ramble on for...</p>",
+                `<p>Years have passed.<br>The list grows smaller.<br>My patience grows weary.</p><p>At this moment, progress has, indeed, slowed down to a crawl. I'm afraid the worst of my thoughts have turned into reality. LG... while he means well, has turned from a curious child looking to make games into a jaded slob looking to put off his math homework.</p><p>I think I'm about ready to quit. There's nothing left to report, nothing left to document, nothing left to preserve that hasn't been preserved already.<br>While I can't say this hasn't had its fun moments, I'm tired of waiting. I'm tired of putting on this stupid voice. I'm tired of pretending to be someone I'm not. I'm TIRED of all the NOTHING HAPPENING!!</p><p>Sorry, sorry, I probably shouldn't yell in such a dim place. I don't know why LG entrusted me with this task. I'm not some brilliant scholar, hell, I work in a damn mine for crying out loud!<br>I can't do this anymore! I genuinely CAN'T! I'm staying up until three in the morning just digging through all of LG's old crap! Have you SEEN some of the junk he keeps on that hard drive of his?!</p><p>To think I was so excited to finally get out of those dirt-ridden caves, just to end up sitting at a desk and plunging into some of the least interesting "lore" a guy has to offer. Gosh, how pathetic is that?! Has my life really deteriorated to such a level where THIS is what I've been doing for three months straight?!</p><p>Seriously, his game are made on Scratch, and like, why is he treating some fourth grade-level game as some terrific work of art? Who the hell even IS this guy, anyway? So what, he made a website? Yeah, I'm not required to add that space between the words, am I?! Do I LOOK deranged to you?!</p><p>Ah, why do I bother continuing to write here. LG, you can suck my fat one, because I am OUT! The next time you get someone to document your generic ass life, why don't YOU give it a shot!</p>`
+            ]
+            const dialog = document.getElementById("dialog");
+            const info = document.getElementById("markInfo");
+            const titles = document.querySelectorAll(".mark span")
+
+            // css things
+
+            const marks = document.querySelectorAll(".mark");
+            const clouds = document.querySelectorAll(".cloud");
+
+            for (let i = 0; i < marks.length; i++) {
+                marks[i].setAttribute("onclick", `showInfo(${i+1})`);
+                if (i % 2 == 1) { titles[i].classList = "alt"; }
+
+                let delay = 0.2 * (i + 1);
+                if (clouds[i]) { 
+                    clouds[i].style.setProperty('--delay', delay.toString() + "s");
+                }
+            }
+
+            // showing/hiding the dialog
+
+            function showInfo(index) {
+                if (index == 0) {
+                    dialog.className = "closed";
+                    for (let i = 0; i < marks.length; i++) {
+                        marks[i].className = "mark";
+                    }
+                } else {
+                    dialog.className = "open"
+                    marks[index-1].className += " lit";
+                    info.innerHTML = `<h1>${titles[index-1].innerHTML}</h1>` + infoArray[index-1] + '<span class="close" onclick="showInfo(0)">x</span>' + `<span>#${index}</span>`;
+                }
+            }
+        </script>
+    </body>
+</html>

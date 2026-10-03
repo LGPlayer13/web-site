@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Photography</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #5e7815;
+                --darkHue: #272e11;
+                --bgHue: #e9e9df;
+            }
+            body {
+                background-image: linear-gradient(rgba(58,255,0,0.1)), url(/images/backgrounds/stucco.jpg);
+                background-attachment: scroll;
+                background-repeat: repeat;
+                background-size: auto;
+                animation: none;
+            }
+            footer {
+                --color: black;
+                --shadow: transparent;
+            }
+
+            nav a:last-child {
+                color: white;
+                background: var(--hue);
+                pointer-events: none;
+            }
+
+            summary::selection {
+                color: white !important;
+                background: var(--hue) !important;
+            }
+
+            .photos {
+                display: flex;
+                margin-top: 10px;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap: 5px;
+
+                & a {width: 49%;}
+                & img {
+                    border: 1px solid black;
+                    width: stretch;
+                    height: 240px;
+                    object-fit: cover;
+                }
+            }
+
+            #nintendin {
+                position: absolute;
+                width: 90px;
+                bottom: -15px;
+                right: -15px;
+                filter: drop-shadow(2px 2px var(--darkHue));
+                transform: rotate(-2deg);
+                z-index: 1;
+            }
+            
+            .bgimg {display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <a href="/museum.html"><img class="banner" src="/images/sprites/siteBannerM.jpeg"></a>
+            </header>
+            <nav id="theWorks">
+                <a href="/index.html">Home</a><a href="archives.html">Archives</a><a href="collections.html">Collections</a><a href="photography.html">Photography</a>
+            </nav>
+
+            <main>
+                <h1>Photography</h1>
+                
+                <article class="article-two">
+                    <h2>fine displays of art</h2>
+                    <p>While photography is something anyone can do, few people have mastered it. I am not one of those few. I take pictures with my cell phone, for crying out loud.</p>
+                    <p>Taking pictures is pretty cool, though. I can't exactly described what I'm "into" per se, but I guess I like pictures of nature and water and stuff like that.</p>
+                </article>
+                <article class="article-one">
+                    <h2>three dee ess?</h2>
+                    <p class="lefty">Because I'm so unique and interesting, I take pictures with this thing now.</p><p class="lefty">Who cares  what people think, it's a fun hobby to have!<br><small>(technically it's a 2DS)</small></p>
+                    <img id="nintendin" src="images/creeper2DS.png" title="400 dollars btw">
+                </article>
+
+                <article class="article-wide pic">
+                    <h2>the photo gallery</h2>
+                    <details open>
+                        <summary>Europe 2025</summary>
+                        <div class="photos">
+                            <a><img src="images/photography/25-06-12_1.jpg"></a>
+                            <a><img src="images/photography/25-06-12_2.jpg"></a>
+                            <a><img src="images/photography/25-06-12_3.jpg"></a>
+                            <a><img src="images/photography/25-06-13.jpg"></a>
+                            <a><img src="images/photography/25-06-17.jpg"></a>
+                            <a><img src="images/photography/25-06-18_1.jpg"></a>
+                            <a><img src="images/photography/25-06-18_2.jpg"></a>
+                            <a><img src="images/photography/25-06-21.jpg"></a>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>San Francisco 2024</summary>
+                        <div class="photos">
+                            <a><img src="images/photography/24-12-28_1.jpg"></a>
+                            <a><img src="images/photography/24-12-28_2.jpg"></a>
+                            <a><img src="images/photography/24-12-28_3.jpg"></a>
+                            <a><img src="images/photography/24-12-29.jpg"></a>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Cover Art</summary>
+                        <div class="photos">
+                            <a><img src="images/photography/parade_cover.jpg"></a>
+                            <a><img src="images/photography/schematics_cover.jpg"></a>
+                            <a><img src="images/photography/theS_cover.jpg"></a>
+                            <a><img src="images/photography/doublemint_cover.jpg"></a>
+                            <a><img src="images/photography/magnesium_cover.jpg"></a>
+                            <a><img src="images/photography/fragments_cover.jpg"></a>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>3DS Camera</summary>
+                        <div class="photos">
+                            <a><img src="images/photography/0032_3ds.JPG"></a>
+                            <a><img src="images/photography/0057_3ds.JPG"></a>
+                            <a><img src="images/photography/0061_3ds.JPG"></a>
+                        </div>
+                    </details>
+                </article>
+            </main>
+            
+            <footer-component></footer-component>
+        </div>
+    
+        <script>
+            const photos = document.querySelectorAll(".photos a");
+
+            for (let i = 0; i < photos.length; i++) {
+                photos[i].href = photos[i].children[0].src;
+            }
+        </script>
+    </body>
+</html>

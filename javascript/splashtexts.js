@@ -96,7 +96,7 @@ var splashes = [
     "We are human, after all. Much in common, after all.", // daft punk
     "Buy it, use it, break it, fix it, trash it, change it, mail, upgrade it.", // daft punk
     "No sauce is going to fix this atrocity.", // thereportoftheweek
-    "I don’t expect anything these days, so it is what it is.", // thereportoftheweek
+    "I don't expect anything these days, so it is what it is.", // thereportoftheweek
     "Why the f*** do you eat Toy Story action figures", // ribbit
     "This marquee has given me too much power.", // old nomnomnami quote
     "Welcome to the George Series, you kinda joined at a low point.", // spoof on a deadpool quote
@@ -110,10 +110,10 @@ var splashes = [
     "99% of gamblers quit before the big win!", // true story
     "Someone stop this criminal, this is not forgivable!", // element animation
     "That evil individual, this is just unthinkable!", // element animation
-    "Don’t you think this is all a little unfair?", // element animation
+    "Don't you think this is all a little unfair?", // element animation
     "I am the yeast of thoughts and mind.", // i am the Globglogabgalab
     "New Objective: Wait in the line of slaves.", // lord of the ring: gollum
-    "Hey look, ramps! We can use these as ramps!", // from some sonic game
+    "Hey look, ramps! We can use these as ramps!", // from some sonic game (probably)
     "Business. Serious business. This is absolutely all of your business.", // cookie clicker quote, or at least i'm pretty sure it originated here
     "Oh look, SpongeBob and Patrick are on fire. This is going to be the best hunger games we have ever had.", // pamtri quote
     "Kick some ice.", // Blades of Glory tagline
@@ -144,7 +144,7 @@ var splashes = [
     "Unregistered HyperCam 2", // Unregistered Hypercam 2
     "Ah, 'Snow White and the 7 Clever Boys' for the PS2, my favorite horror game.", // aztrosist quote
     "Majority of the rights reserved... I think.", // Made by me! x4
-    "She didn’t have what it takes to survive in the cutthroat world of businesssssssss.", // dinosaur office quote
+    "She didn't have what it takes to survive in the cutthroat world of businesssssssss.", // dinosaur office quote
     "'This world is mine to craft.' -Bryan, the Hero", // you were supposed to be the hero
     "Bro made a guipplegorp-", // from the BTA discord server
     "According to all known laws of physics, there is no way Java should be able to compile.", // also from the BTA discord
@@ -185,17 +185,17 @@ var splashes = [
     "Speaking is not permitted during the debate.", // from the same cs188 ytp as before
     "Don't let your dad pick out your clothes if he can't pick out his clothes.", // matt rose quote
     "When life gives you lemons, make orange juice and let the world wonder how you did it.", // yt comment
-    "Man, wish my parents weren’t so divorced.", // jack pop quote
+    "Man, wish my parents weren't so divorced.", // jack pop quote
     "Where are you Christmas? Why are you Christmas?", // jack pop quote
-    "Slackies; when you gotta go, but you don’t wanna leave.", // gumball quote (The Vegging)
+    "Slackies; when you gotta go, but you don't wanna leave.", // gumball quote (The Vegging)
     "At this point, I feel like Jack Black is going to be cast for the voice in my head.", // penguinz0 quote
-    "I have never followed a rule. That is my rule. Do you follow? I don’t.", // batman AI
+    "I have never followed a rule. That is my rule. Do you follow? I don't.", // batman AI
     "This is now a safe city. I have punched a penguin into prison.", // batman AI
     "Eat a dinner, Mattress Wayne.", // batman AI
     "As a child, I yearned for the mines.", // a minecraft movie
     "There is no data.", // ps2 memory card message
     "Why do I miss people who hurt me? That's because you're a dummy.", // jack stauber quote
-    "Ron’s Ron shirt was just as bad as Ron himself.", // harry potter AI
+    "Ron's Ron shirt was just as bad as Ron himself.", // harry potter AI
     "They looked at the door, screaming about how closed it was.", // harry potter AI
     "h", // h
     "Max, what do you want for dinner?", // justice, with a side of spaghetti
@@ -203,7 +203,7 @@ var splashes = [
     "Suggest to confine child and observe behavior.", // matt rose
     "Contributed to alcohol abuse statistics; Love and laughter shared.", // matt rose
     "Fluorine Uranium Carbon Potassium Bismuth Technetium Helium Sulfur Germanium Thulium Oxygen Neon Yttrium.", // iykyk
-    "Life is like a sardine... it’s small and kinda sucks.", // spilling the milk quote
+    "Life is like a sardine... it's small and kinda sucks.", // spilling the milk quote
     "Not a flying toy.", // toy story
     "Duck forgot to drink water so now he is dead. Some sort of blob turns up.", // from the don't hug me i'm scared website
     "That's the way the cookie crumbles.", // clarence quote
@@ -223,7 +223,7 @@ var splashes = [
     "Please welcome to the stage, Thom Yorke and the Radioheads.", // thom yorke laughs funny
     "I am in a contant state of Missouri.", // boffy quote
     "Do y'all ever get bored and download western Australia?", // from the scratch addons discord
-    "If it exists, there’s a Tiger handheld version of it.", // yt comment
+    "If it exists, there's a Tiger handheld version of it.", // yt comment
     "34 hours! That's short for an RPG, but... that's long for somebody with a life.", // videogamedunkey quote
     "Before playing, read your operations manual for important information about your health and safety.", // wii would like to halt your play time
     "You do not know how much you show, but the wind doth blow in the hills below?", // gumball quote (The Apology)
@@ -254,14 +254,14 @@ var splashes = [
     "Oh, these dudes? They're the villagers!", // a minecraft movie
     "Coming in hot!", // a minecraft movie
     "That looks dubious to me. What do you think?", // petscop
-    "I’ve checked every Gucci store on the planet looking for this baby.", // parallel pipes quote
+    "I've checked every Gucci store on the planet looking for this baby.", // parallel pipes quote
     "I f***ing hate it when the immutable power of the sun detonates in my room.", // comment on that video where the kid's room explodes while he lip syncs story of undertale
     "Life is short. Have a Kitkat.", // combination of two particular slogans
     "Hello my good friend, I am the milk man here to serve fresh pasturized milk rich with vitamins and calcium.", // from grotto.faith
     "I'd rather have one Birdo than five children.", // scott the woz quote
     "Mario and Peach together, me and Gina together.", // wii u ad
     "Hot buttered popcorn, that's a deal!", // wii u ad
-    "$29.99, none of that $60, multiplayer-only bullsh*t.", // lawbreakers (not in-game)
+    "$29.99, none of that $60, multiplayer-only bullshit.", // lawbreakers (not in-game)
     "I like you Jimmy, you're a spunky guy.", // a real exchange between logan paul and mr beast
     "This program is a cancer.", // baldi's basics
     "The world is big. Class dismissed.", // baldi's basics
@@ -333,7 +333,7 @@ var splashes = [
     "How we you take i a little a place it La A Little I took a like... On did.", // matt rose
     "You're a cinephile, I watch Family Guy.", // tame impala lyric
     "Hang on while Windows reports the problem to Microsoft..", // microslop
-    "Water, fire, air, and dirt. F***in' magnets, how do they work?", // insane clown posse
+    "Water, fire, air, and dirt. Fuckin' magnets, how do they work?", // insane clown posse
     "And so begins the revolution.", // ouya
     "I wake up, then I go to bed! I wake up, then I go to bed! I wake up, then I go to bed!", // wait there's things that i still haven't said
     "I don't really know what to put here. This backing track is pretty dang cool.", // jeremy
@@ -342,8 +342,8 @@ var splashes = [
     "I'm on the world wide web. That flips my hat backwards!", // baldi's basics kickstarter vid
     "Okay, it's nighttime, and there's four dudes in my bed.", // quote from a Baron of something video
     "We need to get the dodge out of hell. This cave is hell. This world is hell.", // https://www.youtube.com/watch?v=agGbVXA2NEE (i might be in this)
-    "What happens when an invincible bridge meets resurresctive antimatter?", // yt comment
-    "Your honour, shut up. You weren’t even there.", // yt comment
+    "What happens when an invincible bridge meets resurrective antimatter?", // yt comment
+    "Your honour, shut up. You weren't even there.", // yt comment
     "The disk in drive A: is not the Font disk.", // windows 1 error message
     "My favorite M**vel Superhero's D**key Kong!", // from undertale 10th anniversary stream
     "versatile⠀⠀summary", // from one of my APCSP assignments
@@ -364,13 +364,18 @@ var splashes = [
     `There's no "I" in "prawn"!`, // also rhythm heaven (fever)
     "An object stuck to velcro will remain stuck to velcro unless acted upon by an outside force.", // from a reddit post on r/rareinsults
     "I hate this site. My irl grandmother married the skeleton from minecraft", // yt comment
-    "should i drink d stream more often shw wiol.l youm guys watch ity????/", // beer
+    "should i drink d stream more often shw wiol.l youm guys watch ity????/", // beer male
     "You are accused of a crime. Murder!!!!", // from a criminal justice assignment of mine
     "McAfee - when the solution is worse than the problem.", // from a reddit post on r/mildlyinfuriating
     "UvuvwevwevweOnyetenvewveUgwemubwemOssas", // UvuvwevwevweOnyetenvewveUgwemubwemOssas SODA
     "Always blue! Always blue! Always blue!", // from Silicon Valley
     "I feel like a heavy weight has been lifted from my shoulders.", // from the new tomodachi life
     "An idiot admires complexity, a genius admires simplicity.", // terry davis quote
+    "Negative integer on top of the 2x-15 negatively.", // sodapoppins on mogul money
+    "< > dneirf_ruoy_ma_I", // < > t'nac_I -no_one wonderland.jar
+    "Hey, guys! I think I found a glue!", // they're eating my flesh! -flowery deltarune
+    "Despite what the blog says, we use MM/DD/YYYY around these parts.", // true...
+    `When the <b>Karate</b> is <b>man</b> !`, // quick hands
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it

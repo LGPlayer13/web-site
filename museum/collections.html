@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Collections</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #784d15;
+                --darkHue: #2e2011;
+                --bgHue: #e9e9df;
+            }
+            body {
+                background: url(/images/backgrounds/stucco.jpg);
+                animation: none;
+            }
+            footer {
+                --color: black;
+                --shadow: transparent;
+            }
+
+            nav a:nth-child(3) {
+                color: white;
+                background: var(--hue);
+                pointer-events: none;
+            }
+
+            #note {
+                position: absolute;
+                background: url(/images/backgrounds/noteCard.png);
+                padding: 1em;
+                top: -8px;
+                right: 8px;
+                transform: rotate(-1deg);
+                box-shadow: 1px 1px 4px black;
+            }
+
+            .stats {
+                flex: 1;
+                background: beige;
+                border: 2px dotted var(--darkHue);
+                border-radius: 0;
+                margin: 3px 4px;
+                padding: 5px;
+                font-family: "Fuzzy Bubbles", sans-serif;
+                box-shadow: 3px 3px var(--darkHue);
+
+                & h3 {margin: 0;}
+                & ul {
+                    padding: 0 1.5em;
+                    text-align: left;
+                }
+                & li {padding-right: 0;}
+    
+                &:first-child {margin-left: 0;}
+                &:last-child {margin-right: 0;}
+            }
+
+            article:has(details) {max-height: fit-content;}
+
+            details p {
+                font-size: 14px;
+                text-indent: 0;
+            }
+            details hr {
+                width: calc(100% - 2em);
+                margin: 1.5em auto;
+            }
+
+            summary {
+                background: var(--bg) center !important;
+                padding: 9px 10px 7px !important;
+                text-shadow: 2px 2px var(--darkHue);
+            }
+            #plushies {--bg: url(images/collections/theGangsAllHere.png);}
+            #cds {--bg: url(images/collections/grizzlyHead.png);}
+            #consoles {--bg: url(images/collections/consoleWars.png);}
+
+            div.cd {
+                position: relative;
+                text-align: center;
+                
+                & img {
+                    border: 2px inset var(--bgHue);
+                    width: 102px;
+                }
+                & span {
+                    opacity: 0;
+                    color: white;
+                    position: absolute;
+                    background: var(--hue);
+                    padding: 2px;
+                    width: 120px;
+                    bottom: -6px;
+                    left: -10px;
+                    right: 0;
+                    font-size: 14px;
+                    pointer-events: none;
+                    transition: opacity 0.2s ease;
+                    z-index: 1;
+                }
+            }
+            div.cd:hover span {opacity: 1;}
+
+            table {
+                border-spacing: 4px;
+                padding: 0 1em;
+                width: stretch;
+            }
+            td {
+                vertical-align: top;
+                &:last-child {
+                    padding-left: .5em !important;
+                    width: 70%;
+                }
+
+                & h3, p {padding: 0;}
+                & h3 {margin: 0 0 10px;}
+
+                & img {
+                    border: 2px outset var(--bgHue);
+                    width: calc(100% - 4px);
+                    object-fit: cover;
+                }
+            }
+            tr.console {
+                & td:last-child {width: 65%;}
+                & img {height: 110px;}
+            }
+
+            td p:last-of-type {margin-bottom: 0;}
+
+            .grid {
+                display: grid;
+                margin: auto;
+                width: fit-content;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-items: center;
+                gap: 10px;
+            }
+
+            .gap td {padding: 12px 0;}
+
+            article img, article summary {image-rendering: pixelated;}
+            .bgimg {display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <a href="/museum.html"><img class="banner" src="/images/sprites/siteBannerM.jpeg"></a>
+            </header>
+            <nav id="theWorks">
+                <a href="/index.html">Home</a><a href="archives.html">Archives</a><a href="collections.html">Collections</a><a href="photography.html">Photography</a>
+            </nav>
+
+            <main>
+                <h1>Collections</h1>
+                
+                <article class="article-wide">
+                    <h2>show us the stuff!</h2>
+                    <p>I like collecting things. Sure, I might not have a shelf full of figurines, sketchbooks, or anything terribly eye-catching, but I've got a lot to say about what I do have.</p>
+                    <p>The rest of the page pretty much speaks for itself, so feel free to browse!</p>
+
+                    <div id="note">
+                        hello! i forgot why i put this here!
+                    </div>
+                </article>
+
+                <div class="article-wide flex">
+                    <section class="stats">
+                        <h3>Plushies</h3>
+                        <ul>
+                            <li>Total collected: hell if i know</li>
+                            <li>Shelves used: 4</li>
+                            <li>Minecraft plushies collected: 24</li>
+                            <!-- baby sheep, orange sheep, blue sheep, baby pig, baby panda, axolotl, dolphin, giant fox, trader llama, iron golem, mushroom chicken, pumpkin, zombie, Steve?, goat, turtle, frog, armadillo, baby cow, arctic fox, ender dragon, chicken jockey, big ass bee, warden -->
+                            <li>Plushies wearing a beanie: 1<small> (guess who!)</small></li>
+                        </ul>
+                    </section>
+                    <section class="stats">
+                        <h3>CDs</h3>
+                        <ul>
+                            <li>Total collected: 53</li>
+                            <li>Stolen from parents: 22</li>
+                            <li>Artists/bands: 15 (+2)</li>
+                            <br>
+                            <li>Vinyls collected: 1<br><small>(It's a Grizzly Bear single I bought at the 2025 tour.)</small></li>
+                        </ul>
+                    </section>
+                    <section class="stats">
+                        <h3>Consoles</h3>
+                        <ul>
+                            <li>Total collected: 8</li>
+                            <li>Most played: Nintendo Switch</li>
+                            <li>Least played: Game Boy Micro</li>
+                            <li>Money spent: $750+<br><small>Measured in USD</small></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <article class="article-half">
+                    <details class="big">
+                        <summary id="plushies">Plushies</summary>
+                        <p>Did you know I like Minecraft? Well, guess what! 80% of my plushies are all from Minecraft! But don't leave just yet—I have more interests, I swear!!<br>Anyhoo, here's a list of my favorites. I'll make it unique!</p>
+
+                        <table>
+                            <tr>
+                                <td><img src="images/collections/plushies/frog.jpg"></td>
+                                <td>
+                                    <h3>Frog (Minecraft)</h3>
+                                    <p>I got this (admittedly wrinkled) twerp as a Christmas gift. He also has a brass penny in his mouth, which I made in a chemistry lab.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/collections/plushies/ross.jpg"></td>
+                                <td>
+                                    <h3>Ross Federman</h3>
+                                    <p>Back in my middle school days, I was kinda obsessed with Tally Hall. This is the result of that. I like him.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/collections/plushies/miku.jpg"></td>
+                                <td>
+                                    <h3>Hatsune Miku</h3>
+                                    <p>I wouldn't call myself a big Miku fan, but I got this along with a Warden plush just for the hell of it. She's cute.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/collections/plushies/greg.jpg"></td>
+                                <td>
+                                    <h3>Greg Heffley</h3>
+                                    <p>I'm not a big reader, but I made an exception for ol' Greg here as a kid. My personal library has a shelf just for DOAWK books (1-20).</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <p><b>I also have these select plushies:</b><br>Baby sheep, blue sheep, orange sheep, baby cow, axolotl, dolphin, arctic fox, armadillo, turtle, goat, baby panda, trader llama, chicken jockey, and a Bob-omb.</p>
+                    </details>
+                </article>
+                <article class="article-half">
+                    <details class="big">
+                        <summary id="cds">CDs</summary>
+                        <p>I'm a bit of a music man, if I do say so myself. The two CDs above are from my favorite bands ever. I've been asked if I collect vinyl, but it's too unwieldy for my liking.</p>
+                        <p>Like the plushies, I'll go through some favs. Only this time, there'll be a lot more of 'em!<br><small>Hover over the covers for their names!</small></p>
+
+                        <section class="grid">
+                            <div class="cd">
+                                <img src="images/collections/cds/yellow-house.jpg">
+                                <span>Grizzly Bear - Yellow House</span>
+                            </div>
+                            <div class="cd">
+                                <img src="images/collections/cds/congratulations.png">
+                                <span>MGMT - Congratulations</span>
+                            </div>
+                            <div class="cd">
+                                <img src="images/collections/cds/antisocialites.jpg">
+                                <span>Alvvays - Antisocialites</span>
+                            </div>
+                            <div class="cd">
+                                <img src="images/collections/cds/imaginal-disk.png">
+                                <span>Magdalena Bay - Imaginal Disk</span>
+                            </div>
+                            <div class="cd">
+                                <img src="images/collections/cds/the-car.jpg">
+                                <span>Arctic Monkeys - The Car</span>
+                            </div>
+                            <div class="cd">
+                                <img src="images/collections/cds/only-god-was-above-us.png">
+                                <span>Vampire Weekend - OGWAU</span>
+                            </div>
+                            <div class="cd">
+                                <img src="images/collections/cds/plastic-beach.jpg">
+                                <span>Gorillaz - Plastic Beach</span>
+                            </div>
+                            <div class="cd">
+                                <img src="images/collections/cds/supermodel.jpg">
+                                <span>Foster the People - Supermodel</span>
+                            </div>
+                            <div class="cd">
+                                <img src="images/collections/cds/midnite-vultures.jpg">
+                                <span>Beck - Midnite Vultures</span>
+                            </div>
+                        </section>
+
+                        <p>My favorite album of all time is <i>In Rainbows</i> by Radiohead. It's probably gonna stay that way for a long while. Second place is <i>Shields</i> by Grizzly Bear.</p>
+                        <p>Check out my <a href="https://www.last.fm/user/LGPlayer13" target="_blank">Last.fm</a> for my listening habits.<br>I also have an <a href="https://www.albumoftheyear.org/user/lgplayer13/" target="_blank">AOTY</a> for albums ratings and such.</p>
+                    </details>
+                </article>
+                <article class="article-wide">
+                    <details class="big" open>
+                        <summary id="consoles">Consoles</summary>
+                        <p>I'm quite fond of video games, and I've collected a sizeable amount of consoles over the years. So here, I'll go over my favorites and what I like most about them!<br>I'll also mention some others at the end. I still love them, but they'd be the last ones saved from a house fire.<br><small>And don't mind the fact that these are all handhelds.</small></p>
+
+                        <!-- I FREAKING LOVE RHYTHM HEAVEN -->
+                        <table>
+                            <tr class="console">
+                                <td><img src="images/collections/consoles/gameBoysMicro.png" alt="a rhythm tengoku score of 91.2"></td>
+                                <td>
+                                    <h3>Game Boy Micro (2005)</h3>
+                                    <p>I may have only gotten this thing two days before writing this, but I already love it to death. Though you're probably wondering, "Out of every Game Boy you could've gotten, why a Micro?"</p>
+                                    <p>It has a headphone jack. Not to mention, the screen quality is excellent despite its size. Plus, the console is really goddamn sleek and extremely portable! It's the ultimate Game Boy for those who don't really care about the Game Boy.</p>
+                                    <p>Despite how the picture looks, my GBM is actually silver. It also came with a game, that being the original Super Mario Bros. (in a red cartridge)!</p>
+                                </td>
+                            </tr>
+                            <tr class="console gap">
+                                <td><img src="images/collections/consoles/nintendin.png" style="object-position: left;" alt="a Superb rating on DS Remix 8"></td>
+                                <td>
+                                   <h3>Nintendo 2DS (2013)</h3>
+                                    <p>While not the sharpest tool in the shed, my original 2DS was a big part of my childhood. If there's one reason to keep this thing around, it's for all the dumbass pictures I took.</p>
+                                    <p>This thing is also unmodded. I was thinking about breathing new life into it a few months back, but that was until I got...</p> 
+                                </td>
+                            </tr>
+                            <tr class="console">
+                                <td><img src="images/collections/consoles/goat.png" alt="a well-fed goat from rhythm heaven megamix"></td>
+                                <td>
+                                    <h3>New Nintendo 2DS LL Creeper Edition (2018)</h3>
+                                    <p>My prized possession. I mean, what more could I say about it? I love Minecraft, and my old 2DS is over a decade old, so of course I'd set my sights on the perfect model.</p>
+                                    <p>I don't care if you think New 2DS XL's are the weakest of the bunch. This console is HEAVENLY. It's green, looks mean, and is a fully modded beast of a machine. Not only did I get a nearly mint condition console, but it also came with the box! Not like I keep it in there; I bought a case for it.</p>
+                                    <p>Half the time, though, I don't use the 2DS for games. I use it for taking pictures! There's not a whole lot to look at right now, but I'm gonna be lugging this thing around for a long while. It'll be fun to look at a few decades down the line.</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <p><b>And these are all the consoles I care slightly less about:</b><br>Nintendo Wii, Wii U, Playstation 4, Nintendo Switch, Switch 2, The Leapfrog which I probably threw away years ago</p>
+                    </details>
+                </article>
+            </main>
+            
+            <footer-component></footer-component>
+        </div>
+    </body>
+</html>

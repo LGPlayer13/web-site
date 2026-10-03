@@ -5,229 +5,155 @@
         <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
         <script src="/javascript/components.js" type="text/javascript" defer></script>
         <script src="/javascript/blog.js" type="text/javascript" defer></script>
         <style>
-            body {
-                --bgGradient1: rgba(67, 65, 3, 0.87);
-                --bgGradient2: rgba(103, 85, 8, 0.87);
+            :root {
+                --bgGradient1: rgba(233,233,223,0.87);
+                --bgGradient2: rgba(158,199,108,0.87);
+
+                --hue: #4a5241;
+                --darkHue: #1a1c16;
+                --bgHue: #e9e9df;
             }
             
-            .board {
-                position: relative;
-                background-image: url(/images/linkimgs/plankbg.jpg);
-                border: 6px double #261600;
-                outline: 2px solid #261600;
-                border-radius: 6px;
-                margin: 10px auto;
-                padding: 0;
-                width: 85%;
-                box-shadow: 0 3px 6px rgba(42,22,0,0.7);
-            }
-            .board div {display: flex;justify-content: center;}
+            article > div {position: relative;}
             
-            .toggle {
-                flex: 1;
-                background: #4c341b;
-                border-bottom: 2px solid #261600;
-                padding: 8px;
-                transition: background 0.2s, border 0.2s, letter-spacing 0.4s;
-                cursor: default;
+            footer {
+                --color: black;
+                --shadow: #838383;
             }
-            .toggle:hover, #extend:hover, .blogYear:hover {
-                background: #76512a;
-                cursor: pointer;
-            }
+            
+            /* blog stuffs */
             
             #postlistdiv {
-                margin: 0;
-                padding: 10px 0;
-                min-height: 250px;
-                overflow: auto;
-                transition: max-height 0.25s ease;
-            }
-            #postlistdiv::-webkit-scrollbar {display: none;}
-            
-            #postlistdiv ul {
-                margin: 0;
+                background: rgba(0,0,0,0.1);
+                border: 2px solid var(--hue);
+                margin: 1em 2em;
                 padding: 0;
-                list-style-type: none;
-            }
-            #postlistdiv a {
-                display: block;
-                color: black;
-                background: url(/images/background/blogPaper.png) no-repeat center;
-                border-radius: 6px;
-                margin: 5px auto;
-                padding: 10px 0;
-                width: 85%;
-                font-size: 19px;
-                font-family: "Indie Flower", cursive;
-                text-shadow: none;
-                transition: 0.2s;
-            }
-            #postlistdiv li:has(a:visited) {filter: brightness(0.9);}
-            #postlistdiv a:hover {transform: scaleX(1.05);}
-            
-            #postlistdiv li.devlog {filter: brightness(0.75);}
-            
-            #extend {
-                color: #f8ca8a;
-                position: absolute;
-                background: #4c341b;
-                border: 3px solid #261600;
-                border-radius: 50%;
-                padding: 3px 8.2px;
-                bottom: -14px;
-                right: -20px;
-                font-size: 27px;
-                text-shadow: none;
-                transition: background 0.2s;
-                cursor: default;
-            }
-            
-            #blogYearDiv {
-                display: flex;
-                position: absolute;
-                width: 140px;
-                max-height: 200px;
-                right: -73px;
-                top: 50px;
+                min-height: 210px;
+                max-height: 320px;
                 overflow: auto;
-                justify-content: flex-start;
-                align-items: center;
-                flex-direction: column;
+                
+                & ul {
+                    padding: 0;
+                    list-style-type: none;
+                }
+                & li {margin: 8px 0;}
+
+                & p {position: relative;}
             }
-            #blogYearDiv::-webkit-scrollbar {display: none;}
             
-            .blogYear {
-                position: relative;
-                background: #4c341b;
-                border: 2px solid #261600;
-                border-radius: 4px;
-                margin: 2px 0;
-                padding: 8px 2px;
-                width: 50%;
-                transition: background 0.2s, border 0.2s, letter-spacing 0.4s;
-                box-shadow: 0 2px 5px rgba(42,22,0,0.7);
-                cursor: default;
+            li {
+                & time {
+                    background: rgba(255,255,255,0.75);
+                    border-radius: 4px;
+                    padding: 2px 5px;
+                }
+                & span {
+                    opacity: 0.5;
+                    margin: 0 8px;
+                    font-size: 18px;
+                    pointer-events: none;
+                }
+                
+                & a {
+                    color: black !important;
+                    background: none !important;
+                }
             }
-            .blogYear.active, .toggle.active {
-                border-color: wheat;
-                font-weight: bold;
-                letter-spacing: 1.8px;
+            p img {
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+            }
+            
+            #yearSort {
+                position: absolute;
+                background: rgba(0,0,0,0.1);
+                border: 2px solid var(--hue);
+                padding: 2px 12px;
+                width: 70px;
+                top: -26px;
+                right: 2em;
+                font-size: inherit;
+                font-family: inherit;
+                text-align: center;
+                
+                &:hover {
+                    color: white;
+                    background: var(--hue);
+                    cursor: pointer;
+                }
             }
         </style>
     </head>
     <body>
-        <header-component></header-component>
-        
-        <div class="hangingDecor" style="--img: url(/images/background/hangingLeaves.png);"></div>
-
         <div id="container">
+            <header-component></header-component>
             
-            <aside>
-                <img class="charHover" src="/images/decor/tearjerker.png" style="position: absolute;width: 110px;top: 380px;right: 10px;" title="oh come on, it can't be THAT bad" alt="sparky crying and covering her face">
-            </aside>
-            
+            <div class="hangingDecor" style="--img: url(/images/decor/hangingLeaves.png);"></div>
+
             <main>
                 <h1>Blog</h1>
+                <img class="gif" style="top: 8%;right: -56%;" src="/images/gifs/it'sALotBlurb.gif" alt="it's a lot, i know">
                 
-                <div class="box background" style="--bg: url(/images/background/blogField.png);--pos: 0 50%;">
-                    <p>Welcome to my blog! This is where I rant about stuff that happens in my life. New posts don't have a schedule; both blog and devlog.<br><span class="fadedText">It serves as a diary more than anything, and I don't expect you to actually read all of it.</span></p>
-                    <hr>
-                    <p>You can sort posts by <i>year</i> and <i>type</i> using the buttons below.</p>
-                </div>
-                <sup>this blog uses <a href="https://zonelets.net/" target="_blank">Zonelets</a> as a backend.</sup>
-                
-                <hr>
-
-                <div class="board">
+                <article class="article-wide">
+                    <h2>a blog, you say?</h2>
+                    <p>Welcome to my blog! This is where I rant about stuff that happens in my life. From progress reports to school rants, game announcements to meaningless garbage; this blog has it all. It's basically a glorified diary, and I don't expect you to read all of it.</p>
+                    <p>Typically, blog posts with song names are "life updates". I will say, though, a handful of these posts contain personal stuff that people <b>probably wouldn't be comfortable reading</b>. Not every post is like this, thankfully, but the outliers will have a trigger warning at the top.</p>
+                    
+                    <h3 style="margin: 1em 2em;">without further ado, here be the posts!</h3>
                     <div>
-                        <span class="toggle active" onclick="showPosts('all')">All</span>
-                        <span id="blogCount" class="toggle" onclick="showPosts('blog')">Blog</span>
-                        <span id="devlogCount" class="toggle" onclick="showPosts('devlog')">Devlog</span>
+                        <p id="postlistdiv"></p>
+                        <button id="yearSort" onclick="sortPosts()">All</button>
                     </div>
-                    <p id="postlistdiv" style="max-height: 420px;"></p>
-                    
-                    <div id="blogYearDiv">
-                        <div class="blogYear">2026</div>
-                        <div class="blogYear">2025</div>
-                        <div class="blogYear">2024</div>
+                </article>
+                
+                <article class="article-two">
+                    <h2>the blog 2: the second part</h2>
+                    <p>In case you're wondering what this particular article is talking about, wonder no more! For those who might actually remember, <a href="museum/archives.html">ancient versions of the site</a> had a completely different blog.</p>
+                    <p>That version of the blog is now known as the 'Old Blog', and is, in all honesty, pretty terrible. I didn't use Zonelets or any fancy Javascript (nor did I even know any), and it resulted in a very interesting ten months. Click the pink buttons and read away!</p>
+                </article>
+                <article class="article-one">
+                    <h2>old stuffs</h2>
+                    <div class="links">
+                        <a href="blog/old-blog.html">Old Blog</a><a href="blog/old-backlog.html">Old Backlog</a><a href="blog/old-devlog.html">Old Devlog</a>
+                        <div class="blurb"><u>NOTE:</u> these pages are very old. i don't visit them often, and they usually make me cringe.</div>
                     </div>
-                    
-                    <div id="extend" onclick="extendList()">⬇</div>
-                </div>
+                </article>
 
-                <div class="bubbleCont">
-                    <a class="bubble" href="/posts/old-blog">Old Blog</a>
-                    <a class="bubble" href="/posts/old-backlog">Old Backlog</a>
-                    <a class="bubble" href="/posts/old-devlog">Old Devlog</a>
+                <div id="extras" class="article-wide">
+                    <a href="blog/100webmaster.html"><img src="/images/sprites/icons/cursor.png">100 Questions for Webmasters</a>
                 </div>
-                <sup><b>note:</b> these are legacy pages, and aren't up to par with the latest pages.</sup>
             </main>
             
-            <aside>
-                <img class="charHover" src="/images/decor/nerdcore2.png" style="position: absolute;width: 130px;top: 300px;left: 0;--delay: 0.75s;" title="no no no, you had it right before" alt="audrey holding up a book, confused">
-                
-                
-            </aside>
-
+            <footer-component></footer-component>
         </div>
-
-        <footer-component></footer-component>
-
+        
         <script>
-            const extend = document.getElementById("extend");
-            const blogYears = document.querySelectorAll(".blogYear");
-            const blogToggles = document.querySelectorAll(".toggle");
+            const date = new Date();
+            const sorter = document.getElementById("yearSort");
             
-            let selectedType = "all";
-            let selectedYear;
+            let selectedYear = date.getFullYear() + 1;
             
-            // showing posts by type (e.g. blog, devlog)
-            function showPosts(type) {
-                selectedType = type;
+            function sortPosts() {
+                selectedYear -= 1;
                 
-                for (let x = 0; x < blogToggles.length; x++) {
-                    if (blogToggles[x].innerHTML.toLowerCase().includes(selectedType)) { blogToggles[x].className = "toggle active"; }
-                    else { blogToggles[x].className = "toggle" }
-                }
-                
-                for (let i = 0; i < postListChildren.length; i++) {
-                    if ((postListChildren[i].classList.contains(selectedType) || selectedType === "all") && (postListChildren[i].innerHTML.includes(selectedYear) || selectedYear === undefined))  {
+                if (selectedYear == 2023) {
+                    sorter.innerHTML = "All";
+                    selectedYear = date.getFullYear() + 1;
+                    for (let i = 0; i < postListChildren.length; i++) {
                         postListChildren[i].style.display = "list-item";
-                    } else {
-                        postListChildren[i].style.display = "none";
                     }
-                }
-            }
-            
-            // extending the post list division
-            function extendList() {
-                if (postList.style.maxHeight == "420px") {
-                    postList.style.maxHeight = "675px";
-                    extend.innerHTML = "⬆";
                 } else {
-                    postList.style.maxHeight = "420px";
-                    extend.innerHTML = "⬇";
-                }
-            }
-            
-            // sorting posts by year (the buttons that do it)
-            for (let i = 0; i < blogYears.length; i++) {
-                blogYears[i].addEventListener("click", function () {
-                    if (blogYears[i].className == ("blogYear")) {
-                        for (let x = 0; x < blogYears.length; x++) { blogYears[x].className = "blogYear"; }
-                        blogYears[i].className = "blogYear active";
-                        selectedYear = blogYears[i].innerHTML;
-                    } else {
-                        blogYears[i].className = "blogYear";
-                        selectedYear = undefined;
+                    sorter.innerHTML = selectedYear;
+                    for (let i = 0; i < postListChildren.length; i++) {
+                        if (postListChildren[i].innerHTML.includes(selectedYear)) { postListChildren[i].style.display = "list-item";}
+                        else { postListChildren[i].style.display = "none"; }
                     }
-                    showPosts(selectedType);
-                });
+                }
             }
         </script>
     </body>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Archives</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #781f15;
+                --darkHue: #2e1411;
+                --bgHue: #e9e9df;
+            }
+            body {
+                background-image: linear-gradient(rgba(255, 13, 0, 0.1)), url(/images/backgrounds/stucco.jpg);
+                background-attachment: scroll;
+                background-repeat: repeat;
+                background-size: auto;
+                animation: none;
+
+                &:not(:has(.version:target)) #none {
+                    display: block;
+                }
+            }
+            footer {
+                --color: black;
+                --shadow: transparent;
+            }
+
+            nav a:nth-child(2) {
+                color: white;
+                background: var(--hue);
+                pointer-events: none;
+            }
+
+            .logo {
+                margin: 12px 0;
+                text-align: center;
+                
+                & img {
+                    display: block;
+                    width: 85%;
+                    max-height: 50px;
+                    margin: 0 auto 5px;
+                    object-fit: contain;
+                }
+                & p {
+                    margin: 0;
+                    text-indent: 0;
+                }
+            }
+            .scroll {padding: 0;}
+
+            .links {
+                display: flex;
+                padding-top: 0;
+
+                & a {
+                    display: inline-block;
+                    flex: 1;
+                }
+            }
+
+            #none {display: none;}
+
+            .version {
+                display: none;
+                color: white;
+                position: relative;
+                background: var(--hue);
+                border-bottom: 3px solid var(--darkHue);
+                margin: 10px 0 0;
+                padding: 1em;
+
+                &:target {display: block;}
+
+                & h2 {margin: 0;}
+                & p {
+                    margin: 5px 0 0;
+                    padding: 0;
+                    text-indent: 0;
+                }
+                & small {color: lightgray;}
+
+                & p a {color: white !important;}
+
+                & img.archive {
+                    background: var(--bgHue);
+                    border: 9px double var(--hue);
+                    margin-top: 1em;
+                    width: stretch;
+                    height: 460px;
+                    object-fit: cover;
+                }
+            }
+            .version::selection {
+                color: black;
+                background: var(--bgHue);
+            }
+
+            .trip {
+                position: absolute;
+                background: var(--bgHue);
+                border: 6px double var(--hue);
+                border-radius: 24px;
+                padding: 3px 50px;
+                top: 11px;
+                right: 15px;
+                font-size: 19px;
+                font-weight: normal;
+                    text-decoration: none;
+
+                &:hover {
+                    border: 2px solid var(--bgHue);
+                    top: 14px;
+                    right: 19px;
+                }
+                &.off {color: black;}
+            }
+
+            small a {color: lightgray !important;}
+            
+            .bgimg {display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <a href="/museum.html"><img class="banner" src="/images/sprites/siteBannerM.jpeg"></a>
+            </header>
+            <nav id="theWorks">
+                <a href="/index.html">Home</a><a href="archives.html">Archives</a><a href="collections.html">Collections</a><a href="photography.html">Photography</a>
+            </nav>
+
+            <main>
+                <h1>Archives</h1>
+                
+                <article class="article-half">
+                    <h2>epic site versions of history</h2>
+                    <p>This site's been through a lot. No one gets it right the first time, as the saying goes. To be blunt, none of the versions below got it right. They didn't even come close.</p>
+                    <p>But color theory and lists be damned, I love dwelling on the past. And now you can too!</p>
+                    <p>Or, you can just <a href="https://web.archive.org/web/*/https://lgplayer13.neocities.org/">visit the wayback machine</a> yourself. It's up to you.</p>
+                </article>
+                <article class="article-half">
+                    <h2>graphic design is my passion</h2>
+                    <div class="scroll" style="--max: 224px;">
+                        <p class="lefty">Y'know how big corpos have logos? Well, I do as well! Though, some are better than others.</p>
+                        <div class="logo">
+                            <img src="images/archives/logoTrash.png">
+                            <p>This logo was used very briefly, appearing in an old George 2 demo. Neither effort nor very much thought was put in.</p>
+                        </div>
+                        <div class="logo">
+                            <img src="images/archives/logo2.0.png">
+                            <p>The "LG" part was made almost immediately after the last logo. It stuck around, but I later dropped the black arrow... thing.</p>
+                        </div>
+                        <div class="logo">
+                            <img src="images/archives/logo4.0.png">
+                            <p>It's what I use to this day! I trimmed the fat, while giving it some <i>shine</i>. I've grown quite fond of pink.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-wide">
+                    <div class="links row">
+                        <a href="#1.0">v1.0</a>
+                        <a href="#2.0">v2.0</a>
+                        <a href="#2.1">v2.1</a>
+                        <a href="#3.1">v3.1</a>
+                        <a href="#4.0.2">v4.0.2</a>
+                    </div>
+
+                    <div id="none">
+                        <p class="centered-text">Select a version to see its history.</p>
+                    </div>
+
+                    <div id="1.0" class="version">
+                        <a class="trip off" href="#">Take a trip!</a>
+                        <h2>version 1.0</h2>
+                        <img class="archive" src="images/archives/web1.0.png">
+                        <p>Back when the site was on GitHub Pages, it looked something like this. I didn't archive much of this version, except for the Old Blog and Devlog.<br>I barely knew anything about web design, and was mostly going off what I knew from Idle Game Maker (mainly The Lost Labyrinths). While this definitely helped get the site off the ground, it looked incredibly ugly. At least I was having fun.</p>
+                        <p>Before I settled on Atabook, I used the now-defunct 123Guestbook. It had a nice widget, which you can see near below the purple box.</p>
+                        <small>I was also unaware that "120.0.0.7" is the localhost, going so far as to censoring it.</small>
+                    </div>
+                    <div id="2.0" class="version">
+                        <a class="trip" href="https://web.archive.org/web/20240910172443/https://lgplayer13.neocities.org/">Take a trip!</a>
+                        <h2>version 2.0</h2>
+                        <img class="archive" src="images/archives/web2.0.png">
+                        <p>And here's where I moved back to Neocities. Not sure why I left in the first place, but oh well.</p>
+                        <p>This design fully embraced the color orange. While my HTML skills had been steadily improving, my CSS was still crap, for lack of a better word (which is surprising, since SMS '24 looks okay).<br>Even though I just said my HTML skills were improving, I didn't know how to use lists, resulting in some questionable design choices.</p>
+                        <p>The response to this version was shockingly positive, but it would only be a few months before I really stepped up my game.</p>
+                    </div>
+                    <div id="2.1" class="version">
+                        <a class="trip" href="https://web.archive.org/web/20250424064729/https://lgplayer13.neocities.org/">Take a trip!</a>
+                        <h2>version 2.1</h2>
+                        <img class="archive" src="images/archives/web2.1.png">
+                        <p>Well, the colors are still hard to digest, but everything else looks noticeably better! I don't know what I did in the three months between versions, but this is a lot more like it.</p>
+                        <p>I forgot to mention in v2.0's section, but this version had a variety of themes! They came in green, turquoise, and purple, and only the last one was worth using!<br>Around this time, the new blog was introduced as well. Even though the text was cramped and a bit hard to read, it was another step in the right direction.</p>
+                        <p>It would take six months for the next major update, but I'd say this is where the site got "good".</p>
+                        <small>This update was also so good that I had <a href="https://hyphen-lost.neocities.org/gallery/bricks.png" target="_blank">bricks thrown at my knees</a>!</small>
+                    </div>
+                    <div id="3.1" class="version">
+                        <a class="trip" href="https://web.archive.org/web/20251111220319/https://lgplayer13.neocities.org/">Take a trip!</a>
+                        <h2>version 3.1</h2>
+                        <img class="archive" src="images/archives/web3.1.png">
+                        <p>Now <i>this</i> was the stuff back in the day. I know I said the gap between versions was six months, but in reality, v3.0 only took six <i>days</i>. But I had a lot of fun making it!</p>
+                        <p>This is where I started shoving a bunch of my characters into different pages, in an effort to bring out my "personality". Having them floating there looks kinda odd now, but it's not like we don't have those nowadays.</p>
+                        <p>Colors were yet a persistent struggle in my pre-5.0 days, and those browns weren't exactly flattering. And little did I know, the bulk of this design would end up sticking around for over a year.</p>
+                    </div>
+                    <div id="4.0.2" class="version">
+                        <a class="trip" href="https://web.archive.org/web/20260603051521/https://lgplayer13.neocities.org/">Take a trip!</a>
+                        <h2>version 4.0.2</h2>
+                        <img class="archive" src="images/archives/web4.0.png">
+                        <p>I'm mixed about v4.0. On the one hand, it introduced stuff like the new logo, proper site colors, and the clickable floating characters. On the other, though, this design ended up being a nightmare to expand upon.</p>
+                        <p>The beta version of v4.1 was so disastrous that I ended up scrapping the whole thing and making v5.0 (you can read more about it <a href="/blog/posts/2026-08-13-Five-Points.html">here</a>). That whole "liquid glass" thing I was going for never really stuck, and this version ended up being kind of a mess.</p>
+                        <p>People still responded positively to it, so I considered it a success at the time.</p>
+                    </div>
+                </article>
+            </main>
+            
+            <footer-component></footer-component>
+        </div>
+    </body>
+</html>

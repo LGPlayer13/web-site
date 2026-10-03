@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • Doodles</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #912e2e;
+                --darkHue: #361111;
+                --bgHue: #f9dbdb;
+            }
+            body {
+                background: #ae444e;
+                animation: none;
+            }
+            footer {--shadow: transparent;}
+
+            /* actual page stuff */
+
+			main {
+				gap: 6px;
+				& h1 {
+					background: var(--hue);
+					border-radius: 2em;
+					margin: 0;
+					padding: 10px;
+					text-align: center;
+				}
+			}
+			h1 span {
+				position: absolute;
+				background: var(--hue);
+				border-radius: 12px 12px 0 0;
+				padding: 2px 20px 0;
+				top: -23px;
+				left: 35px;
+				font-size: large;
+				text-shadow: none;
+				box-shadow: 3px 3px var(--darkHue);
+				z-index: -1;
+
+				& a {color: white !important;}
+			}
+            p {
+				padding: 0 1.17em !important;
+				text-indent: 0 !important;
+			}
+
+            .goHome {--bg: #e3a4b3;}
+            .bgimg {display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <a class="bubble headBack" href="/index.html">Head home?</a>
+
+            <main>
+                <h1>doodle gallery<span>back to <a href="/art.html">art gallery</a></span></h1>
+
+                <article class="article-wide">
+					<h3>krita doodles</h3>
+					<p>i guess we're doing 512x512 now (drawing with a mouse is hard)</p>
+					
+					<div class="art">
+						<a><img src="images/krita-doodles/holeOfSticks.png"></a>
+						<a><img src="images/krita-doodles/asIfCanDraw.png"></a>
+						<a><img src="images/krita-doodles/thumbsUp.png"></a>
+					</div>
+
+                    <h3>chromebook doodles</h3>
+					<p>these were drawn on my school chromebook during intense periods of boredom.<br>it's weird, because <i>everyone</i> was drawing on these things for the first few months, but then people just kinda stopped after a little while??<br>i feel bad for the drawing pencils that haven't seen the light of day in years, though a lot of students ended up breaking theirs.</p>
+
+                    <div class="art">
+                        <a><img src="images/chrome-doodles/georgie7.png"></a>
+                        <a><img src="images/chrome-doodles/georgie6.png"></a>
+                        <a><img src="images/chrome-doodles/georgie5.png"></a>
+                        <a><img src="images/chrome-doodles/georgie4.png"></a>
+                        <a><img src="images/chrome-doodles/georgie2.png"></a>
+                        <a><img src="images/chrome-doodles/georgie1.png"></a>
+					</div>
+                </article>
+            </main>
+            
+            <footer-component></footer-component>
+        </div>
+    </body>
+</html>

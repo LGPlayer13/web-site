@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • To-Do List</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #4c4c4c;
+                --darkHue: #303030;
+                --bgHue: #eeeeee;
+            }
+            body {
+                background: #d1d1d1;
+                animation: none;
+            }
+
+            footer {
+                --color: black;
+                --shadow: transparent;
+            }
+
+            /* actual page stuff */
+
+            header {
+                margin-bottom: 2rem;
+                & h1, p {text-align: left;}
+                & p {font-size: large;}
+                & a {color: black !important;}
+            }
+
+            article {
+                box-shadow: none;
+                & h2 {border: none;}
+                & p {text-indent: 0;}
+
+                &.youtube {--hue: #ff0033;}
+
+                &::before {
+                    position: absolute;
+                    background: var(--bgHue);
+                    border: 2px solid var(--hue);
+                    border-bottom: none;
+                    border-radius: 8px 8px 0 0;
+                    padding: 1px 15px;
+                    top: -24px;
+                    right: 8px;
+                }
+            }
+            article {
+                &.active::before {content: "active!";}
+                &.pending::before {content: "pending";}
+                &.hiatus::before {content: "hiatus...";}
+                &.future::before {content: "planned";}
+            }
+
+            .lefty small {font-style: italic;}
+
+            .goHome {--bg: #d1d1d1;}
+            .bgimg {display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>to-do list</h1>
+                <p>will i bother to actually finish anything here? don't get your hopes up!<br>NOTE: for George 1.5 updates, visit <a href="george-1.5.html">its page</a>.</p>
+                <p>also, would you like to go <a href="/games.html">back to Games</a>?</p>
+            </header>
+
+            <main>
+                <article class="article-two active">
+                    <h2>Return to Mine!<span>IGM</span></h2>
+                    <p>While the core gameplay is there, the game still needs a lot more content and polish before a proper build can be released.<br>I've listed the top objectives for the next public build here:</p>
+                    <ul>
+                        <li>Items, and their battle counterparts</li>
+                        <li>More ore types and badges</li>
+                        <li>Overall progression system + lore</li>
+                    </ul>
+
+                    <details class="info">
+                        <summary>About the game</summary>
+                        <p>The <abbr title="it more closely resembles the original idea for Mine!">spiritual successor</abbr> to Mine!, now known as <a href="https://orteil.dashnet.org/igm/?g=https://file.garden/Yhwc9XZFah3TM9iw/Stone%20Mine%20Simulator.txt" target="_blank">Stone Mine Simulator</a>. You work for an odd company, mining ores and traversing through different mines. Expand your reach, hire grandmas, and collect all the ores!</p>
+                        <p>Main gameplay is a clicker with some idle and RPG elements scattered about. The framework is done, but it needs a hell of a lot more content.</p>
+                    </details>
+                </article>
+                <article class="article-one hiatus">
+                    <h2>Fire Forge<span>IGM</span></h2>
+                    <p>The basic UI design and inventory are there, but the idea is far from fleshed out.</p>
+                    <p>I've put it on hold to make time for RTM!, for the time being (sorry).</p>
+
+                    <details class="info">
+                        <summary>About the game</summary>
+                        <p>Make junk in your background out of an open flame. Some friends might also get involved.</p>
+                        <p>An old <a href="https://orteil.dashnet.org/igm/?g=https://file.garden/Yhwc9XZFah3TM9iw/Fire%20Forge%20Private%20Build%20Delta.txt" target="_blank">development version</a> is available, albeit it lacks any pixel art.</p>
+                    </details>
+                </article>
+
+                <article class="article-half pending">
+                    <h2>You're Dating a Cucumber!<span>Scratch</span></h2>
+                    <p>Dating sim! If you couldn't tell by the title, you'll be going on a series of dates with Cory the Cucumber.</p>
+                    <p>Originally, I wanted this game to have "live dating" gameplay, where Cory would spout random strings of dialogue at random.<br>That idea is definitely NOT going to stick, so the game will likely end up as a visual novel with some fun minigames thrown in.</p>
+                </article>
+                <article class="article-half future">
+                    <h2>Sid's Adventure (re-do)<span>itch.io</span></h2>
+                    <p>I plan to (somehow) learn Godot and start work on a reboot/remake/rewhatever of <a href="https://lgplayer13.itch.io/sids-adventure-widescreen-port" target="_blank">Sid's Adventure</a>, sometime after George 1.5.</p>
+                    <p>The re-do will span a few chapters, featuring a new character or two to follow along Sid. I have some ideas for the overarching story, but that's an issue for later.</p>
+                    <p>Some concept art can be found <a href="/art/concepts.html">here</a>.</p>
+                </article>
+
+                <article class="article-one youtube pending">
+                    <h2>The YT channel</h2>
+                    <p>I'll get around to making these ideas real at some point.</p>
+                    <ul>
+                        <li>Wonderland.jar part 2</li>
+                        <li>Super Scratch Smash on Demonic Mod (again)</li>
+                        <li>Chirpy Reverie vid</li>
+                    </ul>
+                </article>
+                <article class="article-two future">
+                    <h2>Other random ideas</h2>
+                    <ul>
+                        <li>A good buddy of mine drew some comics once, maybe I could get in on that action</li>
+                        <li>George 2, which will come after Sid's Adventure and also be made in Godot</li>
+                        <li>Just an entirely new IP that gives me some more characters to work with (preferably not shapes)</li>
+                    </ul>
+                </article>
+            </main>
+
+            <a class="goHome" href="/index.html">&lt;- Go back home?</a>
+            
+            <footer-component></footer-component>
+        </div>
+    </body>
+</html>

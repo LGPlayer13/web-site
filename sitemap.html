@@ -1,106 +1,102 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>LG Productions • Patch Notes</title>
+        <title>LG Productions • Site Map</title>
         <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
         <script src="/javascript/components.js" type="text/javascript" defer></script>
         <style>
-            body {
-                --bgGradient1: rgba(79, 56, 19, 0.87);
-                --bgGradient2: rgba(74, 46, 7, 0.87);
+            :root {
+                --bgGradient1: rgba(109, 82, 46, 0.87);
+                --bgGradient2: rgba(117, 114, 44, 0.87);
+            
+                --hue: #564321;
+                --darkHue: #1c1916;
+                --bgHue: #e9e5df;
+            }
+
+            #deprecated {
+                position: absolute;
+                background: var(--bgHue);
+                border: 2px solid var(--hue);
+                border-radius: 8px 0 0 0;
+                border-style: solid none none solid;
+                padding: 5px;
+                bottom: 0;
+                right: 0;
             }
         </style>
     </head>
     <body>
-        <header-component></header-component>
-    
         <div id="container">
-            
-            <aside></aside>
-            
+            <header-component></header-component>
+
             <main>
-                <h2>Site Map</h2>
+                <h1>Site Map</h1>
                 
-                <div class="box">
-                    <p>Not sure where to go? Find your way with the Site Map!<br>Check a board with the folder you're looking for, then click on a link!</p>
-                </div>
+                <article class="article-wide">
+                    <h2>the map to map all maps</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <ul>
+                            <li><a href="timeline.html">Timeline</a></li>
+                        </ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="links.html">Links</a></li>
+                        <li><a href="art.html">Art Gallery</a></li>
+                        <ul>
+                            <li><a href="art/concepts.html">Concepts</a></li>
+                            <li><a href="art/doodles.html">Doodles</a></li>
+                        </ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <ul>
+                            <li><a href="blog/100webmaster.html">100 Questions for Webmasters</a></li>
+                            <li><a href="blog/old-blog.html">Old Blog</a></li>
+                            <li><a href="blog/old-backlog.html">Old Backlog</a></li>
+                            <li><a href="blog/old-devlog.html">Old Devlog</a></li>
+                        </ul>
+                        <li><a class="off">Characters</a> (coming soon!)</li>
+                        <li><a href="games.html">Games</a></li>
+                        <ul>
+                            <li><a href="games/george-1.5.html">George 1.5 (devlog)</a></li>
+                            <li><a href="games/extra-games.html">Extra Games</a></li>
+                            <li><a href="games/to-do-list.html">To-Do List</a></li>
+                        </ul>
+                        <li><a href="museum.html">Museum</a></li></li>
+                        <ul>
+                            <li><a href="museum/archives.html">Archives</a></li>
+                            <li><a href="museum/collections.html">Collections</a></li>
+                            <li><a href="museum/photography.html">Photography</a></li>
+                        </ul>
+                        <li><a href="shrines.html">Shrines</a></li>
+                        <ul>
+                            <li><a class="off">The First Shrine</a> (coming soon!)</li>
+                        </ul>
+                        <li><a href="sitemap.html">Sitemap</a> (you are here!)</li>
+                        <li><a href="patch-notes.html">Patch Notes</a></li>
+                        <li><a href="not_found.html">Not Found (404)</a></li>
+                        <li><a class="off">style.css</a></li>
+                    </ul>
 
-                <hr>
-
-                <div class="flex">
-                    <div class="gridBox" style="transform: rotate(1deg);">
-                        <h3>- Root -</h3>
+                    <div id="deprecated">
+                        <small>old and forgotten...</small>
                         <ul>
-                            <li><a href="/index">Home</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/gallery">Gallery</a></li>
-                            <li><a href="/games">Games</a></li>
-                            <li><a href="/patch-notes">Patch Notes</a></li>
-                            <!--<li><a href="/shrines">Shrines</a></li>-->
-                            <li><a href="/not_found">Not Found (404)</a></li>
+                            <li><a class="off">About Extras</a></li>
+                            <li><a class="off">Devlog</a></li>
+                            <li><a class="off">Gallery</a></li>
+                            <li><a class="off">Guestbook</a></li>
+                            <li><a class="off">Lore</a></li>
+                            <li><a class="off">Music</a></li>
+                            <li><a class="off">Socials</a></li>
                         </ul>
-                        <img class="floatImg" src="/images/decor/abitheavy.svg" title="don't drop it, ya goof" alt="robert holding up his scythe">
                     </div>
-                    <div class="gridBox" style="transform: rotate(-1.5deg);">
-                        <h3>- Games -</h3>
-                        <ul>
-                            <li><a href="/games/george-series">George Series</a></li>
-                            <ul>
-                                <li><a href="/games/george-series/george-1r">George 1 Remastered</a></li>
-                                <li><a href="/games/george-series/george-1.5">George 1.5</a></li>
-                            </ul>
-                            <li><a href="/games/sids-adventure">Sid's Adventure</a></li>
-                            <li><a href="/games/lgs-remastered-collection">LG's Remastered Collection</a></li>
-                            <li><a href="/games/super-scratch-melee">Super Scratch Melee</a></li>
-                            <li><a href="/games/after-hours-x">After Hours X</a></li>
-                            <li><a href="/games/labyrinths-II">Labyrinths II</a></li>
-                            <li><a href="/games/sms-24">Stone Mine Simulator '24</a></li>
-                            <li><a href="/games/fire-forge">Fire Forge</a></li>
-                        </ul>
-                        <img class="floatImg" src="/images/decor/games/ragequitter.png" title="rodrick rules by doing absolutely nothing" alt="rodrick playing on a laptop">
-                    </div>
-                    <div class="gridBox" style="transform: rotate(-0.4deg);">
-                        <h3>- Posts -</h3>
-                        <ul>
-                            <li><a href="/posts/old-blog">Old Blog</a></li>
-                            <li><a href="/posts/old-backlog">Old Backlog</a></li>
-                            <li><a href="/posts/old-devlog">Old Devlog</a></li>
-                        </ul>
-                        <img class="floatImg" src="/images/decor/sadPinkThing.svg" title="why the long face?" alt="pop looking somewhat distressed">
-                    </div>
-                    <div class="gridBox" style="transform: rotate(0.6deg);">
-                        <h3>- Deprecated -</h3>
-                        <ul>
-                            <li><a href="/about-extras">About Extras</a></li>
-                            <li><a href="/about-extras">Art Gallery</a></li>
-                            <li><a href="/devlog">Devlog</a></li>
-                            <li><a href="/faq">FAQ</a></li>
-                            <li><a href="/faq-extras">FAQ Extras</a></li>
-                            <li><a href="/guestbook">Guestbook</a></li>
-                            <li><a href="/lore">Lore</a></li>
-                            <li><a href="/music">Music</a></li>
-                        </ul>
-                        <img class="floatImg" src="/images/decor/lostDorito.png" title="wait how are you lost with a map" alt="george looking at a map, confused">
-                    </div>
-                    <!--<div class="gridBox" style="transform: rotate(0.6deg);">
-                        <h3>- Shrines -</h3>
-                        <ul>
-                            <li><a href="/shrines/mojib-ribbon">Mojib-Ribbon</a></li>
-                            <li>...maybe i'll make another?</li>
-                        </ul>
-                        <img class="floatImg" src="/images/decor/calligraphy.svg" title="please start taking this seriously" alt="george looking at a map, confused">
-                    </div>-->
-                </div>
+                </article>
             </main>
             
-            <aside></aside>
-    
+            <footer-component></footer-component>
         </div>
-    
-        <footer-component></footer-component>
     </body>
 </html>

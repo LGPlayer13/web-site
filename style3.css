@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); /* MAIN FONT */
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap'); /* BLOG FONT */
+
+:root {
+    --delay: 0s;
+    --bgGradient1: rgba(81,87,159,0.87);
+    --bgGradient2: rgba(139,83,163,0.87);
+    
+    --hue: #3f2e91;
+    --darkHue: #171136;
+    --bgHue: #e0dbf9;
+    --linkHue: #f62e84;
+
+    --blur: 0;
+}
+html {
+    scrollbar-color: var(--hue) var(--bgHue);
+}
+
+body {
+    color: black;
+    background-image: linear-gradient(135deg, var(--bgGradient1), var(--bgGradient2)), url("/images/backgrounds/checkeredbg.png");
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed;
+    background-size: auto, 29px;
+    margin: 0;
+    text-align: center;
+    font-family: "Varela Round", sans-serif;
+    animation: bgScroll 3.5s linear infinite;
+    overflow-x: hidden;
+    --scroll: 58px;
+}
+
+/* CORE ELEMENTS */
+
+#container {
+    position: relative;
+    margin: 3rem auto;
+    max-width: var(--width);
+    z-index: 1;
+    --width: 50rem;
+
+    &::selection {
+        color: white;
+        background: var(--hue);
+    }
+}
+
+main {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
+a:not(.off) {color: var(--linkHue);}
+a:hover {text-decoration: none;}
+
+/* header and footer */
+
+header {
+    position: relative;
+    margin-bottom: 1rem;
+}
+header .banner {
+    width: 100%;
+    box-shadow: 3px 3px #361129;
+}
+
+nav {
+    display: none;
+    margin: 3px 0 1.25rem;
+    width: 100%;
+    box-shadow: 3px 3px var(--darkHue);
+}
+nav#theWorks {
+    display: flex;
+    background: var(--darkHue);
+    border-radius: 12px;
+
+    & a:first-child {border-radius: 10px 0 0 10px;}
+    & a:last-child {border-radius: 0 10px 10px 0;}
+}
+
+footer {
+    opacity: 0.9;
+    color: var(--color);
+    margin-top: 4em;
+    text-shadow: 1.25px 1.25px 1px var(--shadow);
+    --color: white;
+    --shadow: black;
+    
+    & span {margin: 0 8px;}
+}
+footer a {color: var(--color) !important;}
+
+main > h1, h3.article-two {
+    color: white;
+    background: var(--hue);
+    margin: 0 0 3px;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 3px 3px var(--darkHue);
+    box-shadow: 3px 3px var(--blur) var(--darkHue);
+}
+main > h1 {grid-column: 1 / -1;}
+
+/* ARTICLES (grid boxes) */
+
+.article-wide {grid-column: 1 / -1;}
+.article-half {grid-column: span 3;}
+.article-two {grid-column: span 4;}
+.article-one {grid-column: span 2;}
+
+article {
+    display: inline-block;
+    position: relative;
+    background: var(--bgHue);
+    border: 2px solid var(--hue);
+    border-radius: 10px;
+    padding: 9px 0;
+    text-align: left;
+    text-shadow: none;
+    box-shadow: 3px 3px var(--blur) var(--darkHue);
+    
+    & a:not(.bubble):hover {
+        color: white;
+        background: var(--hue);
+    }
+}
+
+article > h2, details.big summary {
+    color: white;
+    background: var(--hue);
+    border-bottom: 3px solid var(--darkHue);
+    margin: 0;
+    padding: 2px 10px 0;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: left;
+    
+    &.gloomy {background: linear-gradient(to right, rgba(255,255,255,0.15), rgba(255,0,0,0.15));}
+    &:last-child {margin: 0;}
+    
+    & span {
+        margin-left: .5em;
+        font-weight: initial;
+        font-size: small;
+    }
+}
+article summary {cursor: pointer;}
+article > h3, details > h3 {margin: 1em;}
+
+details:not([class]) {
+    background: white;
+    border: 1px dotted var(--darkHue);
+    margin: 1em;
+    padding: 8px;
+
+    & p {
+        font-size: 14px;
+        text-indent: 0;
+    }
+}
+details.info {
+    & p {
+        padding: 0 1.5em;
+        text-indent: 0;
+    }
+
+    & summary {
+        background: rgba(0,0,0,0.2);
+        border-radius: 6px;
+        margin: 1em;
+        padding: 4px 8px;
+        font-weight: normal;
+    }
+}
+
+main h1, main > h3, article h2, article summary {
+    &::selection, span::selection {
+        color: black;
+        background: var(--bgHue);
+    }
+}
+
+article {
+    & p {
+        padding: 0 10px;
+        text-indent: 1.5em;
+    }
+    & p[class^="left"] {text-indent: 0;}
+    & p.leftyy {padding: 0 1.17em;}
+    
+    & q, .centered-text { /* quotes and centered text */
+        display: block;
+        text-align: center;
+        text-indent: 0 !important;
+    }
+}
+
+/* article classes */
+
+.flex, .flex-column {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > a {flex: 1;}
+}
+.flex-column {flex-direction: column;}
+.full-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollable {
+    max-height: var(--max); /* wish there was a better way to do this, but i'm stuck hard-coding for now :( */
+    overflow: auto;
+    --max: unset;
+}
+
+.links {padding-top: 10px;}
+
+.links > a, nav a {
+    display: block;
+    background: rgba(246,46,132,0.2);
+    border: 1px solid var(--hue);
+    border-style: solid none;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: letter-spacing 0.25s ease;
+    
+    &:hover {
+        color: white;
+        background: var(--hue);
+        letter-spacing: 1px;
+    }
+}
+
+.links.row a {border-width: 2px;}
+.links:not(.row) > a {
+    &:first-of-type {border-top-width: 2px;}
+    &:last-of-type {border-bottom-width: 2px;}
+}
+nav a {
+    display: inline-block;
+    flex: 1;
+    background: var(--bgHue);
+    border-width: 2px;
+
+    &:first-child {border-style: solid none solid solid;}
+    &:last-child {border-style: solid solid solid none;}
+}
+
+.hotlinks a {
+    flex: 1;
+    color: white;
+    border: 2px solid var(--hue);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1.25px 1.25px 2px black;
+    transition: letter-spacing 0.25s ease, color 0.25s, box-shadow 0.25s ease;
+    box-shadow: 3px 3px var(--darkHue), 0 0 7px var(--ss) rgba(255,255,255,0.6) inset;
+    --dim: 0.25;
+    --ss: 2px;
+    
+    &:hover {
+        color: var(--bgHue);
+        letter-spacing: 1px;
+        --ss: 6px;
+    }
+
+    & span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+.hotlinks.flex a {
+    margin: 0 4px;
+    &:first-child {margin-left: 0;}
+    &:last-child {margin-right: 0;}
+}
+.hotlinks.flex-column a {
+    display: table;
+    margin: 4px 0;
+
+    &:first-child {margin-top: 0;}
+    &:last-child {margin-bottom: 0;}
+}
+
+
+.art {
+    display: flex;
+    margin: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 5px;
+    --col: 3;
+
+    & a {width: calc((100% / var(--col)) - 5px);}
+    & img {
+        border: 1px dotted var(--hue);
+        width: stretch;
+        height: calc(730px / var(--col));;
+        object-fit: cover;
+    }
+}
+
+.background, .hotlinks a {
+    background-image: linear-gradient(rgba(0,0,0,var(--dim))), var(--bg) !important;
+    background-position: center;
+    background-size: cover;
+}
+.background {
+    box-shadow: 3px 3px var(--darkHue), 0 -2px 7px 2px rgba(255,255,255,0.5) inset;
+    --dim: 0.6;
+}
+
+/* BUBBLES */
+
+.bubble {
+    display: inline-block;
+    background: var(--bgHue);
+    border: 2px solid var(--hue);
+    border-radius: 20px;
+    margin: 5px 10px;
+    padding: 4px 30px;
+    width: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none !important;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    box-shadow: 2px 2px var(--darkHue);
+    
+    &:not(.off):hover {
+        color: white;
+        background: var(--hue);
+        transform: translate(2px, 2px);
+        box-shadow: none;
+    }
+}
+
+div:has(#links) > .bubble {
+    margin: 3px 0;
+    padding: 3px 0;
+    width: stretch;
+}
+
+/* EXTRA LINKS */
+
+.headBack {
+    position: fixed;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.goHome {
+    position: fixed;
+    color: black !important;
+    background: var(--bg);
+    padding: 2px 5px;
+    top: 20px;
+    left: 20px;
+    font-size: larger;
+    text-align: left;
+    --bg: transparent;
+}
+
+.flexlinks {
+    display: flex;
+    margin: 0 1em;
+    text-align: center;
+}
+.flexlinks a {
+    display: inline-block;
+    flex: 1;
+    color: black;
+    background: var(--hue2);
+    border: 2px solid var(--hue);
+    border-radius: 8px;
+    margin: 3px;
+    padding: 5px;
+    text-decoration: none !important;
+
+    &:hover {
+        background: var(--hue) !important;
+        border-color: var(--hue) !important;
+    }
+}
+
+#extras {
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#extras a {
+    display: inline-block;
+    background: var(--bgHue);
+    border: 2px solid var(--hue);
+    border-radius: 16px;
+    margin: 2px 0.25em;
+    padding: 2px 3em;
+    min-width: 150px;
+    width: fit-content;
+    text-decoration: none;
+    box-shadow: 2px 2px var(--blur) var(--darkHue);
+
+    & img {
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        color: white;
+        background: var(--hue);
+    }
+}
+
+/* CHAR LINKS */
+
+.charLink {
+    position: absolute;
+    width: var(--width);
+    
+    & img {
+        width: 100%;
+        object-fit: contain;
+        transition: filter 0.2s, transform 0.2s;
+        filter: drop-shadow(4px 4px var(--darkHue));
+    }
+}
+.charLink span {
+    opacity: 0;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1.25px 1.25px 2px black;
+    pointer-events: none;
+    transition: opacity 0.2s, bottom 0.2s;
+    z-index: 1;
+}
+
+.charLink:hover {
+    & img {
+        transform: scale(1.015);
+        filter: drop-shadow(4px 4px var(--darkHue)) drop-shadow(0 0 6px white) brightness(110%);
+    }
+    & span {
+        opacity: 1;
+        bottom: -10px;
+    }
+}
+
+/* LINK BUBBLES */
+
+.linkBubble {
+    display: block;
+    color: white !important;
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.3)), var(--bg);
+    background-position: var(--pos);
+    background-size: cover;
+    border: 3px solid black;
+    border-radius: 16px;
+    margin: 5px;
+    width: 45%;
+    text-align: left;
+    text-decoration: none !important;
+    transition: border 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 0 0 white inset, 0 2px 5px rgba(6,5,6,0.6);
+    --pos: center;
+}
+.linkBubble:hover {
+    border-color: white;
+    box-shadow: 0 0 24px white inset, 0 2px 5px rgba(139,109,151,0.6);
+}
+
+.linkBubble p {
+    margin: 5px 0;
+    padding: 0 8px 5px;
+    font-size: 16px;
+}
+
+.linkBubble h3 {
+    background: rgba(0,0,0,0.5);
+    border-radius: 13px 13px 0 0;
+    margin: 0;
+    padding: 5px 8px;
+    font-size: 24px;
+}
+
+.linkBubble span {
+    opacity: 0;
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: "Varela Round", sans-serif;
+    transition: opacity 0.2s;
+}
+.linkBubble:hover span, span.urgent, span.float {opacity: 1;}
+.linkBubble span.urgent {color: #ff40a9;}
+.linkBubble span.float {float: right;margin-top: 5px;}
+
+/* IMAGES */
+
+.decor, .gif {
+    position: absolute;
+    width: auto;
+    filter: drop-shadow(2px 2px rgba(0,0,0,0.6));
+}
+.gif {image-rendering: pixelated;}
+
+#logo, .gridBox img, .gamelogo, a:has(.art) {
+    filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+
+.bgimg {
+    opacity: 0;
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 100px;
+    left: 100px;
+    pointer-events: none;
+    animation: fadeloop 5s ease infinite;
+    animation-delay: var(--delay);
+    z-index: -1;
+}
+
+.hangingDecor {
+    opacity: 0.3;
+    background: var(--img) repeat-x;
+    background-size: 25%;
+    position: fixed;
+    width: 100%;
+    height: 30%;
+    top: 0;
+    left: 0;
+    animation: fellOff 1s ease;
+    z-index: -1;
+}
+
+/* HORIZONTAL LINES */
+
+hr {border: 0;}
+
+#container > hr {
+    border-bottom: 6px dotted rgba(0,0,0,0.6);
+    margin: 8px auto;
+    width: 15%;
+}
+article hr {
+    border-bottom: 2px dashed var(--darkHue);
+    margin: 1em auto;
+    width: 90%;
+}
+
+/* TEXT STYLING */
+
+.hotpink {
+    color: transparent;
+    background-image: linear-gradient(90deg, #c790fe, #fe5c96);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(1.25px 1.25px 1px black);
+}
+.solidpink {
+    opacity: 0.9;
+    margin: 0 0 1em;
+    font-style: italic;
+}
+.solidpink, #blogText::after {color: #e4bde5;}
+
+.blurb, small { /* 'small' is typically used, but the class is for special cases */
+    color: #333;
+    line-height: 1.1;
+    text-align: left;
+}
+.blurb {
+    margin-top: 8px;
+    font-size: smaller;
+}
+div.blurb {padding: 0 6px;}
+
+/* GAME PAGES */
+
+#gameInfo {
+    grid-column: 1 / -1;
+    margin-bottom: -4px;
+    text-align: left;
+
+    & a:hover {background: var(--hue);}
+}
+
+.updatelog {
+    max-height: 280px;
+    overflow: auto;
+}
+.version {margin: 1em 0;}
+
+/* MISC. RULES */
+
+.off {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.scroll {
+    margin: 0;
+    padding: calc(1em - 10px) 0;
+    max-height: var(--max);
+    overflow: auto;
+}
+
+marquee {
+    color: white;
+    background: var(--hue);
+    margin: 0 0 3px;
+    padding: 0;
+    white-space: nowrap;
+    box-shadow: 3px 3px var(--darkHue);
+    overflow: hidden;
+}
+marquee::selection {
+    color: black;
+    background: var(--bgHue);
+}
+
+ul.row {
+    display: flex;
+    padding: 0 2.5em;
+    flex-wrap: wrap;
+    gap: 0 1em;
+}
+li {padding-right: 1em;}
+
+/* ANIMATIONS */
+
+@keyframes bgScroll {
+    100% {background-position: 0, var(--scroll) var(--scroll);}
+}
+
+@keyframes scrollingText {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+@keyframes fadeloop {
+    0% {opacity: 0;}
+    50% {opacity: 0.3;}
+    100% {opacity: 0;}
+}
+
+@keyframes hover {
+    0%, 100% {transform: translate(0, 0);}
+    50% {transform: translate(0, var(--reach));}
+}
+
+@keyframes fellOff {
+    from {transform: translateY(-50px);}
+    to {}
+}
+
+@keyframes portalSpin {
+    100% {transform: rotate(360deg);}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body, .charLink, .charHover, .hangingLeaves, #shrinePortal, #sumicChannel {
+        animation: none !important;
+    }
+}
+@media screen and (max-width: 1280px) {
+    #container:has(nav) header {margin-bottom: 0;}
+    nav {display: flex;}
+
+    .decor, .gif, .charLink, .sparky, #status {
+        display: none;
+    }
+}

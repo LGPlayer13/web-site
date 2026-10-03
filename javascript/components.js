@@ -7,13 +7,14 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <header>
-                <a href="/index"><img id="logo" src="/images/decor/newLGLogo.png"></a>
+                <a href="/index.html"><img class="banner" src="/images/sprites/siteBanner.jpeg" alt="homepage"></a>
             </header>
         `;
     }
 }
 
 customElements.define('header-component', Header);
+const version = "v5.0";
 
 // footer
 class Footer extends HTMLElement {
@@ -24,36 +25,34 @@ class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <footer>
-                <sup>
-                    <span>&copy; LG Productions 2026 • v4.1 (beta)</span>
-                    <span><a href="/sitemap">site map</a></span>
-                    <span><a href="https://neocities.org/site/lgplayer13" target="_blank">neocities</a></span>
-                    <span><a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord</a></span>
-                </sup>
+                <span>LG Productions • ${version}</span><span><a href="/sitemap.html">site map</a></span><span><a href="https://neocities.org/site/lgplayer13" target="_blank">neocities</a></span><span><a href="https://discord.gg/v7NaVBTwnD" target="_blank">discord</a></span>
             </footer>
 
-            <img class="bgimg" style="animation-delay:0.78s" src="/images/bgshapes/georgeshape.png">
-            <img class="bgimg" style="animation-delay:1.43s" src="/images/bgshapes/coryshape.png">
-            <img class="bgimg" style="animation-delay:3.29s" src="/images/bgshapes/sparkyshape.png">
-            <img class="bgimg" style="animation-delay:4.51s" src="/images/bgshapes/sidshape.png">
-            <img class="bgimg" style="animation-delay:5.34s" src="/images/bgshapes/popshape.png">
-            <img class="bgimg" style="animation-delay:5.89s" src="/images/bgshapes/maxshape.png">
-            <img class="bgimg" style="animation-delay:6.67s" src="/images/bgshapes/aubreyshape.png">
-            <img class="bgimg" style="animation-delay:7.45s" src="/images/bgshapes/robertshape.png">
-            <img class="bgimg" style="animation-delay:8.21s" src="/images/bgshapes/karloffshape.png">
+            <img class="bgimg" style="animation-delay:0.78s" src="/images/backgrounds/shapes/georgeshape.png">
+            <img class="bgimg" style="animation-delay:1.43s" src="/images/backgrounds/shapes/coryshape.png">
+            <img class="bgimg" style="animation-delay:3.29s" src="/images/backgrounds/shapes/sparkyshape.png">
+            <img class="bgimg" style="animation-delay:4.51s" src="/images/backgrounds/shapes/sidshape.png">
+            <img class="bgimg" style="animation-delay:5.34s" src="/images/backgrounds/shapes/popshape.png">
+            <img class="bgimg" style="animation-delay:5.89s" src="/images/backgrounds/shapes/maxshape.png">
+            <img class="bgimg" style="animation-delay:6.67s" src="/images/backgrounds/shapes/aubreyshape.png">
+            <img class="bgimg" style="animation-delay:7.45s" src="/images/backgrounds/shapes/robertshape.png">
+            <img class="bgimg" style="animation-delay:8.21s" src="/images/backgrounds/shapes/karloffshape.png">
         `;
-        // change ABOUT page footer version when updating this
     }
 }
 
 customElements.define('footer-component', Footer);
 
-// auto-link showoff imgs
-const showoffs = document.querySelectorAll(".showoff a:has(img)");
+if (document.title.includes("Home")) {
+    document.querySelector("footer span").innerHTML = "&copy; LG Productions 2026 • " + version;
+}
 
-if (showoffs.length > 0) {
-    for (let i = 0; i < showoffs.length; i++) {
-        showoffs[i].href = showoffs[i].children[0].src;
+// auto-link art
+const art = document.querySelectorAll(".art a");
+
+if (art) {
+    for (let i = 0; i < art.length; i++) {
+        art[i].href = art[i].children[0].src;
     }
 }
 

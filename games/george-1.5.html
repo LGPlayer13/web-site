@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>LG Productions • George 1.5</title>
+        <link rel="icon" href="https://lgplayer13.neocities.org/siteLogo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style3.css" type="text/css" media="all">
+        <script src="/javascript/components.js" type="text/javascript" defer></script>
+        <style>
+            :root {
+                --hue: #c47b1d;
+                --darkHue: #362711;
+                --bgHue: #eafff6;
+                --linkHue: #0da175;
+            }
+            body {
+                background: #8ec1f5;
+                animation: none;
+            }
+            footer {
+                --color: black;
+                --shadow: transparent;
+            }
+
+            #water {
+                background: linear-gradient(to bottom, #459cd9, transparent);
+                position: fixed;
+                width: 100%;
+                height: 50%;
+                bottom: 0;
+                left: 0;
+
+                & img {pointer-events: none;}
+
+                & img:first-child {
+                    position: absolute;
+                    right: 4%;
+                    top: -40px;
+                }
+                & img:last-child {
+                    position: fixed;
+                    top: 10px;
+                    left: 10%;
+                }
+            }
+
+            /* actual page stuff */
+
+            main > img {
+                grid-column: 1 / -1;
+                width: 70%;
+                justify-self: center;
+            }
+
+            details:not(.info) {
+                background: #baffee;
+                border-color: var(--darkHue);
+
+                & summary {
+                    color: #003327;
+                    font-size: large;
+                    font-weight: bold;
+                }
+                & summary span {
+                    margin-left: 10px;
+                    font-size: medium;
+                    font-weight: normal;
+                }
+            }
+
+            .bgimg {display: none;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="water">
+                <img src="images/george-series/asfard.png">
+                <img src="images/george-series/theTwinSuns.png">
+            </div>
+
+            <a class="bubble headBack" href="/index.html">Head home?</a>
+
+            <main>
+                <img src="images/george-series/g15title.png">
+
+                <h1>Official Devlog</h1>
+
+                <article class="article-wide">
+                    <h2>overview<span>last updated on <b>10/01/26</b></span></h2>
+                    <p>Welcome! This is the official devlog for <b>George 1.5</b>, the half-sequel to George the Jumping Triangle. What started out as a series of (crappy) beta builds has turned into a game with an actual premise and good gameplay. If you're wondering what led up to George 1.5, check out the links below.</p>
+
+                    <ul class="row">
+                        <li><a href="https://lgplayer13.itch.io/george-1-remastered-widescreen-port">George 1 Remastered</a></li>
+                        <li><a href="https://scratch.mit.edu/projects/595705765/">George 2 [OLD DEMO]</a></li>
+                        <li><a href="https://scratch.mit.edu/projects/751275360/">George 2: Redefined Demo</a></li>
+                    </ul>
+
+                    <p>Currently, there are no plans for any early access or demo versions of George 1.5. Any and all future updates will be posted here, in the section below.</p>
+
+                    <details class="info">
+                        <summary>More about the game <b>(spoilers!)</b></summary>
+                        <p>George 1.5 serves as an "in-between" chapter, connecting the (abrupt) ending of George 1 to the future events of George 2. It focuses on the relationship between George and Greg, and how George has to cope with losing the last remaining member of his family.</p>
+                        <p>The game will take place across five levels, with cutscenes and boss fights between each one. You be ranked based on your performance in each level, from E to S+ tier. The game can be saved after each level, recording your times and ranks.</p>
+                    </details>
+
+                    <h2>update list!</h2>
+                    <details>
+                        <summary>Discord Update Recap 2<span>2026</span></summary>
+                        <ul>
+                            <li>Redesigned UI: new health bar and life counter, keys are displayed in the bottom-left</li>
+                            <li>Redid saving system: saves no longer record your exact game position and can only be obtained outside levels</li>
+                            <li>Tweaked menu to have the difficulty be chosen right after choosing "New game"</li>
+                            <li>Redid Greg's colors and shading</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Discord Update Recap 1<span>2025</span></summary>
+                        <ul>
+                            <li>Made two new cutscenes: one during level 2, and one right before level 3</li>
+                            <li>Added a level completion screen, which shows your time, rank, and a George sprite that changes with each level</li>
+                            <li>Wrapped up level 2 with another new cutscene, and started work on level 3</li>
+                            <li>Redid the entire system for entering/exiting levels, removing all the hardcoded nonsense</li>
+                            <li>Redesigned the game's logo after some debating with friends</li>
+                            <li>Created a new Timeline menu (the web site timeline is inspired by it!)</li>
+                            <li>Redid the level 1 background and level 3 colors</li>
+                        </ul>
+                    </details>
+
+                    <!--
+                    <details>
+                        <summary>Update 1<span>2026</span></summary>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </details>
+                    -->
+
+                    <h2>screenies</h2>
+                    <p class="leftyy">i'll add more at some point, trust</p>
+					<div class="art">
+						<a><img src="images/screenies/g15Screenie1.jpg"></a>
+						<a><img src="images/screenies/g15Screenie2.jpg"></a>
+						<a><img src="images/screenies/g15Screenie3.jpg"></a>
+					</div>
+                </article>
+            </main>
+            
+            <footer-component></footer-component>
+        </div>
+        <script>
+            document.querySelector("details:not(.info)").setAttribute("open", "");
+        </script>
+    </body>
+</html>

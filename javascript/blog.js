@@ -30,35 +30,36 @@ let authorLink = "https://lgplayer13.neocities.org/"; // Enter your website, soc
 /*UPDATE: as of version 1.3, you may omit the date if you would like. But if you
   use a date it must still follow that format.*/
 
-// Date (yyyy-mm-dd), Title, Type (blog/devlog), Word Count
 let postsArray = [
-[ "posts/2026-06-07-Blog-Junior-Year.html", encodeURI ( "Junior Year Review" ), "blog", 5452 ],
-[ "posts/2026-05-04-Blog-Blue-Moon.html", encodeURI ( "Blue Moon" ), "blog", 2572 ],
-[ "posts/2026-04-07-Blog-Cant-Remember.html", encodeURI ( "A Dream I Can't Remember" ), "blog", 2714 ],
-[ "posts/2026-03-01-Blog-Wrong-Way.html", encodeURI ( 'Wrong Way' ), "blog", 2127 ],
-[ "posts/2026-02-16-Devlog-Web-404.html", encodeURI ( 'Web Design 404' ), "devlog", 1869 ],
-[ "posts/2026-02-02-Blog-Stranded-Lullaby.html", encodeURI ( 'Stranded Lullaby' ), "blog", 1730 ],
-[ "posts/2026-01-07-Blog-Another-Day.html", encodeURI ( 'Maybe Another Day...' ), "blog", 1833 ],
-[ "posts/2025-12-31-Devlog-Year-Recap.html", encodeURI ( '2025 Recapped' ), "devlog", 2170 ],
-[ "posts/2025-12-06-Blog-Be-Thankful.html", encodeURI ( 'To Be Thankful' ), "blog", 1675 ],
-[ "posts/2025-11-02-Blog-Nothing-Changes.html", encodeURI ( 'Nothing Changes' ), "blog", 1735 ],
-[ "posts/2025-10-04-Blog-Break-Tension.html", encodeURI ( 'Break the Tension' ), "blog", 2079 ],
-[ "posts/2025-09-03-Blog-Big-Ideas.html", encodeURI ( 'Big Ideas' ), "blog", 2108 ],
-[ "posts/2025-08-01-Blog-End-Summer.html", encodeURI ( 'End Of Summer' ), "blog", 1779 ],
-[ "posts/2025-07-03-Blog-Two-Weeks.html", encodeURI ( 'Two Weeks' ), "blog", 3440 ],
-[ "posts/2025-06-02-Blog-Sophomore-Year.html", encodeURI ( 'Sophomore Year Review' ), "blog", 3408 ],
-[ "posts/2025-05-23-Devlog-LabII-Alpha1.html", encodeURI ( 'Labyrinths II (Alpha 1)' ), "devlog", 1448 ],
-[ "posts/2025-05-03-Blog-Will-Calls.html", encodeURI ( 'Will Calls' ), "blog", 2681 ],
-[ "posts/2025-04-07-Blog-Over-Ocean.html", encodeURI ( 'Over the Ocean' ), "blog", 2806 ],
-[ "posts/2025-03-11-Devlog-New-Album.html", encodeURI ( 'Fragments of Waves' ), "devlog", 957 ],
-[ "posts/2025-03-02-Blog-Worrywort.html", encodeURI ( 'Worrywort' ), "blog", 2612 ],
-[ "posts/2025-02-03-Blog-Part-III.html", encodeURI ( 'Part III' ), "blog", 1975 ],
-[ "posts/2025-01-03-Blog-Daydreaming.html", encodeURI ( 'Daydreaming' ), "blog", 1719 ],
-[ "posts/2024-12-31-Devlog-Year-Recap.html", encodeURI ( '2024 Recapped' ), "devlog", 979 ],
-[ "posts/2024-12-01-Blog-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid' ), "blog", 1295 ],
-[ "posts/2024-11-16-Devlog-G1R-v1.1.html", encodeURI ( 'George 1R Update 1.1' ), "devlog", 566 ],
-[ "posts/2024-11-02-Blog-Yet-Again.html", encodeURI ( 'Yet Again' ), "blog", 1178 ],
-[ "posts/2024-06-06-OldBlog-Freshman-Year.html", encodeURI ( 'Freshman Year Review' ), "blog", 2089 ]
+//[ "posts/2026-08-15-Expert-Streamer.html", encodeURI ( "Now That I'm an Expert Streamer" ), 2 ],
+[ "posts/2026-10-03-Five-Points.html", encodeURI ( "Devlog: Five Points for The G!" ), 1768 ],
+[ "posts/2026-06-07-Junior-Year.html", encodeURI ( "The Junior Year Review" ), 5457 ],
+[ "posts/2026-05-04-Blue-Moon.html", encodeURI ( "Blue Moon" ), 2570 ],
+[ "posts/2026-04-07-Cant-Remember.html", encodeURI ( "A Dream I Can't Remember" ), 2714 ],
+[ "posts/2026-03-01-Wrong-Way.html", encodeURI ( 'Wrong Way' ), 2127 ],
+[ "posts/2026-02-16-Web-404.html", encodeURI ( 'Web Design 404' ), 1868 ],
+[ "posts/2026-02-02-Stranded-Lullaby.html", encodeURI ( 'Stranded Lullaby' ), 1730 ],
+[ "posts/2026-01-07-Another-Day.html", encodeURI ( 'Maybe Another Day...' ), 1833 ],
+[ "posts/2025-12-31-Year-Recap.html", encodeURI ( '2025 Recapped (Idling...)' ), 2170 ],
+[ "posts/2025-12-06-Be-Thankful.html", encodeURI ( 'To Be Thankful' ), 1675 ],
+[ "posts/2025-11-02-Nothing-Changes.html", encodeURI ( 'Nothing Changes' ), 1735 ],
+[ "posts/2025-10-04-Break-Tension.html", encodeURI ( 'Break the Tension' ), 2079 ],
+[ "posts/2025-09-03-Big-Ideas.html", encodeURI ( 'Big Ideas' ), 2108 ],
+[ "posts/2025-08-01-End-Summer.html", encodeURI ( 'End Of Summer' ), 1779 ],
+[ "posts/2025-07-03-Two-Weeks.html", encodeURI ( 'Two Weeks' ), 3440 ],
+[ "posts/2025-06-02-Sophomore-Year.html", encodeURI ( 'The Sophomore Year Review' ), 3408 ],
+[ "posts/2025-05-23-LabII-Alpha1.html", encodeURI ( 'Devlog: LABY 2???' ), 1448 ],
+[ "posts/2025-05-03-Will-Calls.html", encodeURI ( 'Will Calls' ), 2681 ],
+[ "posts/2025-04-07-Over-Ocean.html", encodeURI ( 'Over the Ocean' ), 2806 ],
+[ "posts/2025-03-11-New-Album.html", encodeURI ( 'Fragments of Waves' ), 957 ],
+[ "posts/2025-03-02-Worrywort.html", encodeURI ( 'Worrywort' ), 2612 ],
+[ "posts/2025-02-03-Part-III.html", encodeURI ( 'Part III' ), 1975 ],
+[ "posts/2025-01-03-Daydreaming.html", encodeURI ( 'Daydreaming' ), 1719 ],
+[ "posts/2024-12-31-Year-Recap.html", encodeURI ( '2024 Recapped (Now Presenting)' ), 979 ],
+[ "posts/2024-12-01-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid' ), 1295 ],
+[ "posts/2024-11-16-G1R-v1.1.html", encodeURI ( 'Devlog: G1R v1.1 is out!' ), 566 ],
+[ "posts/2024-11-02-Yet-Again.html", encodeURI ( 'Yet Again' ), 1178 ],
+[ "posts/2024-06-06-Freshman-Year.html", encodeURI ( 'The Freshman Year Review' ), 2089 ]
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -79,7 +80,7 @@ let url = window.location.pathname;
 const postDateFormat = /\d{4}\-\d{2}\-\d{2}\-/;
 
 //Check if you are in posts (if so, the links will have to go up a directory)
-let relativePath = ".";
+let relativePath = "blog";
 if ( url.includes("posts/") ) {
     relativePath = "..";
 }
@@ -157,8 +158,7 @@ if ( currentIndex > -1 ) {
 function formatPostLink(i) {
     let postTitle_i = "";
     if ( postsArray[i].length > 1 ) {
-        let postType = postsArray[i][2];
-        postTitle_i = decodeURI(postsArray[i][1]) + " - " + postType.charAt(0).toUpperCase() + postType.slice(1);
+        postTitle_i = decodeURI(postsArray[i][1]);
     } else {
         if ( postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
             postTitle_i = postsArray[i][0].slice(17,-5).replace(/-/g," ");
@@ -167,7 +167,8 @@ function formatPostLink(i) {
         }
     }
     if ( postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-        return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
+        if (document.title.includes("Home")) { return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>'; }
+        else { return `<li><time>${postsArray[i][0].slice(6,16)}</time><span>\u00BB</span><a href="` + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>'; }
     } else {
         return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
     }
@@ -202,17 +203,17 @@ let prevlink = "";
  a "Next Post" link, right? And vice versa with the oldest 
  post! That's what the following code handles.*/
 if ( postsArray.length < 2 ) {
-    nextprevHTML = '<a class="bubble off">prev</a><a class="bubble" href="/blog">back</a><a class="bubble off">next</a>';
+    nextprevHTML = '<a class="bubble off">prev</a><a href="/blog.html">blog</a><a class="bubble off">next</a>';
 } else if ( currentIndex === 0 ) {
     prevlink = postsArray[currentIndex + 1][0];
-    nextprevHTML = '<a class="bubble" href="/'+ prevlink +'">prev</a><a class="bubble" href="/blog">back</a><a class="bubble off">next</a>';
+    nextprevHTML = '<a href="../'+ prevlink +'">prev</a><a href="/blog.html">blog</a><a class="bubble off">next</a>';
 } else if ( currentIndex === postsArray.length - 1 ) {
     nextlink = postsArray[currentIndex - 1][0];
-    nextprevHTML = '<a class="bubble off">prev</a><a class="bubble" href="/blog">back</a><a class="bubble" href="/' + nextlink +'">next</a>';
+    nextprevHTML = '<a class="bubble off">prev</a><a href="/blog.html">blog</a><a href="../' + nextlink +'">next</a>';
 } else if ( 0 < currentIndex && currentIndex < postsArray.length - 1 ) {
     nextlink = postsArray[currentIndex - 1][0];
     prevlink = postsArray[currentIndex + 1][0];
-    nextprevHTML = '<a class="bubble" href="/'+ prevlink +'">prev</a><a class="bubble" href="/blog">back</a><a class="bubble" href="/' + nextlink +'">next</a>';
+    nextprevHTML = '<a href="../'+ prevlink +'">prev</a><a href="/blog.html">blog</a><a href="../' + nextlink +'">next</a>';
 }
 
 //-----------------------------
@@ -224,12 +225,12 @@ if ( postsArray.length < 2 ) {
   one particular blog post where we don't want the footer to appear, 
   we simply don't put a <div id="footer"> on that page.*/
 
-if (document.getElementById("blogNav")) { document.getElementById("blogNav").innerHTML += nextprevHTML; }
-if (document.getElementById("postlistdiv")) { document.getElementById("postlistdiv").innerHTML = postListHTML; }
+if (document.getElementById("blogInfo")) { document.getElementById("blogInfo").innerHTML += `<span>post #${(postsArray.length - currentIndex)}</span><span>|</span>` + nextprevHTML; }
+if (document.getElementById("postlistdiv")) { document.getElementById("postlistdiv").innerHTML = postListHTML + '<p>This blog is powered by <a href="http://zonelets.net/">Zonelets</a>.<img src="images/sprites/storyteller.png" alt="Pop reading a book, concerned" title="i can only imagine the horrors within those pages"></p>'; }
 if (document.getElementById("recentpostlistdiv")) { document.getElementById("recentpostlistdiv").innerHTML = recentPostListHTML; }
 // if (document.getElementById("header")) { document.getElementById("header").innerHTML = headerHTML; }
 if (document.getElementById("blogTitleH1")) { document.getElementById("blogTitleH1").innerHTML = blogTitle; }
-if (document.getElementById("postTitleH1")) { document.getElementById("postTitleH1").innerHTML = currentPostTitle; }
+if (document.getElementById("postTitle")) { document.getElementById("postTitle").innerHTML = currentPostTitle; }
 if (document.getElementById("postDate")) { document.getElementById("postDate").innerHTML = niceDate + ' | <span id="words" />'; }
 if (document.getElementById("footer")) { document.getElementById("footer").innerHTML = footerHTML; }
 
@@ -237,20 +238,15 @@ if (document.getElementById("footer")) { document.getElementById("footer").inner
 //The <title> tag content is what shows up on browser tabs
 if (document.title === "Blog Post") {
     document.title = 'LG Productions • ' + currentPostTitle;
-    document.querySelector(".indicator").style.setProperty("--indicMsg", `'Post #${(postsArray.length - currentIndex)} (${postsArray[currentIndex][2]})'`);
-
-    const root = document.documentElement;
-    root.style.setProperty("--bgGradient1", "rgba(3,55,32,0.87)");
-    root.style.setProperty("--bgGradient2", "rgba(103,85,8,0.87)");
-    
-    const navbox = document.getElementById("links");
-    const sections = document.getElementById("blogText").querySelectorAll('h3:not([id^="post"])');
+/* 
+    const navbox = document.getElementById("blogNav");
+    const sections = document.getElementById("blogText").querySelectorAll('h2');
 
     for (let i = 0; i < sections.length; i++) {
         let id = sections[i].id;
-        navbox.innerHTML += `<a href="#${id}">${id}.</a>`;
+        navbox.innerHTML += `<a href="#${id}">section ${id}.</a>`;
     }
-    //navbox.innerHTML += '<a href="#bottom"></a>';
+*/
 }
 
 // Add necessary subtitles + word count
@@ -258,27 +254,23 @@ const r = document.querySelector(':root');
 const subtitle = getComputedStyle(r).getPropertyValue('--subtitle');
 
 if (subtitle.length > 0) {
-    document.getElementById("postTitleH1").innerHTML += ` <span>${subtitle}</span>`;
+    document.getElementById("postTitle").innerHTML += ` <span>${subtitle}</span>`;
 }
-if (document.getElementById("words") != null) {document.getElementById("words").innerHTML = postsArray[currentIndex][3] + " words";}
+if (document.getElementById("words") != null) {
+    document.getElementById("words").innerHTML = postsArray[currentIndex][2] + " words";
+}
 
-// Adding the assigned classes to each post (LG-made!)
+// Counting up the woerds
 const postList = document.querySelector("#postlistdiv");
-const postListChildren = postList.querySelectorAll("li");
+let postListChildren;
 
-let blogPosts = 0;
-let devlogPosts = 0;
-let wordCount = 0;
+if (postList) {
+    postListChildren = postList.querySelectorAll("#postlistdiv li");
+    let wordCount = 0;
 
-for (let i = 0; i < postListChildren.length; i++) {
-    postListChildren[i].classList.add(postsArray[i][2]);
-    if (postsArray[i][3] != undefined) {wordCount += Number(postsArray[i][3]);}
-    
-    if (postsArray[i][2] == "blog") { blogPosts += 1; }
-    else if (postsArray[i][2] == "devlog") { devlogPosts += 1; }
+    for (let i = 0; i < postListChildren.length; i++) {
+        if (postsArray[i][2] != undefined) {wordCount += Number(postsArray[i][2]);}
+    }
+
+    console.log("Total word count (approximately): " + wordCount);
 }
-console.log("Total word count: " + wordCount);
-/*
-document.getElementById("blogCount").innerHTML = "Blog (" + blogPosts + ")";
-document.getElementById("devlogCount").innerHTML = "Devlog (" + devlogPosts + ")";
-*/
