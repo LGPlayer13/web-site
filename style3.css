@@ -308,6 +308,7 @@ nav a {
     & img {
         border: 1px dotted var(--hue);
         width: stretch;
+        width: -moz-available;
         height: calc(730px / var(--col));;
         object-fit: cover;
     }
@@ -351,6 +352,7 @@ div:has(#links) > .bubble {
     margin: 3px 0;
     padding: 3px 0;
     width: stretch;
+    width: -moz-available;
 }
 
 /* EXTRA LINKS */
