@@ -348,7 +348,7 @@ var splashes = [
     "My favorite M**vel Superhero's D**key Kong!", // from undertale 10th anniversary stream
     "versatile⠀⠀summary", // from one of my APCSP assignments
     "Alice went timidly up to the door, and stood there.", // Hello World CS activity quote
-    "Turnabout is fair play, but you should really look where you're going.", // WRONG WAY cover art (by hyphen)
+    "Turnabout is fair play, but you should really look where you're going.", // WRONG WAY cover art (by hyphen-lost)
     "Enter my amazing world of fun and fantasy intrigue", // "$100" "No Mario" meme
     "BillVPN is your go-to VPN for downloading torrents and emailing zip bombs to your neighbors.", // bearman3600 quote
     "Great job. Time to pause.", // LanSchool Air (hate it)
@@ -363,7 +363,7 @@ var splashes = [
     "Go for a Perfect!", // rhythm heaven
     `There's no "I" in "prawn"!`, // also rhythm heaven (fever)
     "An object stuck to velcro will remain stuck to velcro unless acted upon by an outside force.", // from a reddit post on r/rareinsults
-    "I hate this site. My irl grandmother married the skeleton from minecraft", // yt comment
+    "I hate this game. My irl grandmother married the skeleton from minecraft", // yt comment
     "should i drink d stream more often shw wiol.l youm guys watch ity????/", // beer male
     "You are accused of a crime. Murder!!!!", // from a criminal justice assignment of mine
     "McAfee - when the solution is worse than the problem.", // from a reddit post on r/mildlyinfuriating
@@ -376,6 +376,7 @@ var splashes = [
     "Hey, guys! I think I found a glue!", // they're eating my flesh! -flowery deltarune
     "Despite what the blog says, we use MM/DD/YYYY around these parts.", // true...
     `When the <b>Karate</b> is <b>man</b> !`, // quick hands
+    "Did you know that me and hyphen met through a failed Minecraft SMP?", // true...
     "We've got the vision, now let's have some fun."
     // "Overrated band... you will want to slit your wrists listening to [Radiohead's] music" and i took that personally
     // i find this quote funny, but it's too sensitive and kinda makes me upset thinking about it

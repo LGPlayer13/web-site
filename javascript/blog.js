@@ -32,34 +32,34 @@ let authorLink = "https://lgplayer13.neocities.org/"; // Enter your website, soc
 
 let postsArray = [
 //[ "posts/2026-08-15-Expert-Streamer.html", encodeURI ( "Now That I'm an Expert Streamer" ), 2 ],
-[ "posts/2026-10-03-Five-Points.html", encodeURI ( "Devlog: Five Points for The G!" ), 1768 ],
-[ "posts/2026-06-07-Junior-Year.html", encodeURI ( "The Junior Year Review" ), 5457 ],
-[ "posts/2026-05-04-Blue-Moon.html", encodeURI ( "Blue Moon" ), 2570 ],
-[ "posts/2026-04-07-Cant-Remember.html", encodeURI ( "A Dream I Can't Remember" ), 2714 ],
-[ "posts/2026-03-01-Wrong-Way.html", encodeURI ( 'Wrong Way' ), 2127 ],
-[ "posts/2026-02-16-Web-404.html", encodeURI ( 'Web Design 404' ), 1868 ],
-[ "posts/2026-02-02-Stranded-Lullaby.html", encodeURI ( 'Stranded Lullaby' ), 1730 ],
-[ "posts/2026-01-07-Another-Day.html", encodeURI ( 'Maybe Another Day...' ), 1833 ],
-[ "posts/2025-12-31-Year-Recap.html", encodeURI ( '2025 Recapped (Idling...)' ), 2170 ],
-[ "posts/2025-12-06-Be-Thankful.html", encodeURI ( 'To Be Thankful' ), 1675 ],
-[ "posts/2025-11-02-Nothing-Changes.html", encodeURI ( 'Nothing Changes' ), 1735 ],
-[ "posts/2025-10-04-Break-Tension.html", encodeURI ( 'Break the Tension' ), 2079 ],
-[ "posts/2025-09-03-Big-Ideas.html", encodeURI ( 'Big Ideas' ), 2108 ],
-[ "posts/2025-08-01-End-Summer.html", encodeURI ( 'End Of Summer' ), 1779 ],
-[ "posts/2025-07-03-Two-Weeks.html", encodeURI ( 'Two Weeks' ), 3440 ],
-[ "posts/2025-06-02-Sophomore-Year.html", encodeURI ( 'The Sophomore Year Review' ), 3408 ],
-[ "posts/2025-05-23-LabII-Alpha1.html", encodeURI ( 'Devlog: LABY 2???' ), 1448 ],
-[ "posts/2025-05-03-Will-Calls.html", encodeURI ( 'Will Calls' ), 2681 ],
-[ "posts/2025-04-07-Over-Ocean.html", encodeURI ( 'Over the Ocean' ), 2806 ],
-[ "posts/2025-03-11-New-Album.html", encodeURI ( 'Fragments of Waves' ), 957 ],
-[ "posts/2025-03-02-Worrywort.html", encodeURI ( 'Worrywort' ), 2612 ],
-[ "posts/2025-02-03-Part-III.html", encodeURI ( 'Part III' ), 1975 ],
-[ "posts/2025-01-03-Daydreaming.html", encodeURI ( 'Daydreaming' ), 1719 ],
-[ "posts/2024-12-31-Year-Recap.html", encodeURI ( '2024 Recapped (Now Presenting)' ), 979 ],
-[ "posts/2024-12-01-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid' ), 1295 ],
-[ "posts/2024-11-16-G1R-v1.1.html", encodeURI ( 'Devlog: G1R v1.1 is out!' ), 566 ],
-[ "posts/2024-11-02-Yet-Again.html", encodeURI ( 'Yet Again' ), 1178 ],
-[ "posts/2024-06-06-Freshman-Year.html", encodeURI ( 'The Freshman Year Review' ), 2089 ]
+[ "posts/2026-10-03-Five-Points.html", encodeURI ( "Devlog: Five Points for The G!" ), 1768, "web site, rant" ],
+[ "posts/2026-06-07-Junior-Year.html", encodeURI ( "The Junior Year Review" ), 5457, "summary, venting" ],
+[ "posts/2026-05-04-Blue-Moon.html", encodeURI ( "Blue Moon" ), 2570, "life, school" ],
+[ "posts/2026-04-07-Cant-Remember.html", encodeURI ( "A Dream I Can't Remember" ), 2714, "life, rant" ],
+[ "posts/2026-03-01-Wrong-Way.html", encodeURI ( 'Wrong Way' ), 2127, "random, reflection" ],
+[ "posts/2026-02-16-Web-404.html", encodeURI ( 'Web Design 404' ), 1868, "school, rant, coding" ],
+[ "posts/2026-02-02-Stranded-Lullaby.html", encodeURI ( 'Stranded Lullaby' ), 1730, "anxiety, reflection, venting" ],
+[ "posts/2026-01-07-Another-Day.html", encodeURI ( 'Maybe Another Day...' ), 1833, "life, random" ],
+[ "posts/2025-12-31-Year-Recap.html", encodeURI ( '2025 Recapped (Idling...)' ), 2170, "recap, projects" ],
+[ "posts/2025-12-06-Be-Thankful.html", encodeURI ( 'To Be Thankful' ), 1675, "anxiety, web site" ],
+[ "posts/2025-11-02-Nothing-Changes.html", encodeURI ( 'Nothing Changes' ), 1735, "social, venting" ],
+[ "posts/2025-10-04-Break-Tension.html", encodeURI ( 'Break the Tension' ), 2079, "school, social, rant" ],
+[ "posts/2025-09-03-Big-Ideas.html", encodeURI ( 'Big Ideas' ), 2108, "school, projects" ],
+[ "posts/2025-08-01-End-Summer.html", encodeURI ( 'End Of Summer' ), 1779, "random, rant" ],
+[ "posts/2025-07-03-Two-Weeks.html", encodeURI ( 'Two Weeks' ), 3440, "world trip" ],
+[ "posts/2025-06-02-Sophomore-Year.html", encodeURI ( 'The Sophomore Year Review' ), 3408, "summary, venting" ],
+[ "posts/2025-05-23-LabII-Alpha1.html", encodeURI ( 'Devlog: LABY 2???' ), 1448, "projects, nerd" ],
+[ "posts/2025-05-03-Will-Calls.html", encodeURI ( 'Will Calls' ), 2681, "projects, school, rant" ],
+[ "posts/2025-04-07-Over-Ocean.html", encodeURI ( 'Over the Ocean' ), 2806, "school, social" ],
+[ "posts/2025-03-11-New-Album.html", encodeURI ( 'Fragments of Waves' ), 957, "projects" ],
+[ "posts/2025-03-02-Worrywort.html", encodeURI ( 'Worrywort' ), 2612, "social, venting, deep" ],
+[ "posts/2025-02-03-Part-III.html", encodeURI ( 'Part III' ), 1975, "school, social" ],
+[ "posts/2025-01-03-Daydreaming.html", encodeURI ( 'Daydreaming' ), 1719, "holiday, social, venting" ],
+[ "posts/2024-12-31-Year-Recap.html", encodeURI ( '2024 Recapped (Now Presenting)' ), 979, "recap, projects" ],
+[ "posts/2024-12-01-Theatre-Kid.html", encodeURI ( 'The Non-Theatre Theatre Kid' ), 1295, "school, fun" ],
+[ "posts/2024-11-16-G1R-v1.1.html", encodeURI ( 'Devlog: G1R v1.1 is out!' ), 566, "projects, george" ],
+[ "posts/2024-11-02-Yet-Again.html", encodeURI ( 'Yet Again' ), 1178, "random" ],
+[ "posts/2024-06-06-Freshman-Year.html", encodeURI ( 'The Freshman Year Review' ), 2089, "school, venting" ]
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -114,7 +114,6 @@ for (i = 0; i < postsArray.length; i++) {
 //Or pass along the "special characters" version of the title if one exists
 function formatPostTitle(i) {
     // Check if there is an alternate post title
-        console.log(document.getElementById(blogTitle));
     if ( postsArray[i].length > 1 ) {
         //Remember how we had to use encodeURI for special characters up above? Now we use decodeURI to get them back.
         return decodeURI(postsArray[i][1]);
@@ -167,15 +166,19 @@ function formatPostLink(i) {
         }
     }
     if ( postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-        if (document.title.includes("Home")) { return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>'; }
-        else { return `<li><time>${postsArray[i][0].slice(6,16)}</time><span>\u00BB</span><a href="` + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>'; }
+        if (document.title.includes("Home")) { return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i; }
+        else { return `<li><time>${postsArray[i][0].slice(6,16)}</time><span>\u00BB</span><a href="` + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i; }
     } else {
-        return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
+        return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i;
     }
 }
 
 let postListHTML = "<ul>";
-for ( let i = 0; i < postsArray.length; i++ ) { postListHTML += formatPostLink(i); }
+for ( let i = 0; i < postsArray.length; i++ ) {
+    /* tags = "";
+    if (postsArray[i][3]) { tags = `<span>${postsArray[i][3]}</span>`; } */
+    postListHTML += formatPostLink(i) + "</a></li>";
+}
 postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
@@ -229,15 +232,15 @@ if (document.getElementById("blogInfo")) { document.getElementById("blogInfo").i
 if (document.getElementById("postlistdiv")) { document.getElementById("postlistdiv").innerHTML = postListHTML + '<p>This blog is powered by <a href="http://zonelets.net/">Zonelets</a>.<img src="images/sprites/storyteller.png" alt="Pop reading a book, concerned" title="i can only imagine the horrors within those pages"></p>'; }
 if (document.getElementById("recentpostlistdiv")) { document.getElementById("recentpostlistdiv").innerHTML = recentPostListHTML; }
 // if (document.getElementById("header")) { document.getElementById("header").innerHTML = headerHTML; }
-if (document.getElementById("blogTitleH1")) { document.getElementById("blogTitleH1").innerHTML = blogTitle; }
 if (document.getElementById("postTitle")) { document.getElementById("postTitle").innerHTML = currentPostTitle; }
 if (document.getElementById("postDate")) { document.getElementById("postDate").innerHTML = niceDate + ' | <span id="words" />'; }
-if (document.getElementById("footer")) { document.getElementById("footer").innerHTML = footerHTML; }
 
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier
 //The <title> tag content is what shows up on browser tabs
 if (document.title === "Blog Post") {
     document.title = 'LG Productions • ' + currentPostTitle;
+
+    if (postsArray[currentIndex][3]) { document.getElementById("blogTitle").innerHTML += `<span id="tag">${postsArray[currentIndex][3]}</span>`; }
 /* 
     const navbox = document.getElementById("blogNav");
     const sections = document.getElementById("blogText").querySelectorAll('h2');
@@ -256,8 +259,9 @@ const subtitle = getComputedStyle(r).getPropertyValue('--subtitle');
 if (subtitle.length > 0) {
     document.getElementById("postTitle").innerHTML += ` <span>${subtitle}</span>`;
 }
-if (document.getElementById("words") != null) {
+if (document.getElementById("words")) {
     document.getElementById("words").innerHTML = postsArray[currentIndex][2] + " words";
+    
 }
 
 // Counting up the woerds

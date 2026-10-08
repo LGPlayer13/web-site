@@ -78,6 +78,7 @@ body {
 
 #blogTitle {
     color: white;
+    position: relative;
     background: url(/images/backgrounds/blogField.png) no-repeat center/cover;
     margin: 0 auto 2em;
     padding: 1px 1em;
@@ -98,6 +99,23 @@ body {
 
 #postTitle, #postDate, #quote {
     font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+span#tag {
+    position: absolute;
+    backdrop-filter: blur(3px);
+    border: 1px solid var(--bgHue);
+    border-radius: 1px;
+    padding: 5px 1em;
+    bottom: 5px;
+    right: 5px;
+    text-align: center;
+    text-shadow: none;
+
+    &::selection {
+        color: black;
+        background: var(--bgHue);
+    }
 }
 
 /* generic stuffs */
